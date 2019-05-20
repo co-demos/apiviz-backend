@@ -46,7 +46,7 @@ log_app.debug('>>> TESTING LOGGER')
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
 from	flask 			import Flask, g, current_app, session, request
-from 	flask_wtf.csrf 	import CSRFProtect
+# from 	flask_wtf.csrf 	import CSRFProtect
 # from	flask import jsonify, flash, render_template, url_for, make_response, request, redirect
 
 from flask_cors import CORS
