@@ -35,17 +35,6 @@ network:
 
 
 ### ============ ###
-### frontend
-### ============ ###
-
-frontend: 
-	${DC} -f ${DC_PREFIX_FOLDER}-frontend.yml up --build -d
-frontend-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-frontend.yml down
-
-
-
-### ============ ###
 ### backend
 ### ============ ###
 
@@ -115,49 +104,49 @@ backend-gunicorn-prod-dist-stop:
 
 # --------------------
 # default - local DB
-up: network frontend backend-gunicorn-default-local
-down: backend-gunicorn-default-local-stop frontend-stop network-stop
+up: network backend-gunicorn-default-local
+down: backend-gunicorn-default-local-stop network-stop
 restart: down up
 
 # default - distant DB
-up-dist: network frontend backend-gunicorn-default-dist
-down-dist: backend-gunicorn-default-dist-stop frontend-stop network-stop
+up-dist: network backend-gunicorn-default-dist
+down-dist: backend-gunicorn-default-dist-stop network-stop
 restart-dist: down-dist up-dist
 
 # --------------------
 # testing - local DB
-up-test-local: network frontend backend-gunicorn-test-local
-down-test-local: backend-gunicorn-test-local-stop frontend-stop network-stop
+up-test-local: network backend-gunicorn-test-local
+down-test-local: backend-gunicorn-test-local-stop network-stop
 restart-test-local: down-test-local up-test-local
 
 # testing - server DB
-up-test-server: network frontend backend-gunicorn-test-server
-down-test-server: backend-gunicorn-test-server-stop frontend-stop network-stop
+up-test-server: network backend-gunicorn-test-server
+down-test-server: backend-gunicorn-test-server-stop network-stop
 restart-test-server: down-test-server up-test-server
 
 # testing - distant DB
-up-test-dist: network frontend backend-gunicorn-test-dist
-down-test-dist: backend-gunicorn-test-dist-stop frontend-stop network-stop
+up-test-dist: network backend-gunicorn-test-dist
+down-test-dist: backend-gunicorn-test-dist-stop network-stop
 restart-test-dist: down-test-dist up-test-dist
 
 # --------------------
 # preprod - server DB
-up-preprod-server: network frontend backend-gunicorn-preprod-server
-down-preprod-server: backend-gunicorn-preprod-server-stop frontend-stop network-stop
+up-preprod-server: network backend-gunicorn-preprod-server
+down-preprod-server: backend-gunicorn-preprod-server-stop network-stop
 restart-preprod-server: down-preprod-server up-preprod-server
 
 # preprod - distant DB
-up-preprod-dist: network frontend backend-gunicorn-preprod-dist
-down-preprod-dist: backend-gunicorn-preprod-dist-stop frontend-stop network-stop
+up-preprod-dist: network backend-gunicorn-preprod-dist
+down-preprod-dist: backend-gunicorn-preprod-dist-stop network-stop
 restart-preprod-dist: down-preprod-dist up-preprod-dist
 
 # --------------------
 # prod - server DB
-up-prod-server: network frontend backend-gunicorn-prod-server
-down-prod-server: backend-gunicorn-prod-server-stop frontend-stop network-stop
+up-prod-server: network backend-gunicorn-prod-server
+down-prod-server: backend-gunicorn-prod-server-stop network-stop
 restart-prod-server: down-prod-server up-prod-server
 
 # prod - distant DB
-up-prod-dist: network frontend backend-gunicorn-prod-dist
-down-prod-dist: backend-gunicorn-prod-dist-stop frontend-stop network-stop
+up-prod-dist: network backend-gunicorn-prod-dist
+down-prod-dist: backend-gunicorn-prod-dist-stop network-stop
 restart-prod-dist: down-prod-dist up-prod-dist
