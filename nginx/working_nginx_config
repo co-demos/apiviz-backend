@@ -1,0 +1,18 @@
+
+### NGINX file apiviz in /etc/nginx/sites-available
+### < create file and copy config into it >
+### $ sudo vim /etc/nginx/sites-available/apiviz
+### <link file> 
+### $ sudo ln -s /etc/nginx/sites-available/apiviz /etc/nginx/sites-enabled
+### 
+
+server {
+	listen 80;
+	server_name apiviz.fr www.apiviz.fr
+		;
+
+	location / {
+		include proxy_params;
+		proxy_pass http://unix:/home/jpy/app_apiviz/apiviz.sock;
+	}
+}

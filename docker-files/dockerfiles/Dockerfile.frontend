@@ -1,0 +1,12 @@
+FROM node:8
+
+WORKDIR /app_in_docker
+
+# COPY ./frontend .
+COPY ./backend/frontend .
+
+WORKDIR /app_in_docker
+# cache package.json and node_modules to speed up builds
+RUN npm install
+
+CMD ["npm","run","build"]
