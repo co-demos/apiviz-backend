@@ -1,6 +1,6 @@
 
 <h2 align=center>
-	<img src="./backend/static/logos/logo_apiviz_15.png">
+	<img src="./backend/static/logos/logo_apiviz_15.png"><br>
   BACKEND
 </h2>
 
