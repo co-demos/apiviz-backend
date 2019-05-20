@@ -177,6 +177,10 @@ Please check out our *[guidelines](./GUIDELINES_DEV.md)*
       make down-test-server
 
       ```
+
+    - test the following url in your browser : 
+    [`http://localhost:8100/backend/api/config/global?uuid=c5efafab-1733-4ad1-9eb8-d529bc87c481`](http://localhost:8100/backend/api/config/global?uuid=c5efafab-1733-4ad1-9eb8-d529bc87c481)
+
 <hr>
 
 ### _WITHOUT DOCKER - LOCALLY_
@@ -228,7 +232,8 @@ Please check out our *[guidelines](./GUIDELINES_DEV.md)*
 	pythom run_apiviz.py --port=8200 --mode=preprod
 	```
 
-1. **check in your browser** at `localhost:8100`
+1. **test the following url in your browser** : 
+[`http://localhost:8081/backend/api/config/global?uuid=c5efafab-1733-4ad1-9eb8-d529bc87c481`](http://localhost:8081/backend/api/config/global?uuid=c5efafab-1733-4ad1-9eb8-d529bc87c481)
 
 
 ### _WITHOUT DOCKER - IN PRODUCTION_
