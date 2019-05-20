@@ -20,6 +20,13 @@ ApiViz (soon will) includes "out-the-box" a back-office to fully configure an or
 
 --------
 
+
+#### warning : 
+
+**apiviz-frontend** is only the backend of the APIVIZ application, it provides the API for serving its configuration to any **[apiviz-backend](https://github.com/co-demos/apiviz-frontend)** instance.
+
+--------
+
 ## THE APIVIZ ECOSYSTEM
 
 ApiViz is designed to **agnosticaly display data** and provide an engine to deploy a **datavisualisation website** without (too much) pain, not regarding to the service(s) serving and storing the data. 
