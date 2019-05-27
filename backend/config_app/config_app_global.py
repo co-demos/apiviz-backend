@@ -12,7 +12,7 @@ default_global_config = [
         "languages"   : ["fr"],
         "locale"      : "fr",
         "app_version" : version,
-        "help"        : u"The default homepage for your ApiViz instance",
+        "help"        : u"The languages and default locale for your ApiViz instance",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"  : True
       },

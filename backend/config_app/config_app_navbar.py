@@ -11,7 +11,7 @@ default_app_navbar = [
       { "field"       : "app_navbar",
         "content"     : u"apiviz default navbar",
         "app_version" : version,
-        "help"        : u"The nabvbar of your ApiViz instance",
+        "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/sonum-carto/carte",
         "ui_options"  : {
           "background_color" : { "value" : None, "default" : "white", },
@@ -24,6 +24,7 @@ default_app_navbar = [
             { "is_visible" : True, 
               "position"   : "exterior_right",
               "link_to"    : "/sonum-xp/accueil",
+              "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show as link
               "icon_class" : "", 
@@ -48,6 +49,7 @@ default_app_navbar = [
             { "is_visible" : True, 
               "position"   : "exterior_right",
               "link_to"    : "/sonum-carto/carte",
+              "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show as link
               "icon_class" : "", 
@@ -81,6 +83,7 @@ default_app_navbar = [
             { "is_visible" : True, 
               "position"   : "exterior_right",
               "link_to"    : "https://forum.societenumerique.gouv.fr/category/10/cartographie-des-services-de-médiation-et-d-inclusion-numérique",
+              "help"       : u"Third menu in navbar",
               "is_external_link" : True,
               "link_type"  : "button", ### show btn border
               "icon_class" : "", 
@@ -100,7 +103,7 @@ default_app_navbar = [
       { "field"       : "app_navbar",
         "content"     : u"CIS navbar",
         "app_version" : version,
-        "help"        : u"The nabvbar of your ApiViz instance",
+        "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
         "ui_options"  : {
           "background_color" : { "value" : None, "default" : "white", },
@@ -111,6 +114,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/recherche",
+              "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -125,6 +129,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/le-projet",
+              "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -139,6 +144,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/qui-sommes-nous",
+              "help"       : u"Third menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -153,6 +159,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "",
+              "help"       : u"Fourth menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -167,6 +174,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "",
+              "help"       : u"Fifth menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",

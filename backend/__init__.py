@@ -2,13 +2,9 @@
 
 
 """
-front app du Carrefour des Innovations Sociales : 
 -------------------------------------------------
-version : 0.1
+version : 0.4
 -------------------------------------------------
-- framework back : flask
-- pages : Vue.js
-
 """
 
 
