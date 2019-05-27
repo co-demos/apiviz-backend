@@ -16,7 +16,12 @@ default_app_footer = [
         "dynamic_template"  : 'DynamicFooter',
         "has_credits_footer": True,
         "credits_footer_url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/footer-mednum.html",
-        "active_columns"    : ['block_left', 'block_center_left', 'block_center_right','block_right'],
+        "active_columns"    : [
+          'block_left', 
+          'block_center_left', 
+          'block_center_right',
+          'block_right'
+        ],
 
         "contents_fields" : {
 
@@ -163,21 +168,21 @@ default_app_footer = [
                 "tooltip"    : [{"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
-                "link_to"    : "https://github.com/co-demos/ApiViz",
+                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "", 
                 "link_text"  : [{"locale" : "fr", "text" : "code source" }],
                 "tooltip"    : [{"locale" : "fr", "text" : "accéder au code source" }] 
               },
-              { "is_visible" : True, 
-                "link_to"    : "/apiviz/outils",
-                "is_external_link" : False,
-                "link_type"  : "text",
-                "icon_class" : "", 
-                "link_text"  : [{"locale" : "fr", "text" : "outils open source" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "accéder au code source" }] 
-              },
+              # { "is_visible" : True, 
+              #   "link_to"    : "/apiviz/outils",
+              #   "is_external_link" : False,
+              #   "link_type"  : "text",
+              #   "icon_class" : "", 
+              #   "link_text"  : [{"locale" : "fr", "text" : "outils open source" }],
+              #   "tooltip"    : [{"locale" : "fr", "text" : "accéder au code source" }] 
+              # },
               { "is_visible" : True, 
                 "link_to"    : "/login",
                 "is_external_link" : False,
@@ -336,7 +341,7 @@ default_app_footer = [
                 "tooltip"    : [{"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://github.com/co-demos/ApiViz",
+                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
@@ -360,7 +365,7 @@ default_app_footer = [
                 "tooltip"    : [{"locale" : "fr", "text" : "voir le site" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://github.com/co-demos/ApiViz",
+                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",

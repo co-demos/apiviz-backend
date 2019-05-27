@@ -158,7 +158,7 @@ default_global_config = [
 
     ### REPO GITHUB
       { "field"       : "app_code",
-        "url"         : "https://github.com/co-demos/ApiViz",
+        "url"         : "https://github.com/co-demos/apiviz-frontend",
         "app_version" : version,
         "help"        : u"Choose the repo for the source code of your ApiViz instance",
         "content"     : [{ "locale" : "fr", "text" : "Code source"}],
@@ -327,7 +327,7 @@ default_global_config = [
 
     ### REPO GITHUB
       { "field"       : "app_code",
-        "url"         : "https://github.com/co-demos/ApiViz",
+        "url"         : "https://github.com/co-demos/apiviz-frontend",
         "app_version" : version,
         "help"        : u"Choose the repo for the source code of your ApiViz instance",
         "content"     : [{ "locale" : "fr", "text" : "Code source"}],

@@ -66,7 +66,7 @@ def setupDefaultConfig(collection, defaultList, uniqueField="field") :
   """
   
   ### delete all previous default items in collection
-  collection.delete_many({"is_default" : True })
+  collection.delete_many({"is_default" : True }) 
   
   ### set up 
   for config_app_item in defaultList : 
