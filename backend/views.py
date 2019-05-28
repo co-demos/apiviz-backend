@@ -238,7 +238,6 @@ def backend_configs(collection, doc_id=None):
   field 	= request.args.get('field', 	default='field', type=str)
   as_list = request.args.get('as_list', default=False,   type=bool)
 
-
   # role_to_check = request.args.get('role',    default='admin', type=str)
   roles_to_check = COLLECTIONS_AUTH_MODIFICATIONS[collection][request.method]
   log_app.debug("config app route / roles_to_check : %s", roles_to_check )
@@ -262,7 +261,6 @@ def backend_configs(collection, doc_id=None):
 
   ### build basic query
   query = {'apiviz_front_uuid' : apiviz_uuid}
-  # query = {"apiviz_front_uuid" : apiviz_uuid }
   if doc_id :
     query["_id"] = ObjectId(doc_id)
 
@@ -277,15 +275,20 @@ def backend_configs(collection, doc_id=None):
   ### TO DO
   if request.method != 'GET':
 
-    query["_id"] = ObjectId(req_json['doc_id']) 
-    log_app.debug("config app route / !GET / query : \n%s", query )
-
     if request.method == 'POST':
-      
+
       log_app.debug("config app route / POST" )
+
+      query["_id"] = ObjectId(req_json['doc_id']) 
+      log_app.debug("config app route / POST / query : \n%s", query )
+
+      ### retrieve original document
+      configDoc = mongoColl.find_one(query)
+      log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
+      
       is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
 
-      if is_authorized :
+      if is_authorized and configDoc is not None :
 
         ### retrieve editionn config 
         doc_config = req_json['doc_config']
@@ -300,59 +303,97 @@ def backend_configs(collection, doc_id=None):
         if doc_config['type'] == 'blocs_list' : 
           editSubfield = req_json['doc_subfield'].split('.')
 
-        ### config specifics
+        ### config edit specifics
         canAddKey = doc_config.get('canAddKeys', False) 
         canAddToList = doc_config.get('canAddToList', False) 
         canModifyKey = doc_config.get('canModifKeys', False) 
 
-        ### retrieve original document
-        configDoc = mongoColl.find_one(query)
-        log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
-
         ### target fields to update
         print() 
+        update_query = {'$set' : {} }
         for k, v in doc_data.items() :
-          log_app.debug("config app route / posT / k:v : \n%s", pformat({k:v}) )
-          
+          # log_app.debug("config app route / posT / k:v : \n%s", pformat({k:v}) )
           # directly update field : for type == blocs || docs_list
-          if k not in notAllowedFields and k in [*configDoc] : 
-            configDoc[k] = v
+          if canAddKey == False :
+            if k not in notAllowedFields and k in [*configDoc] : 
+              update_query['$set'][k] = v
 
-          print() 
+          if canAddKey == False :
+            if k not in notAllowedFields : 
+              update_query['$set'][k] = v
+          # print() 
 
         ### update version
-        configDoc['app_version'] = version
+        update_query['$set']['app_version'] = version
+        log_app.debug("config app route / posT / update_query : \n%s", pformat(update_query) )
 
         ### save updated doc
-        # mongoColl.save(configDoc)
+        mongoColl.update_one(query, update_query)
 
-        log_app.debug("config app route / posT / configDoc edited : \n%s", pformat(configDoc) )
+        ### get back doc as updated
+        updatedDoc = mongoColl.find_one(query)
+        # log_app.debug("config app route / posT / updatedDoc : \n%s", pformat(updatedDoc) )
 
-        # return DocOidToString(configDoc)
-        return "hello config master / POST ... praise be"
+        formatedUpdatedConfig = DocOidToString(updatedDoc)
+        # log_app.debug("config app route / posT / DocOidToString(updatedDoc) : \n%s", pformat( formatedUpdatedConfig ))
+        # return "hello config master / POST ... praise be"
+        return jsonify({
+          'msg' : "the doc was updated",
+          'query' : DocOidToString(query),
+          'doc_updated' : formatedUpdatedConfig,
+          'request' : req_json,
+          })
+
+      elif configDoc is None :
+        return jsonify({ 
+          "msg" : "noooope... can't find doc dammit....",
+          'query' : DocOidToString(query),
+          'request' : req_json,
+        })
 
       else :
-        return "noooope... you can't edit this mate"
-
-
-
-
-
-
+        return jsonify({ 
+          "msg" : "noooope... you can't edit this ... mate",
+          'query' : DocOidToString(query),
+          'request' : req_json,
+        })
 
 
     elif request.method == 'DELETE':
 
+      log_app.debug("config app route / DELETE" )
+
       allowedCollsForDelete = [ "endpoints" , "routes" ]
 
-      log_app.debug("config app route / DELETE" )
+      ### retrieve token from request and check it 
+      req_data = json.loads(request.data)
+      log_app.debug("config app route / req_data : \n%s", pformat(req_data) )
+      token = req_data.get('token', '')
+
       is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
 
-      if is_authorized :
+      if is_authorized and collection in allowedCollsForDelete :
 
-        return "hello config master / DELETE ... praise be"
+        ### retrieve doc to delete to add to returned message
+        configDoc = mongoColl.find_one(query)
+        deletedDoc = DocOidToString(configDoc)
+
+        ### delete doc 
+        mongoColl.delete_one(query)
+
+        return jsonify({
+          'msg' : 'this doc was deleted',
+          'query' : DocOidToString(query),
+          'request' : req_json,
+          'deleted_doc' : deletedDoc
+        })
+
       else :
-        return "noooope"
+        return jsonify({ 
+          'msg' : "noooope... not authorized to delete this ... mate ...",
+          'query' : DocOidToString(query),
+          'request' : req_json,
+        })
 
 
   elif request.method == 'GET':
