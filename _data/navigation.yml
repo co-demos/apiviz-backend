@@ -48,6 +48,17 @@ docs:
       - title: "Install the docs"
         url: /guide/install-docs
 
+  - title: Developers
+    children:
+      - title: "Stack"
+        url: /dev/stack
+      - title: "Contributing"
+        url: /dev/contributing
+      - title: "Roadmaps"
+        url: /dev/roadmaps
+      - title: "Guidelines"
+        url: /dev/guidelines
+
   - title: Snippets
     children:
       - title: "Nginx"
@@ -60,17 +71,6 @@ docs:
         url: /prod/ubuntu
       - title: "Git"
         url: /prod/git
-
-  - title: Developers
-    children:
-      - title: "Stack"
-        url: /dev/stack
-      - title: "Contributing"
-        url: /dev/contributing
-      - title: "Roadmaps"
-        url: /dev/roadmaps
-      - title: "Guidelines"
-        url: /dev/guidelines
 
   - title: Meta
     children:
