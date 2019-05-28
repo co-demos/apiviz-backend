@@ -11,7 +11,7 @@
 Visualize data coming from an API in a CMS-like app. 
 If your data is stored somewhere and accessible via an API, ApiViz can transform it into a full website to show it at its best. 
 
-ApiViz (soon will) includes "out-the-box" a back-office to fully configure an original datavisualisation website : 
+ApiViz includes "out-the-box" a back-office to fully configure an original datavisualisation website : 
   - **navbar** : define the logo, links, and menus in your apiviz instance's navabr. 
   - **styles** : define the CSS styles for your apiviz instance.
   - **routes** : define the pages and routes of your apiviz instance, either statics contents or data views.
@@ -21,10 +21,16 @@ ApiViz (soon will) includes "out-the-box" a back-office to fully configure an or
 
 --------
 
+## DOCUMENTATION
+
+Check our brand new [documentation website](https://co-demos.github.io/apiviz-backend/) here : https://co-demos.github.io/apiviz-backend/
+
+--------
 
 #### warning : 
 
-**apiviz-frontend** is only the backend of the APIVIZ application, it provides the API for serving its configuration to any **[apiviz-backend](https://github.com/co-demos/apiviz-frontend)** instance.
+**apiviz-backend** is the backend of the APIVIZ-FRONTEND application, it provides the API for serving its configuration to any **[apiviz-frontend](https://github.com/co-demos/apiviz-frontend)** instance.
+
 
 --------
 
@@ -59,34 +65,6 @@ You can also check those several projects and repository to find some layout for
 
 **Note** : all the schemas were realized with [VUE - Visual Understanding Environment](https://vue.tufts.edu/index.cfm), an open source mind mapping tool. The source file for the schemas is [here](./documentation/configurations/APIVIZ_CONFIGURATIONS.vue)
 
---------
-
-## HOW TO CONFIGURE YOUR APIVIZ INSTANCE
-
-1. register an user (user data will stored and managed in TokTok, so you'd need to install Toktok locally) ;
-1. make this user an `admin` (in TokTok) ;
-1. log in (`admin` link in the default footer, `/login` route by default) ;
-1. go to the `/backoffice` route by clicking on the button ;
-1. set up your ApiViz configuration : 
-    
-    - set up the global variables ; 
-    - set up your data endpoints ; 
-    - set up your authentication endpoints ; 
-    - set up your routes (pages must point out to html contents, f.e. on Github) ; 
-    - set up the styles ;
-    - set up your navbar ; 
-    - set up your footer ;
-
-1. save your configuration ;
-1. deploy (if not done already) and enjoy ;
-
-More detailed configuration documentation on its way...
-
---------
-
-## DEVELOPERS
-
-Please check out our *[guidelines](./GUIDELINES_DEV.md)*
 
 --------
 
@@ -273,60 +251,6 @@ Please check out our *[guidelines](./GUIDELINES_DEV.md)*
 
 
 
-------
-
-## TECHNICAL POINTS
-
-#### Tech stack
-
-- _Language_ : 
-    - **Python 3**... it's not the hypest but still has a nice ecosystem
-<br>
-
-- _Backend_  : 
-    - **[Flask](http://flask.pocoo.org/)**... minimalistic Python framework to serve configuration
-<br>  
-
-- _Server_   : 
-    - **[Ubuntu 18.04]()**, 
-    - **[NGINX](https://www.nginx.com/)**, 
-    - **[Gunicorn](http://gunicorn.org/)**, 
-    - hosted in **[Digital Ocean](http://digitalocean.com/)**, 
-    - domain name from **[NameCheap](http://namecheap.com/)**
-<br>
-
-- _Dev tools_   : 
-    - **[Docker](https://www.docker.com/)**... also check this [introduction to Docker](https://guillim.github.io/docker/2018/11/18/docker-hands-on-intro.html)
-
-
--------
-
-## CREDITS 
-
-#### ApiViz's team thanks :
-
-- the [EIG](https://entrepreneur-interet-general.etalab.gouv.fr/) program by [Etalab](https://www.etalab.gouv.fr/)
-- the [Social Connect](https://entrepreneur-interet-general.etalab.gouv.fr/defi/2017/09/26/socialconnect/) project, aka "Carrefour des Innovations Sociales"
-- the [CGET](http://www.cget.gouv.fr/)
-- the [MedNum](https://lamednum.coop)
-- the [Mission Société Numérique](https://societenumerique.gouv.fr)
-- and all those who believed and helped in this project : 
-    - Christophe N.
-    - Damla S.
-    - Bastien G. 
-    - Mathilde B. 
-    - Rémy S.
-    - Cécile B.
-
-#### Contacts - maintainance :
-
-- [Julien Paris](<mailto:codemos.infos@gmail.com>) (aka [JPy](https://github.com/JulienParis) on Github)
-- [Guillaume Lancrenon](https://guillim.github.io) (aka [Guillim](https://github.com/guillim) on Github)
-
-#### Design UI-UX
-- [Elise Lalique](https://github.com/Eliselalique)
-
-
 -------
 
 ## SCREENSHOTS (development)
@@ -338,9 +262,6 @@ serves your **[apiviz-backend](https://github.com/co-demos/apiviz-frontend)** co
 <h2 align=center>
 	<img src="./documentation/screenshots/backend-api-global-01.png">
 </h2>
-
-
-
 
 --------
 
