@@ -25,6 +25,8 @@ docs:
         url: /general/presentation
       - title: "The Apiviz ecosystem"
         url: /general/ecosystem
+      - title: "Apiviz frontend"
+        url: https://co-demos.github.io/apiviz-frontend/
 
   # - title: Dataviz principles
   #   children: 
