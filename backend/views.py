@@ -13,6 +13,9 @@ from		flask 	import 	jsonify, flash, render_template, \
                   url_for, make_response, request, redirect, \
                   send_file
 
+from .config_app.app_metas import app_metas
+version = app_metas["version"]
+
 # from 	werkzeug.security 	import 	generate_password_hash, check_password_hash
 from werkzeug.exceptions import BadRequest
 
@@ -162,7 +165,7 @@ def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/ap
 
   ### retrieving the root_url for authentication in general given the AUTH_MODE
   root_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_root_auth'})
-  log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
+  # log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
 
   auth_url = root_auth_doc['root_url'][auth_mode]
   log_app.debug( "checkJWT / auth_url : %s", pformat(auth_url) )
@@ -183,14 +186,14 @@ def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/ap
       confirm_arg = '?{}={}'.format(arg['arg'], token)
   
   confirm_url = confirm_basestring + confirm_arg
-  log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
+  # log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
 
   ### send request to service and read response
   auth_response = requests.get(confirm_url)
   auth_response_status = auth_response.status_code
   log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
   auth_response_data = auth_response.json()
-  log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
+  # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
 
   ### get role to check value in response
   auth_response_user_role = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
@@ -221,7 +224,8 @@ def backend_configs(collection, doc_id=None):
   log_app.debug("config app route / doc_id : %s", doc_id )
 
   ### target right config collection
-  if collection in ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ] :
+  allowedCollections = ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ]
+  if collection in allowedCollections :
     mongoColl = mongoConfigColls[collection] ### imported from . (and from there from .api.__init__ )
   else :
     log_app.warning("error : -%s- is not a valid config collection (redirect)", collection)
@@ -267,28 +271,85 @@ def backend_configs(collection, doc_id=None):
 
   ### check if token allows user to POST
   # if True : ### only for tests
-  if token != '' :
-    log_app.debug("config app route / checking jwt..." )
+  # if token != '' :
+  #   log_app.debug("config app route / checking jwt..." )
 
   ### TO DO
   if request.method != 'GET':
 
-    if request.method == 'POST':
+    query["_id"] = ObjectId(req_json['doc_id']) 
+    log_app.debug("config app route / !GET / query : \n%s", query )
 
+    if request.method == 'POST':
+      
       log_app.debug("config app route / POST" )
       is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
 
       if is_authorized :
+
+        ### retrieve editionn config 
+        doc_config = req_json['doc_config']
+        doc_data = req_json['doc_data']
+        log_app.debug("config app route / posT / doc_config : \n%s", pformat(doc_config) )
+        
+        ### not editable fields
+        notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version']
+
+        ### check if need for nested field update / f.i. navbar links
+        editSubfield = False
+        if doc_config['type'] == 'blocs_list' : 
+          editSubfield = req_json['doc_subfield'].split('.')
+
+        ### config specifics
+        canAddKey = doc_config.get('canAddKeys', False) 
+        canAddToList = doc_config.get('canAddToList', False) 
+        canModifyKey = doc_config.get('canModifKeys', False) 
+
+        ### retrieve original document
+        configDoc = mongoColl.find_one(query)
+        log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
+
+        ### target fields to update
+        print() 
+        for k, v in doc_data.items() :
+          log_app.debug("config app route / posT / k:v : \n%s", pformat({k:v}) )
+          
+          # directly update field : for type == blocs || docs_list
+          if k not in notAllowedFields and k in [*configDoc] : 
+            configDoc[k] = v
+
+          print() 
+
+        ### update version
+        configDoc['app_version'] = version
+
+        ### save updated doc
+        # mongoColl.save(configDoc)
+
+        log_app.debug("config app route / posT / configDoc edited : \n%s", pformat(configDoc) )
+
+        # return DocOidToString(configDoc)
         return "hello config master / POST ... praise be"
+
       else :
-        return "noooope"
+        return "noooope... you can't edit this mate"
+
+
+
+
+
+
+
 
     elif request.method == 'DELETE':
+
+      allowedCollsForDelete = [ "endpoints" , "routes" ]
 
       log_app.debug("config app route / DELETE" )
       is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
 
       if is_authorized :
+
         return "hello config master / DELETE ... praise be"
       else :
         return "noooope"
