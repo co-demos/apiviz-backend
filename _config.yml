@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   from raw data with the Apiviz eco-sytem"
 twitter_username: jparis_py
 github_username: JulienParis
-repository: "co-demos/apiviz-frontend"
+repository: "co-demos/apiviz-backend"
 search: true 
 
 # Build settings
