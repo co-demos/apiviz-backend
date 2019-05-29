@@ -10,7 +10,7 @@ default_global_config = [
     ### LANGUAGES
       { "field"       : "app_languages",
         "languages"   : ["fr", "en"],
-        "is_multi_lang" : False,
+        "is_multi_lang" : True,
         "locale"      : "fr", 
         "app_version" : version,
         "help"        : u"The languages and default locale for your ApiViz instance",
@@ -23,7 +23,7 @@ default_global_config = [
         "help"        : u"The default dict for your ApiViz instance",
 
         "no_data"        : [{"locale" : "en", "text" : "no data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "non renseigné" }],
-        "reinit_filters" : [{"locale" : "en", "text" : "delete filterrs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Supprimer tous les filtrees" }],
+        "reinit_filters" : [{"locale" : "en", "text" : "delete filters"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Supprimer tous les filtres" }],
         "no_abstract"    : [{"locale" : "en", "text" : "no abstract"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "(Pas de résumé)" }],
         "no_address"     : [{"locale" : "en", "text" : "no address"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pas d'adresse enregistrée" }],
         "no_info"        : [{"locale" : "en", "text" : "no info"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pas d'information" }],
@@ -280,7 +280,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"The default dict for your ApiViz instance",
         "no_data"        : [{"locale" : "en", "text" : "no data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "non renseigné" }],
-        "reinit_filters" : [{"locale" : "en", "text" : "delete filterrs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Supprimer tous les filtrees" }],
+        "reinit_filters" : [{"locale" : "en", "text" : "delete filters"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Supprimer tous les filtres" }],
         "no_abstract"    : [{"locale" : "en", "text" : "no abstract"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "(Pas de résumé)" }],
         "no_address"     : [{"locale" : "en", "text" : "no address"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pas d'adresse enregistrée" }],
         "no_info"        : [{"locale" : "en", "text" : "no info"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pas d'information" }],

@@ -14,6 +14,7 @@ default_app_navbar = [
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/sonum-carto/carte",
         "ui_options"  : {
+          "background_isdark" : False,
           "background_color" : { 
             "bulma_color" : "white"
           },
@@ -108,9 +109,11 @@ default_app_navbar = [
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
         "ui_options"  : {
+          "background_isdark" : False,
           "background_color" : { 
             "bulma_color" : "white"
           },
+
         },
         "links_options" : {
           "extra_buttons" : [ ### for buttons not declared in routes/pages
