@@ -133,13 +133,13 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
         "tab_list"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
+          "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
         },
         "tab_map"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
+          "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
         },
         "tab_stat"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
+          "link_text"  : [ {"locale" : "en", "text" : "charts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
         },
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"  : True
@@ -389,13 +389,13 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
         "tab_list"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
+          "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
         },
         "tab_map"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
+          "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
         },
         "tab_stat"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
+          "link_text"  : [ {"locale" : "en", "text" : "data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
         },
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"  : True

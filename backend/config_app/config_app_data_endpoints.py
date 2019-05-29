@@ -224,11 +224,11 @@ default_data_endpoints_config = [
 
           ],
           "items_found"   : [
-            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" },
+            {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" },
 
           ],
           "reset"   : [
-            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" },
+            {"locale" : "en", "text" : "Reset"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" },
 
           ],
 
@@ -244,43 +244,39 @@ default_data_endpoints_config = [
             { "name"		: u"coding services__",
               "id"      : "filter_1",
               "dataType" : "text",
-              "fullname": u"Modalités d'accompagnement",		
-              "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Modalités d'accompagnement" }],
+              "filter_title" : [{"locale" : "en", "text" : "Coaching methods"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Modalités d'accompagnement" }],
               "choices"	: [
-                {"name" : u"ACC", "fullname" : u"accompagnement", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }]},
-                {"name" : u"FOR", "fullname" : u"formation", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation" }]},
-                {"name" : u"ACL", "fullname" : u"accès libre", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accès libre" }]},
-                # {"name" : u"non", "fullname" : u"aucun", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "aucun" }]},
-                {"name" : u"NR",  "fullname" : u"non renseigné", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "non renseigné" }]},
+                {"name" : u"ACC", "choice_title" : [{"locale" : "en", "text" : "coaching"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }]},
+                {"name" : u"FOR", "choice_title" : [{"locale" : "en", "text" : "training"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation" }]},
+                {"name" : u"ACL", "choice_title" : [{"locale" : "en", "text" : "free access"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accès libre" }]},
+                {"name" : u"NR",  "choice_title" : [{"locale" : "en", "text" : "not specified"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "non renseigné" }]},
               ]
             },
             { "name"		: u"coding jours__",
               "id"      : "filter_2",
               "dataType" : "text",
-              "fullname": u"Jours d'ouverture",		
-              "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jours d'ouverture" }],
+              "filter_title" : [{"locale" : "en", "text" : "Opening days"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jours d'ouverture" }],
               "choices"	: [
-                {"name" : u"lu", "fullname" : u"lundi", "fullname_i" : [{"locale" : "en", "text" : "monday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lundi" }]},
-                {"name" : u"ma", "fullname" : u"mardi", "fullname_i" : [{"locale" : "en", "text" : "tuesday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mardi" }]},
-                {"name" : u"me", "fullname" : u"mercredi", "fullname_i" : [{"locale" : "en", "text" : "wednesday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mercredi" }]},
-                {"name" : u"je", "fullname" : u"jeudi", "fullname_i" : [{"locale" : "en", "text" : "thursday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "jeudi" }]},
-                {"name" : u"ve", "fullname" : u"vendredi", "fullname_i" : [{"locale" : "en", "text" : "friday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "vendredi" }]},
-                {"name" : u"sa", "fullname" : u"samedi", "fullname_i" : [{"locale" : "en", "text" : "saturday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "samedi" }]},
-                {"name" : u"di", "fullname" : u"dimanche", "fullname_i" : [{"locale" : "en", "text" : "sunday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "dimanche" }]},
+                {"name" : u"lu", "choice_title" : [{"locale" : "en", "text" : "monday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lundi" }]},
+                {"name" : u"ma", "choice_title" : [{"locale" : "en", "text" : "tuesday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mardi" }]},
+                {"name" : u"me", "choice_title" : [{"locale" : "en", "text" : "wednesday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mercredi" }]},
+                {"name" : u"je", "choice_title" : [{"locale" : "en", "text" : "thursday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "jeudi" }]},
+                {"name" : u"ve", "choice_title" : [{"locale" : "en", "text" : "friday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "vendredi" }]},
+                {"name" : u"sa", "choice_title" : [{"locale" : "en", "text" : "saturday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "samedi" }]},
+                {"name" : u"di", "choice_title" : [{"locale" : "en", "text" : "sunday"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "dimanche" }]},
               ]
             },
             {	"name"		: u"source__",
               "id"      : "filter_3",
               "dataType" : "text",
-              "fullname" 	: u"Source",		
-              "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Source" }],
+              "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
               "choices"	: [
-                {"name" : u"APTIC",            "fullname" : u"APTIC", "fullname_i" : [{"locale" : "en", "text" : "APTIC"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APTIC" }]},
-                {"name" : u"Gironde",          "fullname" : u"Gironde", "fullname_i" : [{"locale" : "en", "text" : "Gironde"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gironde" }]},
-                {"name" : u"Hauts de France",  "fullname" : u"Hauts de France", "fullname_i" : [{"locale" : "en", "text" : "Hauts de France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hauts de France" }]},
-                {"name" : u"Loire-Atlantique", "fullname" : u"Loire-Atlantique", "fullname_i" : [{"locale" : "en", "text" : "Loire-Atlantique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Loire-Atlantique" }]},
-                {"name" : u"MSAP",             "fullname" : u"MSAP", "fullname_i" : [{"locale" : "en", "text" : "MSAP"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "MSAP" }]},
-                {"name" : u"NetPublic",        "fullname" : u"NetPublic", "fullname_i" : [{"locale" : "en", "text" : "NetPublic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "NetPublic" }]},
+                {"name" : u"APTIC",            "choice_title" : [{"locale" : "en", "text" : "APTIC"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APTIC" }]},
+                {"name" : u"Gironde",          "choice_title" : [{"locale" : "en", "text" : "Gironde"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gironde" }]},
+                {"name" : u"Hauts de France",  "choice_title" : [{"locale" : "en", "text" : "Hauts de France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hauts de France" }]},
+                {"name" : u"Loire-Atlantique", "choice_title" : [{"locale" : "en", "text" : "Loire-Atlantique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Loire-Atlantique" }]},
+                {"name" : u"MSAP",             "choice_title" : [{"locale" : "en", "text" : "MSAP"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "MSAP" }]},
+                {"name" : u"NetPublic",        "choice_title" : [{"locale" : "en", "text" : "NetPublic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "NetPublic" }]},
               ], 
             },
 
@@ -429,13 +425,13 @@ default_data_endpoints_config = [
           "dataset_uri"   : "sonum-xp",
 
           "placeholder"   : [
-            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'une initiative" }
+            {"locale" : "en", "text" : "Enter the name of an initiative"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'une initiative" }
           ],
           "items_found"   : [
-            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "initiatives trouvées" }
+            {"locale" : "en", "text" : "initiatives found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "initiatives trouvées" }
           ],
           "reset"   : [
-            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
+            {"locale" : "en", "text" : "Reset"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
@@ -451,32 +447,30 @@ default_data_endpoints_config = [
             { "name"		: u"type structure__",
               "id"      : "filter_1",
               "dataType" : "text",
-              "fullname": u"Type de structure",
-              "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type de structure" }],
+              "filter_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type de structure" }],
               "choices"	: [
-                {"name" : u"structure publique (CCAS, CIAS, bibliothèque, etc...)", "fullname" : u"structure publique", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "structure publique" }]},
-                {"name" : u"collectivité territoriale/EPCI",                        "fullname" : u"collectivité territoriale/EPCI", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "collectivité territoriale/EPCI" }]},
+                {"name" : u"structure publique (CCAS, CIAS, bibliothèque, etc...)", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "structure publique" }]},
+                {"name" : u"collectivité territoriale/EPCI",                        "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "collectivité territoriale/EPCI" }]},
 
               ]
             },
             { "name"		: u"thématique__",
               "id"      : "filter_2",
               "dataType" : "text",
-              "fullname": u"Thématique",	
-              "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématique" }],
+              "filter_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématique" }],
               "choices"	: [
-                {"name" : u"INCNUM", "fullname" : u"inclusion numérique", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "inclusion numérique" }]},
-                {"name" : u"DEMPAR", "fullname" : u"démocratie participative", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "démocratie participative" }]},
-                {"name" : u"FORNUM", "fullname" : u"formation aux métiers du numérique", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation aux métiers du numérique" }]},
-                {"name" : u"POLOUV", "fullname" : u"politique d'ouverture des données", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "politique d'ouverture des données" }]},
-                {"name" : u"MEDNUM", "fullname" : u"médiation numérique", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "médiation numérique" }]},
-                {"name" : u"FORAGP", "fullname" : u"formation d'agents publics", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation d'agents publics" }]},
-                {"name" : u"TERINT", "fullname" : u"territoire intelligent", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "territoire intelligent" }]},
-                {"name" : u"CULNUM", "fullname" : u"culture numérique", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "culture numérique" }]},
-                {"name" : u"TIELIE", "fullname" : u"tiers lieux", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "tiers lieux" }]},
-                {"name" : u"COMMUN", "fullname" : u"communs numériques", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "communs numériques" }]},
-                {"name" : u"DATLIT", "fullname" : u"data literacy", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "data literacy" }]},
-                {"name" : u"AUTRES", "fullname" : u"autre", "fullname_i" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "autre" }]},
+                {"name" : u"INCNUM", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "inclusion numérique" }]},
+                {"name" : u"DEMPAR", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "démocratie participative" }]},
+                {"name" : u"FORNUM", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation aux métiers du numérique" }]},
+                {"name" : u"POLOUV", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "politique d'ouverture des données" }]},
+                {"name" : u"MEDNUM", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "médiation numérique" }]},
+                {"name" : u"FORAGP", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation d'agents publics" }]},
+                {"name" : u"TERINT", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "territoire intelligent" }]},
+                {"name" : u"CULNUM", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "culture numérique" }]},
+                {"name" : u"TIELIE", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "tiers lieux" }]},
+                {"name" : u"COMMUN", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "communs numériques" }]},
+                {"name" : u"DATLIT", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "data literacy" }]},
+                {"name" : u"AUTRES", "choice_title" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "autre" }]},
               ]
             },
 
@@ -827,13 +821,13 @@ default_data_endpoints_config = [
         "dataset_uri"   : "cis",
 
         "placeholder"   : [
-          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
+          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
         ],
         "items_found"   : [
-          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" }
+          {"locale" : "en", "text" : "projects found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "projets trouvés" }
         ],
         "reset"   : [
-          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
+          {"locale" : "en", "text" : "Reset"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
@@ -848,52 +842,52 @@ default_data_endpoints_config = [
           { "name"		: u"coding services__", # TODO
             "id"      : "filter_1",
             "dataType" : "text",
-            "fullname": u"Domaines",
+            "filter_title" : [{"locale" : "en", "text" : "Domains"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Domaines" }],
             "choices"	: [
-              {"name" : u"CV", "fullname" : u"Cadre de vie"},
-              {"name" : u"DD", "fullname" : u"Développement durable"},
-              {"name" : u"DE", "fullname" : u"Développement économique"},
-              {"name" : u"HA", "fullname" : u"Habitat"},
-              {"name" : u"IN", "fullname" : u"Inclusion"},
-              {"name" : u"LS", "fullname" : u"Lien social"},
-              {"name" : u"SS", "fullname" : u"Santé et sport"},
-              {"name" : u"TR", "fullname" : u"Travail"},
+              {"name" : u"CV", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cadre de vie" }]},
+              {"name" : u"DD", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développement durable" }]},
+              {"name" : u"DE", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développement économique" }]},
+              {"name" : u"HA", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Habitat" }]},
+              {"name" : u"IN", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Inclusion" }]},
+              {"name" : u"LS", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lien social" }]},
+              {"name" : u"SS", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Santé et sport" }]},
+              {"name" : u"TR", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Travail" }]},
               # {"name" : u"non", "fullname" : u"aucun"},
             ]
           },
           { "name"		: u"coding audience__", # TODO
             "id"      : "filter_2",
             "dataType" : "text",
-            "fullname": u"Publics",
+            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
             "choices"	: [
-              {"name" : u"ha", "fullname" : u"Handicap"},
-              {"name" : u"je", "fullname" : u"Jeunesse"},
-              {"name" : u"se", "fullname" : u"Seniors"},
+              {"name" : u"ha", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Handicap" }]},
+              {"name" : u"je", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jeunesse" }]},
+              {"name" : u"se", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Seniors" }]},
             ]
           },
           {	"name"		: u"source__", # TODO
             "id"      : "filter_3",
             "dataType" : "text",
-            "fullname" 	: u"Source",
+            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Source" }],
             "choices"	: [
-              {"name" : u"AG2R La mondiale", "fullname" : u"AG2R La mondiale"},
-              {"name" : u"Apriles",          "fullname" : u"Apriles"},
-              {"name" : u"Avise",            "fullname" : u"Avise"},
-              {"name" : u"Banque des territoires", "fullname" : u"Banque des territoires"},
-              {"name" : u"Bleu Blanc Zèbre", "fullname" : u"Bleu Blanc Zèbre"},
-              {"name" : u"Bretagne Créative", "fullname" : u"Bretagne Créative"},
-              {"name" : u"Coorace",          "fullname" : "Coorace"},
-              {"name" : u"Fondation la France s’engage", "fullname" : "Fondation la France s’engage"},
-              {"name" : u"Fondation Veolia", "fullname" : "Fondation Veolia"},
-              {"name" : u"Lab Innovation et Territoires", "fullname" : u"Lab Innovation et Territoires"},
-              {"name" : u"My Positive Impact", "fullname" : u"My Positive Impact"},
-              {"name" : u"Nov Impact",        "fullname" : u"Nov Impact"},
-              {"name" : u"Prix de l’innovation périurbaine", "fullname" : u"Prix de l’innovation périurbaine"},
-              {"name" : u"Réseau Rural",      "fullname" : u"Réseau Rural"},
-              {"name" : u"Ronalpia",          "fullname" : u"Ronalpia"},
-              {"name" : u"Semeoz",            "fullname" : u"Semeoz"},
-              {"name" : u"Solidarum",         "fullname" : u"Solidarum"},
-              {"name" : u"UNCCAS",            "fullname" : u"UNCCAS"},
+              {"name" : u"AG2R La mondiale", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "AG2R La mondiale" }]},
+              {"name" : u"Apriles",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Apriles" }]},
+              {"name" : u"Avise",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Avise" }]},
+              {"name" : u"Banque des territoires", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Banque des territoires" }]},
+              {"name" : u"Bleu Blanc Zèbre",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bleu Blanc Zèbre" }]},
+              {"name" : u"Bretagne Créative", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bretagne Créative" }]},
+              {"name" : u"Coorace",           "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Coorace" }]},
+              {"name" : u"Fondation la France s’engage", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation la France s’engage" }]},
+              {"name" : u"Fondation Veolia",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation Veolia" }]},
+              {"name" : u"Lab Innovation et Territoires", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lab Innovation et Territoires" }]},
+              {"name" : u"My Positive Impact",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "My Positive Impact" }]},
+              {"name" : u"Nov Impact",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nov Impact" }]},
+              {"name" : u"Prix de l’innovation périurbaine", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Prix de l’innovation périurbaine" }]},
+              {"name" : u"Réseau Rural",      "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Réseau Rural" }]},
+              {"name" : u"Ronalpia",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ronalpia" }]},
+              {"name" : u"Semeoz",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Semeoz" }]},
+              {"name" : u"Solidarum",         "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Solidarum" }]},
+              {"name" : u"UNCCAS",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "UNCCAS" }]},
             ],
           },
 

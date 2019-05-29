@@ -14,47 +14,9 @@ default_app_footer = [
         "template_url"      : None,
         "is_dynamic"        : True,
         "dynamic_template"  : 'DynamicFooter',
+
         "has_credits_footer": True,
         "credits_footer_url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/footer-mednum.html",
-        "active_columns"    : [
-          'block_left', 
-          'block_center_left', 
-          'block_center_right',
-          'block_right'
-        ],
-
-        "contents_fields" : {
-
-          "block_left"  : [
-            { 
-              "is_visible"  : False, 
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
-              "position"    : "block_top_left", 
-            }
-          ],
-          "block_center_left" : [
-            { 
-              "is_visible"  : False, 
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sites publics", "is_visible" : False}],
-              "position"    : "block_top_middle", 
-            }
-          ],
-          "block_center_right" : [
-            { 
-              "is_visible"  : False, 
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sites publics", "is_visible" : False}],
-              "position"    : "block_top_middle", 
-            }
-          ],
-          "block_right" : [
-            { 
-              "is_visible"  : False, 
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
-              "position"    : "block_top_right", 
-            }
-          ],
-
-        },
 
         "ui_options" : {
 
@@ -75,6 +37,7 @@ default_app_footer = [
 
           "block_left" : {
             "is_visible"  : False,
+            "has_socials" : False,
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
@@ -82,8 +45,9 @@ default_app_footer = [
 
           "block_center_left" : {
             "is_visible"  : True,
+            "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "French Digital Agency"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique", "is_visible" : False}],
             "links"       : [
 
               { "is_visible" : True, 
@@ -91,32 +55,33 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "French Digital Agency"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.francethd.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission France Très Haut Débit" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Mission France Très Haut Débit"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission France Très Haut Débit" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.lafrenchtech.com/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission French Tech" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Mission French Tech"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission French Tech" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
             ]
           },
 
           "block_center_right" : {
             "is_visible"  : True,
+            "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Digital Society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
             "links"       : [
 
               { "is_visible" : True, 
@@ -124,56 +89,64 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://societenumerique.gouv.fr/presse/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Presse" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Press"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Presse" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "kit d'intervention rapide" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Quick intervention toolkit"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "kit d'intervention rapide" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Plateforme des Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://societenumerique.gouv.fr/mentions-legales/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mentions légales" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mentions légales" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://societenumerique.gouv.fr/accessibilite/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accessibilité" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Accessibility"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accessibilité" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+              },
+              { "is_visible" : True, 
+                "link_to"    : "",
+                "is_external_link" : False,
+                "link_type"  : "divider",
+                "icon_class" : "", 
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "todo" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "todo" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }] 
+                "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
+                "tooltip"    : [{"locale" : "en", "text" : "check the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }] 
               },
               # { "is_visible" : True, 
               #   "link_to"    : "/apiviz/outils",
@@ -188,8 +161,8 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "admin" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "se connecter au back-office" }] 
+                "link_text"  : [{"locale" : "en", "text" : "login - admin"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "login - admin" }],
+                "tooltip"    : [{"locale" : "en", "text" : "connect to back office"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "se connecter au back-office" }] 
               },
               # { "is_visible" : False, 
               #   "link_to"    : "/register",
@@ -204,8 +177,9 @@ default_app_footer = [
 
           "block_right" : {
             "is_visible"  : True,
+            "has_socials" : True,
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
             "links"       : [
 
               { "is_visible" : True, 
@@ -213,40 +187,40 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "gouvernement.fr" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "gouvernement.fr"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "gouvernement.fr" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.service-public.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "service-public.fr" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "service-public.fr"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "service-public.fr" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.legifrance.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "legifrance.fr" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "legifrance.fr"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "legifrance.fr" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.elysee.fr",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "elysee.fr" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "elysee.fr"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "elysee.fr" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
                 "link_to"    : "https://www.data.gouv.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "data.gouv.fr" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
+                "link_text"  : [{"locale" : "en", "text" : "data.gouv.fr"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "data.gouv.fr" }],
+                "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
             ]
           },
@@ -267,40 +241,6 @@ default_app_footer = [
         "dynamic_template"  : 'DynamicFooter',
         "has_credits_footer": True,
         "credits_footer_url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/footer-mednum.html",
-        "active_columns"    : ['block_left', 'block_center_left', 'block_center_right','block_right'],
-
-        "contents_fields" : {
-
-          "block_left"  : [
-            {
-              "is_visible"  : False,
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
-              "position"    : "block_top_left",
-            }
-          ],
-          "block_center_left" : [
-            {
-              "is_visible"  : False,
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sites publics", "is_visible" : False}],
-              "position"    : "block_top_middle",
-            }
-          ],
-          "block_center_right" : [
-            {
-              "is_visible"  : False,
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sites publics", "is_visible" : False}],
-              "position"    : "block_top_middle",
-            }
-          ],
-          "block_right" : [
-            {
-              "is_visible"  : False,
-              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
-              "position"    : "block_top_right",
-            }
-          ],
-
-        },
 
         "ui_options" : {
 
@@ -321,6 +261,7 @@ default_app_footer = [
 
           "block_left" : {
             "is_visible"  : False,
+            "has_socials" : False,
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
@@ -328,8 +269,9 @@ default_app_footer = [
 
           "block_center_left" : {
             "is_visible"  : True,
+            "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Carrefour des Innovations Sociales", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Social Innovations Crossroads"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Carrefour des Innovations Sociales", "is_visible" : False}],
             "links"       : [
 
               { "is_visible" : True,
@@ -337,58 +279,61 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui sommes-nous ?" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+                "link_text"  : [{"locale" : "en", "text" : "Who are we"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui sommes-nous ?" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
                 "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+                "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
             ]
           },
 
           "block_center_right" : {
             "is_visible"  : False,
+            "has_socials" : False,
+            
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Digital society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
             "links"       : [
               { "is_visible" : True,
                 "link_to"    : "/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
+                "link_text"  : [{"locale" : "en", "text" : "Palteforme des territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
+                "tooltip"    : [{"locale" : "en", "text" : "check the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
               },
               { "is_visible" : True,
                 "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
+                "link_text"  : [{"locale" : "en", "text" : "source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
+                "tooltip"    : [{"locale" : "en", "text" : "access to the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
               },
               { "is_visible" : True,
                 "link_to"    : "/apiviz/outils",
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "outils open source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
+                "link_text"  : [{"locale" : "en", "text" : "open source tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "outils open source" }],
+                "tooltip"    : [{"locale" : "en", "text" : "access to the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
               },
             ]
           },
 
           "block_right" : {
             "is_visible"  : True,
+            "has_socials" : True,
+            
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
             "links"       : [
-
             ]
           },
 
