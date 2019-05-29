@@ -30,8 +30,8 @@ default_routes_config = [
           "position"   : "middle_left",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -74,8 +74,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -113,8 +113,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -195,9 +195,9 @@ default_routes_config = [
           "ui_options"        : {
             "card_color"    : { "value" : None, "default" : "white", },
             "text_color"    : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -205,21 +205,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : False,
             "position"    : "block_bottom_1",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_data_infos" : {
             "is_visible"  : False,
             "position"    : "block_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_share" : {
             "is_visible"  : False,
             "position"    : "block_bottom_3",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
@@ -251,8 +251,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -327,9 +327,9 @@ default_routes_config = [
           "ui_options" : {
             "card_color"    : { "value" : None, "default" : "white", },
             "text_color"    : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -337,21 +337,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : False,
             "position"    : "block_bottom_1",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_data_infos" : {
             "is_visible"  : False,
             "position"    : "block_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_share" : {
             "is_visible"  : False,
             "position"    : "block_bottom_3",
-            "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
             "links"       : []
             },
 
@@ -382,8 +382,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -463,12 +463,12 @@ default_routes_config = [
             { "field" : "services",
               "is_visible" : True,
               "position" : "block_services",
-              "title_block" : [{ "locale" : "fr", "text" : "Services proposés", "is_visible" : False }],
+              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services proposés", "is_visible" : False }],
             },
             { "field" : "infos pratiques",
               "is_visible" : True,
               "position" : "block_infos_pract",
-              "title_block" : [{ "locale" : "fr", "text" : "Informations pratiques", "is_visible" : False }],
+              "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Informations pratiques", "is_visible" : False }],
             },
 
           ],
@@ -481,9 +481,9 @@ default_routes_config = [
           "ui_options"        : {
             "card_color"     : { "value" : None, "default" : "white", },
             "text_color"     : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : False, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : False, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -491,21 +491,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : True,
             "position"    : "block_left_middle_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : [
               { "field" : "website",
                 "is_visible" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "fr", "text" : "website" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "voir le site" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "website" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
               },
               { "field" : "contact",
                 "is_visible" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "fr", "text" : "contact" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "contacter la structure" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contact" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contacter la structure" }]
               },
             ]
             },
@@ -513,28 +513,28 @@ default_routes_config = [
             "block_share" : {
             "is_visible"  : True,
             "position"    : "block_left_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
             "links"       : [
               {
                 "is_visible" : True,
                 "link_type"  : "icon",
                 "icon_class" : "fas fa-link",
-                "link_text"  : [{"locale" : "fr", "text" : "lien" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lien" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
               },
               {
                 "is_visible" : True,
                 "link_type"  : "icon",
                 "icon_class" : "fab fa-facebook-f",
-                "link_text"  : [{"locale" : "fr", "text" : "facebook" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "partager sur facebook" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "facebook" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur facebook" }]
               },
               {
                 "is_visible" : True,
                 "link_type"  : "icon",
                 "icon_class" : "fab fa-twitter",
-                "link_text"  : [{"locale" : "fr", "text" : "twitter" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "partager sur twitter" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "twitter" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur twitter" }]
               },
             ]
             },
@@ -568,8 +568,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher une expérience" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher une expérience" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -632,9 +632,9 @@ default_routes_config = [
           "ui_options"        : {
             "card_color"    : { "value" : None, "default" : "white", },
             "text_color"    : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -642,21 +642,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : False,
             "position"    : "block_bottom_1",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_data_infos" : {
             "is_visible"  : False,
             "position"    : "block_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_share" : {
             "is_visible"  : False,
             "position"    : "block_bottom_3",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
@@ -687,8 +687,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher une expérience" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher une expérience" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -751,9 +751,9 @@ default_routes_config = [
           "ui_options" : {
             "card_color"    : { "value" : None, "default" : "white", },
             "text_color"    : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -761,21 +761,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : False,
             "position"    : "block_bottom_1",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_data_infos" : {
             "is_visible"  : False,
             "position"    : "block_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : []
             },
 
             "block_share" : {
             "is_visible"  : False,
             "position"    : "block_bottom_3",
-            "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
             "links"       : []
             },
 
@@ -806,8 +806,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher une expérience" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher une expérience" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -972,9 +972,9 @@ default_routes_config = [
           "ui_options"        : {
             "card_color"     : { "value" : None, "default" : "white", },
             "text_color"     : { "value" : None, "default" : "black", },
-            "link_to_detail"   : { "is_visible" : False, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-            "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-            "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+            "link_to_detail"   : { "is_visible" : False, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
           "links_options"  : {
@@ -982,21 +982,21 @@ default_routes_config = [
             "block_contents_links" : {
             "is_visible"  : True,
             "position"    : "block_left_middle_2",
-            "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
             "links"       : [
               { "field" : "website",
                 "is_visible" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "fr", "text" : "website" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "voir le site" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "website" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
               },
               { "field" : "contact",
                 "is_visible" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "fr", "text" : "contact" }],
-                "tooltip"    : [{"locale" : "fr", "text" : "contacter la structure" }]
+                "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contact" }],
+                "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contacter la structure" }]
               },
             ]
             },
@@ -1004,28 +1004,28 @@ default_routes_config = [
             "block_share" : {
             "is_visible"  : True,
             "position"    : "block_left_bottom_2",
-            "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
             "links"       : [
                 {
                   "is_visible" : True,
                   "link_type"  : "icon",
                   "icon_class" : "fas fa-link",
-                  "link_text"  : [{"locale" : "fr", "text" : "lien" }],
-                  "tooltip"    : [{"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
+                  "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lien" }],
+                  "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
                 },
                 {
                   "is_visible" : True,
                   "link_type"  : "icon",
                   "icon_class" : "fab fa-facebook-f",
-                  "link_text"  : [{"locale" : "fr", "text" : "facebook" }],
-                  "tooltip"    : [{"locale" : "fr", "text" : "partager sur facebook" }]
+                  "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "facebook" }],
+                  "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur facebook" }]
                 },
                 {
                   "is_visible" : True,
                   "link_type"  : "icon",
                   "icon_class" : "fab fa-twitter",
-                  "link_text"  : [{"locale" : "fr", "text" : "twitter" }],
-                  "tooltip"    : [{"locale" : "fr", "text" : "partager sur twitter" }]
+                  "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "twitter" }],
+                  "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur twitter" }]
                 },
               ]
             },
@@ -1055,8 +1055,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -1089,8 +1089,8 @@ default_routes_config = [
             "position"   : "middle_right",
             "link_type"  : "link",
             "icon_class" : "",
-            "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
           },
 
           "in_footer"         : False,
@@ -1131,8 +1131,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "button",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1171,8 +1171,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "button",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : True,
@@ -1208,8 +1208,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -1356,7 +1356,35 @@ default_routes_config = [
         "is_default"        : True
       },
 
+      { "field"             : "app_preferences",
+        "is_global_app_homepage" : False,
+        "route_title"       : u"preferences",
+        "route_description" : u"apiviz default user preferences page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : ""
+        },
 
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : False,
+        "urls"              : ["/preferences"],
+        "template_url"      : "",
+        "help"              : u"default preferences page for Apiviz",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main user preferences route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "Preferences",
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "is_default"        : True
+      },
 
 
 
@@ -1385,8 +1413,8 @@ default_routes_config = [
           "position"   : "middle_left",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1431,8 +1459,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1515,9 +1543,9 @@ default_routes_config = [
         "ui_options"        : {
           "card_color"    : { "value" : None, "default" : "white", },
           "text_color"    : { "value" : None, "default" : "black", },
-          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
         "links_options"  : {
@@ -1525,21 +1553,21 @@ default_routes_config = [
           "block_contents_links" : {
           "is_visible"  : False,
           "position"    : "block_bottom_1",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : []
           },
 
           "block_data_infos" : {
           "is_visible"  : False,
           "position"    : "block_bottom_2",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : []
           },
 
           "block_share" : {
           "is_visible"  : False,
           "position"    : "block_bottom_3",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : []
           },
 
@@ -1571,8 +1599,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1648,9 +1676,9 @@ default_routes_config = [
         "ui_options" : {
           "card_color"    : { "value" : None, "default" : "white", },
           "text_color"    : { "value" : None, "default" : "black", },
-          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
         "links_options"  : {
@@ -1658,21 +1686,21 @@ default_routes_config = [
           "block_contents_links" : {
           "is_visible"  : False,
           "position"    : "block_bottom_1",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : []
           },
 
           "block_data_infos" : {
           "is_visible"  : False,
           "position"    : "block_bottom_2",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : []
           },
 
           "block_share" : {
           "is_visible"  : False,
           "position"    : "block_bottom_3",
-          "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
           "links"       : []
           },
 
@@ -1704,8 +1732,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1768,7 +1796,7 @@ default_routes_config = [
           { "field"       : "tags",
             "is_visible"  : True,
             "position"    : "block_right_bottom_1",
-            "title_block" : [{ "locale" : "fr", "text" : "Tags", "is_visible" : True }],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tags", "is_visible" : True }],
           },
 
         ],
@@ -1781,9 +1809,9 @@ default_routes_config = [
         "ui_options"        : {
           "card_color"     : { "value" : None, "default" : "white", },
           "text_color"     : { "value" : None, "default" : "black", },
-          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "fr", "text" : "voir le document" }] },
-          "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir prochain document" }] },
-          "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "fr", "text" : "voir le document précédent" }] },
+          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+          "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+          "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
         "links_options"  : {
@@ -1791,21 +1819,21 @@ default_routes_config = [
           "block_contents_links" : {
           "is_visible"  : True,
           "position"    : "block_left_middle_2",
-          "title_block" : [{ "locale" : "fr", "text" : "", "is_visible" : False}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
           "links"       : [
             { "field" : "website",
               "is_visible" : True,
               "link_type"  : "text",
               "icon_class" : "",
-              "link_text"  : [{"locale" : "fr", "text" : "website" }],
-              "tooltip"    : [{"locale" : "fr", "text" : "voir le site" }]
+              "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "website" }],
+              "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
             },
             { "field" : "contact",
               "is_visible" : True,
               "link_type"  : "text",
               "icon_class" : "",
-              "link_text"  : [{"locale" : "fr", "text" : "contact" }],
-              "tooltip"    : [{"locale" : "fr", "text" : "contacter la structure" }]
+              "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contact" }],
+              "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contacter la structure" }]
             },
           ]
           },
@@ -1813,28 +1841,28 @@ default_routes_config = [
           "block_share" : {
           "is_visible"  : True,
           "position"    : "block_left_bottom_2",
-          "title_block" : [{ "locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
+          "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
           "links"       : [
             {
               "is_visible" : True,
               "link_type"  : "icon",
               "icon_class" : "fas fa-link",
-              "link_text"  : [{"locale" : "fr", "text" : "lien" }],
-              "tooltip"    : [{"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
+              "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lien" }],
+              "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
             },
             {
               "is_visible" : True,
               "link_type"  : "icon",
               "icon_class" : "fab fa-facebook-f",
-              "link_text"  : [{"locale" : "fr", "text" : "facebook" }],
-              "tooltip"    : [{"locale" : "fr", "text" : "partager sur facebook" }]
+              "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "facebook" }],
+              "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur facebook" }]
             },
             {
               "is_visible" : True,
               "link_type"  : "icon",
               "icon_class" : "fab fa-twitter",
-              "link_text"  : [{"locale" : "fr", "text" : "twitter" }],
-              "tooltip"    : [{"locale" : "fr", "text" : "partager sur twitter" }]
+              "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "twitter" }],
+              "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur twitter" }]
             },
           ]
           },
@@ -1868,8 +1896,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1911,8 +1939,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "button",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -1949,8 +1977,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -1991,8 +2019,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "button",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : False,
@@ -2031,8 +2059,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "button",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "Rechercher" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
         "in_footer"         : True,
@@ -2068,8 +2096,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -2106,8 +2134,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -2144,8 +2172,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -2183,8 +2211,8 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "fr", "text" : "" }],
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
         },
 
         "in_footer"         : True,
@@ -2330,7 +2358,35 @@ default_routes_config = [
         "is_default"        : True
       },
 
+      { "field"             : "app_preferences",
+        "is_global_app_homepage" : False,
+        "route_title"       : u"preferences",
+        "route_description" : u"apiviz default user preferences page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : ""
+        },
 
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : False,
+        "urls"              : ["/preferences"],
+        "template_url"      : "",
+        "help"              : u"default preferences page for Apiviz",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main user preferences route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "Preferences",
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "is_default"        : True
+      },
 
 
 ]

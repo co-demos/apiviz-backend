@@ -220,13 +220,16 @@ default_data_endpoints_config = [
           "dataset_uri"   : "sonum-carto",
 
           "placeholder"   : [
-            {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" },
+
           ],
           "items_found"   : [
-            {"locale" : "fr", "text" : "lieux trouvés" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" },
+
           ],
           "reset"   : [
-            {"locale" : "fr", "text" : "Effacer" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" },
+
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
@@ -423,13 +426,13 @@ default_data_endpoints_config = [
           "dataset_uri"   : "sonum-xp",
 
           "placeholder"   : [
-            {"locale" : "fr", "text" : "Tapez le nom d'une initiative" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'une initiative" }
           ],
           "items_found"   : [
-            {"locale" : "fr", "text" : "initiatives trouvées" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "initiatives trouvées" }
           ],
           "reset"   : [
-            {"locale" : "fr", "text" : "Effacer" }
+            {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
@@ -819,13 +822,13 @@ default_data_endpoints_config = [
         "dataset_uri"   : "cis",
 
         "placeholder"   : [
-          {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
+          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
         ],
         "items_found"   : [
-          {"locale" : "fr", "text" : "lieux trouvés" }
+          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" }
         ],
         "reset"   : [
-          {"locale" : "fr", "text" : "Effacer" }
+          {"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Effacer" }
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
