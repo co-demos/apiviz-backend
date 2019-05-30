@@ -421,18 +421,24 @@ def backend_configs(collection, doc_id=None):
 @app.route('/backend/api/get_default_models', methods=['GET'])
 def get_default_models():
   """
-  Main route GET to get Apiviz uuids defined as default
+  Main route GET to get Apiviz uuids defined as usable models
   """
 
   print ("")
   log_app.debug("create_new_config")
   log_app.debug("create_new_config / method : %s", request.method )
+  
+  only_default = request.args.get('only_default', default=False, type=bool)
 
   models = None 
 
   ### check if uuid is new and not already used
   globalColl = mongoConfigColls['global']
-  query = {'is_default' : True, 'can_be_used_as_model' : True }
+
+  if only_default : 
+    query = {'is_default' : True, 'can_be_used_as_model' : True }
+  else :
+    query = {'can_be_used_as_model' : True }
 
   results = list(globalColl.find(query, {'_id': 0 }))
 

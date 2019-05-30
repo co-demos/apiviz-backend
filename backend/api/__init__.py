@@ -60,7 +60,7 @@ log_app.debug(">>> MongoDB / mongoColls.keys() : \n %s", pformat( mongoColls.key
 ### - - - - - - - - - - - - - - - - - - - - - - - - - - - - ###
 ### CREATE DEFAULT GLOBAL CONFIG IF COLLECTION IS EMPTY
 ### - - - - - - - - - - - - - - - - - - - - - - - - - - - - ###
-def setupDefaultConfig(collection, defaultList, uniqueField="field") :
+def setupDefaultConfig(collection, defaultList) :
   """ 
   main function to set up config collections
   """
@@ -71,22 +71,9 @@ def setupDefaultConfig(collection, defaultList, uniqueField="field") :
   ### set up 
   for config_app_item in defaultList : 
     
-    # print ("- - - "*10 )
-    # log_app.debug(">>> config_item : \n%s", pformat(config_app_item)) 
     collection.insert(config_app_item)
 
-    # current_app_config_item = collection.find_one({ uniqueField : config_app_item[ uniqueField ] })
-    # log_app.debug(">>> current_app_config_item : \n%s", pformat(current_app_config_item))
-    
-    # if current_app_config_item == None : 
-      # log_app.debug(">>> current_app_config_item is None --> add : %s", config_app_item[uniqueField])
-      # collection.insert(config_app_item)
-
-    # else : 
-      # if current_app_config_item["is_default"] : 
-        # log_app.debug(">>> current_app_config_item is default --> update : %s", current_app_config_item[uniqueField])
-        # current_app_config_item_id = current_app_config_item["_id"]
-        # collection.replace_one( {"_id": current_app_config_item_id}, config_app_item )
+### - - - - - - - - - - - - - - - - - - - - - - - - - - - - ###
 
 from backend.config_app.config_app_global         import default_global_config
 from backend.config_app.config_app_navbar         import default_app_navbar
@@ -99,28 +86,13 @@ from backend.config_app.config_app_socials        import default_socials_config
 
 ### retrieve default config for every collection
 existing_app_config             = list( mongo_config_global.find({}) )
-# log_app.debug(">>> existing_app_config : \n%s \n", pformat(existing_app_config))
-
 existing_app_navbar_config      = list( mongo_config_navbar.find({}) )
-# log_app.debug(">>> existing_app_config : \n%s \n", pformat(existing_app_navbar_config))
-
-existing_app_tabs_config      = list( mongo_config_tabs.find({}) )
-# log_app.debug(">>> existing_app_config : \n%s \n", pformat(existing_app_tabs_config))
-
-existing_data_endpoints_config   = list( mongo_config_data_endpoints.find({}) )
-# log_app.debug(">>> existing_data_endpoints_config : \n%s \n", pformat(existing_data_endpoints_config))
-
-existing_app_styles_config       = list( mongo_config_app_styles.find({}) )
-# log_app.debug(">>> existing_app_styles_config : \n%s \n", pformat(existing_app_styles_config))
-
-existing_routes_config           = list( mongo_config_routes.find({}) )
-# log_app.debug(">>> existing_routes_config : \n%s \n", pformat(existing_routes_config))
-
+existing_app_tabs_config        = list( mongo_config_tabs.find({}) )
+existing_data_endpoints_config  = list( mongo_config_data_endpoints.find({}) )
+existing_app_styles_config      = list( mongo_config_app_styles.find({}) )
+existing_routes_config          = list( mongo_config_routes.find({}) )
 existing_app_footer_config      = list( mongo_config_footer.find({}) )
-# log_app.debug(">>> existing_app_config : \n%s \n", pformat(existing_app_footer_config))
-
 existing_socials_config         = list( mongo_config_socials.find({}) )
-# log_app.debug(">>> existing_socials_config : \n%s \n", pformat(existing_socials_config))
 
 ### setup every collection with default
 setupDefaultConfig( mongo_config_global,           default_global_config )
@@ -131,7 +103,6 @@ setupDefaultConfig( mongo_config_app_styles,       default_app_styles_config )
 setupDefaultConfig( mongo_config_routes,           default_routes_config )
 setupDefaultConfig( mongo_config_footer,           default_app_footer )
 setupDefaultConfig( mongo_config_socials,          default_socials_config )
-
 
 
 def backup_mongo_collection(coll, filepath) :
@@ -147,46 +118,7 @@ def backup_mongo_collection(coll, filepath) :
     backup_file.write(',')
   backup_file.write(']')
 
-
-
 print 
-
-
-
-# create fields in user documents if fields doesn't exit yet
-# mongo_users.update_many({'verified_as_partner'  : {"$exists" : False}}, {"$set": {'verified_as_partner'  : 'no'}})
-# mongo_users.update_many({'created_at'      : {"$exists" : False}}, {"$set": {'created_at'      : datetime.datetime.now() }})
-# mongo_users.update_many({'last_modified_by'    : {"$exists" : False}}, {"$set": {'last_modified_by'  : "system" }})
-# mongo_users.update_many({'login_last_at'    : {"$exists" : False}}, {"$set": {'login_last_at'    : datetime.datetime.now() }})
-# mongo_users.update_many({'logins_total'      : {"$exists" : False}}, {"$set": {'logins_total'    : 1 }})
-# mongo_users.update_many({'follow_up_user'    : {"$exists" : False}}, {"$set": {'follow_up_user'    : "- suivi des échanges avec l'utilisateur -" }})
-
-# mongo_users.update_many({'follow_up_user'    : {"$exists" : False}}, {"$set": {'follow_up_user'    : "- suivi des échanges avec l'utilisateur -" }})
-# mongo_users.update_many({'userNewsletter'    : {"$exists" : False}}, {"$set": {'userNewsletter'    : True }})
-
-# for user in mongo_users.find({}):
-#   # mod_doc = modify_doc(doc)
-#   user['userName']  = user['userName'].capitalize()
-#   user['userSurname'] = user['userSurname'].capitalize()
-#   mongo_users.save(user)
-
-
-# create fields in feedback documents if fields doesn't exit yet
-# note : files created are ignored by .gitignore
-# mongo_feedbacks.update_many({'created_at'      : {"$exists" : False}}, {"$set": {'created_at'      : datetime.datetime.today() }})
-# mongo_feedbacks.update_many({'follow_up_feedback'  : {"$exists" : False}}, {"$set": {'follow_up_feedback'  : "- suivi du message de l'utilisateur -" }})
-
-# for user in mongo_feedbacks.find({}):
-#   # mod_doc = modify_doc(doc)
-#   user['userName']  = user['userName'].capitalize()
-#   user['userSurname'] = user['userSurname'].capitalize()
-#   mongo_feedbacks.save(user)
-
-### TEMPORARY FUNCTIONS FOR CLEANING WHILE DEVELOPPING
-### WARNING : COMMENT THIS BEFORE PUSHING TO PROD
-# mongo_users.update_many({}, {"$set": { "last_modified_by": "" } } )
-# mongo_users.update_many({}, {"$unset": { "userCreatedAt":1 } } )
-# mongo_users.update_many({}, {"$unset": { "userLastModifiedAt":1 } } )
 
 
 # backup all collections when restart in ./_backups_collections
