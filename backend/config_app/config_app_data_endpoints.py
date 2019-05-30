@@ -246,7 +246,7 @@ default_data_endpoints_config = [
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Coaching methods"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Modalités d'accompagnement" }],
               "choices"	: [
-                {"name" : u"ACC", "choice_title" : [{"locale" : "en", "text" : "coaching"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }]},
+                {"name" : u"ACC", "choice_title" : [{"locale" : "en", "text" : "coaching"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accompagnement" }]},
                 {"name" : u"FOR", "choice_title" : [{"locale" : "en", "text" : "training"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "formation" }]},
                 {"name" : u"ACL", "choice_title" : [{"locale" : "en", "text" : "free access"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accès libre" }]},
                 {"name" : u"NR",  "choice_title" : [{"locale" : "en", "text" : "not specified"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "non renseigné" }]},
