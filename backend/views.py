@@ -414,6 +414,205 @@ def backend_configs(collection, doc_id=None):
     } )
 
 
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+### NEW CONFIG CREATION - BACKEND API
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+@app.route('/backend/api/get_default_models', methods=['GET'])
+def get_default_models():
+  """
+  Main route GET to get Apiviz uuids defined as default
+  """
+
+  print ("")
+  log_app.debug("create_new_config")
+  log_app.debug("create_new_config / method : %s", request.method )
+
+  models = None 
+
+  ### check if uuid is new and not already used
+  globalColl = mongoConfigColls['global']
+  query = {'is_default' : True, 'can_be_used_as_model' : True }
+
+  results = list(globalColl.find(query, {'_id': 0 }))
+
+  responseFields = ['image_preview', 'apiviz_front_uuid', 'content']
+  remapper = {
+    'image_preview' : 'preview', 
+    'apiviz_front_uuid' : 'uuid', 
+    'content' : 'name'
+  }
+  tempList = []
+  if results : 
+    for doc in results : 
+      # trim fields
+      docTrimmed = { remapper[k] : v for k,v in doc.items() if k in responseFields }
+      tempList.append(docTrimmed)
+    models = tempList
+
+  log_app.debug("create_new_config / models : \n%s", pformat(models) )
+
+  return jsonify({
+    'msg' : 'here comes the models defined as default and authorized to be copied',
+    'models': models,
+  })
+
+
+@app.route('/backend/api/get_config_model/<string:uuid>', methods=['GET'])
+def get_config_model(uuid, returnDict=False):
+  """
+  Main route GET to retrive an existing Apiviz instance field : 'global/app_title'
+  """
+
+  print ("")
+  log_app.debug("get_config_model")
+  log_app.debug("get_config_model / method : %s", request.method )
+  log_app.debug("get_config_model / uuid : %s", uuid )
+
+  mongoColl = mongoConfigColls['global'] ### imported from . (and from there from .api.__init__ )
+  query = { 'field' : 'app_title', 'apiviz_front_uuid' : uuid }
+
+  model = mongoColl.find_one(query)
+  log_app.debug("get_config_model / model : \n%s", pformat(model) )
+
+  if model is not None : 
+    model = DocOidToString(model)
+    responseFields = ['image_preview', 'apiviz_front_uuid', 'app_version', 'content']
+    if model['can_be_used_as_model'] == True : 
+      msg = 'here is the model you requested'
+      model = { k : v for k,v in model.items() if k in responseFields}
+    else : 
+      msg = "you can't use this as a model"
+      model = None
+  else : 
+    model = None
+    msg = 'there is no model as requested'
+
+  if returnDict == False :
+    return jsonify({
+      'msg' : msg,
+      'req_uuid' : uuid,
+      'query' : query,
+      'model' : model 
+    })
+  else : 
+    return model
+
+
+
+
+@app.route('/backend/api/create_new_config', methods=['POST','DELETE'])
+def create_new_config():
+  """
+  Main route POST/DELETE to create a whole new Apiviz instance
+  """
+
+  print ("")
+  log_app.debug("create_new_config")
+  log_app.debug("create_new_config / method : %s", request.method )
+
+  req_json    = request.get_json()
+  log_app.debug("create_new_config / req_json : \n%s", pformat(req_json) )
+
+  new_uuid = req_json['model_uuid']
+
+  ### target right config collection
+  allowedCollections = ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ]
+    
+  if request.method == 'POST':
+
+    log_app.debug("config app route / POST" )
+    
+    ### check if model can be used
+    modelCheck = get_config_model(new_uuid, returnDict=True)
+    log_app.debug("create_new_config / modelCheck : \n%s", pformat(modelCheck) )
+
+    ### check if uuid is new and not already used
+    globalColl = mongoConfigColls['global']
+    usedUuids = globalColl.distinct('apiviz_front_uuid')
+    log_app.debug("create_new_config / usedUuids : \n%s", pformat(usedUuids) )
+    
+    modelIsUsed = new_uuid in usedUuids
+    # modelIsUsed = False ### only for debugging
+    log_app.debug("create_new_config / modelIsUsed : %s", modelIsUsed )
+
+    canUseModel = modelIsUsed == False and modelCheck != None 
+    log_app.debug("create_new_config / canUseModel : %s", canUseModel )
+
+    ### start copying documents if allowed
+    if canUseModel : 
+
+      query = {'apiviz_front_uuid' : new_uuid}
+      
+      # loop collections
+      for coll in allowedCollections : 
+        
+        # get corresponding documents without _id
+        mongoColl = mongoConfigColls[coll]
+        results = list(mongoColl.find(query, {'_id':0 } ))
+        
+        # replace 'apiviz_front_uuid' field's value by new_uuid
+        # set 'is_default' field's value as False
+        for doc in results :
+
+          log_app.debug("create_new_config / coll-doc['field'] : %s-%s" %(coll,doc['field']) )
+          
+          doc['apiviz_front_uuid'] = new_uuid
+          doc['is_default'] = False
+
+          # specific cases
+          if doc['field'] == 'app_title' : 
+            doc['content'] = req_json['new_title']
+
+          if doc['field'] == 'app_logo' : 
+            doc['url'] = req_json['new_logoUrl']
+
+        # save documents list back in collection
+        # mongoColl.insert(results)
+
+        print()
+
+        msg = 'your new website is ready'
+        resp_code = 200
+    
+    else : 
+      msg = 'errors : '
+      if modelIsUsed :
+        msg += 'your current uuid is already used... '
+      if modelCheck == None : 
+        msg += "you can't use this model.. "
+      resp_code = 500
+      log_app.debug("create_new_config / msg : %s", msg )
+
+    return jsonify({
+      'msg' : msg,
+      'uuid' : new_uuid,
+      'request' : req_json,
+    })
+
+
+
+
+  ### TO DO 
+  elif request.method == 'DELETE' : 
+
+    log_app.debug("config app route / DELETE" )
+    
+    return jsonify({
+      'msg' : 'your apiviz instance has been deleted',
+      'uuid' : new_uuid,
+      'request' : req_json,
+    })
+
+
+  # not a POST nor a DELETE request
+  else : 
+    return jsonify({
+      'msg' : 'there was an error during the process (method not allowed)',
+      'uuid' : new_uuid,
+      'request' : req_json,
+    }), 500
+
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 ### FILES ROUTES

@@ -171,6 +171,9 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a title for your ApiViz instance",
         "content"     : u"SoNum",
+        
+        "can_be_used_as_model" : True,
+        "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/map-view-sonum-03.png",
 
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"  : True
@@ -425,6 +428,10 @@ default_global_config = [
       { "field"       : "app_title",
         "app_version" : version,
         "help"        : u"Choose a title for your ApiViz instance",
+
+        "can_be_used_as_model" : True,
+        "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
+
         "content"     : u"CIS - ApiBêta",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"  : True
