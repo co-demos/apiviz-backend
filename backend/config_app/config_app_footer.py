@@ -105,7 +105,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "Quick intervention toolkit"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "kit d'intervention rapide" }],
+                "link_text"  : [{"locale" : "en", "text" : "Quick intervention toolkit"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Kit d'intervention rapide" }],
                 "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
@@ -113,7 +113,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "Plateforme des Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
+                "link_text"  : [{"locale" : "en", "text" : "Plateforme des Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plateforme des territoires" }],
                 "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
@@ -121,7 +121,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text", 
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "mentions légales" }],
+                "link_text"  : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales" }],
                 "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
@@ -129,7 +129,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "Accessibility"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accessibilité" }],
+                "link_text"  : [{"locale" : "en", "text" : "Accessibility"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accessibilité" }],
                 "tooltip"    : [{"locale" : "en", "text" : "see the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }] 
               },
               { "is_visible" : True, 
@@ -305,7 +305,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Palteforme des territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "plateforme des territoires" }],
+                "link_text"  : [{"locale" : "en", "text" : "Palteforme des territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plateforme des territoires" }],
                 "tooltip"    : [{"locale" : "en", "text" : "check the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
               },
               { "is_visible" : True,
