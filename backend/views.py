@@ -418,6 +418,27 @@ def backend_configs(collection, doc_id=None):
 ### NEW CONFIG CREATION - BACKEND API
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
+def getUuidDistinct(coll, uuid, distinctField):
+  """
+  Util to get a model's specs
+  """
+  # log_app.debug("getUuidDistinct / coll, uuid, distinctField : %s, %s, %s" %(coll, uuid, distinctField) )
+  mongoColl = mongoConfigColls[coll]
+  query = { 'apiviz_front_uuid' : uuid }
+  results = mongoColl.find(query).distinct(distinctField)
+  # log_app.debug("getUuidDistinct / results : %s", results )
+  return results
+
+def getUuidDocSubfield(coll, uuid, field, subField):
+  """
+  Util to get a model's subfield
+  """
+  mongoColl = mongoConfigColls[coll]
+  query = { 'field' : field, 'apiviz_front_uuid' : uuid }
+  result = mongoColl.find_one(query)
+  log_app.debug("getUuidDocSubfield / result : %s", result )
+  return result[subField]
+
 @app.route('/backend/api/get_default_models', methods=['GET'])
 def get_default_models():
   """
@@ -442,18 +463,12 @@ def get_default_models():
 
   results = list(globalColl.find(query, {'_id': 0 }))
 
-  responseFields = ['image_preview', 'apiviz_front_uuid', 'content']
-  remapper = {
-    'image_preview' : 'preview', 
-    'apiviz_front_uuid' : 'uuid', 
-    'content' : 'name'
-  }
   tempList = []
   if results : 
     for doc in results : 
       # trim fields
-      docTrimmed = { remapper[k] : v for k,v in doc.items() if k in responseFields }
-      tempList.append(docTrimmed)
+      model = get_config_model( doc['apiviz_front_uuid'], returnDict=True, noRemap=False)
+      tempList.append(model)
     models = tempList
 
   log_app.debug("create_new_config / models : \n%s", pformat(models) )
@@ -465,7 +480,7 @@ def get_default_models():
 
 
 @app.route('/backend/api/get_config_model/<string:uuid>', methods=['GET'])
-def get_config_model(uuid, returnDict=False):
+def get_config_model(uuid, returnDict=False, noRemap=True):
   """
   Main route GET to retrive an existing Apiviz instance field : 'global/app_title'
   """
@@ -475,10 +490,31 @@ def get_config_model(uuid, returnDict=False):
   log_app.debug("get_config_model / method : %s", request.method )
   log_app.debug("get_config_model / uuid : %s", uuid )
 
-  mongoColl = mongoConfigColls['global'] ### imported from . (and from there from .api.__init__ )
+  ### remapper
+  responseFields = ['image_preview', 'apiviz_front_uuid', 'content', 'app_version']
+  remapper = {
+    'image_preview' : 'preview', 
+    'apiviz_front_uuid' : 'uuid', 
+    'content' : 'name',
+    'app_version' : 'app_version'
+  }
+
+  ### disctincts to retrieve
+  distinctFields = [
+    { 'coll' : 'routes', 'field' : 'dynamic_template' },
+    { 'coll' : 'endpoints', 'field' : 'endpoint_type' },
+  ]
+
+  ### specs to retrieve
+  specsFields = [
+    { 'coll' : 'styles', 'field' : 'app_colors', 'subfield' : 'content' },
+  ]
+
+  mongoCollGlobal = mongoConfigColls['global'] ### imported from . (and from there from .api.__init__ )
+  
   query = { 'field' : 'app_title', 'apiviz_front_uuid' : uuid }
 
-  model = mongoColl.find_one(query)
+  model = mongoCollGlobal.find_one(query)
   log_app.debug("get_config_model / model : \n%s", pformat(model) )
 
   if model is not None : 
@@ -486,7 +522,17 @@ def get_config_model(uuid, returnDict=False):
     responseFields = ['image_preview', 'apiviz_front_uuid', 'app_version', 'content']
     if model['can_be_used_as_model'] == True : 
       msg = 'here is the model you requested'
-      model = { k : v for k,v in model.items() if k in responseFields}
+      model_uuid = model['apiviz_front_uuid']
+      if noRemap : 
+        model = { k : v for k,v in model.items() if k in responseFields}
+      else : 
+        model = { remapper[k] : v for k,v in model.items() if k in responseFields }
+      model['distincts'] = {}
+      for distinct in distinctFields : 
+        model['distincts'][distinct['field']] = getUuidDistinct(distinct['coll'], model_uuid, distinct['field'])
+      model['specs'] = {}
+      for spec in specsFields : 
+        model['specs'][spec['field']] = { spec['subfield'] : getUuidDocSubfield(spec['coll'], model_uuid, spec['field'], spec['subfield']) }
     else : 
       msg = "you can't use this as a model"
       model = None
