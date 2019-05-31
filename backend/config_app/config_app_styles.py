@@ -20,7 +20,7 @@ default_app_styles_config = [
           ### SIMILI - BULMA
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
-          'link'       : '#21295e',
+          'link'       : '#4b4d58',
           'link-hover' : '#513085',
           'primary'    : '#513085',
           'info'       : '#40529d',
@@ -184,7 +184,7 @@ default_app_styles_config = [
           ### SIMILI - BULMA
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
-          'link'       : '#21295e',
+          'link'       : '#4b4d58',
           'link-hover' : '#592d7b',
           'primary'    : '#592d7b',
           'info'       : '#40529d',
