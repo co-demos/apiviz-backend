@@ -13,6 +13,7 @@ default_app_navbar = [
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/sonum-carto/carte",
+        "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,
           "background_color" : { 
@@ -108,6 +109,7 @@ default_app_navbar = [
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
+        "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,
           "background_color" : { 

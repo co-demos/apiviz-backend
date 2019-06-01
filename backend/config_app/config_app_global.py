@@ -161,7 +161,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"          : "/favicon.ico",
+        "url"          : "https://societenumerique.gouv.fr/wp-content/uploads/2017/12/carre-300x300.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
 
