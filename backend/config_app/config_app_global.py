@@ -161,7 +161,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"          : "/",
+        "url"          : "/favicon.ico",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
 
@@ -420,7 +420,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"          : "/",
+        "url"          : "/favicon.ico",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",

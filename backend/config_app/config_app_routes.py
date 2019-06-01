@@ -49,6 +49,45 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "sonum-tabs",
+        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "is_default"        : True
+      },
+
+      ### PAGE PROJECT
+      { "field"             : "sonum_carto_project",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/sonum-carto/projet"],
+        "template_url"      : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html",
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+          "app_version"       : version,
+        "comment"           : u"Main project route in french",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "sonum-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -58,42 +97,6 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### DATASETS CARTO SONUM
-
-        ### PAGE PROJECT
-        { "field"             : "sonum_carto_project",
-          "is_global_app_homepage" : True,
-          "route_title"       : u"Home",
-          "route_description" : u"apiviz default home page",
-          "route_activated"   : True,
-          "banner" : {
-            "activated"  : False,
-            "banner_uri" : "banner-sonum-carto"
-          },
-          "in_main_navbar"    : False,
-          "navbar_btn_options" : {
-            "position"   : "middle_right",
-            "link_type"  : "link",
-            "icon_class" : "",
-            "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
-            "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
-          },
-
-          "in_footer"         : False,
-          "link_in_logo"      : True,
-          "urls"              : ["/sonum-carto/projet"],
-          "template_url"      : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html",
-          "help"              : u"you can specify a remote template (f.e. a github url)",
-          "languages"         : ["fr"],
-            "app_version"       : version,
-          "comment"           : u"Main project route in french",
-          "is_dynamic"        : True,
-          "dynamic_template"  : "DynamicStatic",
-          "has_navbar"        : True,
-          "has_footer"        : True,
-
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
-          "is_default"        : True
-        },
 
         ## PAGE - map
         { "field"             : "sonum_carto_carte",
@@ -227,6 +230,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
 
@@ -359,6 +364,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
@@ -543,6 +550,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
@@ -664,6 +673,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
@@ -783,6 +794,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
@@ -1034,6 +1047,8 @@ default_routes_config = [
 
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
@@ -1071,6 +1086,8 @@ default_routes_config = [
           "dynamic_template"  : "DynamicStatic",
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
           "is_default"        : True
         },
@@ -1106,6 +1123,8 @@ default_routes_config = [
           "dynamic_template"  : "DynamicStatic",
           "has_navbar"        : True,
           "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
           "is_default"        : True
         },
@@ -1150,6 +1169,8 @@ default_routes_config = [
         "dynamic_template"  : 'DynamicStatic',
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1189,6 +1210,8 @@ default_routes_config = [
         "dynamic_template"  : None,
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1227,6 +1250,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1262,6 +1287,8 @@ default_routes_config = [
         "dynamic_template"  : "Login",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1292,6 +1319,8 @@ default_routes_config = [
         "dynamic_template"  : "Register",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1322,6 +1351,8 @@ default_routes_config = [
         "dynamic_template"  : "Logout",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1352,6 +1383,8 @@ default_routes_config = [
         "dynamic_template"  : "BackOffice",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1382,6 +1415,8 @@ default_routes_config = [
         "dynamic_template"  : "Preferences",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"        : True
       },
@@ -1432,6 +1467,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "dataset_uri"       : "cis",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
@@ -1575,6 +1612,8 @@ default_routes_config = [
 
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
@@ -1708,6 +1747,8 @@ default_routes_config = [
 
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
@@ -1871,6 +1912,8 @@ default_routes_config = [
 
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
@@ -1918,6 +1961,8 @@ default_routes_config = [
         "has_tabs"          : True,
         "tabs_uri"          : "project-cis-tabs",
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -1958,6 +2003,8 @@ default_routes_config = [
         "dynamic_template"  : 'DynamicStatic',
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -1998,6 +2045,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2038,6 +2087,8 @@ default_routes_config = [
         "dynamic_template"  : 'DynamicStatic',
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2077,6 +2128,8 @@ default_routes_config = [
         "dynamic_template"  : None,
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2115,6 +2168,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2153,6 +2208,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2191,6 +2248,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2230,6 +2289,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2264,6 +2325,8 @@ default_routes_config = [
         "dynamic_template"  : "Login",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2294,6 +2357,8 @@ default_routes_config = [
         "dynamic_template"  : "Register",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2324,6 +2389,8 @@ default_routes_config = [
         "dynamic_template"  : "Logout",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2354,6 +2421,8 @@ default_routes_config = [
         "dynamic_template"  : "BackOffice",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2384,6 +2453,8 @@ default_routes_config = [
         "dynamic_template"  : "Preferences",
         "has_navbar"        : True,
         "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
