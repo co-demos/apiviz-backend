@@ -37,7 +37,7 @@ COLLECTIONS_AUTH_MODIFICATIONS	= {
     'GET'     : ['all']
   },
   "endpoints" : {
-    'POST'    : ['admin'], 
+    'POST'    : ['admin', 'staff'], 
     'DELETE'  : ['admin'], 
     'GET'     : ['all']
   },

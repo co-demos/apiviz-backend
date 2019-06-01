@@ -296,7 +296,7 @@ def backend_configs(collection, doc_id=None):
         log_app.debug("config app route / posT / doc_config : \n%s", pformat(doc_config) )
         
         ### not editable fields
-        notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version']
+        notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version', 'is_default']
 
         ### check if need for nested field update / f.i. navbar links
         editSubfield = False
@@ -471,7 +471,7 @@ def get_default_models():
       tempList.append(model)
     models = tempList
 
-  log_app.debug("create_new_config / models : \n%s", pformat(models) )
+  # log_app.debug("create_new_config / models : \n%s", pformat(models) )
 
   return jsonify({
     'msg' : 'here comes the models defined as default and authorized to be copied',
@@ -551,6 +551,72 @@ def get_config_model(uuid, returnDict=False, noRemap=True):
     return model
 
 
+@app.route('/backend/api/add_document/<string:collection>', methods=['POST','DELETE'])
+def add_document(collection, testMode=True):
+  """
+  Main route POST to create a new document for an existing Apiviz instance
+  """
+
+  print ("")
+  log_app.debug("add_document")
+  log_app.debug("add_document / method : %s", request.method )
+
+  req_json    = request.get_json()
+  # log_app.debug("add_document / req_json : \n%s", pformat(req_json) )
+
+  # role_to_check = request.args.get('role',    default='admin', type=str)
+  roles_to_check = COLLECTIONS_AUTH_MODIFICATIONS[collection][request.method]
+  log_app.debug("add_document / roles_to_check : %s", roles_to_check )
+
+  allowedCollections = ["tabs", "endpoints" , "routes" ]
+  ### not editable fields
+  notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version', 'is_default']
+
+  if request.method == 'POST' and collection in allowedCollections :
+  
+    log_app.debug("config app route / POST" )
+
+    token = req_json.get('token', '')
+    apiviz_uuid = req_json['apiviz_front_uuid']
+    is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
+
+    if is_authorized : 
+
+      ### trim request doc from not allowed fields + add 
+      newDocData = req_json['doc_data']
+      newDoc = { k: v for k, v in newDocData.items() if k not in notAllowedFields}    
+      newDoc['apiviz_front_uuid'] = apiviz_uuid
+      newDoc['app_version'] = version
+      newDoc['is_default'] = testMode
+
+      # insert newdoc to collection
+      mongoColl = mongoConfigColls[collection]
+      addedDoc = mongoColl.insert_one(newDoc)
+
+      log_app.debug("add_document / newDoc : \n%s", pformat(DocOidToString(newDoc)) )
+
+      msg = "you added this document to the collection"
+      respDoc = DocOidToString(newDoc)
+
+      return jsonify({
+        'msg' : msg,
+        'request' : req_json,
+        'new_doc' : respDoc
+      })
+
+    else : 
+      msg = "you don't have the authorization level to add a new document"
+      return jsonify({
+        'msg' : msg,
+        'request' : req_json,
+      })
+  
+  else : 
+    msg = "you can't add this document to this collection or the method is not allowed..."
+    return jsonify({
+      'msg' : msg,
+      'request' : req_json,
+    })
 
 
 @app.route('/backend/api/create_new_config', methods=['POST','DELETE'])
@@ -620,7 +686,7 @@ def create_new_config():
             doc['url'] = req_json['new_logoUrl']
 
         # save documents list back in collection
-        # mongoColl.insert(results)
+        mongoColl.insert(results)
 
         print()
 
