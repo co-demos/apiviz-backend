@@ -480,7 +480,7 @@ def get_default_models():
 
 
 @app.route('/backend/api/get_config_model/<string:uuid>', methods=['GET'])
-def get_config_model(uuid, returnDict=False, noRemap=True):
+def get_config_model(uuid, returnDict=False, noRemap=False):
   """
   Main route GET to retrive an existing Apiviz instance field : 'global/app_title'
   """
@@ -642,7 +642,7 @@ def create_new_config():
     log_app.debug("config app route / POST" )
     
     ### check if model can be used
-    modelCheck = get_config_model(new_uuid, returnDict=True)
+    modelCheck = get_config_model(new_uuid, returnDict=True, noRemap=True)
     log_app.debug("create_new_config / modelCheck : \n%s", pformat(modelCheck) )
 
     ### check if uuid is new and not already used
