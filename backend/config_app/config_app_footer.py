@@ -145,7 +145,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
+                "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source" }],
                 "tooltip"    : [{"locale" : "en", "text" : "check the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }] 
               },
               # { "is_visible" : True, 
@@ -161,7 +161,7 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "", 
-                "link_text"  : [{"locale" : "en", "text" : "login - admin"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "login - admin" }],
+                "link_text"  : [{"locale" : "en", "text" : "Login - admin"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login - admin" }],
                 "tooltip"    : [{"locale" : "en", "text" : "connect to back office"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "se connecter au back-office" }] 
               },
               # { "is_visible" : False, 

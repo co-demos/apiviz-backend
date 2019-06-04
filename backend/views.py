@@ -507,6 +507,7 @@ def get_config_model(uuid, returnDict=False, noRemap=False):
 
   ### specs to retrieve
   specsFields = [
+    { 'coll' : 'global', 'field' : 'app_languages', 'subfield' : 'languages' },
     { 'coll' : 'styles', 'field' : 'app_colors', 'subfield' : 'content' },
   ]
 
