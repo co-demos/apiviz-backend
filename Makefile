@@ -68,12 +68,22 @@ backend-gunicorn-prod-stop:
 ### ============================= ###
 
 # --------------------
+# # default - dev
+# up: network backend-gunicorn-dev
+# down: backend-gunicorn-dev-stop network-stop
+# restart: down up
+
+# # default - prod
+# up-prod: network backend-gunicorn-prod
+# down-prod: backend-gunicorn-prod-stop network-stop
+# restart-prod: down-prod up-prod
+
 # default - dev
-up: network backend-gunicorn-dev
-down: backend-gunicorn-dev-stop network-stop
+up: backend-gunicorn-dev
+down: backend-gunicorn-dev-stop 
 restart: down up
 
 # default - prod
-up-prod: network backend-gunicorn-prod
-down-prod: backend-gunicorn-prod-stop network-stop
+up-prod: backend-gunicorn-prod
+down-prod: backend-gunicorn-prod-stop
 restart-prod: down-prod up-prod

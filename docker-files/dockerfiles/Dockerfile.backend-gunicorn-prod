@@ -9,4 +9,4 @@ RUN pip install -r requirements.txt
 COPY . /apiviz_backend_in_docker
 
 ENTRYPOINT ["gunicorn"]
-CMD ["wsgi_prod:app","--bind","0.0.0.0:8100"]
+CMD ["wsgi_prod_docker:app","--bind","0.0.0.0:8100"]

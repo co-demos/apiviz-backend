@@ -48,23 +48,24 @@ from backend import app, log_app
 
 
 if __name__ == '__main__':
-	"""
-	runner for the CIS front Flask app
-	- warning : gets most of its variables at start from environment variables
+  """
+  runner for the CIS front Flask app
+  - warning : gets most of its variables at start from environment variables
 
-	in command line just type :
-	"python wsgi_dev.py"
-	or
-	"gunicorn --bind 0.0.0.0:8100 --workers=1 wsgi_dev:app" for instance
+  in command line just type :
+  "python wsgi_dev.py"
+  or
+  "gunicorn --bind 0.0.0.0:8100 --workers=1 wsgi_dev:app" for instance
 
-	"""
+  """
 
-	# set environment variable to set config later in config_app.config_env.py
+  # set environment variable to set config later in config_app.config_env.py
 
-	print ("= "*25)
-	print ("= = = WSGI / RERUN FLASK APP = = =")
-	log_app.info
-	print ("= "*25)
+  print ("= "*25)
+  print ("= = = WSGI / RERUN FLASK APP = = =")
+  log_app.info
+  print ("= "*25)
 
-	# simple flask runner
-	app.run()
+  # simple flask runner
+  # app.run()
+  app.run(host='0.0.0.0', port=8100)

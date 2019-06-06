@@ -1,7 +1,7 @@
 version: '2.1'
 services:
-  backend:
-    container_name: ${APP}-backend-prod
+  apiviz-back:
+    container_name: ${APP}-prod
     build:
       context: ${APP_PATH}
       dockerfile: ${DF_FOLDER_SUBPATH}/Dockerfile.backend-gunicorn-prod
