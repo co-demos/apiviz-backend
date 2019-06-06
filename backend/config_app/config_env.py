@@ -3,6 +3,38 @@ import os
 
 from .. import log_app, pformat
 
+
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+def formatEnvVar(var_name, format_type='boolean', separator=',') : 
+
+  print("formatEnvVar / var_name : ", var_name)
+  env_var = os.getenv(var_name)
+  print("formatEnvVar / env_var : ", env_var)
+
+  if format_type == 'boolean' : 
+    if env_var in ['yes', 'Yes', 'YES', 'true', 'True', 'TRUE', '1'] : 
+      return True
+    else :
+      return False
+  
+  elif format_type == 'integer' : 
+    return int(env_var)
+
+  elif format_type == 'float' : 
+    return float(env_var)
+
+  elif format_type == 'list' : 
+    return env_var.split(separator)
+
+  else : 
+    if env_var in ['none', 'None', 'NONE', 'nan', 'Nan', 'NAN', 'null', 'Null','NULL', 'undefined'] : 
+      return None
+    else : 
+      return env_var
+
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
 config_name    = os.getenv('FLASK_CONFIGURATION', 'default')
 config_mongodb = os.getenv('MONGODB_MODE',        'local')
 config_docker  = os.getenv('DOCKER_MODE',         'docker_off')
@@ -13,209 +45,134 @@ log_app.info("$ config_name : %s", config_name)
 log_app.info("$ config_mongodb : %s", config_mongodb)  
 log_app.info("$ config_docker : %s", config_docker)  
 
-correction_env_path = {
-  "development"   : "",
-  "testing"       : "",
-  "production"    : "",
-  "preprod"       : "",
-  "default"       : ""       ### 'default' for local development
+
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+### READ ENV VARS / MONGO
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+MONGO_ROOT_LOCAL           = os.getenv('MONGO_ROOT_LOCAL') # "localhost"
+MONGO_ROOT_DOCKER          = os.getenv('MONGO_ROOT_DOCKER') # "host.docker.internal"
+
+MONGO_PORT_LOCAL           = os.getenv('MONGO_PORT_LOCAL') # "27017"
+
+MONGO_ROOT_SERVER          = os.getenv('MONGO_ROOT_SERVER') # "127.0.0.1" # IP depending on your server's mongoDB configuration
+MONGO_PORT_SERVER          = os.getenv('MONGO_PORT_SERVER') # "27017"
+MONGO_USER_SERVER          = os.getenv('MONGO_USER_SERVER') # "MY-MONGODB-SERVER-ADMIN-USER"
+MONGO_PASS_SERVER          = os.getenv('MONGO_PASS_SERVER') # "MY-SERVER-MONGODB-PASSWORD"
+MONGO_OPTIONS_SERVER       = os.getenv('MONGO_OPTIONS_SERVER') # ""
+
+MONGO_DISTANT_URI          = os.getenv('MONGO_DISTANT_URI') # "mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>"  
+MONGO_DISTANT_URI_OPTIONS  = os.getenv('MONGO_DISTANT_URI_OPTIONS') # "?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true"
+
+
+# temporary dicts
+mongodb_roots_dict = {
+  "local"  : { 
+    "docker_off" : MONGO_ROOT_LOCAL,  
+    "docker_on"  : MONGO_ROOT_DOCKER  
+  },
+  "server" : { 
+    "docker_off" : MONGO_ROOT_SERVER, 
+    "docker_on"  : MONGO_ROOT_DOCKER  
+  },
 }
-repath_env_vars = correction_env_path[config_name]
 
+mongodb_ports_dict = {
+  "local"  : MONGO_PORT_LOCAL,
+  "server" : MONGO_PORT_SERVER,
+}
 
-### set environment default variables from gitignored : config_secret_vars_prod.py
-try :
-  
-  ### load secret env vars and keys from secret | public file
-  if config_name in ["default"] : 
-    from .config_secret_vars_example import *
+mongodb_dbnames_dict = {
+  "default"     : os.getenv("MONGO_DBNAME"),
+  "testing"     : os.getenv("MONGO_DBNAME_TEST"),
+  "preprod"     : os.getenv("MONGO_DBNAME_PREPROD"),
+  "production"  : os.getenv("MONGO_DBNAME")
+}
 
-  elif config_name in ["testing", "preprod", "production"] : 
-    from .config_secret_vars_prod import *
+### get DB name
+mongodb_dbname = mongodb_dbnames_dict[config_name]
 
-  ### load env vars
+### get MONGODB FULL URI 
+### format : mongodb://<USER>:<PASSWORD>@<HOST>:<PORT>/<DBNAME>?<OPTIONS>
 
-  os.environ["SECRET_KEY"] = SECRET_KEY
-  os.environ["SERVER_NAME_TEST"] = SERVER_NAME_TEST
+if config_mongodb == "distant" :
+  mongodb_uri = "{}/{}{}".format(MONGO_DISTANT_URI, mongodb_dbname, MONGO_DISTANT_URI_OPTIONS)
 
-  try : 
-    os.environ["ALLOWED_HOSTS"]	= ALLOWED_HOSTS
-  except :
-    log_app.info("no ALLOWED_HOSTS env var") 
+else : 
+  mongodb_root = mongodb_roots_dict[config_mongodb][config_docker]
+  mongodb_port = mongodb_ports_dict[config_mongodb]
 
-  # os.environ["PORT_EVENTLET"]		= PORT_EVENTLET
+  ### get login if mongodb hosted on a server
+  mongodb_login = "" 
+  mongodb_options = "" 
+  if config_name == "server" : 
+    mongodb_login = "{}:{}@".format(MONGO_USER_SERVER, MONGO_PASS_SERVER)
+    mongodb_options = MONGO_OPTIONS_SERVER ### must begin with "?"
 
+  mongodb_uri = "mongodb://{}{}:{}/{}{}".format(mongodb_login, mongodb_root, mongodb_port, mongodb_dbname, mongodb_options)
 
-
-
-  ### load correct MONGO_URI given env vars
-  # config_name : default | testing | preprod | production
-  # x 
-  # config_docker : true | false
-  # x 
-  # config_mongodb : local | distant | server
-
-
-  # temporary dicts
-  mongodb_roots_dict = {
-    "local"  : { 
-      "docker_off" : MONGO_ROOT_LOCAL,  
-      "docker_on"  : MONGO_ROOT_DOCKER  
-    },
-    "server" : { 
-      "docker_off" : MONGO_ROOT_SERVER, 
-      "docker_on"  : MONGO_ROOT_DOCKER  
-    },
-  }
-
-  mongodb_ports_dict = {
-    "local"  : MONGO_PORT_LOCAL,
-    "server" : MONGO_PORT_SERVER,
-  }
-
-  mongodb_dbnames_dict = {
-    "default"     : MONGO_DBNAME,
-    "testing"     : MONGO_DBNAME_TEST,
-    "preprod"     : MONGO_DBNAME_PREPROD,
-    "production"  : MONGO_DBNAME
-  }
-
-  ### get DB name
-  mongodb_dbname = mongodb_dbnames_dict[config_name]
-
-  ### get MONGODB FULL URI 
-  ### format : mongodb://<USER>:<PASSWORD>@<HOST>:<PORT>/<DBNAME>?<OPTIONS>
-
-  if config_mongodb == "distant" :
-    mongodb_uri = "{}/{}{}".format(MONGO_DISTANT_URI, mongodb_dbname, MONGO_DISTANT_URI_OPTIONS)
-  
-  else : 
-    mongodb_root = mongodb_roots_dict[config_mongodb][config_docker]
-    mongodb_port = mongodb_ports_dict[config_mongodb]
-
-    ### get login if mongodb hosted on a server
-    mongodb_login = "" 
-    mongodb_options = "" 
-    if config_name == "server" : 
-      mongodb_login = "{}:{}@".format(MONGO_USER_SERVER, MONGO_PASS_SERVER)
-      mongodb_options = MONGO_OPTIONS_SERVER ### must begin with "?"
-
-    mongodb_uri = "mongodb://{}{}:{}/{}{}".format(mongodb_login, mongodb_root, mongodb_port, mongodb_dbname, mongodb_options)
-
-  os.environ["MONGODB_URI"] = mongodb_uri 
-
-
-
-
-### except if no production env 
-except : 
-  log_app.error(" --- ENV VARS WERE NOT LOADED CORRECTLY --- ") 
-
+log_app.debug(" --- MONGODB_URI : %s ", mongodb_uri) 
+os.environ["MONGODB_URI"] = mongodb_uri 
 
 
 class Config(object):
   
   """ BASIC Config Class """
-
+  RUN_MODE = os.getenv("RUN_MODE")
+  DEBUG = formatEnvVar('DEBUG', format_type='boolean') # True
+ 
   """ GLOBAL_FLASK """
   static_dir  = '/static'
   uploads_dir = '/static/uploads'
 
-  # SITE_ROOT			= os.path.realpath(os.path.dirname(__file__))
-  # SITE_STATIC		= SITE_ROOT   +  static_dir
-  # SITE_UPLOADS	= SITE_ROOT   +  uploads_dir
+  # SITE_ROOT      = os.path.realpath(os.path.dirname(__file__))
+  # SITE_STATIC    = SITE_ROOT   +  static_dir
+  # SITE_UPLOADS  = SITE_ROOT   +  uploads_dir
 
   """ HOST """
-  DOMAIN_NAME			=  os.getenv("DOMAIN_NAME")
-  DOMAIN_ROOT			=  os.getenv("DOMAIN_ROOT")
-  DOMAIN_PORT			=  os.getenv("DOMAIN_PORT")
-  
-  # SERVER_NAME		=  os.getenv("SERVER_NAME")
-  SERVER_NAME_TEST	= os.getenv("SERVER_NAME_TEST")
-  if SERVER_NAME_TEST == "True" :
-    SERVER_NAME  	=  os.getenv("SERVER_NAME")
+  if config_docker != 'docker_on' :
+    DOMAIN_ROOT      =  os.getenv("DOMAIN_ROOT")
+    # DOMAIN_PORT      =  formatEnvVar("DOMAIN_PORT", format_type='integer')
+    DOMAIN_PORT      =  os.getenv("DOMAIN_PORT")
+
+    http_mode = "http"
+    if formatEnvVar("HTTPS_MODE", format_type='boolean') == True : 
+      http_mode = "https"
+    os.environ["SERVER_NAME"]   = DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
+    os.environ["DOMAIN_NAME"]   = http_mode + "://" + DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
+    DOMAIN_NAME =  os.getenv("DOMAIN_NAME")
+    
+    # SERVER_NAME    =  os.getenv("SERVER_NAME")
+    SERVER_NAME_TEST  = os.getenv("SERVER_NAME_TEST")
+    if SERVER_NAME_TEST == "True" :
+      SERVER_NAME    =  os.getenv("SERVER_NAME")
 
   """ SESSIONS """
-  SECRET_KEY					= os.getenv("SECRET_KEY")
-
-  """ JWT """
-  # JWT_SECRET_KEY		= os.getenv("JWT_SECRET_KEY")
+  SECRET_KEY          = os.getenv("SECRET_KEY")
   
   """ MONGODB """
-  # MONGO_DBNAME								= 'apiviz'
-  MONGO_URI	= os.getenv("MONGODB_URI")
-  MONGO_COLL_CONFIG_GLOBAL					= "config_global"
-  MONGO_COLL_CONFIG_NAVBAR					= "config_navbar"
-  MONGO_COLL_CONFIG_TABS	   				= "config_tabs"
-  MONGO_COLL_CONFIG_APP_STYLES			= "config_app_styles"
-  MONGO_COLL_CONFIG_DATA_ENDPOINTS	= "config_data_endpoints"
-  MONGO_COLL_CONFIG_ROUTES					= "config_routes"
-  MONGO_COLL_CONFIG_FOOTER					= "config_footer"
-  MONGO_COLL_CONFIG_SOCIALS					= "config_socials"
+  # MONGO_DBNAME                    = 'apiviz'
+  MONGO_URI  = os.getenv("MONGODB_URI")
+  MONGO_COLL_CONFIG_GLOBAL          = os.getenv('MONGO_COLL_CONFIG_GLOBAL') # "config_global"
+  MONGO_COLL_CONFIG_NAVBAR          = os.getenv('MONGO_COLL_CONFIG_NAVBAR') # "config_navbar"
+  MONGO_COLL_CONFIG_TABS            = os.getenv('MONGO_COLL_CONFIG_TABS') # "config_tabs"
+  MONGO_COLL_CONFIG_APP_STYLES      = os.getenv('MONGO_COLL_CONFIG_APP_STYLES') # "config_app_styles"
+  MONGO_COLL_CONFIG_DATA_ENDPOINTS  = os.getenv('MONGO_COLL_CONFIG_DATA_ENDPOINTS') # "config_data_endpoints"
+  MONGO_COLL_CONFIG_ROUTES          = os.getenv('MONGO_COLL_CONFIG_ROUTES') # "config_routes"
+  MONGO_COLL_CONFIG_FOOTER          = os.getenv('MONGO_COLL_CONFIG_FOOTER') # "config_footer"
+  MONGO_COLL_CONFIG_SOCIALS         = os.getenv('MONGO_COLL_CONFIG_SOCIALS') # "config_socials"
 
   """ AUTH MODE """
-  AUTH_MODE = config_auth
-
-
-class DevelopmentConfig(Config):
-
-  """ Development Config Class """
-  DEBUG = True
- 
-  """ RUNNING ENVIRONNEMENT """
-  RUNNING_ENV = "local" # local | preprod | prod
-
-
-class PreprodConfig(Config):
-  
-  """ PRODUCTION Config Class """
-  DEBUG = True
-  ALLOWED_HOSTS		= os.getenv("ALLOWED_HOSTS")
-
-
-  """ RUNNING ENVIRONNEMENT """
-  RUNNING_ENV	= os.getenv("RUNNING_ENV", "preprod")
-
-
-class ProductionConfig(Config):
-  
-  """ PRODUCTION Config Class """
-  DEBUG = False
-  ALLOWED_HOSTS		= os.getenv("ALLOWED_HOSTS")
-
-
-  """ RUNNING ENVIRONNEMENT """
-  RUNNING_ENV	= os.getenv("RUNNING_ENV", "production")
-
-
-
-class TestingConfig(DevelopmentConfig, Config):
-  
-  """ TESTING Config Class """
-  DEBUG = True
-  TESTING = True
-
-
-
-### config dict to reroute to correct objects
-config = {
-  "development"	: "%sbackend.config_app.config_env.DevelopmentConfig"    %(repath_env_vars),
-  "testing"			: "%sbackend.config_app.config_env.TestingConfig"        %(repath_env_vars),
-  "production"	: "backend.config_app.config_env.ProductionConfig",     #%(repath_env_vars),    	
-  "preprod"	    : "backend.config_app.config_env.PreprodConfig",     #%(repath_env_vars),    	
-  "default"			: "backend.config_app.config_env.DevelopmentConfig"      ### 'default' for local 
-}
+  AUTH_MODE = os.getenv('AUTH_MODE')
 
 
 ### main function to configure app
 def configure_app(app):
   """ configure Flask app from object created above """
 
-  log_app.info("$ config[config_name] : %s ",  config[config_name]  )
-
   log_app.info("$ creating app.config from object...")
-  app.config.from_object( config[config_name] )
+  app.config.from_object( Config )
 
-  log_app.info("$ app.config['RUNNING_ENV']  : %s ", app.config["RUNNING_ENV"] )
+  # log_app.info("$ app.config['RUN_MODE']  : %s ", app.config["RUN_MODE"] )
   # log_app.info("$ app.config['MONGO_DBNAME'] : %s ", app.config["MONGO_DBNAME"] ) 
   print

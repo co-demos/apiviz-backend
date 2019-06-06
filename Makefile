@@ -1,4 +1,11 @@
-export APP=apiviz
+
+# include .env file
+# include example.env.global
+# include example.env.mongodb
+# include .env.global
+# include .env.mongodb
+
+export APP=apiviz-back-only
 
 export D_FOLDER=docker-files
 export DC_FOLDER=dockercomposes
@@ -22,6 +29,10 @@ export APP_PATH := $(shell pwd)
 export BACKEND=${APP_PATH}
 export FRONTEND=${APP_PATH}
 
+# this is usefull with most python apps in dev mode because if stdout is
+# buffered logs do not shows in realtime
+PYTHONUNBUFFERED=1
+export PYTHONUNBUFFERED
 
 
 ### ============ ###
@@ -39,63 +50,17 @@ network:
 ### ============ ###
 
 # ------------------
-# default - local DB 
-backend-gunicorn-default-local:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-default-local.yml up --build -d
-backend-gunicorn-default-local-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-default-local.yml down
+# default - dev 
+backend-gunicorn-dev:
+	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-dev.yml up --build 
+backend-gunicorn-dev-stop:
+	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-dev.yml down
 
-# default - distant DB 
-backend-gunicorn-default-dist:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-default-dist.yml up --build -d
-backend-gunicorn-default-dist-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-default-dist.yml down
-
-# ------------------
-# test - local DB 
-backend-gunicorn-test-local:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-local.yml up --build -d
-backend-gunicorn-test-local-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-local.yml down
-
-# test - distant DB 
-backend-gunicorn-test-dist:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-dist.yml up --build -d
-backend-gunicorn-test-dist-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-dist.yml down
-
-# test - server DB 
-backend-gunicorn-test-server:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-server.yml up --build -d
-backend-gunicorn-test-server-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-test-server.yml down
-
-# ------------------
-# # preprod - server DB 
-backend-gunicorn-preprod-server:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-preprod-server.yml up --build -d
-backend-gunicorn-preprod-server-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-preprod-server.yml down
-
-# # preprod - distant DB 
-backend-gunicorn-preprod-dist:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-preprod-dist.yml up --build -d
-backend-gunicorn-preprod-dist-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-preprod-dist.yml down
-
-# ------------------
-# # production - server DB 
-backend-gunicorn-prod-server:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod-server.yml up --build -d
-backend-gunicorn-prod-server-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod-server.yml down
-
-# # production - distant DB 
-backend-gunicorn-prod-dist:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod-dist.yml up --build -d
-backend-gunicorn-prod-dist-stop:
-	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod-dist.yml down
-
+# default - prod
+backend-gunicorn-prod:
+	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod.yml up --build -d
+backend-gunicorn-prod-stop:
+	${DC} -f ${DC_PREFIX_FOLDER}-backend-gunicorn-prod.yml down
 
 
 ### ============================= ###
@@ -103,50 +68,12 @@ backend-gunicorn-prod-dist-stop:
 ### ============================= ###
 
 # --------------------
-# default - local DB
-up: network backend-gunicorn-default-local
-down: backend-gunicorn-default-local-stop network-stop
+# default - dev
+up: network backend-gunicorn-dev
+down: backend-gunicorn-dev-stop network-stop
 restart: down up
 
-# default - distant DB
-up-dist: network backend-gunicorn-default-dist
-down-dist: backend-gunicorn-default-dist-stop network-stop
-restart-dist: down-dist up-dist
-
-# --------------------
-# testing - local DB
-up-test-local: network backend-gunicorn-test-local
-down-test-local: backend-gunicorn-test-local-stop network-stop
-restart-test-local: down-test-local up-test-local
-
-# testing - server DB
-up-test-server: network backend-gunicorn-test-server
-down-test-server: backend-gunicorn-test-server-stop network-stop
-restart-test-server: down-test-server up-test-server
-
-# testing - distant DB
-up-test-dist: network backend-gunicorn-test-dist
-down-test-dist: backend-gunicorn-test-dist-stop network-stop
-restart-test-dist: down-test-dist up-test-dist
-
-# --------------------
-# preprod - server DB
-up-preprod-server: network backend-gunicorn-preprod-server
-down-preprod-server: backend-gunicorn-preprod-server-stop network-stop
-restart-preprod-server: down-preprod-server up-preprod-server
-
-# preprod - distant DB
-up-preprod-dist: network backend-gunicorn-preprod-dist
-down-preprod-dist: backend-gunicorn-preprod-dist-stop network-stop
-restart-preprod-dist: down-preprod-dist up-preprod-dist
-
-# --------------------
-# prod - server DB
-up-prod-server: network backend-gunicorn-prod-server
-down-prod-server: backend-gunicorn-prod-server-stop network-stop
-restart-prod-server: down-prod-server up-prod-server
-
-# prod - distant DB
-up-prod-dist: network backend-gunicorn-prod-dist
-down-prod-dist: backend-gunicorn-prod-dist-stop network-stop
-restart-prod-dist: down-prod-dist up-prod-dist
+# default - prod
+up-prod: network backend-gunicorn-prod
+down-prod: backend-gunicorn-prod-stop network-stop
+restart-prod: down-prod up-prod

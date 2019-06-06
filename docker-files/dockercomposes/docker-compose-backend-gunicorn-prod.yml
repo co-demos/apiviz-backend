@@ -1,10 +1,10 @@
 version: '2.1'
 services:
   backend:
-    container_name: ${APP}-backend-prod-dist
+    container_name: ${APP}-backend-prod
     build:
       context: ${APP_PATH}
-      dockerfile: ${DF_FOLDER_SUBPATH}/Dockerfile.backend-gunicorn-prod-dist
+      dockerfile: ${DF_FOLDER_SUBPATH}/Dockerfile.backend-gunicorn-prod
     restart: always
     ports:
       - "8100:8100"

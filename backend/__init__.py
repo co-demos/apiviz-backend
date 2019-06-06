@@ -18,16 +18,16 @@ print ("__init__ / global imports for functions")
 
 import  os
 from    os import environ
-import	time, datetime
-from	datetime import timedelta
-from 	datetime import date
-import	json
+import  time, datetime
+from  datetime import timedelta
+from   datetime import date
+import  json
 import requests
-from 	pprint import pprint, pformat
-from	bson import json_util
-from	bson.objectid import ObjectId
-import	re
-from	functools import wraps
+from   pprint import pprint, pformat
+from  bson import json_util
+from  bson.objectid import ObjectId
+import  re
+from  functools import wraps
 
 
 # ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
@@ -41,19 +41,19 @@ log_app.debug('>>> TESTING LOGGER')
 ### FLASK IMPORTS 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
-from	flask 			import Flask, g, current_app, session, request
-# from 	flask_wtf.csrf 	import CSRFProtect
-# from	flask import jsonify, flash, render_template, url_for, make_response, request, redirect
+from  flask import Flask, g, current_app, session, request
+# from   flask_wtf.csrf   import CSRFProtect
+# from  flask import jsonify, flash, render_template, url_for, make_response, request, redirect
 
 from flask_cors import CORS
 
 import  socket
 
 try : 
-	host_IP = socket.gethostbyname( socket.gethostname() )
-	log_app.info( ">>> host IP : %s " , host_IP )
+  host_IP = socket.gethostbyname( socket.gethostname() )
+  log_app.info( ">>> host IP : %s " , host_IP )
 except: 
-	log_app.error(">>> no IP host detected")
+  log_app.error(">>> no IP host detected")
 
 
 
@@ -62,7 +62,7 @@ except:
 ### MONGO DB IMPORTS 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
-from	flask_pymongo import PyMongo ### flask_pymongo instead of flask.ext.pymongo
+from  flask_pymongo import PyMongo ### flask_pymongo instead of flask.ext.pymongo
 
 
 
@@ -72,24 +72,24 @@ from	flask_pymongo import PyMongo ### flask_pymongo instead of flask.ext.pymongo
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
 ### create Flask app 
-app		= Flask( __name__ )
+app = Flask( __name__ )
 CORS(app)
 
 ### FOR DEBUGGING PURPOSES
 ### LOG / PRINT HEADERS
 @app.before_request
 def before_request():
-	
-	print ()
-	print ("+ - "*25)
+  
+  print ()
+  print ("+ - "*25)
 
-	log_app.debug( '/// NEW REQUEST /// ' )
+  log_app.debug( '/// NEW REQUEST /// ' )
 
-	### print headers
-	# log_app.debug( '/// REQUEST HEADERS : \n %s ', request.headers )
-	### NOTE BUG : 
-	### SAFARI HEADERS DON'T CONTAIN COOKIE, THEREFORE NOR CSRF VALUE
-	
+  ### print headers
+  # log_app.debug( '/// REQUEST HEADERS : \n %s ', request.headers )
+  ### NOTE BUG : 
+  ### SAFARI HEADERS DON'T CONTAIN COOKIE, THEREFORE NOR CSRF VALUE
+  
 
 
 ### set environment and app variables
@@ -100,12 +100,12 @@ from .config_app.config_env import *
 
 configure_app(app)
 
-if config_name in ["default","preprod", "testing"]  :
-	log_app.info('>>> config_name : %s \n', config_name )
-	log_app.info(	">>> ENVIRONMENT VARIABLES / to understand what the fuck is goin on ... : \n %s \n", 
-		pformat({ k : v for k,v in  os.environ.items() }) )
-	log_app.info(	">>> APP.CONFIG / to understand what the fucking fuck is goin on ... : \n %s \n", 
-		pformat({ k : v for k,v in  app.config.items() }) )
+if config_name in ["default","preprod"]  :
+  log_app.info('>>> config_name : %s \n', config_name )
+  log_app.info(  ">>> ENVIRONMENT VARIABLES / to understand what the fuck is goin on ... : \n %s \n", 
+    pformat({ k : v for k,v in  os.environ.items() }) )
+  log_app.info(  ">>> APP.CONFIG / to understand what the fucking fuck is goin on ... : \n %s \n", 
+    pformat({ k : v for k,v in  app.config.items() }) )
 print
 
 
@@ -115,14 +115,14 @@ print
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
 # settings classes : global variable for app
-from 	.settings 	import *
-log_app.info(">>> LIST_PARTNERS : \n %s", pformat(LIST_PARTNERS) )
+from   .settings   import *
+# log_app.info(">>> LIST_PARTNERS : \n %s", pformat(LIST_PARTNERS) )
 
 # utils 
-from 	.utils		import *
+from   .utils    import *
 
 # models :
-from 	.models 	import *
+from   .models   import *
 
 
 # forms classes :
@@ -138,7 +138,7 @@ from .api import *
 
 
 reboot_datetime = datetime.datetime.now().strftime("%Y-%m-%d-h%H-m%M-s%S")
-# backup_mongo_collection(mongo_users,	 cwd + "/backend/_backups_collections/backup_coll_users-"+reboot_datetime +".json")
+# backup_mongo_collection(mongo_users,   cwd + "/backend/_backups_collections/backup_coll_users-"+reboot_datetime +".json")
 # backup_mongo_collection(mongo_feedbacks, cwd + "/backend/_backups_collections/backup_coll_feedbacks-"+reboot_datetime +".json")
 
 

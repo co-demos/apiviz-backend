@@ -18,6 +18,7 @@ SERVER_NAME_TEST		= "True"
 
 
 """ MONGODB """
+
 MONGO_ROOT_LOCAL     = "localhost"
 MONGO_ROOT_DOCKER    = "host.docker.internal"
 
@@ -34,5 +35,6 @@ MONGO_USER_SERVER    = "MY-MONGODB-SERVER-USERNAME"
 MONGO_PASS_SERVER    = "MY-MONGODB-SERVER-USER-PASSWORD"
 MONGO_OPTIONS_SERVER = "?MY-MONGODB-SERVER-OPTIONS" ### must begin with "?"
 
+### for instance on Mongodb Atlas
 MONGO_DISTANT_URI          = "mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>"  
-MONGO_DISTANT_URI_OPTIONS  = "?ssl=true&replicaSet=APIVIZ-configs-shard-0&authSource=admin&retryWrites=true"
+MONGO_DISTANT_URI_OPTIONS  = "?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true"
