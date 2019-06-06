@@ -18,6 +18,7 @@ toc_sticky: true
 
 You need to install Apiviz-backend to enjoy **[Apiviz-frontend](https://github.com/co-demos/apiviz-frontend)** to serve your configuration to the frontend.
 
+
 --------
 
 ## Build and run 
@@ -41,31 +42,8 @@ You have two different options to run (locally) Apiviz on your computer/server :
         ```
     - check the following URL in your browser : 
       ```
-      http://localhost:8081
+      http://localhost:8100
       ```    
-    - (optional) you can also use those other docker commands : 
-      ```sh
-       
-      ### for local dev 
-      # local DB
-      make up
-      make restart
-      make down
-      # distant DB - you will need to set up your mongodb URI in "app/config/config_secret_vars_example.py"  
-      make up-dist
-      make restart-dist
-      make down-dist
-
-      ### for testing mode
-      # local DB 
-      make up-test
-      make restart-test
-      make down-test
-      # distant DB - you will need to set up your mongodb URI in "app/config/config_secret_vars_example.py"  
-      make up-test-dist
-      make restart-test-dist
-      make down-test-dist
-      ```
 
 - **in production** 
     - install [Docker](https://phoenixnap.com/kb/how-to-install-docker-on-ubuntu-18-04) on your server (here for Ubuntu 18) 
@@ -83,40 +61,6 @@ You have two different options to run (locally) Apiviz on your computer/server :
     - lauch docker and run the command : 
       ```sh
       make up-prod
-      ```
-    - you can also use those other docker commands : 
-      ```sh
-       
-      ### for production 
-      # distant DB 
-      make up-prod
-      make restart-prod
-      make down-prod
-      # server DB 
-      make up-prod-server
-      make restart-prod-server
-      make down-prod-server
-
-      ### for preprod 
-      # distant DB 
-      make up-preprod
-      make restart-preprod
-      make down-preprod
-      # server DB 
-      make up-preprod-server
-      make restart-preprod-server
-      make down-preprod-server
-
-      ### for testing 
-      # distant DB 
-      make up-test-dist
-      make restart-test-dist
-      make down-test-dist
-      # server DB 
-      make up-test-server
-      make restart-test-server
-      make down-test-server
-
       ```
 
     - test the following url in your browser : 
@@ -170,7 +114,7 @@ You have two different options to run (locally) Apiviz on your computer/server :
 	python run_apiviz.py --help
 
 	# for example : run with a custom port number in testing mode
-	pythom run_apiviz.py --port=8200 --mode=preprod
+	python run_apiviz.py --port=8200 --mode=preprod
 	```
 
 1. **test the following url in your browser** : 
@@ -202,5 +146,106 @@ You have two different options to run (locally) Apiviz on your computer/server :
     # rerun app
     sudo systemctl restart apiviz
     ```
+    
+--------
+
+## Environment variables
 
 
+### the `.env` files
+
+The environment variables are stored in a couple of files at the root of the project : 
+
+- `example.env.global`
+- `example.env.mongodb`
+
+If you want or need to use Apiviz in production you will have to duplicate those files at the same level with those new names : 
+
+- `.env.global`
+- `.env.mongodb`
+
+... then you will be able to change the environment variable you want and begin to use all of the available arguments like :
+
+```sh
+# with Docker
+make up-prod
+```
+
+```sh
+# with Python only
+python run_apiviz.py mongodb=distant mode=dev_email
+```
+
+```sh
+# with Gunicorn
+gunicorn wsgi_prod:app --bind=0.0.0.0:4100
+```
+
+
+### the variables
+
+At the CLI level you can use :
+
+``` python
+@click.option('--mode',     default="default",     nargs=1,  help="The <mode> you need to run the app : default | testing | preprod | production" )
+@click.option('--docker',   default="docker_off",  nargs=1,  help="Are you running the app with <docker> : docker_off | docker_on" )
+@click.option('--mongodb',  default="local",       nargs=1,  help="The <mongodb> you need to run the app : local | distant | server" )
+@click.option('--auth',     default="default",     nargs=1,  help="The <auth> mode you need to run the app : default | default_docker | server | server_docker | distant_preprod | distant_prod" )
+@click.option('--host',     default="localhost",   nargs=1,  help="The <host> name you want the app to run on : <IP_NUMBER> " )
+@click.option('--port',     default="8100",        nargs=1,  help="The <port> number you want the app to run on : <PORT_NUMBER>")
+@click.option('--https',    default="false",       nargs=1,  help="The <https> mode you want the app to run on : true | false")
+```
+
+Within the `.env`files you can change the following variables : 
+
+- `example.env.global`
+
+``` bash
+RUN_MODE=preprod
+DOCKER_MODE=docker_on
+AUTH_MODE=distant_prod
+HTTPS_MODE=false
+
+### FLASK RELATED 
+DEBUG=true
+TESTING=true
+DOMAIN_ROOT=localhost
+DOMAIN_PORT=8100
+SECRET_KEY=qJxDaGacUT4Df5nx2UgGUx2VNNnjgxd9BKKVdLYQ
+SERVER_NAME_TEST=True
+
+
+### MONGO DB RELATED
+MONGODB_MODE=local
+MONGO_ROOT_LOCAL=localhost
+MONGO_ROOT_DOCKER=host.docker.internal
+MONGO_PORT_LOCAL=27017
+MONGO_COLL_CONFIG_GLOBAL=config_global
+MONGO_COLL_CONFIG_NAVBAR=config_navbar
+MONGO_COLL_CONFIG_TABS=config_tabs
+MONGO_COLL_CONFIG_APP_STYLES=config_app_styles
+MONGO_COLL_CONFIG_DATA_ENDPOINTS=config_data_endpoints
+MONGO_COLL_CONFIG_ROUTES=config_routes
+MONGO_COLL_CONFIG_FOOTER=config_footer
+MONGO_COLL_CONFIG_SOCIALS=config_socials
+```
+
+- `example.env.mongodb`
+
+``` bash
+MONGO_DBNAME=apiviz
+MONGO_DBNAME_TEST=apiviz-test
+MONGO_DBNAME_PREPROD=apiviz-preprod
+MONGO_DBNAME_PROD=apiviz-prod
+
+MONGO_ROOT_SERVER=127.0.0.1
+MONGO_PORT_SERVER=27017
+MONGO_USER_SERVER=AdminApiviz
+MONGO_PASS_SERVER=6nz2D2KzdqhaTVxy9Xk2PWzKu
+MONGO_OPTIONS_SERVER=None
+
+### for instance on MongodbAtlas
+MONGO_DISTANT_URI=mongodb://admin:Mc3NeDZTf1zQev4n@apiviz-configs-shard-00-00-54v6z.mongodb.net:27017,apiviz-configs-shard-00-01-54v6z.mongodb.net:27017,apiviz-configs-shard-00-02-54v6z.mongodb.net:27017
+MONGO_DISTANT_URI_OPTIONS=?ssl=true&replicaSet=APIVIZ-configs-shard-0&authSource=admin&retryWrites=true
+
+```
