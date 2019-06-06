@@ -50,19 +50,19 @@ log_app.info("$ config_docker : %s", config_docker)
 ### READ ENV VARS / MONGO
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
-MONGO_ROOT_LOCAL           = os.getenv('MONGO_ROOT_LOCAL') # "localhost"
-MONGO_ROOT_DOCKER          = os.getenv('MONGO_ROOT_DOCKER') # "host.docker.internal"
+MONGO_ROOT_LOCAL           = os.getenv('MONGO_ROOT_LOCAL',  'localhost') 
+MONGO_ROOT_DOCKER          = os.getenv('MONGO_ROOT_DOCKER', 'host.docker.internal') 
 
-MONGO_PORT_LOCAL           = os.getenv('MONGO_PORT_LOCAL') # "27017"
+MONGO_PORT_LOCAL           = os.getenv('MONGO_PORT_LOCAL', '27017') 
 
-MONGO_ROOT_SERVER          = os.getenv('MONGO_ROOT_SERVER') # "127.0.0.1" # IP depending on your server's mongoDB configuration
-MONGO_PORT_SERVER          = os.getenv('MONGO_PORT_SERVER') # "27017"
-MONGO_USER_SERVER          = os.getenv('MONGO_USER_SERVER') # "MY-MONGODB-SERVER-ADMIN-USER"
-MONGO_PASS_SERVER          = os.getenv('MONGO_PASS_SERVER') # "MY-SERVER-MONGODB-PASSWORD"
-MONGO_OPTIONS_SERVER       = os.getenv('MONGO_OPTIONS_SERVER') # ""
+MONGO_ROOT_SERVER          = os.getenv('MONGO_ROOT_SERVER', '127.0.0.1') # IP depending on your server's mongoDB configuration
+MONGO_PORT_SERVER          = os.getenv('MONGO_PORT_SERVER', '27017')
+MONGO_USER_SERVER          = os.getenv('MONGO_USER_SERVER') 
+MONGO_PASS_SERVER          = os.getenv('MONGO_PASS_SERVER') 
+MONGO_OPTIONS_SERVER       = formatEnvVar('MONGO_OPTIONS_SERVER', format_type="value") # ""
 
 MONGO_DISTANT_URI          = os.getenv('MONGO_DISTANT_URI') # "mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>"  
-MONGO_DISTANT_URI_OPTIONS  = os.getenv('MONGO_DISTANT_URI_OPTIONS') # "?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true"
+MONGO_DISTANT_URI_OPTIONS  = formatEnvVar('MONGO_DISTANT_URI_OPTIONS', format_type="value") # "?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true"
 
 
 # temporary dicts
@@ -83,10 +83,10 @@ mongodb_ports_dict = {
 }
 
 mongodb_dbnames_dict = {
-  "default"     : os.getenv("MONGO_DBNAME"),
-  "testing"     : os.getenv("MONGO_DBNAME_TEST"),
-  "preprod"     : os.getenv("MONGO_DBNAME_PREPROD"),
-  "production"  : os.getenv("MONGO_DBNAME")
+  "default"     : os.getenv("MONGO_DBNAME",         "apiviz"),
+  "testing"     : os.getenv("MONGO_DBNAME_TEST",    "apiviz-test"),
+  "preprod"     : os.getenv("MONGO_DBNAME_PREPROD", "apiviz-preprod"),
+  "production"  : os.getenv("MONGO_DBNAME",         "apiviz-prod")
 }
 
 ### get DB name
@@ -119,7 +119,7 @@ class Config(object):
   
   """ BASIC Config Class """
   RUN_MODE = os.getenv("RUN_MODE")
-  DEBUG = formatEnvVar('DEBUG', format_type='boolean') # True
+  DEBUG = formatEnvVar('DEBUG', format_type='boolean')
  
   """ GLOBAL_FLASK """
   static_dir  = '/static'
@@ -132,6 +132,7 @@ class Config(object):
   """ HOST """
   if config_docker != 'docker_on' :
     DOMAIN_ROOT      =  os.getenv("DOMAIN_ROOT")
+
     # DOMAIN_PORT      =  formatEnvVar("DOMAIN_PORT", format_type='integer')
     DOMAIN_PORT      =  os.getenv("DOMAIN_PORT")
 
@@ -151,16 +152,15 @@ class Config(object):
   SECRET_KEY          = os.getenv("SECRET_KEY")
   
   """ MONGODB """
-  # MONGO_DBNAME                    = 'apiviz'
   MONGO_URI  = os.getenv("MONGODB_URI")
-  MONGO_COLL_CONFIG_GLOBAL          = os.getenv('MONGO_COLL_CONFIG_GLOBAL') # "config_global"
-  MONGO_COLL_CONFIG_NAVBAR          = os.getenv('MONGO_COLL_CONFIG_NAVBAR') # "config_navbar"
-  MONGO_COLL_CONFIG_TABS            = os.getenv('MONGO_COLL_CONFIG_TABS') # "config_tabs"
-  MONGO_COLL_CONFIG_APP_STYLES      = os.getenv('MONGO_COLL_CONFIG_APP_STYLES') # "config_app_styles"
-  MONGO_COLL_CONFIG_DATA_ENDPOINTS  = os.getenv('MONGO_COLL_CONFIG_DATA_ENDPOINTS') # "config_data_endpoints"
-  MONGO_COLL_CONFIG_ROUTES          = os.getenv('MONGO_COLL_CONFIG_ROUTES') # "config_routes"
-  MONGO_COLL_CONFIG_FOOTER          = os.getenv('MONGO_COLL_CONFIG_FOOTER') # "config_footer"
-  MONGO_COLL_CONFIG_SOCIALS         = os.getenv('MONGO_COLL_CONFIG_SOCIALS') # "config_socials"
+  MONGO_COLL_CONFIG_GLOBAL          = os.getenv('MONGO_COLL_CONFIG_GLOBAL', 'config_global') 
+  MONGO_COLL_CONFIG_NAVBAR          = os.getenv('MONGO_COLL_CONFIG_NAVBAR', 'config_navbar') 
+  MONGO_COLL_CONFIG_TABS            = os.getenv('MONGO_COLL_CONFIG_TABS',   'config_tabs') 
+  MONGO_COLL_CONFIG_APP_STYLES      = os.getenv('MONGO_COLL_CONFIG_APP_STYLES',     'config_app_styles') 
+  MONGO_COLL_CONFIG_DATA_ENDPOINTS  = os.getenv('MONGO_COLL_CONFIG_DATA_ENDPOINTS', 'config_data_endpoints') 
+  MONGO_COLL_CONFIG_ROUTES          = os.getenv('MONGO_COLL_CONFIG_ROUTES',  'config_routes') 
+  MONGO_COLL_CONFIG_FOOTER          = os.getenv('MONGO_COLL_CONFIG_FOOTER',  'config_footer') 
+  MONGO_COLL_CONFIG_SOCIALS         = os.getenv('MONGO_COLL_CONFIG_SOCIALS', 'config_socials') 
 
   """ AUTH MODE """
   AUTH_MODE = os.getenv('AUTH_MODE')

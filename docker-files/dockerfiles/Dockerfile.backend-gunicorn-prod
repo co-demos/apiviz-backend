@@ -4,6 +4,8 @@ WORKDIR /apiviz_backend_in_docker
 
 COPY requirements.txt /apiviz_backend_in_docker/requirements.txt
 
+# upgrade pip and install required python packages
+RUN pip install -U pip
 RUN pip install -r requirements.txt
 
 COPY . /apiviz_backend_in_docker

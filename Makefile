@@ -44,6 +44,14 @@ network-stop:
 network:
 	@docker network create ${APP} 2> /dev/null; true
 
+### ============ ###
+### nginx
+### ============ ###
+
+nginx:
+	${DC} -f ${DC_PREFIX_FOLDER}-nginx.yml up --build 
+nginx-stop:
+	${DC} -f ${DC_PREFIX_FOLDER}-nginx.yml down
 
 ### ============ ###
 ### backend
@@ -79,11 +87,11 @@ backend-gunicorn-prod-stop:
 # restart-prod: down-prod up-prod
 
 # default - dev
-up: backend-gunicorn-dev
-down: backend-gunicorn-dev-stop 
+up: network backend-gunicorn-dev
+down: backend-gunicorn-dev-stop network-stop
 restart: down up
 
 # default - prod
-up-prod: backend-gunicorn-prod
-down-prod: backend-gunicorn-prod-stop
+up-prod: network backend-gunicorn-prod
+down-prod: backend-gunicorn-prod-stop network-stop
 restart-prod: down-prod up-prod
