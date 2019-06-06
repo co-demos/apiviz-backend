@@ -206,7 +206,6 @@ DOCKER_MODE=docker_off
 AUTH_MODE=default
 HTTPS_MODE=false
 
-
 ### FLASK RELATED 
 DEBUG=true
 TESTING=true
@@ -214,7 +213,6 @@ DOMAIN_ROOT=localhost
 DOMAIN_PORT=8100
 SECRET_KEY=app_very_secret_key
 SERVER_NAME_TEST=True
-
 
 ### MONGO DB RELATED
 MONGODB_MODE=local
