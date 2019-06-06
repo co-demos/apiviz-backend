@@ -63,8 +63,10 @@ def app_runner(mode, docker, mongodb, auth, host, port, https) :
   ### apply / overwrites host configuration
   if mode != "default" : 
     print ("=== mode : ", mode)
-    os.environ["FLASK_CONFIGURATION"] = str(mode)
-    config_name = os.getenv('FLASK_CONFIGURATION', 'default') ### 'default' for local dev
+    # os.environ["FLASK_CONFIGURATION"] = str(mode)
+    os.environ["RUN_MODE"] = str(mode)
+    # config_name = os.getenv('FLASK_CONFIGURATION', 'default') ### 'default' for local dev
+    config_name = os.getenv('RUN_MODE', 'default') ### 'default' for local dev
     print ("=== config_name : ", config_name)
 
   ### OVERRIDE ENV VARS FROM CLI 

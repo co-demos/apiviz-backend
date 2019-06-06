@@ -7,12 +7,28 @@
 ### 
 
 server {
-	listen 80;
-	server_name apiviz.fr www.apiviz.fr
-		;
+  listen 80 ;
 
-	location / {
-		include proxy_params;
-		proxy_pass http://unix:/home/jpy/app_apiviz/apiviz.sock;
-	}
+  server_name preprod.apiviz.net www.preprod.apiviz.net ;
+  # server_name 139.59.150.58 ;
+
+  location / {
+    #include proxy_params;
+
+    # proxy_set_header   X-Forwarded-For $remote_addr;
+    # proxy_set_header   Host $http_host;
+
+    ### made it work using supervisor + gunicorn
+    # proxy_pass      http://0.0.0.0:8200/ ;
+    # proxy_pass      http://127.0.0.1:8200/;
+    proxy_pass        http://139.59.150.58:8200/;
+    proxy_redirect    default;
+
+    proxy_set_header  X-Real-IP            $remote_addr;
+    proxy_set_header  X-Forwarded-For      $proxy_add_x_forwarded_for;
+    proxy_set_header  X-Forwarded-Proto    $scheme;
+
+    proxy_pass_header Server;
+    proxy_set_header  X-Scheme $scheme;
+  }
 }

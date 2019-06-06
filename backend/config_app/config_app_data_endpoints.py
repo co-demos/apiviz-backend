@@ -24,8 +24,8 @@ default_data_endpoints_config = [
           ### on server ...
           "server"          : "http://localhost:4100/api",            # toktok instance on server
           "server_docker"   : "http://host.docker.internal:4100/api", # toktok instance on server + docker
-          "distant_preprod" : "https://preprod.toktok.co-demos.com/api",
-          "distant_prod"    : "https://toktok.co-demos.com/api"
+          "distant_preprod" : "https://preprod.toktok-auth.com/api",
+          "distant_prod"    : "https://toktok-auth.com/api"
         },
         "args_options"   : [
         ],
