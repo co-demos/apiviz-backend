@@ -201,17 +201,18 @@ Within the `.env`files you can change the following variables :
 - `example.env.global`
 
 ``` bash
-RUN_MODE=preprod
-DOCKER_MODE=docker_on
-AUTH_MODE=distant_prod
+RUN_MODE=default
+DOCKER_MODE=docker_off
+AUTH_MODE=default
 HTTPS_MODE=false
+
 
 ### FLASK RELATED 
 DEBUG=true
 TESTING=true
 DOMAIN_ROOT=localhost
 DOMAIN_PORT=8100
-SECRET_KEY=qJxDaGacUT4Df5nx2UgGUx2VNNnjgxd9BKKVdLYQ
+SECRET_KEY=app_very_secret_key
 SERVER_NAME_TEST=True
 
 
