@@ -247,6 +247,4 @@ MONGO_OPTIONS_SERVER=?MY-MONGODB-SERVER-OPTIONS
 ### for instance on MongodbAtlas
 MONGO_DISTANT_URI=mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>
 MONGO_DISTANT_URI_OPTIONS=?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true
-
-
 ```
