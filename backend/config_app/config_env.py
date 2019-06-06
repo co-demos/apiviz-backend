@@ -87,7 +87,7 @@ mongodb_dbnames_dict = {
   "default"     : os.getenv("MONGO_DBNAME",         "apiviz"),
   "testing"     : os.getenv("MONGO_DBNAME_TEST",    "apiviz-test"),
   "preprod"     : os.getenv("MONGO_DBNAME_PREPROD", "apiviz-preprod"),
-  "production"  : os.getenv("MONGO_DBNAME",         "apiviz-prod")
+  "production"  : os.getenv("MONGO_DBNAME_PROD",    "apiviz-prod")
 }
 
 ### get DB name
