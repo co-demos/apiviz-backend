@@ -240,12 +240,13 @@ MONGO_DBNAME_PROD=apiviz-prod
 
 MONGO_ROOT_SERVER=127.0.0.1
 MONGO_PORT_SERVER=27017
-MONGO_USER_SERVER=AdminApiviz
-MONGO_PASS_SERVER=6nz2D2KzdqhaTVxy9Xk2PWzKu
-MONGO_OPTIONS_SERVER=None
+MONGO_USER_SERVER=MY-MONGODB-SERVER-USERNAME
+MONGO_PASS_SERVER=MY-MONGODB-SERVER-USER-PASSWORD
+MONGO_OPTIONS_SERVER=?MY-MONGODB-SERVER-OPTIONS
 
 ### for instance on MongodbAtlas
-MONGO_DISTANT_URI=mongodb://admin:Mc3NeDZTf1zQev4n@apiviz-configs-shard-00-00-54v6z.mongodb.net:27017,apiviz-configs-shard-00-01-54v6z.mongodb.net:27017,apiviz-configs-shard-00-02-54v6z.mongodb.net:27017
-MONGO_DISTANT_URI_OPTIONS=?ssl=true&replicaSet=APIVIZ-configs-shard-0&authSource=admin&retryWrites=true
+MONGO_DISTANT_URI=mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>
+MONGO_DISTANT_URI_OPTIONS=?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true
+
 
 ```
