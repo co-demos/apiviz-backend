@@ -94,7 +94,16 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for registering a new user",
         "root_url"      : "/usr/register",
         "args_options"  : [
+          { "app_arg" : "name",      "arg" : "name",      "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "surname",   "arg" : "surname",   "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "email",     "arg" : "email",     "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "password",  "arg" : "pwd",       "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "agreement", "arg" : "agreement", "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "locale",    "arg" : "lang",      "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "u_data",    "arg" : "u_data",    "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for registering a new user",
@@ -110,7 +119,11 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for login",
         "root_url"      : "/auth/login",
         "args_options"  : [
+          { "app_arg" : "email",    "arg" : "email", "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "password", "arg" : "pwd",   "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for login an user",
@@ -126,10 +139,12 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for users list",
         "root_url"      : "/usr/infos/list",
         "args_options"  : [
-          { "app_arg" : "authToken",    "arg" : "token",     "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
+          { "app_arg" : "authToken",    "arg" : "token",    "optional" : False,  "in" : ["url","header"],  "default" : "", "type" : "str" },
           { "app_arg" : "pageUser",     "arg" : "page_n",   "optional" : True,   "in" : ["url"],           "default" : 1,   "type": "int" },
           { "app_arg" : "perPageUser",  "arg" : "per_page", "optional" : True,   "in" : ["url"],           "default" : 50, "type": "int" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -147,6 +162,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -164,6 +181,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "PUT",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -182,6 +201,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "DELETE",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -196,7 +217,10 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for changing password",
         "root_url"      : "/auth/password/password_forgotten",
         "args_options"  : [
+          { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -682,6 +706,8 @@ default_data_endpoints_config = [
         "args_options"  : [
           { "app_arg" : "authToken", "arg" : "token", "optional" : False, "in" : ["url","header"], "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint for a new access JWT ",
@@ -696,7 +722,16 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for registering a new user",
         "root_url"      : "/usr/register",
         "args_options"  : [
+          { "app_arg" : "name",      "arg" : "name",      "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "surname",   "arg" : "surname",   "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "email",     "arg" : "email",     "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "password",  "arg" : "pwd",       "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "agreement", "arg" : "agreement", "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "locale",    "arg" : "lang",      "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "u_data",    "arg" : "u_data",    "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for registering a new user",
@@ -712,7 +747,11 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for login",
         "root_url"      : "/auth/login",
         "args_options"  : [
+          { "app_arg" : "email",    "arg" : "email", "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
+          { "app_arg" : "password", "arg" : "pwd",   "optional" : False, "in" : ["payload"], "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for login an user",
@@ -728,10 +767,12 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for users list",
         "root_url"      : "/usr/infos/list",
         "args_options"  : [
-          { "app_arg" : "authToken",    "arg" : "token",     "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
-          { "app_arg" : "pageUser",     "arg" : "page_n",   "optional" : True,   "in" : ["url"],           "default" : 1,   "type": "int" },
+          { "app_arg" : "authToken",    "arg" : "token",    "optional" : False,  "in" : ["url","header"],  "default" : "", "type" : "str" },
+          { "app_arg" : "pageUser",     "arg" : "page_n",   "optional" : True,   "in" : ["url"],           "default" : 1,  "type": "int" },
           { "app_arg" : "perPageUser",  "arg" : "per_page", "optional" : True,   "in" : ["url"],           "default" : 50, "type": "int" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -749,6 +790,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -766,6 +809,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "PUT",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -784,6 +829,8 @@ default_data_endpoints_config = [
           { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
           { "app_arg" : "userID",    "arg" : "doc_id", "optional" : True,   "in" : ["url"],           "default" : "", "type" : "str"}
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "DELETE",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -798,7 +845,10 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for changing password",
         "root_url"      : "/auth/password/password_forgotten",
         "args_options"  : [
+          { "app_arg" : "authToken", "arg" : "token",  "optional" : False, "in" : ["url","header"],   "default" : "", "type" : "str" },
         ],
+        "resp_fields" : {
+        },
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
@@ -942,7 +992,7 @@ default_data_endpoints_config = [
         ],
         "resp_fields" : {
           "projects" : { "path" : "data_raw/f_data" },
-          "total" : { "path" : "data_raw/f_data_count" },
+          "total"    : { "path" : "data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
