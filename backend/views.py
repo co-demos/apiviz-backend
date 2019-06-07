@@ -145,7 +145,8 @@ def getValueFromDictAndPathString(dictToSearch, path) :
   return currentValue
 
   
-def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/api/auth/tokens/confirm_access"):
+# def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/api/auth/tokens/confirm_access"):
+def checkJWT(token, roles_to_check, uuid="", auth_mode=None):
   """ 
   authenticate a token 
   sending request to the auth url / service 
@@ -159,51 +160,55 @@ def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/ap
 
   ### set the collection to user
   mongoColl = mongoConfigColls['endpoints']
-  auth_mode = app.config['AUTH_MODE']
   log_app.debug("checkJWT / auth_mode : %s", auth_mode )
   log_app.debug("checkJWT / roles_to_check : %s", roles_to_check )
 
-  ### retrieving the root_url for authentication in general given the AUTH_MODE
-  root_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_root_auth'})
-  # log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
+  if auth_mode and uuid != "" : 
 
-  auth_url = root_auth_doc['root_url'][auth_mode]
-  log_app.debug( "checkJWT / auth_url : %s", pformat(auth_url) )
+    ### retrieving the root_url for authentication in general given the AUTH_MODE
+    root_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_root_auth'})
+    # log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
 
-  ### retrieving the root_url and args for authentication
-  confirm_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_user_auth'})
-  confirm_rooturl = confirm_auth_doc['root_url']
-  confirm_user_role_path = confirm_auth_doc['resp_fields']['user_role']['path']
-  log_app.debug( "checkJWT / confirm_user_role_path : %s", confirm_user_role_path) 
+    auth_url = root_auth_doc['root_url'][auth_mode]
+    log_app.debug( "checkJWT / auth_url : %s", pformat(auth_url) )
 
-  confirm_basestring = auth_url + confirm_rooturl
-  # log_app.debug( "checkJWT / confirm_basestring : %s", pformat(confirm_basestring) )
-  
-  confirm_options = confirm_auth_doc['args_options']
-  confirm_token_arg = ''
-  for arg in confirm_options : 
-    if arg['app_arg'] == 'authToken' : 
-      confirm_arg = '?{}={}'.format(arg['arg'], token)
-  
-  confirm_url = confirm_basestring + confirm_arg
-  # log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
+    ### retrieving the root_url and args for authentication
+    confirm_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_user_auth'})
+    confirm_rooturl = confirm_auth_doc['root_url']
+    confirm_user_role_path = confirm_auth_doc['resp_fields']['user_role']['path']
+    log_app.debug( "checkJWT / confirm_user_role_path : %s", confirm_user_role_path) 
 
-  ### send request to service and read response
-  auth_response = requests.get(confirm_url)
-  auth_response_status = auth_response.status_code
-  log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
-  auth_response_data = auth_response.json()
-  # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
+    confirm_basestring = auth_url + confirm_rooturl
+    # log_app.debug( "checkJWT / confirm_basestring : %s", pformat(confirm_basestring) )
+    
+    confirm_options = confirm_auth_doc['args_options']
+    confirm_token_arg = ''
+    for arg in confirm_options : 
+      if arg['app_arg'] == 'authToken' : 
+        confirm_arg = '?{}={}'.format(arg['arg'], token)
+    
+    confirm_url = confirm_basestring + confirm_arg
+    # log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
 
-  ### get role to check value in response
-  auth_response_user_role = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
-  log_app.debug( "checkJWT / auth_response_user_role : %s", auth_response_user_role) 
+    ### send request to service and read response
+    auth_response = requests.get(confirm_url)
+    auth_response_status = auth_response.status_code
+    log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
+    auth_response_data = auth_response.json()
+    # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
 
+    ### get role to check value in response
+    auth_response_user_role = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
+    log_app.debug( "checkJWT / auth_response_user_role : %s", auth_response_user_role) 
 
-  print (". "*50)
+    print (". "*50)
 
-  # return is_authorized
-  return auth_response_user_role in roles_to_check or 'all' in roles_to_check
+    # return is_authorized
+    return auth_response_user_role in roles_to_check or 'all' in roles_to_check
+
+  else : 
+    return False
+
 
 @app.route('/backend/api/config/<string:collection>/<string:doc_id>', methods=['GET','POST','DELETE'])
 @app.route('/backend/api/config/<string:collection>', methods=['GET', 'POST'], defaults={"doc_id" : None})
@@ -286,7 +291,8 @@ def backend_configs(collection, doc_id=None):
       configDoc = mongoColl.find_one(query)
       log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
       
-      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
+      auth_mode = req_json.get('auth_mode', None)
+      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
 
       if is_authorized and configDoc is not None :
 
@@ -369,8 +375,8 @@ def backend_configs(collection, doc_id=None):
       req_data = json.loads(request.data)
       log_app.debug("config app route / req_data : \n%s", pformat(req_data) )
       token = req_data.get('token', '')
-
-      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
+      auth_mode = req_data.get('auth_mode', None)
+      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
 
       if is_authorized and collection in allowedCollsForDelete :
 
@@ -578,8 +584,9 @@ def add_document(collection, testMode=True):
     log_app.debug("config app route / POST" )
 
     token = req_json.get('token', '')
+    auth_mode = req_json.get('auth_mode', None)
     apiviz_uuid = req_json['apiviz_front_uuid']
-    is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid)
+    is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
 
     if is_authorized : 
 
