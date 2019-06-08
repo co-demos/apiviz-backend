@@ -57,7 +57,7 @@ You have two different options to run (locally) Apiviz on your computer/server :
     - set up UFW, GIT, NGINX, ...
     - (optional) [install MongoDB](https://docs.mongodb.com/manual/installation/) (if the ApiViz's DB for config is hosted on your own server)
     - add the github repo
-    - create and set of secret variables in a file (`backend/config_app/config_secret_vars_prod.py`) based on `config_secret_vars_example.py` structure
+    - create and set of secret env variables at the project's folder root based on `example.env.global` and `example.env.mongodb`
     - lauch docker and run the command : 
       ```sh
       make up-prod
@@ -73,7 +73,6 @@ You have two different options to run (locally) Apiviz on your computer/server :
 1. **clone or [download](https://github.com/co-demos/ApiViz/archive/master.zip) the repo**
 1. **[install MongoDB](https://docs.mongodb.com/manual/installation/) locally** or get the URI of the MongoDB you're using
 1. **go to your apiviz folder**
-1. **use Python 2**
 1. **install python pip and virtualenv**
 	```sh 
 	sudo apt install python-pip
@@ -93,14 +92,8 @@ You have two different options to run (locally) Apiviz on your computer/server :
 	sudo pip install -r requirements.txt
 	```
 
-1. if any problem occur here try to reinstall pip with 
 
-    ```sh
-      curl https://bootstrap.pypa.io/get-pip.py | python
-    ```
-
-
-1. **optional** : _update the `backend/config_app/config_secret_vars_example.py` file with your mongoDB URI (if you're not using default mongoDB connection_
+1. **optional** : _update the `example.env.mongodb` file with your mongoDB URI (if you're not using default mongoDB connection_
 	>
 
 1. **Go to your app folder and run :**
@@ -126,25 +119,20 @@ You have two different options to run (locally) Apiviz on your computer/server :
 1. **get a server** - check digital ocean, OVH, ...
 1. optionnal : get a domain name : check OVH, namecheap, godaddy.... + setup DNS
 1. **follow (most of) these [instructions](https://github.com/entrepreneur-interet-general/tutos-2018/wiki/Admin-Sys)**
-1. **create a `backend/config_app/config_secret_vars_prod.py` file** based on `config_secret_vars_example.py` structure
+1. **create and set of secret env variables** at the project's folder root based on `example.env.global` and `example.env.mongodb`
 1. **go to app folder and create a virtual env** (for instance called "venv")
-1. **set up the [gunicorn service](./unit/working_service_config.service) and [NGINX](./nginx/working_nginx_config)** accordingly 
+1. **set up the [gunicorn service](./unit/working_service_config.service) and [NGINX](./nginx/working_nginx_config)** with supervisor 
 
 1. ... pray for all that to work as expected, and keep calm... 
 
 1. **update code and (re-)deploy**
 
     ```sh
-    cd /<your_app_folder>/<username>/app_apiviz
+    cd /var/www/apiviz.net
     git pull origin master
-    cd backend/frontend
 
-    # build the frontend
-    npm install
-    npm run build
-
-    # rerun app
-    sudo systemctl restart apiviz
+    # start app with supervisor
+    sudo supervisorctl start toktok
     ```
     
 --------
@@ -216,22 +204,17 @@ SERVER_NAME_TEST=True
 
 ### MONGO DB RELATED
 MONGODB_MODE=local
-MONGO_ROOT_LOCAL=localhost
-MONGO_ROOT_DOCKER=host.docker.internal
-MONGO_PORT_LOCAL=27017
-MONGO_COLL_CONFIG_GLOBAL=config_global
-MONGO_COLL_CONFIG_NAVBAR=config_navbar
-MONGO_COLL_CONFIG_TABS=config_tabs
-MONGO_COLL_CONFIG_APP_STYLES=config_app_styles
-MONGO_COLL_CONFIG_DATA_ENDPOINTS=config_data_endpoints
-MONGO_COLL_CONFIG_ROUTES=config_routes
-MONGO_COLL_CONFIG_FOOTER=config_footer
-MONGO_COLL_CONFIG_SOCIALS=config_socials
+
 ```
 
 - `example.env.mongodb`
 
 ``` bash
+### to build mongodb URI
+MONGO_ROOT_LOCAL=localhost
+MONGO_ROOT_DOCKER=host.docker.internal
+MONGO_PORT_LOCAL=27017
+
 MONGO_DBNAME=apiviz
 MONGO_DBNAME_TEST=apiviz-test
 MONGO_DBNAME_PREPROD=apiviz-preprod
@@ -246,4 +229,15 @@ MONGO_OPTIONS_SERVER=?MY-MONGODB-SERVER-OPTIONS
 ### for instance on MongodbAtlas
 MONGO_DISTANT_URI=mongodb://<DISTANT-USERNAME>:<DISTANT-PASSWORD>@<DISTANT-HOST>:<DISTANT-PORT>
 MONGO_DISTANT_URI_OPTIONS=?ssl=true&replicaSet=<REPLICA-SET>&authSource=admin&retryWrites=true
+
+
+### collections
+MONGO_COLL_CONFIG_GLOBAL=config_global
+MONGO_COLL_CONFIG_NAVBAR=config_navbar
+MONGO_COLL_CONFIG_TABS=config_tabs
+MONGO_COLL_CONFIG_APP_STYLES=config_app_styles
+MONGO_COLL_CONFIG_DATA_ENDPOINTS=config_data_endpoints
+MONGO_COLL_CONFIG_ROUTES=config_routes
+MONGO_COLL_CONFIG_FOOTER=config_footer
+MONGO_COLL_CONFIG_SOCIALS=config_socials
 ```
