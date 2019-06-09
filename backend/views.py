@@ -9,7 +9,7 @@ import sys
 
 ### import all from app.__init__
 from . 	import *
-from		flask 	import 	jsonify, flash, render_template, \
+from flask 	import 	jsonify, flash, render_template, \
                   url_for, make_response, request, redirect, \
                   send_file
 
