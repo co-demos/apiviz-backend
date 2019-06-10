@@ -37,7 +37,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/test-apiviz.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/test-apiviz.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -78,7 +81,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/sonum-carto/projet"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html" }, 
+        ],
         # "is_static_local"   : False,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
@@ -124,7 +130,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-carto/carte"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -265,7 +273,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-carto/liste"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -399,7 +409,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-carto/detail"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -588,7 +600,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-xp/carte"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -710,7 +724,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-xp/liste"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -832,7 +848,9 @@ default_routes_config = [
 
           "in_footer"         : False,
           "urls"              : ["/sonum-xp/detail"],
-          "template_url"      : "/static/spa.html",
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -1085,7 +1103,10 @@ default_routes_config = [
           "in_footer"         : False,
           "link_in_logo"      : True,
           "urls"              : ["/sonum-xp/accueil"],
-          "template_url"      : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/accueil-clean.html",
+          # "template_url"      : "",
+          "template_urls"     : [
+            { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/accueil-clean.html" },
+          ],
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
@@ -1122,7 +1143,10 @@ default_routes_config = [
           "in_footer"         : False,
           "link_in_logo"      : True,
           "urls"              : ["/sonum-xp/strategie"],
-          "template_url"      : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/strategie-clean.html",
+          # "template_url"      : "",
+          "template_urls"     : [
+            { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/strategie-clean.html" },
+          ],
           # "template_url"      : "https://raw.githubusercontent.com/CBalsier/test-content/master/pages-html/le-collectif.html",
           # "is_static_local"   : False,
           "help"              : u"you can specify a remote template (f.e. a github url)",
@@ -1167,7 +1191,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/qui-sommes-nous"],
-        "template_url"      : "https://github.com/co-demos/carto-sonum/blob/master/pages-html/qui-sommes-nous.html?raw=true",
+        # "template_url"      : "",
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://github.com/co-demos/carto-sonum/blob/master/pages-html/qui-sommes-nous.html?raw=true" },
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -1209,7 +1236,10 @@ default_routes_config = [
 
         "in_footer"         : True,
         "urls"              : ["/nos-outils"],
-        "template_url"      : "/static/les-outils.html",
+        # "template_url"      : "/static/les-outils.html",
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "" },
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -1250,7 +1280,10 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/apiviz/outils"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/structure/master/pages-html/tools-fr.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/structure/master/pages-html/tools-fr.html" },
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -1291,7 +1324,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/login"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default login page for Apiviz",
         "languages"         : ["fr"],
@@ -1324,7 +1359,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/register"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default register page for Apiviz",
         "languages"         : ["fr"],
@@ -1357,7 +1394,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/logout"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default logout page for Apiviz",
         "languages"         : ["fr"],
@@ -1390,7 +1429,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/backoffice"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default backoffice page for Apiviz",
         "languages"         : ["fr"],
@@ -1423,7 +1464,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/preferences"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default preferences page for Apiviz",
         "languages"         : ["fr"],
@@ -1475,14 +1518,20 @@ default_routes_config = [
         "urls"              : ["/"],
 
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
-        "template_url"      : "http://localhost:8800/html/pages-html/home.html",
+        # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
+        "template_urls"     : [
+          # {"locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html" },
+          # {"locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
+        ],
         # "is_static_local"   : False,
 
         "has_ext_script"    : True,
         "ext_script_urls"   : [
           {"at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
           {"at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/home.js?v3"},
-          # "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/home.js"
+          # {"at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/home.js"}
         ],
 
         "help"              : u"you can specify a remote template (f.e. a github url)",
@@ -1494,7 +1543,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "",
         "dataset_uri"       : "cis",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
@@ -1528,7 +1577,9 @@ default_routes_config = [
 
         "in_footer"         : False,
         "urls"              : ["/recherche/carte"],
-        "template_url"      : "/static/spa.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
@@ -1671,7 +1722,9 @@ default_routes_config = [
 
         "in_footer"         : False,
         "urls"              : ["/recherche", "/recherche/liste"],
-        "template_url"      : "/static/spa.html",
+        # "template_url"      : "/static/spa.html",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
@@ -1807,7 +1860,9 @@ default_routes_config = [
 
         "in_footer"         : False,
         "urls"              : ["/project", "/cis/detail"],
-        "template_url"      : "/static/spa.html",
+        # "template_url"      : "/static/spa.html",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
@@ -1976,10 +2031,22 @@ default_routes_config = [
         "link_in_logo"      : True,
         "urls"              : ["/le-projet"],
         "dataset_uri"       : "project-cis",
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+        ],
         # "is_static_local"   : False,
-        "has_ext_script"    : False,
-        "ext_script_urls"   : "",
+
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          {"at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+          {"at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/le-projet.js"},
+          # {"at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js?v3"},
+        ],
+
         # "has_carousel"      : True,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
@@ -1988,11 +2055,11 @@ default_routes_config = [
         "is_dynamic"        : True,
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
+
         "has_tabs"          : True,
-        "tabs_uri"          : "project-cis-tabs",
+        "tabs_uri"          : "tabs-cis-test",
+
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2000,8 +2067,8 @@ default_routes_config = [
       ### PAGE : QUI SOMMES-NOUS CIS
       { "field"             : "app_who_fr",
         "is_global_app_homepage" : False,
-        "route_title"        : u"Home",
-        "route_description"  : u"Qui sommes-nous",
+        "route_title"        : u"Collectif",
+        "route_description"  : u"Le collectif",
         "route_activated"    : True,
         "banner" : {
           "activated"  : False,
@@ -2020,8 +2087,14 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : False,
-        "urls"              : ["/qui-sommes-nous"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html",
+        "urls"              : ["/le-collectif"],
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2032,10 +2105,13 @@ default_routes_config = [
         "comment"           : u"A custom page for your ApiViz app",
         "is_dynamic"        : True,
         "dynamic_template"  : 'DynamicStatic',
+
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-collective",
+
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2043,8 +2119,8 @@ default_routes_config = [
       ### PAGE : QUI-SOMMES-NOUS/QUI-FAIT-QUOI
       { "field"             : "cis_partners",
         "is_global_app_homepage" : True,
-        "route_title"       : u"Outils",
-        "route_description" : u"apiviz default tools page",
+        "route_title"       : u"Qui fait quoi",
+        "route_description" : u"APCIS partners page",
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,
@@ -2063,8 +2139,14 @@ default_routes_config = [
         "link_in_logo"      : False,
         "has_ext_script"    : True,
         "ext_script_url"    : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js",
-        "urls"              : ["/qui-sommes-nous/qui-fait-quoi"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html",
+        "urls"              : ["/le-collectif/qui-fait-quoi"],
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2077,8 +2159,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-collective",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2107,7 +2189,13 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/nous-rejoindre"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2120,91 +2208,8 @@ default_routes_config = [
         "dynamic_template"  : 'DynamicStatic',
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
-        "is_default"        : True
-      },
-
-      ### PAGES : TOOLS (GENERIC)
-      { "field"              : "app_outils",
-        "is_global_app_homepage" : False,
-        "route_title"        : u"Outils",
-        "route_description"  : u"Nos outils",
-        "route_activated"    : True,
-        "banner" : {
-          "activated"  : False,
-          "banner_uri" : "default"
-        },
-        "is_dataset_homepage" : False,
-
-        "in_main_navbar"    : False,
-        "navbar_btn_options" : {
-          "position"   : "middle_right",
-          "link_type"  : "button",
-          "icon_class" : "",
-          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
-          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
-        },
-
-        "in_footer"         : True,
-        "urls"              : ["/nos-outils"],
-        "template_url"      : "/static/les-outils.html",
-        # "is_static_local"   : False,
-        "has_ext_script"    : False,
-        "ext_script_urls"   : "",
-        # "has_carousel"      : False,
-        "help"              : u"you can specify a remote template (f.e. a github url)",
-        "languages"         : ["fr"],
-        "app_version"        : version,
-        "comment"           : u"Main tools route in french",
-        "is_dynamic"        : False,
-        "dynamic_template"  : None,
-        "has_navbar"        : True,
-        "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
-        "is_default"        : True
-      },
-
-      ### PAGE TOOLS - FR - APIVIZ
-      { "field"             : "app_tools",
-        "is_global_app_homepage" : True,
-        "route_title"       : u"Outils",
-        "route_description" : u"apiviz default tools page",
-        "route_activated"   : True,
-        "banner" : {
-          "activated"  : False,
-          "banner_uri" : ""
-        },
-        "in_main_navbar"    : False,
-        "navbar_btn_options" : {
-          "position"   : "middle_right",
-          "link_type"  : "link",
-          "icon_class" : "",
-          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
-          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
-        },
-
-        "in_footer"         : True,
-        "link_in_logo"      : False,
-        "urls"              : ["/apiviz/outils"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/structure/master/pages-html/tools-fr.html",
-        # "is_static_local"   : False,
-        "has_ext_script"    : False,
-        "ext_script_urls"   : "",
-        # "has_carousel"      : False,
-        "help"              : u"you can specify a remote template (f.e. a github url)",
-        "languages"         : ["fr"],
-        "app_version"       : version,
-        "comment"           : u"Main apiviz tools route in french",
-        "is_dynamic"        : True,
-        "dynamic_template"  : "DynamicStatic",
-        "has_navbar"        : True,
-        "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-test",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2231,7 +2236,13 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/outils"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2244,8 +2255,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-test",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2272,7 +2283,13 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/parlent-de-nous"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2285,8 +2302,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-test",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2314,7 +2331,13 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/recompenses"],
-        "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html",
+        # "template_url"      : "",
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
+        ],
         # "is_static_local"   : False,
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
@@ -2327,8 +2350,8 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-cis-test",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2354,7 +2377,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/login"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default login page for Apiviz",
         "languages"         : ["fr"],
@@ -2365,7 +2390,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "tabs-cis-default",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2387,7 +2412,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/register"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default register page for Apiviz",
         "languages"         : ["fr"],
@@ -2398,7 +2425,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "tabs-cis-default",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2420,7 +2447,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/logout"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default logout page for Apiviz",
         "languages"         : ["fr"],
@@ -2431,7 +2460,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "tabs-cis-default",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2453,7 +2482,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/backoffice"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default backoffice page for Apiviz",
         "languages"         : ["fr"],
@@ -2464,7 +2495,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "tabs-cis-default",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -2486,7 +2517,9 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/preferences"],
-        "template_url"      : "",
+        # "template_url"      : "",
+        "template_urls"     : [
+        ],
         # "is_static_local"   : False,
         "help"              : u"default preferences page for Apiviz",
         "languages"         : ["fr"],
@@ -2497,7 +2530,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : False,
-        "tabs_uri"          : "cis-tabs",
+        "tabs_uri"          : "tabs-cis-default",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },

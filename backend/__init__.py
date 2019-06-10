@@ -19,15 +19,15 @@ print ("__init__ / global imports for functions")
 import  os
 from    os import environ
 import  time, datetime
-from  datetime import timedelta
-from   datetime import date
+from    datetime import timedelta
+from    datetime import date
 import  json
-import requests
-from   pprint import pprint, pformat
-from  bson import json_util
-from  bson.objectid import ObjectId
+import  requests
+from    pprint import pprint, pformat
+from    bson import json_util
+from    bson.objectid import ObjectId
 import  re
-from  functools import wraps
+from    functools import wraps
 
 
 # ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
