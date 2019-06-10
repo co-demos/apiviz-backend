@@ -30,6 +30,12 @@ brew install ruby
 gem install jekyll
 ```
 
+- From your repo's root go to the `/docs` folder
+
+```sh 
+cd /docs
+```
+
 - Install setup (given the `Gemfile`, `Gemfile.lock` and `_config.yml` files)
 
 ```bash
@@ -46,10 +52,10 @@ bundle update
 jekyll serve
 
 # or if you want to run the docs server on another port
-jekyll serve --port=4001
+jekyll serve --port=8101
 ```
 
 ... then check in your browser : 
 
-[`127.0.0.1:4001`](127.0.0.1:4001) 
+[`127.0.0.1:8101`](127.0.0.1:8101) 
 

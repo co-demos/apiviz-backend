@@ -74,6 +74,9 @@ curl --header "Content-Type: application/json" \
 
 #### examples
 
+```sh
+curl `http://localhost:8100/backend/api/config/global?uuid=c5efafab-1733-4ad1-9eb8-d529bc87c481`
+```
 
 --------
 

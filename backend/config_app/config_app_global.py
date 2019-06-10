@@ -275,8 +275,8 @@ default_global_config = [
 
     ### LANGUAGES
       { "field"       : "app_languages",
-        "languages"   : ["fr"],
-        "is_multi_lang" : False,
+        "languages"   : ["fr", "en"],
+        "is_multi_lang" : True,
         "locale"      : "fr",
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
@@ -424,7 +424,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"          : "/favicon.ico",
+        "url"         : "https://raw.githubusercontent.com/co-demos/cis-data/master/logos/CIS/CIS_logo.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",

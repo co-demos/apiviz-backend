@@ -165,36 +165,36 @@ default_app_navbar = [
                 { "is_divider" : True,  "is_external_link" : False },
               ]
             },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "",
-              "help"       : u"Fourth menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "FR"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "FR" }],
-              "tooltip"    : [{"locale" : "en", "text" : "in french"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En français" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/sonum-xp/accueil",   "link_text" : [{"locale" : "en", "text" : "Home page"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accueil"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "",
-              "help"       : u"Fifth menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "EN"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "EN" }],
-              "tooltip"    : [{"locale" : "en", "text" : "in english"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En anglais" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/sonum-xp/accueil",   "link_text" : [{"locale" : "en", "text" : "Home page"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accueil"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
+            # { "is_visible" : True,
+            #   "position"   : "exterior_right",
+            #   "link_to"    : "",
+            #   "help"       : u"Fourth menu in navbar",
+            #   "is_external_link" : False,
+            #   "link_type"  : "link", ### show btn border
+            #   "icon_class" : "",
+            #   "link_text"  : [{"locale" : "en", "text" : "FR"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "FR" }],
+            #   "tooltip"    : [{"locale" : "en", "text" : "in french"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En français" }],
+            #   "has_dropdown" : False,
+            #   "dropdowns"  : [
+            #     { "is_divider" : False, "is_external_link" : False, "link_to" : "/sonum-xp/accueil",   "link_text" : [{"locale" : "en", "text" : "Home page"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accueil"}] },
+            #     { "is_divider" : True,  "is_external_link" : False },
+            #   ]
+            # },
+            # { "is_visible" : True,
+            #   "position"   : "exterior_right",
+            #   "link_to"    : "",
+            #   "help"       : u"Fifth menu in navbar",
+            #   "is_external_link" : False,
+            #   "link_type"  : "link", ### show btn border
+            #   "icon_class" : "",
+            #   "link_text"  : [{"locale" : "en", "text" : "EN"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "EN" }],
+            #   "tooltip"    : [{"locale" : "en", "text" : "in english"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En anglais" }],
+            #   "has_dropdown" : False,
+            #   "dropdowns"  : [
+            #     { "is_divider" : False, "is_external_link" : False, "link_to" : "/sonum-xp/accueil",   "link_text" : [{"locale" : "en", "text" : "Home page"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accueil"}] },
+            #     { "is_divider" : True,  "is_external_link" : False },
+            #   ]
+            # },
           ]
         },
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
