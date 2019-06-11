@@ -37,14 +37,15 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/test-apiviz.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/test-apiviz.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -81,11 +82,12 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/sonum-carto/projet"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -133,7 +135,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -146,51 +148,59 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "ville structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "intitulé structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "description structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "source",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_src",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             
@@ -249,6 +259,7 @@ default_routes_config = [
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
           "is_default"        : True
         },
+
         ## PAGE - list
         { "field"             : "sonum_carto_liste",
           "is_global_app_homepage" : False,
@@ -276,7 +287,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -289,51 +300,59 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "ville structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "intitulé structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "description structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "source",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_src",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
 
@@ -385,6 +404,7 @@ default_routes_config = [
           "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
           "is_default"        : True
         },
+
         ## PAGE - detail
         { "field"             : "sonum_carto_detail",
           "is_global_app_homepage" : False,
@@ -412,7 +432,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -425,71 +445,83 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "intitulé structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
           { "field" : "code postal structure",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_cp",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "description structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "source",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : False,
               "position" : "block_src",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "services",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "website structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_wesite",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "contact",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "téléphone",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tel",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "horaires structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_open_infos",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "services",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_services",
               "title_block" : [{"locale" : "en", "text" : "Services"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services proposés", "is_visible" : False }],
             },
             { "field" : "infos pratiques",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_infos_pract",
               "title_block" : [{"locale" : "en", "text" : "Informations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Informations pratiques", "is_visible" : False }],
@@ -603,7 +635,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -616,39 +648,45 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "titre initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "city",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "présentation initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "type structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
           ],
@@ -727,7 +765,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -741,39 +779,45 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "titre initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "city",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "présentation initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "type structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
           ],
@@ -851,7 +895,7 @@ default_routes_config = [
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -864,141 +908,162 @@ default_routes_config = [
           "contents_fields"  : [
 
             { "field" : "titre initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "public visé",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_main_tags",
               "custom_title" : "Publics visés :",
               "is_tag_like" : True,
               "tags_separator" : "-",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "échelle action initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_scale_tags",
               "custom_title" : "Echelle :",
               "is_tag_like" : True,
               "tags_separator" : "-",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "nom structure porteuse",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_scale_2",
               "custom_title" : "Structure :",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "adresse structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_scale_address",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "city",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              "trim" : 20,
+              # "trim" : 20,
               "locale" : "fr"
             },
             { "field" : "présentation structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_pre_abstract",
               "custom_title" : "Présentation de la structure",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "présentation initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               "custom_title" : "Présentation de l'initiative",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "type structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "date action initiative - début",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_period",
-              "trim" : 50,
+              
               "locale" : "fr"
             },
             { "field" : "contact - nom",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_surname",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "contact - prénom",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_name",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "contact - titre",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_title",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "contact - email",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_email",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "contact - téléphone",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_tel",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "lien document présentation",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_file_1",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "website - initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_wesite",
-              "trim" : 0,
+              
               "locale" : "fr"
             },
             { "field" : "retour d'expérience",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_right_bottom_1",
-              "trim" : 0,
+              
               "custom_title" : "Retour d'expérience",
               "locale" : "fr"
             },
             { "field" : "partenaires initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_post_abstract_1",
-              "trim" : 0,
+              
               "custom_title" : "Partenaires de l'initiative",
               "locale" : "fr"
             },
             { "field" : "moyens humains initiative",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_post_abstract_2",
-              "trim" : 0,
+              
               "custom_title" : "Moyens",
               "locale" : "fr"
             },
             { "field" : "mesure d'impact",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_right_bottom_2",
-              "trim" : 0,
+              
               "custom_title" : "Mesure d'impact",
               "locale" : "fr"
             },
@@ -1103,11 +1168,12 @@ default_routes_config = [
           "in_footer"         : False,
           "link_in_logo"      : True,
           "urls"              : ["/sonum-xp/accueil"],
-          # "template_url"      : "",
+          
           "template_urls"     : [
             { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/accueil-clean.html" },
+            { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/accueil-clean.html" },
           ],
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -1143,12 +1209,13 @@ default_routes_config = [
           "in_footer"         : False,
           "link_in_logo"      : True,
           "urls"              : ["/sonum-xp/strategie"],
-          # "template_url"      : "",
+          
           "template_urls"     : [
             { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/strategie-clean.html" },
+            { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/strategie-clean.html" },
           ],
           # "template_url"      : "https://raw.githubusercontent.com/CBalsier/test-content/master/pages-html/le-collectif.html",
-          # "is_static_local"   : False,
+          
           "help"              : u"you can specify a remote template (f.e. a github url)",
           "languages"         : ["fr"],
           "app_version"       : version,
@@ -1191,14 +1258,15 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/qui-sommes-nous"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://github.com/co-demos/carto-sonum/blob/master/pages-html/qui-sommes-nous.html?raw=true" },
+          { "locale" : "en", "url" : "https://github.com/co-demos/carto-sonum/blob/master/pages-html/qui-sommes-nous.html?raw=true" },
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1239,11 +1307,12 @@ default_routes_config = [
         # "template_url"      : "/static/les-outils.html",
         "template_urls"     : [
           { "locale" : "fr", "url" : "" },
+          { "locale" : "en", "url" : "" },
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1280,14 +1349,15 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/apiviz/outils"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/structure/master/pages-html/tools-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/structure/master/pages-html/tools-fr.html" },
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1324,10 +1394,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/login"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default login page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1359,10 +1429,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/register"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default register page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1394,10 +1464,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/logout"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default logout page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1429,10 +1499,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/backoffice"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default backoffice page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1464,10 +1534,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/preferences"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default preferences page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1525,13 +1595,13 @@ default_routes_config = [
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
-        # "is_static_local"   : False,
+        
 
         "has_ext_script"    : True,
         "ext_script_urls"   : [
-          {"at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
-          {"at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/home.js?v3"},
-          # {"at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/home.js"}
+          {"script_id" : "js-car" , "at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+          {"script_id" : "js-home", "at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/home.js?v7"},
+          # {"script_id" : "js-home" , "at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/home.js"}
         ],
 
         "help"              : u"you can specify a remote template (f.e. a github url)",
@@ -1577,10 +1647,10 @@ default_routes_config = [
 
         "in_footer"         : False,
         "urls"              : ["/recherche/carte"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1593,53 +1663,69 @@ default_routes_config = [
         "contents_fields"  : [
 
           { "field" : "sd_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           # { "field" : "adresse structure", # SONUM
           { "field" : "adresse du projet", # CIS
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "ville structure",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           # { "field" : "intitulé structure", # SONUM
           { "field" : "titre du projet", # CIS
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "",
+          { "field" : "image(s) du projet",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "link_src", # spider/sourceur
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_tags",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
 
@@ -1725,7 +1811,7 @@ default_routes_config = [
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1738,52 +1824,69 @@ default_routes_config = [
         "contents_fields"  : [
 
           { "field" : "sd_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "adresse du projet",
+          { "field" : "address",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_address",
-            "trim" : 20,
+            "position" : "block_city",
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "ville structure",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "intitulé structure", #SONUM
-          { "field" : "titre du projet",#CIS
+          { "field" : "titre du projet",
+            "field_format" : { "trim" : 50, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "",
+          { "field" : "image(s) du projet",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
-            "trim" : 20,
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
+            "field_format" : { "trim" : 75, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "link_src",
-            "is_visible" : True,
+            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+            "is_visible" : False,
             "position" : "block_src",
-            "trim" : 50,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "",
+          { "field" : "tags",
+            "field_format" : { "trim" : 10, "type" : "list_tags", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_tags",
-            "trim" : 50,
+            "is_tag_like" : False,
+            "tags_separator" : ";",
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
 
@@ -1863,7 +1966,7 @@ default_routes_config = [
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1876,52 +1979,81 @@ default_routes_config = [
         "contents_fields"  : [
 
           # { "field" : "intitulé structure", #SONUM
-          { "field" : "titre du projet",#CIS
+          { "field" : "titre du projet", #CIS
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            "trim" : 0,
+            
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field" : "image(s) du projet",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_image",
+            # "trim" : 20,
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "adresse du projet",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            "trim" : 0,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "code postal structure",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
-            "trim" : 0,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
+            "field_format" : { "trim" : 500, "type" : "list", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
-            "trim" : 0,
+            
+            "custom_title" : "Résumé du projet",
             "locale" : "fr"
           },
           { "field" : "link_src",
-            "is_visible" : False,
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
             "position" : "block_src",
-            "trim" : 0,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "services",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_tags",
-            "trim" : 0,
+            
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field" : "link_data",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
-            "trim" : 0,
+            
+            "custom_title" : "to do",
             "locale" : "fr"
           },
           { "field"       : "tags",
+            "field_format" : { "trim" : 10, "type" : "list_tags", "retrieve" : [-1] },
             "is_visible"  : True,
-            "position"    : "block_right_bottom_1",
-            "title_block" : [{"locale" : "en", "text" : "tags"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tags", "is_visible" : True }],
+            "position"    : "block_rb1_tags",
+
+            "is_tag_like" : False,
+            "tags_separator" : "",
+            "custom_title" : "Thématiques",
+            "locale" : "fr"
           },
 
         ],
@@ -2031,20 +2163,20 @@ default_routes_config = [
         "link_in_logo"      : True,
         "urls"              : ["/le-projet"],
         "dataset_uri"       : "project-cis",
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
-        # "is_static_local"   : False,
+        
 
         "has_ext_script"    : True,
         "ext_script_urls"   : [
-          {"at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
-          {"at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/le-projet.js"},
-          # {"at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js?v3"},
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          # {"script_id" : "js-project", "at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js?v3"},
         ],
 
         # "has_carousel"      : True,
@@ -2088,17 +2220,17 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/le-collectif"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2137,20 +2269,21 @@ default_routes_config = [
 
         "in_footer"         : True,
         "link_in_logo"      : False,
-        "has_ext_script"    : True,
-        "ext_script_url"    : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js",
         "urls"              : ["/le-collectif/qui-fait-quoi"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
         ],
-        # "is_static_local"   : False,
-        "has_ext_script"    : False,
-        "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          # {"script_id" : "js-sho", "at_mount" : True,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js"},
+          {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v5"},
+        ],
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2189,17 +2322,17 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/nous-rejoindre"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2236,17 +2369,17 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/outils"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2283,17 +2416,17 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/parlent-de-nous"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2331,17 +2464,17 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/le-projet/recompenses"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
           # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
           # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
           { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
           { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
         ],
-        # "is_static_local"   : False,
+        
         "has_ext_script"    : False,
         "ext_script_urls"   : "",
-        # "has_carousel"      : False,
+        
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2377,10 +2510,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/login"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default login page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2412,10 +2545,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/register"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default register page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2447,10 +2580,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/logout"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default logout page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2482,10 +2615,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/backoffice"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default backoffice page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -2517,10 +2650,10 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : False,
         "urls"              : ["/preferences"],
-        # "template_url"      : "",
+        
         "template_urls"     : [
         ],
-        # "is_static_local"   : False,
+        
         "help"              : u"default preferences page for Apiviz",
         "languages"         : ["fr"],
         "app_version"       : version,

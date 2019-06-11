@@ -33,21 +33,25 @@ default_app_footer = [
 
         },
 
-        "links_options" : {
+        "links_options" : [
 
-          "block_left" : {
+          {
+            # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
             "position"    : "block_top_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
+            "title_visible" : True,
             "links"       : []
           },
 
-          "block_center_left" : {
+          {
+            # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "French Digital Agency"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "French Digital Agency"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique"}],
+            "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True, 
@@ -77,11 +81,13 @@ default_app_footer = [
             ]
           },
 
-          "block_center_right" : {
+          {
+            # "block_center_right" : {
             "is_visible"  : True,
             "has_socials" : False,
-            "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Digital Society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
+            "position"    : "block_top_center_right",
+            "title_block" : [{"locale" : "en", "text" : "Digital Society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique"}],
+            "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True, 
@@ -175,11 +181,13 @@ default_app_footer = [
             ]
           },
 
-          "block_right" : {
+          {
+            # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics"}],
+            "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True, 
@@ -225,7 +233,7 @@ default_app_footer = [
             ]
           },
 
-        },
+        ],
 
         "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
         "is_default"  : True
@@ -239,7 +247,7 @@ default_app_footer = [
         "template_url"      : None,
         "is_dynamic"        : True,
         "dynamic_template"  : 'DynamicFooter',
-        "has_credits_footer": True,
+        "has_credits_footer": False,
         "credits_footer_url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/footer-mednum.html",
 
         "ui_options" : {
@@ -257,25 +265,29 @@ default_app_footer = [
 
         },
 
-        "links_options" : {
+        "links_options" : [
 
-          "block_left" : {
+          {
+            # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
             "position"    : "block_top_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
+            "title_visible" : True,
             "links"       : []
           },
 
-          "block_center_left" : {
+          {
+            # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Social Innovations Crossroads"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Carrefour des Innovations Sociales", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Social Innovations Crossroads"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Carrefour des Innovations Sociales"}],
+            "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "/qui-sommes-nous",
+                "link_to"    : "/le-collectif",
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
@@ -290,54 +302,51 @@ default_app_footer = [
                 "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
+              { "is_visible" : True,
+                "link_to"    : "/login",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }],
+                "tooltip"    : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }]
+              },
             ]
           },
 
-          "block_center_right" : {
+          {
+            # "block_center_right" : {
             "is_visible"  : False,
             "has_socials" : False,
             
-            "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Digital society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique", "is_visible" : False}],
+            "position"    : "block_top_center_right",
+            "title_block" : [{"locale" : "en", "text" : "Digital society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique"}],
+            "title_visible" : True,
             "links"       : [
-              { "is_visible" : True,
-                "link_to"    : "/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Palteforme des territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plateforme des territoires" }],
-                "tooltip"    : [{"locale" : "en", "text" : "check the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "code source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "access to the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "/apiviz/outils",
-                "is_external_link" : False,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "open source tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "outils open source" }],
-                "tooltip"    : [{"locale" : "en", "text" : "access to the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "accéder au code source" }]
-              },
+
             ]
           },
 
-          "block_right" : {
+          {
+            # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
             
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics", "is_visible" : False}],
+            "title_block" : [{"locale" : "en", "text" : "Stay in touch"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nous rejoindre"}],
+            "title_visible" : True,
             "links"       : [
+              { "is_visible" : True,
+                "link_to"    : "/nous-rejoindre",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Social innovations crossroad's newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter du Carrefour des Innovations Sociales" }],
+                "tooltip"    : [{"locale" : "en", "text" : "Newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter" }]
+              },
             ]
           },
 
-        },
+        ],
 
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"  : True

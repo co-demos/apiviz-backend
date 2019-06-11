@@ -242,6 +242,17 @@ default_data_endpoints_config = [
           "data_type"     : "data",
           "endpoint_type" : "filters",
           "dataset_uri"   : "sonum-carto",
+          "available_views" : ['list', 'map'],
+          "has_schuffle"  : False,
+          "has_pagination" : False,
+          "pagination_options" : {
+            "per_page" : [ 5, 10, 25, 100 ],
+          },
+          "has_infinite_scroll" : True,
+          "has_order_by" : False,
+          "order_by_options" : {
+            "order_by_list" : [],
+          },
 
           "placeholder"   : [
             {"locale" : "en", "text" : "Enter a place, a project name..."},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" },
@@ -331,8 +342,8 @@ default_data_endpoints_config = [
 
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -355,8 +366,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -379,8 +390,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple",   "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -427,8 +438,8 @@ default_data_endpoints_config = [
 
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -447,6 +458,17 @@ default_data_endpoints_config = [
           "data_type"     : "data",
           "endpoint_type" : "filters",
           "dataset_uri"   : "sonum-xp",
+          "available_views" : ['list', 'map'],
+          "has_schuffle"  : False,
+          "has_pagination" : False,
+          "pagination_options" : {
+            "per_page" : [ 5, 10, 25, 100 ],
+          },
+          "has_infinite_scroll" : True,
+          "has_order_by" : False,
+          "order_by_options" : {
+            "order_by_list" : [],
+          },
 
           "placeholder"   : [
             {"locale" : "en", "text" : "Enter the name of an initiative"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'une initiative" }
@@ -525,8 +547,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 0 , "type": "int" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"   : version,
           "method"        : "GET",
@@ -549,8 +571,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -573,8 +595,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple", "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -618,8 +640,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "filters",       "arg" : "search_filters",   "optional" : True, "in" : ["url"],          "default" : "",   "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "path" : "data_raw/f_data" },
-            "total" : { "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -869,6 +891,17 @@ default_data_endpoints_config = [
         "data_type"     : "data",
         "endpoint_type" : "filters",
         "dataset_uri"   : "cis",
+        "available_views" : ['list', 'map'],
+        "has_schuffle"  : False,
+        "has_pagination" : False,
+        "pagination_options" : {
+          "per_page" : [ 5, 10, 25, 100 ],
+        },
+        "has_infinite_scroll" : True,
+        "has_order_by" : False,
+        "order_by_options" : {
+          "order_by_list" : [],
+        },
 
         "placeholder"   : [
           {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
@@ -960,15 +993,16 @@ default_data_endpoints_config = [
         #"root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
         "args_options"  : [
-          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
-          {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,   "type": "int" },
+          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+          {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
           {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 100, "type": "int" },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
         ],
         "resp_fields" : {
-          "projects" : { "path" : "data_raw/f_data" },
-          "total" : { "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -991,8 +1025,8 @@ default_data_endpoints_config = [
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
         ],
         "resp_fields" : {
-          "projects" : { "path" : "data_raw/f_data" },
-          "total"    : { "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
+          "total"    : { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -1015,8 +1049,8 @@ default_data_endpoints_config = [
           {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple",   "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
         ],
         "resp_fields" : {
-          "projects" : { "path" : "data_raw/f_data" },
-          "total" : { "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -1062,8 +1096,8 @@ default_data_endpoints_config = [
 
         ],
         "resp_fields" : {
-          "projects" : { "path" : "data_raw/f_data" },
-          "total" : { "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",

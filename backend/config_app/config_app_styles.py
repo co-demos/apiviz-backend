@@ -99,6 +99,10 @@ default_app_styles_config = [
             "banner_uri"       : "apiviz_default",
             "dataset_uri"      : None,
             "template_url"     : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html",
+            "template_urls"    : [
+              { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html" },
+              { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html" },
+            ],
             "is_dynamic"       : False,
             "dynamic_template" : 'DynamicBanner',
             "is_visible"          : False,
@@ -110,6 +114,10 @@ default_app_styles_config = [
             "banner_uri"       : "banner-sonum-carto",
             "dataset_uri"      : "sonum-carto",
             "template_url"     : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html",
+            "template_urls"    : [
+              { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html" },
+              { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/banner-sonum-dft.html" },
+            ],
             "is_dynamic"       : False,
             "dynamic_template" : 'DynamicBanner',
             "is_visible"          : False,
@@ -121,6 +129,10 @@ default_app_styles_config = [
             "banner_uri"       : "banner-sonum-xp",
             "dataset_uri"      : "sonum-xp",
             "template_url"     : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/banner-sonum-xp.html",
+            "template_urls"    : [
+              { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/banner-sonum-xp.html" },
+              { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/xp-sonum/master/pages-html/banner-sonum-xp.html" },
+            ],
             "is_dynamic"       : False,
             "dynamic_template" : 'DynamicBanner',
             "is_visible"          : False,
