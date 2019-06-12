@@ -36,7 +36,7 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/"],
+        "urls"              : ["/test"],
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/test-apiviz.html" }, 
@@ -81,7 +81,7 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/sonum-carto/projet"],
+        "urls"              : [ "/sonum-carto/projet"],
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/carto-sonum/master/pages-html/sonum-carto-projet.html" }, 
@@ -131,7 +131,7 @@ default_routes_config = [
           },
 
           "in_footer"         : False,
-          "urls"              : ["/sonum-carto/carte"],
+          "urls"              : [ "/", "/sonum-carto/carte"],
           # "template_url"      : "/static/spa.html",
           "template_urls"     : [
           ],
