@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 
-from . import version
+from . import version, uuid_models
 
 ### ROUTES / PAGES
 
@@ -56,7 +56,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "sonum-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -98,7 +98,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "sonum-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -265,7 +265,7 @@ default_routes_config = [
           "deactivate_btn"    : False,
           "is_visible"        : True,
 
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
 
@@ -412,7 +412,7 @@ default_routes_config = [
           "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
 
@@ -616,7 +616,7 @@ default_routes_config = [
           "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
 
@@ -750,7 +750,7 @@ default_routes_config = [
           "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
         ## PAGE - list
@@ -882,7 +882,7 @@ default_routes_config = [
           "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
         ## PAGE - detail
@@ -1161,7 +1161,7 @@ default_routes_config = [
           "tabs_uri"          : "sonum-tabs",
           "deactivate_btn"    : False,
           "is_visible"        : True,
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
 
@@ -1203,7 +1203,7 @@ default_routes_config = [
           "has_footer"        : True,
           "has_tabs"          : False,
           "tabs_uri"          : "sonum-tabs",
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
         ### PAGE STRATEGIE
@@ -1245,7 +1245,7 @@ default_routes_config = [
           "has_footer"        : True,
           "has_tabs"          : False,
           "tabs_uri"          : "sonum-tabs",
-          "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"        : True
         },
 
@@ -1296,7 +1296,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1342,7 +1342,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1387,7 +1387,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
       ### ...
@@ -1427,7 +1427,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1462,7 +1462,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1497,7 +1497,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1532,7 +1532,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1567,7 +1567,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
-        "apiviz_front_uuid" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"        : True
       },
 
@@ -1609,10 +1609,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # {"locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html" },
-          # {"locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
+          {"locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html" },
+          {"locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home-en.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
         
 
@@ -1634,7 +1634,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "",
         "dataset_uri"       : "recherche",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -1801,7 +1801,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"      : True
       },
 
@@ -1956,7 +1956,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2153,7 +2153,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2186,18 +2186,18 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-projet.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
         
 
         "has_ext_script"    : True,
         "ext_script_urls"   : [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
-          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
-          # {"script_id" : "js-project", "at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js?v3"},
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js"},
         ],
 
         # "has_carousel"      : True,
@@ -2213,7 +2213,7 @@ default_routes_config = [
         "tabs_uri"          : "tabs-cis-test",
 
         "has_footer"        : True,
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2243,10 +2243,10 @@ default_routes_config = [
         "urls"              : ["/le-collectif"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/le-collectif.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-collectif.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -2265,7 +2265,7 @@ default_routes_config = [
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-collective",
 
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2293,16 +2293,16 @@ default_routes_config = [
         "urls"              : ["/le-collectif/qui-fait-quoi"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/qui-fait-quoi.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/qui-fait-quoi.html" }, 
         ],
         
         "has_ext_script"    : True,
         "ext_script_urls"   : [
-          # {"script_id" : "js-sho", "at_mount" : True,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js"},
-          {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v14"},
+          {"script_id" : "js-sho", "at_mount" : True,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js"},
+          # {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v14"},
         ],
         
         "help"              : u"you can specify a remote template (f.e. a github url)",
@@ -2315,7 +2315,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-collective",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2345,10 +2345,10 @@ default_routes_config = [
         "urls"              : ["/nous-rejoindre"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/nous-rejoindre.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/nous-rejoindre.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -2364,7 +2364,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-test",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2392,10 +2392,10 @@ default_routes_config = [
         "urls"              : ["/le-projet/outils"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/les-outils.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -2411,7 +2411,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-test",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2439,10 +2439,10 @@ default_routes_config = [
         "urls"              : ["/le-projet/parlent-de-nous"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/parlent-de-nous.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/parlent-de-nous.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -2458,7 +2458,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-test",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2487,10 +2487,10 @@ default_routes_config = [
         "urls"              : ["/le-projet/recompenses"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/recompenses.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/recompenses.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -2506,7 +2506,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-cis-test",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2545,7 +2545,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2580,7 +2580,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2615,7 +2615,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2650,7 +2650,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
@@ -2685,7 +2685,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"        : True
       },
 
