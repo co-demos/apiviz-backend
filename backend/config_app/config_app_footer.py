@@ -304,7 +304,7 @@ default_app_footer = [
               },
               { "is_visible" : True,
                 "link_to"    : "/login",
-                "is_external_link" : True,
+                "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
                 "link_text"  : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }],

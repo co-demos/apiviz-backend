@@ -311,7 +311,7 @@ default_app_styles_config = [
 
       "images_sets" : [
         {
-          "dataset_uri" : "cis",
+          "dataset_uri" : "recherche",
           "images_set"  : [
             { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_1.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?r:aw=true", "credits" : "Élise Lalique", "licence" : "" },

@@ -335,7 +335,7 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "description structure",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               
@@ -807,7 +807,7 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "présentation initiative",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               
@@ -817,7 +817,8 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "is_tag_like" : True,
+              "tags_separator" : "-",
               "locale" : "fr"
             },
           ],
@@ -976,7 +977,8 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "is_tag_like" : True,
+              "tags_separator" : "-",
               "locale" : "fr"
             },
             { "field" : "date action initiative - début",
@@ -1614,7 +1616,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "",
-        "dataset_uri"       : "cis",
+        "dataset_uri"       : "recherche",
         "apiviz_front_uuid" : "f0a482da-28be-4929-a443-f22ecb03ee68",
         "is_default"        : True
       },
@@ -1656,7 +1658,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "cis",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicMap',
         "endpoint_type"     : "map",
 
@@ -1788,7 +1790,7 @@ default_routes_config = [
       { "field"             : "cis_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
-        "route_description" : u"Page de recherche d'Apiviz",
+        "route_description" : u"Page de recherche du CIS",
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,
@@ -1817,7 +1819,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "cis",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicList',
         "endpoint_type"     : "list",
 
@@ -1962,7 +1964,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/project", "/cis/detail"],
+        "urls"              : ["/project", "/cis/detail", "/recherche/detail"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -1972,7 +1974,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "cis",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicDetail',
         "endpoint_type"     : "detail",
 
@@ -2281,7 +2283,7 @@ default_routes_config = [
         "has_ext_script"    : True,
         "ext_script_urls"   : [
           # {"script_id" : "js-sho", "at_mount" : True,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js"},
-          {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v5"},
+          {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v14"},
         ],
         
         "help"              : u"you can specify a remote template (f.e. a github url)",
