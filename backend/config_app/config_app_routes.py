@@ -183,7 +183,7 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "description structure",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               
@@ -196,11 +196,20 @@ default_routes_config = [
               
               "locale" : "fr"
             },
-            { "field" : "",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            # { "field" : "",
+            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            #   "is_visible" : True,
+            #   "position" : "block_tags",
+              
+            #   "locale" : "fr"
+            # },
+            { "field" : "services",
+              "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "filter_correspondance" : True,
+              "is_tag_like" : True,
+              "tags_separator" : "\r\n",
               "locale" : "fr"
             },
             
@@ -349,10 +358,12 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "filter_correspondance" : True,
+              "is_tag_like" : True,
+              "tags_separator" : "\r\n",
               "locale" : "fr"
             },
 
@@ -483,7 +494,9 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "filter_correspondance" : True,
+              "is_tag_like" : True,
+              "tags_separator" : "\r\n",
               "locale" : "fr"
             },
             { "field" : "website structure",
@@ -676,7 +689,7 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "présentation initiative",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               
@@ -686,7 +699,9 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              
+              "filter_correspondance" : True,
+              "is_tag_like" : True,
+              "tags_separator" : "\r\n",
               "locale" : "fr"
             },
           ],
@@ -814,9 +829,10 @@ default_routes_config = [
               "locale" : "fr"
             },
             { "field" : "type structure",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
+              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "-",
               "locale" : "fr"
@@ -977,6 +993,7 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
+              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "-",
               "locale" : "fr"
@@ -1726,7 +1743,9 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_tags",
-            
+            "filter_correspondance" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "\r\n",
             "custom_title" : "to do",
             "locale" : "fr"
           },
@@ -1885,9 +1904,9 @@ default_routes_config = [
             "field_format" : { "trim" : 10, "type" : "list_tags", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_tags",
+            "filter_correspondance" : True,
             "is_tag_like" : False,
             "tags_separator" : ";",
-            
             "custom_title" : "to do",
             "locale" : "fr"
           },

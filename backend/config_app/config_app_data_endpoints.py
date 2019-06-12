@@ -277,7 +277,8 @@ default_data_endpoints_config = [
 
           "filter_options" : [
             { "name"		: u"coding services__",
-              "id"      : "filter_1",
+              "id"      : "filter_1", 
+              "col_name" : "coding services",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Coaching methods"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Modalités d'accompagnement" }],
               "choices"	: [
@@ -288,7 +289,8 @@ default_data_endpoints_config = [
               ]
             },
             { "name"		: u"coding jours__",
-              "id"      : "filter_2",
+              "id"      : "filter_2", 
+              "col_name" : "coding jours",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Opening days"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jours d'ouverture" }],
               "choices"	: [
@@ -302,7 +304,8 @@ default_data_endpoints_config = [
               ]
             },
             {	"name"		: u"source__",
-              "id"      : "filter_3",
+              "id"      : "filter_3", 
+              "col_name" : "source",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
               "choices"	: [
@@ -490,8 +493,9 @@ default_data_endpoints_config = [
 
           "filter_options" : [
 
-            { "name"		: u"type structure__",
+            { "name"		: u"type structure__", 
               "id"      : "filter_1",
+              "col_name" : "type structure",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Structure type"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type de structure" }],
               "choices"	: [
@@ -500,8 +504,9 @@ default_data_endpoints_config = [
 
               ]
             },
-            { "name"		: u"thématique__",
+            { "name"		: u"thématique__", 
               "id"      : "filter_2",
+              "col_name" : "thématique",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Topics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématique" }],
               "choices"	: [
@@ -922,8 +927,9 @@ default_data_endpoints_config = [
         ],
 
         "filter_options" : [
-          { "name"		: u"coding services__", # TODO
+          { "name"		: u"coding services__", # TODO 
             "id"      : "filter_1",
+            "col_name" : "coding services",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Domains"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Domaines" }],
             "choices"	: [
@@ -938,8 +944,9 @@ default_data_endpoints_config = [
               # {"name" : u"non", "fullname" : u"aucun"},
             ]
           },
-          { "name"		: u"coding audience__", # TODO
+          { "name"		: u"coding audience__", # TODO 
             "id"      : "filter_2",
+            "col_name" : "coding audience",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
             "choices"	: [
@@ -948,8 +955,9 @@ default_data_endpoints_config = [
               {"name" : u"se", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Seniors" }]},
             ]
           },
-          {	"name"		: u"source__", # TODO
+          {	"name"		: u"source__", # TODO 
             "id"      : "filter_3",
+            "col_name" : "source",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Source" }],
             "choices"	: [
