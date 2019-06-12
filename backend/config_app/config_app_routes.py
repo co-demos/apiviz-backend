@@ -1619,6 +1619,7 @@ default_routes_config = [
         "has_ext_script"    : True,
         "ext_script_urls"   : [
           {"script_id" : "js-car" , "at_mount" : True,  "type" : None,              "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
           {"script_id" : "js-home", "at_mount" : False, "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/home.js?v7"},
           # {"script_id" : "js-home" , "at_mount" : False, "type" : "text/javascript", "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/home.js"}
         ],
@@ -2196,6 +2197,7 @@ default_routes_config = [
         "has_ext_script"    : True,
         "ext_script_urls"   : [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+          
           # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
           {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/le-projet.js"},
         ],
@@ -2301,7 +2303,7 @@ default_routes_config = [
         
         "has_ext_script"    : True,
         "ext_script_urls"   : [
-          {"script_id" : "js-sho", "at_mount" : True,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js"},
+          {"script_id" : "js-sho", "at_mount" : False,  "type" : "text/javascript", "url" : "https:cdn.jsdelivr.net/gh/co-demos/cis-data/scripts/who-are-we.js?v4"},
           # {"script_id" : "js-who", "at_mount" : False,  "type" : "text/javascript", "url" : "http://localhost:8800/statics/scripts/who-are-we.js?v14"},
         ],
         
