@@ -13,11 +13,63 @@ from flask 	import 	jsonify, flash, render_template, \
                   url_for, make_response, request, redirect, \
                   send_file
 
+from .config_app.config_env import formatEnvVar
+from .config_app.default_uuids_auth import uuid_auth_model
 from .config_app.app_metas import app_metas
 version = app_metas["version"]
 
 # from 	werkzeug.security 	import 	generate_password_hash, check_password_hash
 from werkzeug.exceptions import BadRequest
+
+
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+### UTILS
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+def DocOidToString(data):
+  # log_app.debug("data : %s", data)
+  obj = {}
+  for key in data:
+    if isinstance(data[key], ObjectId):
+      obj[key] = str(data[key])
+    else:
+      obj[key] = data[key]
+  # log_app.debug("obj : %s", obj)
+  return obj
+
+def getValueFromDictAndPathString(dictToSearch, path) : 
+  """ 
+  """ 
+  print (" ")
+  currentValue = dictToSearch
+  path_splitted = path.split('/')
+  while(len(path_splitted)):
+    key = path_splitted.pop(0)
+    currentValue = currentValue.get(key)
+    if (type(currentValue) is not dict and len(path_splitted)):
+      print("Path does not exist!")
+      return None 
+
+  return currentValue
+
+def getDocuments(collection, query={}, oid_to_id=True, as_list=False, field="field") :
+  
+  ### query collection and transform as list
+  results = list(collection.find(query) )
+  # log_app.debug("config app route / results - 1 : \n%s", pformat(results) )
+
+  ### ObjectId to string
+  if oid_to_id :
+    results = [ DocOidToString(i) for i in results ]
+    # log_app.debug("config app route / results - 2 : \n%s", pformat(results) )
+
+  ### list to dict
+  if as_list == False :
+    results = { i[field] : i for i in results }
+    # log_app.debug("config app route / results - 3 : \n%s", pformat(results) )
+
+  return results
+
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 ### AUTH - TOKEN
@@ -49,6 +101,135 @@ def token_required(f):
 
   return decorated
 """
+
+def checkUuidAuth(uuid, auth_mode, user_token=None, return_doc=False) : 
+  """ 
+  authenticate acces to an apiviz instance 
+  """
+
+  print (". "*50)
+  log_app.debug("checkUuidAuth / uuid : %s", uuid )
+
+  ### get uuid auth document
+  uuidsAuthColl = mongoConfigColls['uuids_auth']
+  uuid_auth_doc_raw = uuidsAuthColl.find_one( {'apiviz_front_uuid' : uuid} )
+  uuid_auth_doc = DocOidToString(uuid_auth_doc_raw)
+  # log_app.debug("checkUuidAuth / uuid_auth_doc : \n%s", pformat(uuid_auth_doc) )
+
+  ### main condition : is uuid authorized or locked / blocked
+  uuid_is_authorized = uuid_auth_doc['uuid_is_authorized']
+
+  ### more checks if uuid is private
+  role_check = uuid_auth_doc['apiviz_options']['private_instance']
+  # log_app.debug("checkUuidAuth / role_check : %s", role_check )
+
+  if return_doc :
+    ### return the whole uuid_auth document
+    return uuid_auth_doc
+
+  elif role_check :
+    ### more checks if uuid is private
+
+    # get checkJWT response
+    user_auth_infos = checkJWT(user_token, ["private_instance"], uuid=uuid, auth_mode=auth_mode, return_resp=True)
+    
+    auth_response_data = user_auth_infos['auth_data']
+    confirm_auth_doc   = user_auth_infos['confirm_auth_doc']
+    confirm_user_role_path  = confirm_auth_doc['resp_fields']['user_role']['path']
+    confirm_user_email_path = confirm_auth_doc['resp_fields']['user_email']['path']
+
+    auth_response_user_role  = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
+    auth_response_user_email = getValueFromDictAndPathString(auth_response_data, confirm_user_email_path)
+
+    # check if user_email is listed in auth_role_users
+    auth_role_users = uuid_auth_doc["auth_role_users"]
+    user_is_listed = auth_response_user_email in auth_role_users[auth_response_user_role + '_list']
+
+    ### return a boolean
+    return user_is_listed
+  
+  else : 
+    ### return a boolean
+    return uuid_is_authorized
+  
+
+
+
+# def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/api/auth/tokens/confirm_access"):
+def checkJWT(token, roles_to_check, uuid="", auth_mode=None, return_resp=False):
+  """ 
+  authenticate a token 
+  sending request to the auth url / service 
+  specified in config
+  ... doing so to avoid middle man risk when editing
+  """
+
+  print (". "*50)
+
+  # is_authorized = True
+
+  ### set the collection to user
+  mongoColl = mongoConfigColls['endpoints']
+  log_app.debug("checkJWT / auth_mode : %s", auth_mode )
+  log_app.debug("checkJWT / roles_to_check : %s", roles_to_check )
+
+  if auth_mode and uuid != "" : 
+
+    if 'all' not in roles_to_check :
+
+      ### retrieving the root_url for authentication in general given the AUTH_MODE
+      root_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_root_auth'})
+      # log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
+
+      auth_url = root_auth_doc['root_url'][auth_mode]
+      log_app.debug( "checkJWT / auth_url : %s", pformat(auth_url) )
+
+      ### retrieving the root_url and args for authentication
+      confirm_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_user_auth'})
+      confirm_rooturl = confirm_auth_doc['root_url']
+      confirm_user_role_path = confirm_auth_doc['resp_fields']['user_role']['path']
+      log_app.debug( "checkJWT / confirm_user_role_path : %s", confirm_user_role_path) 
+
+      confirm_basestring = auth_url + confirm_rooturl
+      # log_app.debug( "checkJWT / confirm_basestring : %s", pformat(confirm_basestring) )
+      
+      confirm_options = confirm_auth_doc['args_options']
+      confirm_token_arg = ''
+      for arg in confirm_options : 
+        if arg['app_arg'] == 'authToken' : 
+          confirm_arg = '?{}={}'.format(arg['arg'], token)
+      
+      confirm_url = confirm_basestring + confirm_arg
+      # log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
+
+      ### send request to service and read response
+      auth_response = requests.get(confirm_url)
+      auth_response_status = auth_response.status_code
+      log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
+      auth_response_data = auth_response.json()
+      # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
+
+      print (". "*50)
+
+      if return_resp : 
+        # return full auth response
+        return {
+          'auth_response_data' : auth_response_data,
+          'confirm_auth_doc' : confirm_auth_doc,
+        }
+
+      else :
+        ### get role to check value in response
+        auth_response_user_role = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
+        log_app.debug( "checkJWT / auth_response_user_role : %s", auth_response_user_role) 
+        # return is_authorized
+        return auth_response_user_role in roles_to_check
+    
+    else : 
+      return True
+
+  else : 
+    return False
 
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
@@ -100,115 +281,6 @@ def errorHandler(error, err_code=400):
 ### CONFIG ROUTES - BACKEND API
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
-def DocOidToString(data):
-  # log_app.debug("data : %s", data)
-  obj = {}
-  for key in data:
-    if isinstance(data[key], ObjectId):
-      obj[key] = str(data[key])
-    else:
-      obj[key] = data[key]
-  # log_app.debug("obj : %s", obj)
-  return obj
-
-def getDocuments(collection, query={}, oid_to_id=True, as_list=False, field="field") :
-
-  ### query collection and transform as list
-  results = list(collection.find(query) )
-  # log_app.debug("config app route / results - 1 : \n%s", pformat(results) )
-
-  ### ObjectId to string
-  if oid_to_id :
-    results = [ DocOidToString(i) for i in results ]
-    # log_app.debug("config app route / results - 2 : \n%s", pformat(results) )
-
-  ### list to dict
-  if as_list == False :
-    results = { i[field] : i for i in results }
-    # log_app.debug("config app route / results - 3 : \n%s", pformat(results) )
-
-  return results
-
-def getValueFromDictAndPathString(dictToSearch, path) : 
-  """ 
-  """ 
-  print (" ")
-  currentValue = dictToSearch
-  path_splitted = path.split('/')
-  while(len(path_splitted)):
-    key = path_splitted.pop(0)
-    currentValue = currentValue.get(key)
-    if (type(currentValue) is not dict and len(path_splitted)):
-      print("Path does not exist!")
-      return None 
-
-  return currentValue
-
-  
-# def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/api/auth/tokens/confirm_access"):
-def checkJWT(token, roles_to_check, uuid="", auth_mode=None):
-  """ 
-  authenticate a token 
-  sending request to the auth url / service 
-  specified in config
-  ... doing so to avoid middle man risk when editing
-  """
-
-  print (". "*50)
-
-  # is_authorized = True
-
-  ### set the collection to user
-  mongoColl = mongoConfigColls['endpoints']
-  log_app.debug("checkJWT / auth_mode : %s", auth_mode )
-  log_app.debug("checkJWT / roles_to_check : %s", roles_to_check )
-
-  if auth_mode and uuid != "" : 
-
-    ### retrieving the root_url for authentication in general given the AUTH_MODE
-    root_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_root_auth'})
-    # log_app.debug("checkJWT / root_auth_doc : \n%s", pformat(root_auth_doc) )
-
-    auth_url = root_auth_doc['root_url'][auth_mode]
-    log_app.debug( "checkJWT / auth_url : %s", pformat(auth_url) )
-
-    ### retrieving the root_url and args for authentication
-    confirm_auth_doc = mongoColl.find_one({'apiviz_front_uuid': uuid, 'field' : 'app_data_API_user_auth'})
-    confirm_rooturl = confirm_auth_doc['root_url']
-    confirm_user_role_path = confirm_auth_doc['resp_fields']['user_role']['path']
-    log_app.debug( "checkJWT / confirm_user_role_path : %s", confirm_user_role_path) 
-
-    confirm_basestring = auth_url + confirm_rooturl
-    # log_app.debug( "checkJWT / confirm_basestring : %s", pformat(confirm_basestring) )
-    
-    confirm_options = confirm_auth_doc['args_options']
-    confirm_token_arg = ''
-    for arg in confirm_options : 
-      if arg['app_arg'] == 'authToken' : 
-        confirm_arg = '?{}={}'.format(arg['arg'], token)
-    
-    confirm_url = confirm_basestring + confirm_arg
-    # log_app.debug( "checkJWT / confirm_url : %s", pformat(confirm_url) )
-
-    ### send request to service and read response
-    auth_response = requests.get(confirm_url)
-    auth_response_status = auth_response.status_code
-    log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
-    auth_response_data = auth_response.json()
-    # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
-
-    ### get role to check value in response
-    auth_response_user_role = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
-    log_app.debug( "checkJWT / auth_response_user_role : %s", auth_response_user_role) 
-
-    print (". "*50)
-
-    # return is_authorized
-    return auth_response_user_role in roles_to_check or 'all' in roles_to_check
-
-  else : 
-    return False
-
 
 @app.route('/backend/api/config/<string:collection>/<string:doc_id>', methods=['GET','POST','DELETE'])
 @app.route('/backend/api/config/<string:collection>', methods=['GET', 'POST'], defaults={"doc_id" : None})
@@ -237,187 +309,214 @@ def backend_configs(collection, doc_id=None):
     return redirect( "/error/400" )
 
   ### get request args if any
-  apiviz_uuid = request.args.get('uuid',    default="", 	type=str)
+  apiviz_uuid = request.args.get('uuid', default="", type=str)
   log_app.debug("config app route / apiviz_uuid : %s", apiviz_uuid )
 
-  field 	= request.args.get('field', 	default='field', type=str)
-  as_list = request.args.get('as_list', default=False,   type=bool)
+  ### is_log_route expected as booelan
+  is_log_route_raw = request.args.get('log_route', default="false", type=str)
+  is_log_route = formatEnvVar(is_log_route_raw, format_type='boolean', is_arg=True)
+  log_app.debug("config app route / is_log_route : %s", is_log_route )
 
-  # role_to_check = request.args.get('role',    default='admin', type=str)
-  roles_to_check = COLLECTIONS_AUTH_MODIFICATIONS[collection][request.method]
-  log_app.debug("config app route / roles_to_check : %s", roles_to_check )
-
-  # req_data 	  = request.data
-  # log_app.debug("config app route / request.data : \n%s", pformat(request.data ))
+  ### get request payload (json) if any
   req_json    = request.get_json()
   log_app.debug("config app route / req_json : \n%s", pformat(req_json) )
 
+  ### check if uuid is authorized
+  apiviz_front_auth_mode = request.args.get('auth_mode', default=None, type=str)
   ### retrieve access token 
   token = request.args.get('token', default='', type=str)
   if req_json : 
+    # overide token from args with token from payload if any
     token = req_json.get('token', '')
+  log_app.debug("config app route / token : %s", token )
 
-  ### example of access token :
-  # eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTcwODI3OTQsIm5iZiI6MTU1NzA4Mjc5NCwianRpIjoiNjA4YWRhMDktMzA4My00ZmE1LTg1NDMtNjRkNDJmM2E4ZmZhIiwiZXhwIjoxNTU3MTI1OTk0LCJpZGVudGl0eSI6IjVjY2YzMmExODYyNmEwM2MzNmY1MzYzNCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7Il9pZCI6IjVjY2YzMmExODYyNmEwM2MzNmY1MzYzNCIsImluZm9zIjp7Im5hbWUiOiJFbGlub3IiLCJzdXJuYW1lIjoiT3N0cm9tIiwiZW1haWwiOiJlbGlub3Iub3N0cm9tQGVtYWlsbmEuY28iLCJwc2V1ZG8iOiJBbm9ueW1vdXMgVXNlciJ9LCJhdXRoIjp7InJvbGUiOiJndWVzdCIsImNvbmZfdXNyIjpmYWxzZX0sInByb2ZpbGUiOnsibGFuZyI6ImVuIiwiYWdyZWVtZW50IjpmYWxzZSwidXNyX3ZpZXciOiJtaW5pbWFsIiwidXNyX3Byb2ZpbGVzIjpbXX19fQ.Iux2Grzvv-6VBXzKME5ub31iLtl-LHYea_0JSdQ22eM
-
-  ### filter out field arg to unique identifiers fields in documents
-  if field not in ['_id', 'field'] :
-    field = 'field'
-
-  ### build basic query
-  query = {'apiviz_front_uuid' : apiviz_uuid}
-  if doc_id :
-    query["_id"] = ObjectId(doc_id)
-
-  log_app.debug("config app route / query : \n%s", query )
+  uuid_auth = checkUuidAuth(apiviz_uuid, apiviz_front_auth_mode, user_token=token)
+  log_app.debug("config app route / uuid_auth : %s", uuid_auth )
 
 
-  ### check if token allows user to POST
-  # if True : ### only for tests
-  # if token != '' :
-  #   log_app.debug("config app route / checking jwt..." )
+  if uuid_auth : 
 
-  ### TO DO
-  if request.method != 'GET':
+    field 	= request.args.get('field', 	default='field', type=str)
 
-    if request.method == 'POST':
+    # as_list = request.args.get('as_list', default=False, type=bool)
+    # log_app.debug("config app route / as_list : %s", as_list )
+    as_list_raw = request.args.get('as_list', default="False", type=str)
+    as_list = formatEnvVar(as_list_raw, format_type='boolean', is_arg=True)
+    log_app.debug("config app route / as_list : %s", as_list )
 
-      log_app.debug("config app route / POST" )
+    # role_to_check = request.args.get('role',    default='admin', type=str)
+    roles_to_check = COLLECTIONS_AUTH_MODIFICATIONS[collection][request.method]
+    log_app.debug("config app route / roles_to_check : %s", roles_to_check )
 
-      query["_id"] = ObjectId(req_json['doc_id']) 
-      log_app.debug("config app route / POST / query : \n%s", query )
 
-      ### retrieve original document
-      configDoc = mongoColl.find_one(query)
-      log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
-      
-      auth_mode = req_json.get('auth_mode', None)
-      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
+    ### example of access token :
+    # eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTcwODI3OTQsIm5iZiI6MTU1NzA4Mjc5NCwianRpIjoiNjA4YWRhMDktMzA4My00ZmE1LTg1NDMtNjRkNDJmM2E4ZmZhIiwiZXhwIjoxNTU3MTI1OTk0LCJpZGVudGl0eSI6IjVjY2YzMmExODYyNmEwM2MzNmY1MzYzNCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7Il9pZCI6IjVjY2YzMmExODYyNmEwM2MzNmY1MzYzNCIsImluZm9zIjp7Im5hbWUiOiJFbGlub3IiLCJzdXJuYW1lIjoiT3N0cm9tIiwiZW1haWwiOiJlbGlub3Iub3N0cm9tQGVtYWlsbmEuY28iLCJwc2V1ZG8iOiJBbm9ueW1vdXMgVXNlciJ9LCJhdXRoIjp7InJvbGUiOiJndWVzdCIsImNvbmZfdXNyIjpmYWxzZX0sInByb2ZpbGUiOnsibGFuZyI6ImVuIiwiYWdyZWVtZW50IjpmYWxzZSwidXNyX3ZpZXciOiJtaW5pbWFsIiwidXNyX3Byb2ZpbGVzIjpbXX19fQ.Iux2Grzvv-6VBXzKME5ub31iLtl-LHYea_0JSdQ22eM
 
-      if is_authorized and configDoc is not None :
+    ### filter out field arg to unique identifiers fields in documents
+    if field not in ['_id', 'field'] :
+      field = 'field'
 
-        ### retrieve editionn config 
-        doc_config = req_json['doc_config']
-        doc_data = req_json['doc_data']
-        log_app.debug("config app route / posT / doc_config : \n%s", pformat(doc_config) )
+    ### build basic query
+    query = {'apiviz_front_uuid' : apiviz_uuid}
+    if doc_id :
+      query["_id"] = ObjectId(doc_id)
+    if is_log_route : 
+      query["data_type"] = "user"
+
+    log_app.debug("config app route / query : \n%s", query )
+
+    if request.method != 'GET':
+
+      if request.method == 'POST':
+
+        log_app.debug("config app route / POST" )
+
+        query["_id"] = ObjectId(req_json['doc_id']) 
+        log_app.debug("config app route / POST / query : \n%s", query )
+
+        ### retrieve original document
+        configDoc = mongoColl.find_one(query)
+        log_app.debug("config app route / posT / configDoc : \n%s", pformat(configDoc) )
         
-        ### not editable fields
-        notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version', 'is_default']
+        auth_mode = req_json.get('auth_mode', None)
+        is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
 
-        ### check if need for nested field update / f.i. navbar links
-        editSubfield = False
-        if doc_config['type'] == 'blocs_list' : 
-          editSubfield = req_json['doc_subfield'].split('.')
+        if is_authorized and configDoc is not None :
 
-        ### config edit specifics
-        canAddKey = doc_config.get('canAddKeys', False) 
-        canAddToList = doc_config.get('canAddToList', False) 
-        canModifyKey = doc_config.get('canModifKeys', False) 
+          ### retrieve editionn config 
+          doc_config = req_json['doc_config']
+          doc_data = req_json['doc_data']
+          log_app.debug("config app route / posT / doc_config : \n%s", pformat(doc_config) )
+          
+          ### not editable fields
+          notAllowedFields = ['_id', 'apiviz_front_uuid', 'app_version', 'is_default']
 
-        ### target fields to update
-        print() 
-        update_query = {'$set' : {} }
-        for k, v in doc_data.items() :
-          # log_app.debug("config app route / posT / k:v : \n%s", pformat({k:v}) )
-          # directly update field : for type == blocs || docs_list
-          if canAddKey == False :
-            if k not in notAllowedFields and k in [*configDoc] : 
-              update_query['$set'][k] = v
+          ### check if need for nested field update / f.i. navbar links
+          editSubfield = False
+          if doc_config['type'] == 'blocs_list' : 
+            editSubfield = req_json['doc_subfield'].split('.')
 
-          if canAddKey == False :
-            if k not in notAllowedFields : 
-              update_query['$set'][k] = v
-          # print() 
+          ### config edit specifics
+          canAddKey = doc_config.get('canAddKeys', False) 
+          canAddToList = doc_config.get('canAddToList', False) 
+          canModifyKey = doc_config.get('canModifKeys', False) 
 
-        ### update version
-        update_query['$set']['app_version'] = version
-        log_app.debug("config app route / posT / update_query : \n%s", pformat(update_query) )
+          ### target fields to update
+          print() 
+          update_query = {'$set' : {} }
+          for k, v in doc_data.items() :
+            # log_app.debug("config app route / posT / k:v : \n%s", pformat({k:v}) )
+            # directly update field : for type == blocs || docs_list
+            if canAddKey == False :
+              if k not in notAllowedFields and k in [*configDoc] : 
+                update_query['$set'][k] = v
 
-        ### save updated doc
-        mongoColl.update_one(query, update_query)
+            if canAddKey == False :
+              if k not in notAllowedFields : 
+                update_query['$set'][k] = v
+            # print() 
 
-        ### get back doc as updated
-        updatedDoc = mongoColl.find_one(query)
-        # log_app.debug("config app route / posT / updatedDoc : \n%s", pformat(updatedDoc) )
+          ### update version
+          update_query['$set']['app_version'] = version
+          log_app.debug("config app route / posT / update_query : \n%s", pformat(update_query) )
 
-        formatedUpdatedConfig = DocOidToString(updatedDoc)
-        # log_app.debug("config app route / posT / DocOidToString(updatedDoc) : \n%s", pformat( formatedUpdatedConfig ))
-        # return "hello config master / POST ... praise be"
-        return jsonify({
-          'msg' : "the doc was updated",
-          'query' : DocOidToString(query),
-          'doc_updated' : formatedUpdatedConfig,
-          'request' : req_json,
+          ### save updated doc
+          mongoColl.update_one(query, update_query)
+
+          ### get back doc as updated
+          updatedDoc = mongoColl.find_one(query)
+          # log_app.debug("config app route / posT / updatedDoc : \n%s", pformat(updatedDoc) )
+
+          formatedUpdatedConfig = DocOidToString(updatedDoc)
+          # log_app.debug("config app route / posT / DocOidToString(updatedDoc) : \n%s", pformat( formatedUpdatedConfig ))
+          # return "hello config master / POST ... praise be"
+          return jsonify({
+            'msg' : "the doc was updated",
+            'query' : DocOidToString(query),
+            'doc_updated' : formatedUpdatedConfig,
+            'request' : req_json,
+            })
+
+        elif configDoc is None :
+          return jsonify({ 
+            "msg" : "noooope... can't find doc dammit....",
+            'query' : DocOidToString(query),
+            'request' : req_json,
           })
 
-      elif configDoc is None :
-        return jsonify({ 
-          "msg" : "noooope... can't find doc dammit....",
-          'query' : DocOidToString(query),
-          'request' : req_json,
-        })
-
-      else :
-        return jsonify({ 
-          "msg" : "noooope... you can't edit this ... mate",
-          'query' : DocOidToString(query),
-          'request' : req_json,
-        })
+        else :
+          return jsonify({ 
+            "msg" : "noooope... you can't edit this ... mate",
+            'query' : DocOidToString(query),
+            'request' : req_json,
+          })
 
 
-    elif request.method == 'DELETE':
+      elif request.method == 'DELETE':
 
-      log_app.debug("config app route / DELETE" )
+        log_app.debug("config app route / DELETE" )
 
-      allowedCollsForDelete = [ "endpoints" , "routes" ]
+        allowedCollsForDelete = [ "endpoints" , "routes" ]
 
-      ### retrieve token from request and check it 
-      req_data = json.loads(request.data)
-      log_app.debug("config app route / req_data : \n%s", pformat(req_data) )
-      token = req_data.get('token', '')
-      auth_mode = req_data.get('auth_mode', None)
-      is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
+        ### retrieve token from request and check it 
+        req_data = json.loads(request.data)
+        log_app.debug("config app route / req_data : \n%s", pformat(req_data) )
+        token = req_data.get('token', '')
+        auth_mode = req_data.get('auth_mode', None)
+        is_authorized = checkJWT(token, roles_to_check, uuid=apiviz_uuid, auth_mode=auth_mode)
 
-      if is_authorized and collection in allowedCollsForDelete :
+        if is_authorized and collection in allowedCollsForDelete :
 
-        ### retrieve doc to delete to add to returned message
-        configDoc = mongoColl.find_one(query)
-        deletedDoc = DocOidToString(configDoc)
+          ### retrieve doc to delete to add to returned message
+          configDoc = mongoColl.find_one(query)
+          deletedDoc = DocOidToString(configDoc)
 
-        ### delete doc 
-        mongoColl.delete_one(query)
+          ### delete doc 
+          mongoColl.delete_one(query)
 
-        return jsonify({
-          'msg' : 'this doc was deleted',
-          'query' : DocOidToString(query),
-          'request' : req_json,
-          'deleted_doc' : deletedDoc
-        })
+          return jsonify({
+            'msg' : 'this doc was deleted',
+            'query' : DocOidToString(query),
+            'request' : req_json,
+            'deleted_doc' : deletedDoc
+          })
 
-      else :
-        return jsonify({ 
-          'msg' : "noooope... not authorized to delete this ... mate ...",
-          'query' : DocOidToString(query),
-          'request' : req_json,
-        })
+        else :
+          return jsonify({ 
+            'msg' : "noooope... not authorized to delete this ... mate ...",
+            'query' : DocOidToString(query),
+            'request' : req_json,
+          })
 
 
-  elif request.method == 'GET':
+    elif request.method == 'GET':
 
-    app_config_dict = getDocuments(mongoColl, query=query, as_list=as_list, field=field)
+      app_config_dict = getDocuments(mongoColl, query=query, as_list=as_list, field=field)
 
-    return jsonify( {
-      "msg" 				: "this is the results from your query on the '%s' config collection" % collection,
+      return jsonify( {
+        "msg" 				: "this is the results from your query on the '%s' config collection" % collection,
+        "query"				: query,
+        "request"			: {
+          "url" 				: request.url,
+          "args" 				: request.args,
+          "method"			: request.method,
+          "collection"	: collection,
+          "doc_id"			: doc_id,
+        },
+        "app_config" 	: app_config_dict
+      } )
+
+  else : 
+    ### uuid is not authorized
+    return jsonify({ 
+      "msg" : "this uuid is not authorized, please contact Apiviz team to unlock it",
       "query"				: query,
       "request"			: {
         "url" 				: request.url,
         "args" 				: request.args,
         "method"			: request.method,
-        "collection"	: collection,
-        "doc_id"			: doc_id,
       },
-      "app_config" 	: app_config_dict
-    } )
+    })
 
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
@@ -641,10 +740,11 @@ def create_new_config():
   log_app.debug("create_new_config / req_json : \n%s", pformat(req_json) )
 
   new_uuid = req_json['model_uuid']
+  new_admin_email = req_json['model_admin_email']
 
   ### target right config collection
   allowedCollections = ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ]
-    
+  
   if request.method == 'POST':
 
     log_app.debug("config app route / POST" )
@@ -701,6 +801,18 @@ def create_new_config():
         msg = 'your new website is ready'
         resp_code = 200
     
+      # create new default uuid_auth
+      new_uuid_auth_doc = uuid_auth_model.copy()
+      new_uuid_auth_doc["apiviz_front_uuid"] = new_uuid
+      new_uuid_auth_doc["apiviz_front_name"] = req_json['new_title']
+      new_uuid_auth_doc["date_added"] = datetime.datetime.now()
+      new_uuid_auth_doc["added_by"]["email"] = new_admin_email
+      new_uuid_auth_doc["auth_role_users"]["admin_list"] = [new_admin_email]
+      
+      uuidsAuthColl = mongoConfigColls['uuids_auth']
+      uuidsAuthColl.insert(new_uuid_auth_doc)
+
+
     else : 
       msg = 'errors : '
       if modelIsUsed :
@@ -738,6 +850,23 @@ def create_new_config():
       'uuid' : new_uuid,
       'request' : req_json,
     }), 500
+
+
+
+
+
+
+
+### TO DO
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+### UPDATE UUID LOG
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+
+
+
+
+
 
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###

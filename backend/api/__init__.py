@@ -26,6 +26,9 @@ with app.app_context():
   # mongo_join_message_not_referenced_project_carrier = mongo.db[ app.config["MONGO_COLL_JOIN_MESSAGE_NOT_REFERENCED_PROJECT_CARRIER"] ]
   # mongo_join_message_structures = mongo.db[ app.config["MONGO_COLL_JOIN_MESSAGE_STRUCTURES"] ]
 
+  mongo_uuids_auth          = mongo.db[ app.config["MONGO_COLL_UUIDS_AUTH"] ]
+
+
   mongoColls = {
     # "users"  : mongo_users,
     app.config["MONGO_COLL_CONFIG_GLOBAL"]          : mongo_config_global,
@@ -38,17 +41,21 @@ with app.app_context():
     app.config["MONGO_COLL_CONFIG_SOCIALS"]         : mongo_config_socials,
     # app.config["MONGO_COLL_USERS"]                : mongo_users,
     # app.config["MONGO_COLL_FEEDBACKS"]            : mongo_feedbacks,
+    app.config["MONGO_COLL_UUIDS_AUTH"]             : mongo_uuids_auth,
+
   }
 
 mongoConfigColls ={
-  "global"    : mongo_config_global,
-  "navbar"    : mongo_config_navbar,
-  "tabs"      : mongo_config_tabs,
-  "endpoints" : mongo_config_data_endpoints,
-  "styles"    : mongo_config_app_styles,
-  "routes"    : mongo_config_routes,
-  "footer"    : mongo_config_footer,
-  "socials"   : mongo_config_socials,
+  "global"     : mongo_config_global,
+  "navbar"     : mongo_config_navbar,
+  "tabs"       : mongo_config_tabs,
+  "endpoints"  : mongo_config_data_endpoints,
+  "styles"     : mongo_config_app_styles,
+  "routes"     : mongo_config_routes,
+  "footer"     : mongo_config_footer,
+  "socials"    : mongo_config_socials,
+
+  "uuids_auth" : mongo_uuids_auth,
 }
 
 log_app.debug(">>> MongoDB / mongoColls.keys() : \n %s", pformat( mongoColls.keys() ) )
@@ -84,6 +91,9 @@ from backend.config_app.config_app_routes         import default_routes_config
 from backend.config_app.config_app_footer         import default_app_footer
 from backend.config_app.config_app_socials        import default_socials_config
 
+from backend.config_app.default_uuids_auth        import default_uuids_auth
+log_app.debug(">>> MongoDB / default_uuids_auth : \n%s", pformat(default_uuids_auth) )
+
 ### retrieve default config for every collection
 existing_app_config             = list( mongo_config_global.find({}) )
 existing_app_navbar_config      = list( mongo_config_navbar.find({}) )
@@ -94,16 +104,19 @@ existing_routes_config          = list( mongo_config_routes.find({}) )
 existing_app_footer_config      = list( mongo_config_footer.find({}) )
 existing_socials_config         = list( mongo_config_socials.find({}) )
 
-### setup every collection with default
-setupDefaultConfig( mongo_config_global,           default_global_config )
-setupDefaultConfig( mongo_config_navbar,           default_app_navbar )
-setupDefaultConfig( mongo_config_tabs,             default_app_tabs )
-setupDefaultConfig( mongo_config_data_endpoints,   default_data_endpoints_config )
-setupDefaultConfig( mongo_config_app_styles,       default_app_styles_config )
-setupDefaultConfig( mongo_config_routes,           default_routes_config )
-setupDefaultConfig( mongo_config_footer,           default_app_footer )
-setupDefaultConfig( mongo_config_socials,          default_socials_config )
+existing_uuids_auth             = list( mongo_uuids_auth.find({}) )
 
+### setup every collection with default
+setupDefaultConfig( mongo_config_global,         default_global_config )
+setupDefaultConfig( mongo_config_navbar,         default_app_navbar )
+setupDefaultConfig( mongo_config_tabs,           default_app_tabs )
+setupDefaultConfig( mongo_config_data_endpoints, default_data_endpoints_config )
+setupDefaultConfig( mongo_config_app_styles,     default_app_styles_config )
+setupDefaultConfig( mongo_config_routes,         default_routes_config )
+setupDefaultConfig( mongo_config_footer,         default_app_footer )
+setupDefaultConfig( mongo_config_socials,        default_socials_config )
+
+setupDefaultConfig( mongo_uuids_auth,            default_uuids_auth )
 
 def backup_mongo_collection(coll, filepath) :
   """

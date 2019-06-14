@@ -12,18 +12,18 @@ from ..settings.app_choices import *
 class Partner( ModelMixin ):
 
 	def __init__(self, 	partnerName		= None,
-						partnerWebsite	= None, 
-						partnerAdress	= None, 
-						partnerLogo		= None,
+    partnerWebsite	= None, 
+    partnerAdress	= None, 
+    partnerLogo		= None,
 
-						partnerContacts	= [],
-						partnerPhones	= [],
-						partnerSocial	= [],
-						
-						partnerStatus	= "contributor",
-						partnerSpiderId	= None,
+    partnerContacts	= [],
+    partnerPhones	= [],
+    partnerSocial	= [],
+    
+    partnerStatus	= "contributor",
+    partnerSpiderId	= None,
 
-						):
+    ):
 		"""
 		datamodel for a partner in APIVIZ
 		- take care of keeping same field names than in forms

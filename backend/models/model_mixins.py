@@ -65,14 +65,14 @@ class ModelMixin :
 	
 	### datetimes infos
 
-	def add_created_at(self, 	created_at=datetime.datetime.now()  ) :
+	def add_created_at(self, created_at=datetime.datetime.now() ) :
 		self.created_at 		= created_at
 
-	def add_created_by(self, 	created_by=None ) :
+	def add_created_by(self, created_by=None ) :
 		self.created_by 		= created_by
 
-	def add_modified_by(self, 	last_modified_by = "system",
-								last_modified_at = datetime.datetime.now() ) : 
+	def add_modified_by(self, last_modified_by = "system",
+		last_modified_at = datetime.datetime.now() ) : 
 
 		self.last_modified_by 	= last_modified_by
 		self.last_modified_at 	= last_modified_at #time.time() 		# put timestamp

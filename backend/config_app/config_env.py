@@ -6,11 +6,14 @@ from .. import log_app, pformat
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 
-def formatEnvVar(var_name, format_type='boolean', separator=',') : 
+def formatEnvVar(var_name, format_type='boolean', separator=',', is_arg=False) : 
 
   print("formatEnvVar / var_name : ", var_name)
   env_var = os.getenv(var_name)
   print("formatEnvVar / env_var : ", env_var)
+
+  if is_arg :
+    env_var = var_name
 
   if format_type == 'boolean' : 
     if env_var in ['yes', 'Yes', 'YES', 'true', 'True', 'TRUE', '1'] : 
@@ -140,8 +143,8 @@ class Config(object):
     http_mode = "http"
     if formatEnvVar("HTTPS_MODE", format_type='boolean') == True : 
       http_mode = "https"
-    os.environ["SERVER_NAME"]   = DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
-    os.environ["DOMAIN_NAME"]   = http_mode + "://" + DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
+    os.environ["SERVER_NAME"] = DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
+    os.environ["DOMAIN_NAME"] = http_mode + "://" + DOMAIN_ROOT + ":" + str(DOMAIN_PORT)
     DOMAIN_NAME =  os.getenv("DOMAIN_NAME")
     
     # SERVER_NAME    =  os.getenv("SERVER_NAME")
@@ -162,6 +165,8 @@ class Config(object):
   MONGO_COLL_CONFIG_ROUTES          = os.getenv('MONGO_COLL_CONFIG_ROUTES',  'config_routes') 
   MONGO_COLL_CONFIG_FOOTER          = os.getenv('MONGO_COLL_CONFIG_FOOTER',  'config_footer') 
   MONGO_COLL_CONFIG_SOCIALS         = os.getenv('MONGO_COLL_CONFIG_SOCIALS', 'config_socials') 
+
+  MONGO_COLL_UUIDS_AUTH             = os.getenv('MONGO_COLL_UUIDS_AUTH', 'conf_uuids_auth') 
 
   """ AUTH MODE """
   AUTH_MODE = os.getenv('AUTH_MODE')

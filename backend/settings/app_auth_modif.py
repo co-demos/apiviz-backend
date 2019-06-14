@@ -15,45 +15,58 @@ available roles
 "anonymous" : 
 """
 
+APIVIZ_INSTANCE_AUTH = {
+  "is_public" : {
+    'POST'    : ['super_admin',  'admin'], 
+    'DELETE'  : ['super_admin',  'admin'], 
+    'GET'     : ['all']
+  },
+  "is_private" : {
+    'POST'    : ['super_admin', 'admin', 'staff'], 
+    'DELETE'  : ['super_admin', 'admin'], 
+    'GET'     : ['super_admin', 'admin', 'staff', 'guest']
+  }
+}
+
 COLLECTIONS_AUTH_MODIFICATIONS	= {
   "global"    : {
-    'POST'    : ['admin'], 
-    'DELETE'  : ['admin'], 
-    'GET'     : ['all']
-  },
-  "footer"    : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
-    'GET'     : ['all']
-  },
-  "navbar"    : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
-    'GET'     : ['all']
-  },
-  "tabs"    : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
+    'POST'    : ['super_admin',  'admin'], 
+    'DELETE'  : ['super_admin',  'admin'], 
     'GET'     : ['all']
   },
   "endpoints" : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
-    'GET'     : ['all']
-  },
-  "styles"    : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
+    'POST'    : ['super_admin',  'admin'], 
+    'DELETE'  : ['super_admin',  'admin'], 
     'GET'     : ['all']
   },
   "routes"    : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
+    'POST'    : ['super_admin',  'admin'], 
+    'DELETE'  : ['super_admin',  'admin'], 
+    'GET'     : ['all']
+  },
+  "footer"    : {
+    'POST'    : ['super_admin',  'admin', 'staff'], 
+    'DELETE'  : ['super_admin',  'admin'], 
+    'GET'     : ['all']
+  },
+  "navbar"    : {
+    'POST'    : ['super_admin',  'admin', 'staff'], 
+    'DELETE'  : ['super_admin',  'admin'], 
+    'GET'     : ['all']
+  },
+  "tabs"    : {
+    'POST'    : ['super_admin',  'admin', 'staff'], 
+    'DELETE'  : ['super_admin',  'admin'], 
+    'GET'     : ['all']
+  },
+  "styles"    : {
+    'POST'    : ['super_admin',  'admin', 'staff'], 
+    'DELETE'  : ['super_admin',  'admin'], 
     'GET'     : ['all']
   },
   "socials"   : {
-    'POST'    : ['admin', 'staff'], 
-    'DELETE'  : ['admin'], 
+    'POST'    : ['super_admin',  'admin', 'staff'], 
+    'DELETE'  : ['super_admin',  'admin'], 
     'GET'     : ['all']
   },
 }
