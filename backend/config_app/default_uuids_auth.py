@@ -74,6 +74,7 @@ for key, val in uuid_models.items() :
   temp_auth["apiviz_front_uuid"] = val
 
   ### setting options
+  temp_auth["uuid_is_authorized"] = True
   temp_auth["private_instance"] = False
   temp_auth["months_renewal"] = 120
 
