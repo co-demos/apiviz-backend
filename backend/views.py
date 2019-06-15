@@ -781,6 +781,8 @@ def create_new_config():
 
   new_uuid = req_json['model_uuid']
   new_admin_email = req_json['model_admin_email']
+  new_admin_name = req_json['model_admin_name']
+  new_admin_surname = req_json['model_admin_surname']
 
   ### target right config collection
   allowedCollections = ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ]
@@ -810,7 +812,7 @@ def create_new_config():
 
       query = {'apiviz_front_uuid' : new_uuid}
       
-      # loop collections
+      # loop collections and copy paste docs
       for coll in allowedCollections : 
         
         # get corresponding documents without _id
@@ -843,10 +845,16 @@ def create_new_config():
     
       # create new default uuid_auth
       new_uuid_auth_doc = uuid_auth_model.copy()
+
       new_uuid_auth_doc["apiviz_front_uuid"] = new_uuid
       new_uuid_auth_doc["apiviz_front_name"] = req_json['new_title']
+
       new_uuid_auth_doc["date_added"] = datetime.datetime.now()
+      new_uuid_auth_doc["added_by"]["name"] = new_admin_name
+      new_uuid_auth_doc["added_by"]["surname"] = new_admin_surname
       new_uuid_auth_doc["added_by"]["email"] = new_admin_email
+
+      ### setting admin list
       new_uuid_auth_doc["auth_role_users"]["admin_list"] = [new_admin_email]
       
       uuidsAuthColl = mongoConfigColls['uuids_auth']

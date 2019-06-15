@@ -17,6 +17,7 @@ uuid_auth_model = {
   "date_added" : None,
   "added_by" : {
     "name" : None,
+    "surname" : None,
     "email" : None,
   },
 
@@ -96,10 +97,10 @@ for key, val in uuid_models.items() :
   
   ### setting added infos
   temp_auth["date_added"] = datetime.datetime.now()
-  temp_auth["added_by"] = {
-    "name" : "system",
-    "email" : APIVIZ_SUPER_ADMINS[0],
-  }
+  temp_auth["added_by"]["name"] = "system"
+  temp_auth["added_by"]["surname"] = "apivviz"
+  temp_auth["added_by"]["email"] = APIVIZ_SUPER_ADMINS[0]
+
 
   # print ("... temp_auth : \n", pformat(temp_auth))
 
