@@ -39,9 +39,17 @@ def app_runner(mode, docker, mongodb, auth, host, port, https) :
   print ("=== https   : ", https)
 
   ### READ ENV VARS DEPENDING ON MODE
+  
+  try :
+    env_path_superAdmins = Path('.') / '.env.superadmins'
+    load_dotenv(env_path_superAdmins, verbose=True)
+  except : 
+    env_path_superAdmins = Path('.') / 'example.env.superadmins'
+    load_dotenv(env_path_superAdmins, verbose=True)
+
   if mode in ['default', 'testing']:
     env_path_global = Path('.') / 'example.env.global'
-
+  
     if mongodb in ['local'] : 
       env_path_mongodb = Path('.') / 'example.env.mongodb'
     else : 

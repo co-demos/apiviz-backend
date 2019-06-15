@@ -124,7 +124,10 @@ class Config(object):
   """ BASIC Config Class """
   RUN_MODE = os.getenv("RUN_MODE")
   DEBUG = formatEnvVar('DEBUG', format_type='boolean')
- 
+
+  APIVIZ_SUPER_ADMINS = formatEnvVar('SUPER_ADMIN_LIST', format_type="list", separator=",") 
+  log_app.debug(" --- APIVIZ_SUPER_ADMINS : \n%s ", pformat(APIVIZ_SUPER_ADMINS)) 
+
   """ GLOBAL_FLASK """
   static_dir  = '/static'
   uploads_dir = '/static/uploads'

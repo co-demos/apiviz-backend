@@ -70,6 +70,16 @@ def getDocuments(collection, query={}, oid_to_id=True, as_list=False, field="fie
 
   return results
 
+def getUuidDocSubfield(coll, uuid, field, subField):
+  """
+  Util to get a model's subfield
+  """
+  mongoColl = mongoConfigColls[coll]
+  query = { 'field' : field, 'apiviz_front_uuid' : uuid }
+  result = mongoColl.find_one(query)
+  log_app.debug("getUuidDocSubfield / result : %s", result )
+  return result[subField]
+
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 ### AUTH - TOKEN
@@ -102,7 +112,39 @@ def token_required(f):
   return decorated
 """
 
-def checkUuidAuth(uuid, auth_mode, user_token=None, return_doc=False) : 
+def isUserListed(user_token, uuid, auth_mode, uuid_auth_doc):
+
+  user_auth_infos = checkJWT(user_token, ["private_instance"], uuid=uuid, auth_mode=auth_mode, return_resp=True)
+  log_app.debug("isUserListed / user_auth_infos : \n%s", pformat(user_auth_infos) )
+
+  auth_response_status = user_auth_infos['auth_response_status']
+  log_app.debug("isUserListed / auth_response_status : %s", auth_response_status)
+
+  if auth_response_status == 200 :
+
+    auth_response_data = user_auth_infos['auth_response_data']
+    log_app.debug("isUserListed / auth_response_data : \n%s", pformat(auth_response_data)) 
+
+    confirm_auth_doc   = user_auth_infos['confirm_auth_doc']
+    confirm_user_role_path  = confirm_auth_doc['resp_fields']['user_role']['path']
+    confirm_user_email_path = confirm_auth_doc['resp_fields']['user_email']['path']
+
+    auth_response_user_role  = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
+    log_app.debug("isUserListed / auth_response_user_role : %s", auth_response_user_role) 
+    
+    auth_response_user_email = getValueFromDictAndPathString(auth_response_data, confirm_user_email_path)
+    log_app.debug("isUserListed / auth_response_user_email : %s", auth_response_user_email) 
+
+    # check if user_email is listed in auth_role_users
+    auth_role_users = uuid_auth_doc["auth_role_users"]
+    user_is_listed = auth_response_user_email in auth_role_users[auth_response_user_role + '_list']
+
+  else :
+    user_is_listed = False 
+
+  return user_is_listed
+
+def checkUuidAuth(uuid, auth_mode, user_token=None, return_doc=False, is_log_route=False) : 
   """ 
   authenticate acces to an apiviz instance 
   """
@@ -110,52 +152,67 @@ def checkUuidAuth(uuid, auth_mode, user_token=None, return_doc=False) :
   print (". "*50)
   log_app.debug("checkUuidAuth / uuid : %s", uuid )
 
-  ### get uuid auth document
-  uuidsAuthColl = mongoConfigColls['uuids_auth']
-  uuid_auth_doc_raw = uuidsAuthColl.find_one( {'apiviz_front_uuid' : uuid} )
-  uuid_auth_doc = DocOidToString(uuid_auth_doc_raw)
-  # log_app.debug("checkUuidAuth / uuid_auth_doc : \n%s", pformat(uuid_auth_doc) )
+  if is_log_route == False : 
 
-  ### main condition : is uuid authorized or locked / blocked
-  uuid_is_authorized = uuid_auth_doc['uuid_is_authorized']
+    ### get uuid auth document
+    uuidsAuthColl = mongoConfigColls['uuids_auth']
+    uuid_auth_doc_raw = uuidsAuthColl.find_one( {'apiviz_front_uuid' : uuid} )
 
-  ### more checks if uuid is private
-  role_check = uuid_auth_doc['apiviz_options']['private_instance']
-  # log_app.debug("checkUuidAuth / role_check : %s", role_check )
+    if uuid_auth_doc_raw : 
 
-  if return_doc :
-    ### return the whole uuid_auth document
-    return uuid_auth_doc
+      uuid_auth_doc = DocOidToString(uuid_auth_doc_raw)
+      log_app.debug("checkUuidAuth / uuid_auth_doc : \n%s", pformat(uuid_auth_doc) )
 
-  elif role_check :
-    ### more checks if uuid is private
+      ### main condition : is uuid authorized or locked / blocked
+      uuid_is_authorized = uuid_auth_doc['uuid_is_authorized']
 
-    # get checkJWT response
-    user_auth_infos = checkJWT(user_token, ["private_instance"], uuid=uuid, auth_mode=auth_mode, return_resp=True)
-    
-    auth_response_data = user_auth_infos['auth_data']
-    confirm_auth_doc   = user_auth_infos['confirm_auth_doc']
-    confirm_user_role_path  = confirm_auth_doc['resp_fields']['user_role']['path']
-    confirm_user_email_path = confirm_auth_doc['resp_fields']['user_email']['path']
+      if return_doc :
 
-    auth_response_user_role  = getValueFromDictAndPathString(auth_response_data, confirm_user_role_path)
-    auth_response_user_email = getValueFromDictAndPathString(auth_response_data, confirm_user_email_path)
+        keys_not_in_trimmed_doc = ['added_by', 'logs', 'auth_role_users', '_id']
+        trimmed_uuid_auth_doc = { key : val for key, val in uuid_auth_doc.items() if key not in keys_not_in_trimmed_doc }
+        
+        if user_token : 
+          ### return the whole uuid_auth document depending on user auth
+          user_is_listed = isUserListed(user_token, uuid, auth_mode, uuid_auth_doc)
 
-    # check if user_email is listed in auth_role_users
-    auth_role_users = uuid_auth_doc["auth_role_users"]
-    user_is_listed = auth_response_user_email in auth_role_users[auth_response_user_role + '_list']
+          if user_is_listed : 
+            return uuid_auth_doc
 
-    ### return a boolean
-    return user_is_listed
-  
-  else : 
-    ### return a boolean
-    return uuid_is_authorized
-  
+          else :
+            return trimmed_uuid_auth_doc
 
+        else : 
+          ### return the trimmed uuid_auth document for anonymous users
+          return trimmed_uuid_auth_doc
 
+      ### more checks if uuid is private
+      # role_check = uuid_auth_doc['apiviz_options']['private_instance']
+      role_check = uuid_auth_doc['private_instance']
+      # log_app.debug("checkUuidAuth / role_check : %s", role_check )
 
-# def checkJWT(token, roles_to_check, uuid="", url_check="http://localhost:4100/api/auth/tokens/confirm_access"):
+      if role_check and not return_doc :
+        ### more checks if uuid is private
+
+        # get checkJWT response
+        user_is_listed = isUserListed(user_token, uuid, auth_mode, uuid_auth_doc)
+
+        ### return a boolean
+        return user_is_listed
+
+      else : 
+        ### return a boolean
+        return uuid_is_authorized
+
+    else : 
+      ### return a boolean
+      return {
+        "_id" : None,
+        "apiviz_front_uuid" : None,
+      }
+
+  else :
+    return True
+
 def checkJWT(token, roles_to_check, uuid="", auth_mode=None, return_resp=False):
   """ 
   authenticate a token 
@@ -207,7 +264,7 @@ def checkJWT(token, roles_to_check, uuid="", auth_mode=None, return_resp=False):
       auth_response_status = auth_response.status_code
       log_app.debug( "checkJWT / auth_response_status : %s", auth_response_status )
       auth_response_data = auth_response.json()
-      # log_app.debug( "checkJWT / auth_response : \n%s", pformat(auth_response_data) )
+      # log_app.debug( "checkJWT / auth_response_data : \n%s", pformat(auth_response_data) )
 
       print (". "*50)
 
@@ -215,6 +272,7 @@ def checkJWT(token, roles_to_check, uuid="", auth_mode=None, return_resp=False):
         # return full auth response
         return {
           'auth_response_data' : auth_response_data,
+          'auth_response_status' : auth_response_status,
           'confirm_auth_doc' : confirm_auth_doc,
         }
 
@@ -231,49 +289,38 @@ def checkJWT(token, roles_to_check, uuid="", auth_mode=None, return_resp=False):
   else : 
     return False
 
+@app.route('/backend/api/check_uuid/<string:uuid>', methods=['GET'])
+def checkUuidAuthUrl(uuid):
+  """ 
+  Main route to GET apiviz instance (uuid) auth doc 
+  """ 
 
-### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
-### ERRORS HANDLERS
-### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+  print ("")
+  log_app.debug("checkUuidAuthUrl")
+  log_app.debug("checkUuidAuthUrl / method : %s", request.method )
 
-@app.errorhandler(403)
-@app.errorhandler(404)
-@app.errorhandler(500)
-@app.route("/error/<int:err_code>", defaults={ "error": BadRequest })
-def errorHandler(error, err_code=400):
+  msg = "there is the apiviz instance (uuid) auth options given your credentials"
 
-  if err_code == 404 : #  | error.code == 404 :
-    error_code 	= 404
-    template 		= "errors/404.html"
+  ### get request args if any
+  auth_mode = request.args.get('auth_mode', default="", type=str)
+  log_app.debug("config app route / auth_mode : %s", auth_mode )
 
-  elif err_code == 403 : # | error.code == 403 :
-    error_code 	= 403
-    template 		= "errors/403.html"
+  user_token = request.args.get('token', default="", type=str)
+  log_app.debug("config app route / user_token : %s", user_token )
 
-  elif err_code == 500 : # | error.code == 500 :
-    error_code 	= 500
-    template 		= "errors/500.html"
+  uuid_auth_doc = checkUuidAuth(uuid, auth_mode, user_token=user_token, return_doc=True)
+  if uuid_auth_doc == None : 
+    msg = "this uuid doesn't exist"
 
-  else :
-    error_code 	= 400
-    template 		= "errors/400.html"
-
-  app_config = getDocuments(mongo_config_global)
-
-  return render_template(
-    template,
-    config_name			= config_name, # prod or default...
-    site_section		= "error",
-    error_code			= str(error_code),
-    app_metas				= app_metas,
-    app_config 			= app_config,
-    language				= "fr" ,
-
-    languages_dict	= app_languages_dict ,
-    # error_msg				= u"accès interdit",
-    # user_infos			= current_user.get_public_infos
-  ), error_code
-
+  return jsonify({ 
+    "msg" : msg,
+    "request" : {
+      "url"    : request.url,
+      "args"   : request.args,
+      "method" : request.method,
+    },
+    "uuid_auth_doc" : uuid_auth_doc,
+  })
 
 
 
@@ -321,7 +368,9 @@ def backend_configs(collection, doc_id=None):
   req_json    = request.get_json()
   log_app.debug("config app route / req_json : \n%s", pformat(req_json) )
 
+
   ### check if uuid is authorized
+
   apiviz_front_auth_mode = request.args.get('auth_mode', default=None, type=str)
   ### retrieve access token 
   token = request.args.get('token', default='', type=str)
@@ -330,13 +379,15 @@ def backend_configs(collection, doc_id=None):
     token = req_json.get('token', '')
   log_app.debug("config app route / token : %s", token )
 
-  uuid_auth = checkUuidAuth(apiviz_uuid, apiviz_front_auth_mode, user_token=token)
+  uuid_auth = checkUuidAuth(apiviz_uuid, apiviz_front_auth_mode, user_token=token, is_log_route=is_log_route)
   log_app.debug("config app route / uuid_auth : %s", uuid_auth )
-
+   
+  ### build basic query
+  query = {'apiviz_front_uuid' : apiviz_uuid}
 
   if uuid_auth : 
 
-    field 	= request.args.get('field', 	default='field', type=str)
+    field 	= request.args.get('field', default='field', type=str)
 
     # as_list = request.args.get('as_list', default=False, type=bool)
     # log_app.debug("config app route / as_list : %s", as_list )
@@ -356,11 +407,10 @@ def backend_configs(collection, doc_id=None):
     if field not in ['_id', 'field'] :
       field = 'field'
 
-    ### build basic query
-    query = {'apiviz_front_uuid' : apiviz_uuid}
+    ### precising query
     if doc_id :
       query["_id"] = ObjectId(doc_id)
-    if is_log_route : 
+    if is_log_route and collection == 'endpoints' : 
       query["data_type"] = "user"
 
     log_app.debug("config app route / query : \n%s", query )
@@ -533,16 +583,6 @@ def getUuidDistinct(coll, uuid, distinctField):
   results = mongoColl.find(query).distinct(distinctField)
   # log_app.debug("getUuidDistinct / results : %s", results )
   return results
-
-def getUuidDocSubfield(coll, uuid, field, subField):
-  """
-  Util to get a model's subfield
-  """
-  mongoColl = mongoConfigColls[coll]
-  query = { 'field' : field, 'apiviz_front_uuid' : uuid }
-  result = mongoColl.find_one(query)
-  log_app.debug("getUuidDocSubfield / result : %s", result )
-  return result[subField]
 
 @app.route('/backend/api/get_default_models', methods=['GET'])
 def get_default_models():
@@ -850,6 +890,52 @@ def create_new_config():
       'uuid' : new_uuid,
       'request' : req_json,
     }), 500
+
+
+
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+### ERRORS HANDLERS
+### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
+
+### TO CLEAN / REDO - no templates
+
+@app.errorhandler(403)
+@app.errorhandler(404)
+@app.errorhandler(500)
+@app.route("/error/<int:err_code>", defaults={ "error": BadRequest })
+def errorHandler(error, err_code=400):
+
+  if err_code == 404 : #  | error.code == 404 :
+    error_code 	= 404
+    template 		= "errors/404.html"
+
+  elif err_code == 403 : # | error.code == 403 :
+    error_code 	= 403
+    template 		= "errors/403.html"
+
+  elif err_code == 500 : # | error.code == 500 :
+    error_code 	= 500
+    template 		= "errors/500.html"
+
+  else :
+    error_code 	= 400
+    template 		= "errors/400.html"
+
+  app_config = getDocuments(mongo_config_global)
+
+  return render_template(
+    template,
+    config_name			= config_name, # prod or default...
+    site_section		= "error",
+    error_code			= str(error_code),
+    app_metas				= app_metas,
+    app_config 			= app_config,
+    language				= "fr" ,
+
+    languages_dict	= app_languages_dict ,
+    # error_msg				= u"accès interdit",
+    # user_infos			= current_user.get_public_infos
+  ), error_code
 
 
 

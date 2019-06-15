@@ -15,18 +15,18 @@ available roles
 "anonymous" : 
 """
 
-APIVIZ_INSTANCE_AUTH = {
-  "is_public" : {
-    'POST'    : ['super_admin',  'admin'], 
-    'DELETE'  : ['super_admin',  'admin'], 
-    'GET'     : ['all']
-  },
-  "is_private" : {
-    'POST'    : ['super_admin', 'admin', 'staff'], 
-    'DELETE'  : ['super_admin', 'admin'], 
-    'GET'     : ['super_admin', 'admin', 'staff', 'guest']
-  }
-}
+# APIVIZ_INSTANCE_AUTH = {
+#   "is_public" : {
+#     'POST'    : ['super_admin',  'admin'], 
+#     'DELETE'  : ['super_admin',  'admin'], 
+#     'GET'     : ['all']
+#   },
+#   "is_private" : {
+#     'POST'    : ['super_admin', 'admin', 'staff'], 
+#     'DELETE'  : ['super_admin', 'admin'], 
+#     'GET'     : ['super_admin', 'admin', 'staff', 'guest']
+#   }
+# }
 
 COLLECTIONS_AUTH_MODIFICATIONS	= {
   "global"    : {

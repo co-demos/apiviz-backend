@@ -16,6 +16,12 @@ from pathlib import Path  # python3 only
 env_path_global = Path('.') / 'example.env.global'
 load_dotenv(env_path_global, verbose=True)
 
+try :
+  env_path_superAdmins = Path('.') / '.env.superadmins'
+  load_dotenv(env_path_superAdmins, verbose=True)
+except : 
+  env_path_superAdmins = Path('.') / 'example.env.superadmins'
+  load_dotenv(env_path_superAdmins, verbose=True)
 
 ### READ ENV VARS
 run=os.getenv('RUN_MODE', 'default')

@@ -5,6 +5,10 @@ from    datetime import timedelta
 from    datetime import date
 from    pprint import pprint, pformat
 
+from .config_env import formatEnvVar
+
+APIVIZ_SUPER_ADMINS = formatEnvVar('SUPER_ADMIN_LIST', format_type="list", separator=",") 
+
 uuid_auth_model = {
   
   "apiviz_front_uuid" : None,
@@ -19,6 +23,7 @@ uuid_auth_model = {
   "months_renewal" : 1,
 
   ### apiviz free/pro options
+  "private_instance" : False,
   "apiviz_options" : {
     "datasets" : 1,
     "admins" : 1,
@@ -29,7 +34,6 @@ uuid_auth_model = {
     "backoffice" : True,
     "users_management" : True,
     "options_management" : False,
-    "private_instance" : False,
   },
 
   "logs" : {
@@ -61,13 +65,16 @@ default_uuids_auth = [
 
 for key, val in uuid_models.items() : 
 
+  ### copy uuid_auth_model
   temp_auth = uuid_auth_model.copy()
   # print ("... temp_auth : \n", pformat(temp_auth))
 
+  ### setting main specs
   temp_auth["apiviz_front_name"] = key
   temp_auth["apiviz_front_uuid"] = val
 
-  temp_auth["date_added"] = datetime.datetime.now()
+  ### setting options
+  temp_auth["private_instance"] = False
   temp_auth["months_renewal"] = 120
 
   temp_auth["apiviz_options"]["datasets"] = 3
@@ -79,14 +86,21 @@ for key, val in uuid_models.items() :
   temp_auth["apiviz_options"]["backoffice"] = True
   temp_auth["apiviz_options"]["users_management"] = True
   temp_auth["apiviz_options"]["options_management"] = True
-  temp_auth["apiviz_options"]["private_instance"] = False
 
+  ### setting admin list
+  temp_auth["auth_role_users"]["admin_list"] = APIVIZ_SUPER_ADMINS
+
+  ### define as default model
   temp_auth["is_default"] = True
   
+  ### setting added infos
+  temp_auth["date_added"] = datetime.datetime.now()
   temp_auth["added_by"] = {
     "name" : "system",
-    "email" : "infos.codemos@gmail.com",
+    "email" : APIVIZ_SUPER_ADMINS[0],
   }
+
   # print ("... temp_auth : \n", pformat(temp_auth))
 
+  ### append to list to add / renew in mongodb
   default_uuids_auth.append(temp_auth)

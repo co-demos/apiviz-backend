@@ -13,8 +13,16 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 from dotenv import load_dotenv
 from pathlib import Path  # python3 only
+
 env_path_global = Path('.') / 'example.env.global'
 load_dotenv(env_path_global, verbose=True)
+
+try :
+  env_path_superAdmins = Path('.') / '.env.superadmins'
+  load_dotenv(env_path_superAdmins, verbose=True)
+except : 
+  env_path_superAdmins = Path('.') / 'example.env.superadmins'
+  load_dotenv(env_path_superAdmins, verbose=True)
 
 ### overide env var for Docker
 # os.environ["DOMAIN_ROOT"]	 = None # '0.0.0.0'

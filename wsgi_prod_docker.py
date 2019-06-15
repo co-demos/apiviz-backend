@@ -13,10 +13,15 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
 from dotenv import load_dotenv
 from pathlib import Path  # python3 only
+
 env_path_global = Path('.') / '.env.global'
+env_path_superAdmins = Path('.') / '.env.superadmins'
 env_path_mongodb = Path('.') / '.env.mongodb'
+
 load_dotenv(env_path_global, verbose=True)
+load_dotenv(env_path_superAdmins, verbose=True)
 load_dotenv(env_path_mongodb, verbose=True)
+
 
 ### overide env var for Docker
 os.environ["DOCKER_MODE"]	 = 'docker_on'
