@@ -842,6 +842,7 @@ def create_new_config():
 
         msg = 'your new website is ready'
         resp_code = 200
+        resp_msgCode = 'instane_created_1a'
     
       # create new default uuid_auth
       new_uuid_auth_doc = uuid_auth_model.copy()
@@ -865,15 +866,19 @@ def create_new_config():
       msg = 'errors : '
       if modelIsUsed :
         msg += 'your current uuid is already used... '
+        resp_msgCode = 'uuid_is_current_1a'
       if modelCheck == None : 
         msg += "you can't use this model.. "
-      resp_code = 500
+        resp_msgCode = 'instance_used_1a'
+      resp_code = 400
       log_app.debug("create_new_config / msg : %s", msg )
 
     return jsonify({
-      'msg' : msg,
-      'uuid' : new_uuid,
-      'request' : req_json,
+      'msg'      : msg,
+      'status'   : resp_code,
+      'msg_code' : resp_msgCode,
+      'uuid'     : new_uuid,
+      'request'  : req_json,
     })
 
 
@@ -885,18 +890,22 @@ def create_new_config():
     log_app.debug("config app route / DELETE" )
     
     return jsonify({
-      'msg' : 'your apiviz instance has been deleted',
-      'uuid' : new_uuid,
-      'request' : req_json,
+      'msg'      : 'your apiviz instance has been deleted',
+      'status'   : 200,
+      'msg_code' : 'instane_deleted_1a',
+      'uuid'     : new_uuid,
+      'request'  : req_json,
     })
 
 
   # not a POST nor a DELETE request
   else : 
     return jsonify({
-      'msg' : 'there was an error during the process (method not allowed)',
-      'uuid' : new_uuid,
-      'request' : req_json,
+      'msg'      : 'there was an error during the process (method not allowed)',
+      'status'   : 500,
+      'msg_code' : 'error_1a',
+      'uuid'     : new_uuid,
+      'request'  : req_json,
     }), 500
 
 
