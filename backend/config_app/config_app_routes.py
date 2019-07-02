@@ -620,6 +620,113 @@ default_routes_config = [
           "is_default"        : True
         },
 
+        ## PAGE - stats
+        { "field"             : "sonum_carto_stats",
+          "is_global_app_homepage" : False,
+          "route_title"       : u"Rechercher stats",
+          "route_description" : u"Page de recherche stats LM d'Apiviz",
+          "route_activated"   : True,
+          "banner" : {
+            "activated"  : False,
+            "banner_uri" : "banner-sonum-carto"
+          },
+          "is_dataset_homepage" : False,
+
+          "in_main_navbar"    : False,
+          "navbar_btn_options" : {
+            "only_in_navbar_for_this_dataset" : True,
+            "position"   : "middle_right",
+            "link_type"  : "link",
+            "icon_class" : "",
+            "link_text"  : [{"locale" : "en", "text" : "Search a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+          },
+
+          "in_footer"         : False,
+          "urls"              : ["/sonum-carto/stats"],
+          "template_urls"     : [
+          ],
+          
+          "help"              : u"helper stats...",
+          "languages"         : ["fr"],
+          "app_version"       : version,
+          "comment"           : u"Main search route in french",
+          "is_dynamic"        : True,
+          "dataset_uri"       : "sonum-carto",
+          "dynamic_template"  : 'DynamicStats',
+          "endpoint_type"     : "stat",
+
+          "contents_fields"  : [
+            { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_id",
+              "locale" : "fr"
+            },
+          ],
+
+          "images_fields"   : {
+            "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+            "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
+          },
+
+          "ui_options" : {
+            "card_color"    : { "value" : None, "default" : "white", },
+            "text_color"    : { "value" : None, "default" : "black", },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+          },
+
+          "charts_options" : [ 
+            
+            ### apexCharts configs
+            ### cf : https://apexcharts.com/vue-chart-demos/
+
+            { ### LINE EXAMPLE
+              "chart_type": "line", 
+              "position": { 
+                "row": 0,
+                "col_x": 0,
+                "col_y": 0,
+              },
+              "options": {
+
+              },
+              "height": 350, 
+              "data": None,  
+            },
+
+            { ### DOUGHNUT EXAMPLE
+              "chart_type": "dounnut", 
+              "position": { 
+                "row": 1,
+                "col_x": 0,
+                "col_y": 0,
+              },
+              "options": {
+
+              },
+              "height": 350, 
+              "data": None,  
+            },
+
+
+          ],
+
+          "links_options"  : {
+          },
+
+          "has_navbar"        : True,
+          "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "sonum-tabs",
+          "deactivate_btn"    : False,
+          "is_visible"        : True,
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
+          "is_default"        : True
+        },
+
       ### DATASETS XP SONUM
         ## PAGE - map
         { "field"             : "sonum_xp_carte",
@@ -886,7 +993,7 @@ default_routes_config = [
           "is_default"        : True
         },
         ## PAGE - detail
-        { "field"               : "sonum_xp_detail",
+        { "field"             : "sonum_xp_detail",
           "is_global_app_homepage" : False,
           "route_title"         : u"Rechercher",
           "route_description"   : u"Page de recherche details XP d'Apiviz",
