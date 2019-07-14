@@ -29,6 +29,10 @@ default_data_endpoints_config = [
         },
         "args_options"   : [
         ],
+        "request_header_auth_options" : [
+          { "header_field" : "accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          { "header_field" : "Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
+        ],
         "app_version"    : version,
         "method"         : "GET",
         "help"           : u"define the endpoints for authentication",
@@ -389,15 +393,37 @@ default_data_endpoints_config = [
           "dataset_uri"   : "sonum-carto",
           "content"       : u"apiviz default API endpoint for stats results",
           # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5c89636d328ed70609be03ab",
-          "root_url"      : "https://localhost:4000/api/dso/infos/get_one_stats/5d1936d48626a07bb258d1c6",
+          "root_url"      : "http://localhost:4000/api/dso/infos/get_one_stats/5d1936d48626a07bb258d1c6",
           "args_options"  : [
             {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
             {  "app_arg" : "query",     "arg" : "search_for",     "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
             {  "app_arg" : "filters",   "arg" : "search_filters", "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
           ],
+          "payload_options" : {
+            "payload_format" : "list",
+            "payload_args" : [
+              [ 
+                {  "payload_value" : "source",      "payload_field" : "agg_field",            "optional" : False, "default" : "", "type": "str", "list_pos" : 0 },
+                {  "payload_value" : "count_items", "payload_field" : "agg_sum_type",         "optional" : False, "default" : "", "type": "str", "list_pos" : 0 },
+                {  "payload_value" : False,         "payload_field" : "agg_needs_unwind",     "optional" : False, "default" : "", "type": "bool", "list_pos" : 0 },
+                {  "payload_value" : "-",           "payload_field" : "agg_unwind_separator", "optional" : False, "default" : "", "type": "str", "list_pos" : 0 },
+              ],
+              [
+                {  "payload_value" : "code services", "payload_field" : "agg_field",            "optional" : False, "default" : "", "type": "str", "list_pos" : 1 },
+                {  "payload_value" : "count_items",   "payload_field" : "agg_sum_type",         "optional" : False, "default" : "", "type": "str", "list_pos" : 1 },
+                {  "payload_value" : True,            "payload_field" : "agg_needs_unwind",     "optional" : False, "default" : "", "type": "bool", "list_pos" : 1 },
+                {  "payload_value" : "-",             "payload_field" : "agg_unwind_separator", "optional" : False, "default" : "", "type": "str", "list_pos" : 1 },
+              ]
+            ],
+          },
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "/" },
-            "total"    : { "resp_format" : "int",  "path" : "/" },
+            "projects"   : { "resp_format" : "dict", "path" : "/data" },
+            "dimensions" : { 
+              "quantity"    : { "resp_format" : "int", "path" : "/data/count", "label" : "" },
+              "dimension_A" : { "resp_format" : "str", "path" : "/data/_id",   "label" : "" },
+              "dimension_B" : { "resp_format" : "str", "path" : "/data/count", "label" : "" },
+            },
+            "total"      : { "resp_format" : "int",  "path" : "/" },
           },
           "app_version"   : version,
           "method"        : "POST",
@@ -689,6 +715,10 @@ default_data_endpoints_config = [
           "distant_prod"    : "https://toktok-auth.com/api"
         },
         "args_options"   : [
+        ],
+        "request_header_auth_options" : [
+          { "header_field" : "accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None, "header_value_prefix" : None },
+          { "header_field" : "Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "accessToken", "header_value_prefix" : None },
         ],
         "app_version"    : version,
         "method"         : "GET",
