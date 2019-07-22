@@ -678,37 +678,170 @@ default_routes_config = [
             "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
-          "charts_options" : [ 
+          "charts_list" : [ 
             
             ### apexCharts configs
             ### cf : https://apexcharts.com/vue-chart-demos/
 
-            { ### LINE EXAMPLE
-              "chart_type": "line", 
-              "position": { 
-                "row": 0,
-                "col_x": 0,
-                "col_y": 0,
-              },
-              "options": {
+            { ### BAR HORIZ - SETTINGS EXAMPLE
+              "serie_id" : "sonum-carto-stat-bar-horiz",
+              "is_activated" : True,
+              "chart_type": "bar", 
+              "help" : "bar horiz + stacked example",
+              "position": 0,
+              "col_size" : 4,
+              "height": "350px",
+              "width" : "100%", 
 
-              },
-              "height": 350, 
-              "data": None,  
+              "data_mapping" : {
+
+                "serie_path" : "results/data",
+                "serie_name_field" : "_id",
+                "serie_data" : {
+
+                  "subpath" : "subcounts",
+
+                  "need_remap" : True,
+                  "data_value" : "count",
+
+                  "need_list_only" : False,
+
+                  "add_missing_values" : True,
+                  "missing_data_by" : {
+                    "val_fields_list" : [ "ACC", "FOR", "ACL", "NR" ],
+                    "val_field" : "tag_name",
+                  },
+
+                  "need_sorting" : True,
+                  "sorting_by" : {
+                    "sort_field" : "tag_name",
+                  },
+
+                },
+
+                "serie_chart_options" : [ 
+                  # { 
+                  #   "options_field_path" : "xaxis/categories",
+                  #   "build_list_from" : "results/data/subcounts/tag_name"
+                  # },
+                ],
+              },  
+
+              "chart_options": {
+
+                "chart": {
+                  "stacked": True,
+                  # "stackType": '100%'
+                },
+                "plotOptions": {
+                  "bar": {
+                    "horizontal": True,
+                  }
+                },
+                "stroke": {
+                  "width": 1,
+                  "colors": [
+                    "#fff",
+                    "#fff",
+                    "#fff",
+                    "#fff",
+                    "#fff"
+                  ]
+                },
+                "title": {
+                  "text": "categories by sources"
+                },
+                "xaxis": {
+                  # "categories": [
+                  #   2008,
+                  #   2009,
+                  #   2010,
+                  #   2011,
+                  #   2012,
+                  #   2013,
+                  #   2014
+                  # ],
+                  "categories": [
+                    "ACC",
+                    "ACL",
+                    "FOR",
+                    "NR"
+                  ],
+                  "labels": {}
+                },
+                "yaxis": {
+                  "title": {}
+                },
+                "tooltip": {
+                  "y": {}
+                },
+                "fill": {
+                  "opacity": 1
+                },
+                "legend": {
+                  "position": "top",
+                  "horizontalAlign": "left",
+                  "offsetX": 40
+                }
+              }
             },
 
-            { ### DOUGHNUT EXAMPLE
-              "chart_type": "dounnut", 
-              "position": { 
-                "row": 1,
-                "col_x": 0,
-                "col_y": 0,
-              },
-              "options": {
+            { ### DOUGHNUT - SETTINGS EXAMPLE
+              "serie_id" : "sonum-carto-stat-donut",
+              "is_activated" : True,
+              "chart_type": "donut", 
+              "position": 0,
+              "col_size" : 4,
+              "height": "350px",
+              "width" : "100%", 
 
+              "data_mapping" : {
+                
+                "serie_path" : "results/data",
+                "serie_name_field" : "_id",
+                "serie_data" : {
+
+                  "subpath" : None,
+
+                  "need_remap" : False,
+                  "data_value" : "count",
+
+                  "need_list_only" : True,
+
+                  "add_missing_values" : False,
+                  "missing_data_by" : {
+                    "val_fields_list" : None,
+                  },
+
+                  "need_sorting" : False,
+                  "sorting_by" : {
+                    "sort_field" : "_id",
+                  },
+
+                },
+                "serie_chart_options" : [ 
+                  { 
+                    "step" : "before_list",
+                    "options_field_path" : "labels",
+                    "build_list_from" : "_id"
+                  },
+                ],
               },
-              "height": 350, 
-              "data": None,  
+
+              "chart_options": {
+                "responsive": [{
+                  "breakpoint": 480,
+                  "options": {
+                    "chart": {
+                      "width": 200
+                    },
+                    "legend": {
+                      "position": 'bottom'
+                    }
+                  }
+                }]
+              },
+
             },
 
 
