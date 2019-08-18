@@ -134,21 +134,21 @@ default_global_config = [
         "is_default"  : True
       },
 
-      { "field"       : "app_screen_tabs",
-        "app_version" : version,
-        "help"        : u"The default homepage for your ApiViz instance",
-        "tab_list"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
-        },
-        "tab_map"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
-        },
-        "tab_stat"    : { 
-          "link_text"  : [ {"locale" : "en", "text" : "charts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
-        },
-        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
-        "is_default"  : True
-      },
+      # { "field"       : "app_screen_tabs",
+      #   "app_version" : version,
+      #   "help"        : u"The default homepage for your ApiViz instance",
+      #   "tab_list"    : { 
+      #     "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
+      #   },
+      #   "tab_map"    : { 
+      #     "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
+      #   },
+      #   "tab_stat"    : { 
+      #     "link_text"  : [ {"locale" : "en", "text" : "charts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
+      #   },
+      #   "apiviz_front_uuid" : uuid_models["uuid_sonum"],
+      #   "is_default"  : True
+      # },
 
     ### LOGO
       { "field"       : "app_logo",
@@ -395,21 +395,21 @@ default_global_config = [
         "is_default"  : True
       },
 
-      { "field"       : "app_screen_tabs",
-        "app_version" : version,
-        "help"        : u"The default homepage for your ApiViz instance",
-        "tab_list"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
-        },
-        "tab_map"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
-        },
-        "tab_stat"    : {
-          "link_text"  : [ {"locale" : "en", "text" : "data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
-        },
-        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
-        "is_default"  : True
-      },
+      # { "field"       : "app_screen_tabs",
+      #   "app_version" : version,
+      #   "help"        : u"The default homepage for your ApiViz instance",
+      #   "tab_list"    : {
+      #     "link_text"  : [ {"locale" : "en", "text" : "list"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "liste" }],
+      #   },
+      #   "tab_map"    : {
+      #     "link_text"  : [ {"locale" : "en", "text" : "map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
+      #   },
+      #   "tab_stat"    : {
+      #     "link_text"  : [ {"locale" : "en", "text" : "data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
+      #   },
+      #   "apiviz_front_uuid" : uuid_models["uuid_apcis"],
+      #   "is_default"  : True
+      # },
 
     ### LOGO
       { "field"       : "app_logo",

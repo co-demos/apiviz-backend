@@ -56,6 +56,8 @@ uuid_auth_model = {
     "guest_list" : [], ###
   },
 
+  "users_list" : [],
+
   "is_default" : False,
 }
 
@@ -101,6 +103,15 @@ for key, val in uuid_models.items() :
   temp_auth["added_by"]["surname"] = "apivviz"
   temp_auth["added_by"]["email"] = APIVIZ_SUPER_ADMINS[0]
 
+  default_users_auth_list = [
+    {
+      "name" : "system",
+      "surname" : "apiviz",
+      "email" : APIVIZ_SUPER_ADMINS[0],
+      "role" : "admin",
+    }
+  ]
+  temp_auth["users_list"] = default_users_auth_list
 
   # print ("... temp_auth : \n", pformat(temp_auth))
 

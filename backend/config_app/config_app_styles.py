@@ -13,7 +13,7 @@ default_app_styles_config = [
         "content"     : {
 
           ### DEFAULTS 
-          "navbar-border-color"        : "#40529d",
+          "navbar-border-color"       : "#40529d",
           "default_background_app"    : "#fafafa",
           "default_background_navbar" : "#ffffff",
 

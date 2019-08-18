@@ -29,6 +29,11 @@ default_data_endpoints_config = [
         },
         "args_options"   : [
         ],
+        "request_header_auth_options" : [
+          { "header_field" : u"Accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          { "header_field" : u"Content-type",  "header_value" : "application/json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          { "header_field" : u"Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
+        ],
         "app_version"    : version,
         "method"         : "GET",
         "help"           : u"define the endpoints for authentication",
@@ -242,7 +247,7 @@ default_data_endpoints_config = [
           "data_type"     : "data",
           "endpoint_type" : "filters",
           "dataset_uri"   : "sonum-carto",
-          "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
+          "available_views" : ['VIEW_LIST', 'VIEW_MAP', 'VIEW_STATS'],
           "has_shuffle"  : False,
           "has_pagination" : False,
           "pagination_options" : {
@@ -342,11 +347,12 @@ default_data_endpoints_config = [
             {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
             {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
             {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 0 , "type": "int" },
+            # {  "app_arg" : "descending","arg" : "descending",     "optional" : True, "in" : ["url"],           "default" : False , "type": "bool" },
 
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -369,8 +375,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -381,23 +387,70 @@ default_data_endpoints_config = [
 
         ### DATA STATS
         { "field"         : "sonum_carto_data_API_stats",
-          "is_visible"    : False,
+          "is_visible"    : True,
           "is_disabled"   : False,
           "data_type"     : "data",
           "endpoint_type" : "stat",
-          "dataset_uri"    : "sonum-carto",
+          "dataset_uri"   : "sonum-carto",
           "content"       : u"apiviz default API endpoint for stats results",
-          "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c89636d328ed70609be03ab",
-          "args_options"   : [
-            {  "app_arg" : "dataToken",        "arg" : "token",                "optional" : True, "in" : ["url","header"],   "default" : "", "type": "str" },
-            {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple",   "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
+          
+          # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5c89636d328ed70609be03ab",
+          "root_url"      : "http://localhost:4000/api/dso/infos/get_one_stats/5d1936d48626a07bb258d1c6",
+          
+          "args_options"  : [
+            {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
+            {  "app_arg" : "query",     "arg" : "search_for",     "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
+            {  "app_arg" : "filters",   "arg" : "search_filters", "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
           ],
-          "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+          
+          "payload_options" : {
+
+            # "payload_format" : "list",
+
+            "payload_queries" : [
+              { 
+                "serie_id" : "sonum-carto-stat-bar-horiz",
+                "agg_fields" : [
+                  { 
+                    "agg_field" : "source",
+                    "agg_sum_type" : "count_items", 
+                    "agg_needs_unwind" : False,
+                    "agg_unwind_separator" : "-",
+                  },
+                  { 
+                    "agg_field" : "code services",
+                    "agg_sum_type" : "count_items",
+                    "agg_needs_unwind" : True,
+                    "agg_unwind_separator" : "-", 
+                  }  
+                ]
+              },
+              { 
+                "serie_id" : "sonum-carto-stat-donut",
+                "agg_fields" : [
+                  { 
+                    "agg_field" : "source",
+                    "agg_sum_type" : "count_items", 
+                    "agg_needs_unwind" : False,
+                    "agg_unwind_separator" : "-",
+                  }
+                ]
+              },
+            ],
           },
-          "app_version"    : version,
-          "method"        : "GET",
+          "resp_fields" : {
+            "stats"      : { "resp_format" : "dict", "path" : "series" },
+            # "projects"   : { "resp_format" : "dict", "path" : "data" },
+            # "dimensions" : { 
+            #   "quantity"    : { "resp_format" : "int", "path" : "data/count", "label" : "" },
+            #   "dimension_A" : { "resp_format" : "str", "path" : "data/_id",   "label" : "" },
+            #   "dimension_B" : { "resp_format" : "str", "path" : "data/count", "label" : "" },
+            # },
+            # "total"      : { "resp_format" : "int",  "path" : "/" },
+          },
+
+          "app_version"   : version,
+          "method"        : "POST",
           "help"          : u"define the endpoint to get data for : a stat about the dataset",
           "apiviz_front_uuid" : uuid_models["uuid_sonum"],
           "is_default"    : True
@@ -410,7 +463,10 @@ default_data_endpoints_config = [
           "data_type"     : "data",
           "endpoint_type" : "map",
           "dataset_uri"   : "sonum-carto",
+
           "map_options"   : {
+
+            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
             "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
             "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             "subdomains"       : 'abcd',
@@ -422,7 +478,9 @@ default_data_endpoints_config = [
             "useMarkerCluster" : True,
             "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
             "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+
           },
+          
           "content"       : u"apiviz default API endpoint for map results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c89636d328ed70609be03ab",
           # "root_url"      : "http://localhost:4000/api/dso/infos/get_one/5c89636d328ed70609be03ab",
@@ -441,8 +499,8 @@ default_data_endpoints_config = [
 
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -552,8 +610,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 0 , "type": "int" },
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"   : version,
           "method"        : "GET",
@@ -576,8 +634,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -600,8 +658,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple", "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -645,8 +703,8 @@ default_data_endpoints_config = [
             {  "app_arg" : "filters",       "arg" : "search_filters",   "optional" : True, "in" : ["url"],          "default" : "",   "type": "str" },
           ],
           "resp_fields" : {
-            "projects" : { "resp_format" : "dict", "path" : "data_raw/f_data" },
-            "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+            "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
           },
           "app_version"    : version,
           "method"        : "GET",
@@ -681,6 +739,10 @@ default_data_endpoints_config = [
           "distant_prod"    : "https://toktok-auth.com/api"
         },
         "args_options"   : [
+        ],
+        "request_header_auth_options" : [
+          { "header_field" : "accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None, "header_value_prefix" : None },
+          { "header_field" : "Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "accessToken", "header_value_prefix" : None },
         ],
         "app_version"    : version,
         "method"         : "GET",
@@ -1009,8 +1071,8 @@ default_data_endpoints_config = [
           {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
         ],
         "resp_fields" : {
-          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
-          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -1033,8 +1095,8 @@ default_data_endpoints_config = [
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
         ],
         "resp_fields" : {
-          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
-          "total"    : { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          "total"    : { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -1057,8 +1119,8 @@ default_data_endpoints_config = [
           {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple",   "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
         ],
         "resp_fields" : {
-          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
-          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
@@ -1074,7 +1136,10 @@ default_data_endpoints_config = [
         "data_type"     : "data",
         "endpoint_type" : "map",
         "dataset_uri"   : "recherche",
+
         "map_options"   : {
+          
+          ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
@@ -1086,7 +1151,9 @@ default_data_endpoints_config = [
           "useMarkerCluster" : True,
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
           "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+        
         },
+
         "content"       : u"apiviz default API endpoint for map results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
         "args_options"  : [
@@ -1104,8 +1171,8 @@ default_data_endpoints_config = [
 
         ],
         "resp_fields" : {
-          "projects" : { "resp_format" : "list", "path" : "data_raw/f_data" },
-          "total" :    { "resp_format" : "int",  "path" : "data_raw/f_data_count" },
+          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
         },
         "app_version"    : version,
         "method"        : "GET",
