@@ -689,7 +689,7 @@ default_routes_config = [
               "chart_type": "bar", 
               "help" : "bar horiz + stacked example",
               "position": 0,
-              "col_size" : 4,
+              "col_size" : 8,
               "height": "350px",
               "width" : "100%", 
 
@@ -738,6 +738,9 @@ default_routes_config = [
                     "horizontal": True,
                   }
                 },
+                "theme" : {
+                  "palette" : "palette10", ### cf : https://apexcharts.com/docs/options/theme/#palette
+                },
                 "stroke": {
                   "width": 1,
                   "colors": [
@@ -749,7 +752,7 @@ default_routes_config = [
                   ]
                 },
                 "title": {
-                  "text": "categories by sources"
+                  "text": "categories / sources"
                 },
                 "xaxis": {
                   # "categories": [
@@ -829,6 +832,12 @@ default_routes_config = [
               },
 
               "chart_options": {
+                "title": {
+                  "text": "sources (%)",
+                },
+                "theme" : {
+                  "palette" : "palette3", ### cf : https://apexcharts.com/docs/options/theme/#palette 
+                },
                 "responsive": [{
                   "breakpoint": 480,
                   "options": {
