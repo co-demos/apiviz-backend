@@ -394,8 +394,8 @@ default_data_endpoints_config = [
           "dataset_uri"   : "sonum-carto",
           "content"       : u"apiviz default API endpoint for stats results",
           
-          # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5c89636d328ed70609be03ab",
-          "root_url"      : "http://localhost:4000/api/dso/infos/get_one_stats/5d1936d48626a07bb258d1c6",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5c89636d328ed70609be03ab",
+          # "root_url"      : "http://localhost:4000/api/dso/infos/get_one_stats/5d1936d48626a07bb258d1c6",
           
           "args_options"  : [
             {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
