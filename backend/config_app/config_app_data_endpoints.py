@@ -1193,7 +1193,7 @@ default_data_endpoints_config = [
                   "agg_unwind_separator" : "-",
                 },
                 { 
-                  "agg_field" : "coding services",
+                  "agg_field" : "coding APCIS N1",
                   "agg_sum_type" : "count_items",
                   "agg_needs_unwind" : True,
                   "agg_unwind_separator" : "-", 
