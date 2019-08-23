@@ -1084,7 +1084,7 @@ default_data_endpoints_config = [
               # {"name" : u"Bleu Blanc Zèbre",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bleu Blanc Zèbre" }]},
               # {"name" : u"Bretagne Créative", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bretagne Créative" }]},
               # {"name" : u"Coorace",           "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Coorace" }]},
-              {"name" : u"Fondation la France s’engage", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation la France s’engage" }]},
+              {"name" : u"Fondation la France s’Engage", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation la France s’engage" }]},
               # {"name" : u"Fondation Veolia",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation Veolia" }]},
               # {"name" : u"Lab Innovation et Territoires", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lab Innovation et Territoires" }]},
               # {"name" : u"My Positive Impact",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "My Positive Impact" }]},
@@ -1097,7 +1097,33 @@ default_data_endpoints_config = [
               # {"name" : u"UNCCAS",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "UNCCAS" }]},
             ],
           },
-
+          {	"name"		: u"département__", # TODO 
+            "id"      : "filter_4",
+            "col_name" : "département",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+            "choices"	: [
+              {"name" : u"75", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Paris" }]},
+            ],
+          },
+          {	"name"		: u"région__", # TODO 
+            "id"      : "filter_5",
+            "col_name" : "région",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Régions" }],
+            "choices"	: [
+              {"name" : u"IDF", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ile de France" }]},
+            ],
+          },
+          {	"name"		: u"type de contenu__", # TODO 
+            "id"      : "filter_6",
+            "col_name" : "type de contenu",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Types de contenu" }],
+            "choices"	: [
+              {"name" : u"TPRO", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }]},
+            ],
+          },
         ],
         "app_version"    : version,
         "method"        : "GET",
