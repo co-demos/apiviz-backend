@@ -981,7 +981,8 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785",
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7f0438328ed72e431f338e",
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -1060,8 +1061,8 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        #"root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785",
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -1090,6 +1091,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785",
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -1113,17 +1115,64 @@ default_data_endpoints_config = [
         "endpoint_type" : "stat",
         "dataset_uri"    : "cis",
         "content"       : u"apiviz default API endpoint for stats results",
+
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "args_options"   : [
-          {  "app_arg" : "dataToken",        "arg" : "token",                "optional" : True, "in" : ["url","header"],   "default" : "", "type": "str" },
-          {  "app_arg" : "onlyCountsSimple", "arg" : "only_counts_simple",   "optional" : True, "in" : ["url"],           "default" : "", "type": "bool" },
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5d5fca92328ed71684ce1785",
+        
+        "args_options"  : [
+          {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
+          {  "app_arg" : "query",     "arg" : "search_for",     "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
+          {  "app_arg" : "filters",   "arg" : "search_filters", "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
         ],
-        "resp_fields" : {
-          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
-          "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+        
+        "payload_options" : {
+
+          # "payload_format" : "list",
+
+          "payload_queries" : [
+            { 
+              "serie_id" : "apcis-carto-stat-bar-horiz",
+              "agg_fields" : [
+                { 
+                  "agg_field" : "source",
+                  "agg_sum_type" : "count_items", 
+                  "agg_needs_unwind" : False,
+                  "agg_unwind_separator" : "-",
+                },
+                { 
+                  "agg_field" : "coding services",
+                  "agg_sum_type" : "count_items",
+                  "agg_needs_unwind" : True,
+                  "agg_unwind_separator" : "-", 
+                }  
+              ]
+            },
+            { 
+              "serie_id" : "apcis-carto-stat-donut",
+              "agg_fields" : [
+                { 
+                  "agg_field" : "source",
+                  "agg_sum_type" : "count_items", 
+                  "agg_needs_unwind" : False,
+                  "agg_unwind_separator" : "-",
+                }
+              ]
+            },
+          ],
         },
+        "resp_fields" : {
+          "stats"      : { "resp_format" : "dict", "path" : "series" },
+          # "projects"   : { "resp_format" : "dict", "path" : "data" },
+          # "dimensions" : { 
+          #   "quantity"    : { "resp_format" : "int", "path" : "data/count", "label" : "" },
+          #   "dimension_A" : { "resp_format" : "str", "path" : "data/_id",   "label" : "" },
+          #   "dimension_B" : { "resp_format" : "str", "path" : "data/count", "label" : "" },
+          # },
+          # "total"      : { "resp_format" : "int",  "path" : "/" },
+        },
+
         "app_version"    : version,
-        "method"        : "GET",
+        "method"        : "POST",
         "help"          : u"define the endpoint to get data for : a stat about the dataset",
         "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"    : True
@@ -1156,6 +1205,7 @@ default_data_endpoints_config = [
 
         "content"       : u"apiviz default API endpoint for map results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785",
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
