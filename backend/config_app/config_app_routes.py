@@ -2063,7 +2063,7 @@ default_routes_config = [
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,
-          "banner_uri" : "banner-sonum-carto"
+          "banner_uri" : "banner-apcis-carto"
         },
         "is_dataset_homepage" : False,
 
@@ -2119,7 +2119,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "titre du projet",
-            "field_format" : { "trim" : 50, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
@@ -2135,7 +2135,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
-            "field_format" : { "trim" : 75, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : 75, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
             
