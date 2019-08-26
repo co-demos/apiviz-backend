@@ -2126,14 +2126,14 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "image(s) du projet",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_image",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field" : "image(s) du projet",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          #   # "trim" : 20,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           { "field" : "résumé du projet",
             "field_format" : { "trim" : 75, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
@@ -2251,21 +2251,21 @@ default_routes_config = [
 
           # { "field" : "intitulé structure", #SONUM
           { "field" : "titre du projet", #CIS
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
             
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "image(s) du projet",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_image",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field" : "image(s) du projet",
+          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          #   # "trim" : 20,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           { "field" : "adresse du projet",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
@@ -2283,7 +2283,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
-            "field_format" : { "trim" : 500, "type" : "list", "retrieve" : [-1] },
+            "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
             

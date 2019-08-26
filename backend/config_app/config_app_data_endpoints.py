@@ -981,8 +981,8 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7f0438328ed72e431f338e", ## V2
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7f0438328ed72e431f338e",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785",  ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -1171,7 +1171,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7f0438328ed72e431f338e", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
