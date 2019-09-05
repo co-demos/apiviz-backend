@@ -415,13 +415,14 @@ default_data_endpoints_config = [
                     "agg_field" : "source",
                     "agg_sum_type" : "count_items", 
                     "agg_needs_unwind" : False,
-                    "agg_unwind_separator" : "-",
+                    "agg_unwind_separator" : "-"
                   },
                   { 
-                    "agg_field" : "code services",
+                    # "agg_field" : "code services",
+                    "agg_field" : "coding services",
                     "agg_sum_type" : "count_items",
                     "agg_needs_unwind" : True,
-                    "agg_unwind_separator" : "-", 
+                    "agg_unwind_separator" : "-" 
                   }  
                 ]
               },
@@ -432,7 +433,7 @@ default_data_endpoints_config = [
                     "agg_field" : "source",
                     "agg_sum_type" : "count_items", 
                     "agg_needs_unwind" : False,
-                    "agg_unwind_separator" : "-",
+                    "agg_unwind_separator" : "-"
                   }
                 ]
               },
@@ -741,8 +742,9 @@ default_data_endpoints_config = [
         "args_options"   : [
         ],
         "request_header_auth_options" : [
-          { "header_field" : "accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None, "header_value_prefix" : None },
-          { "header_field" : "Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "accessToken", "header_value_prefix" : None },
+          { "header_field" : u"Accept",        "header_value" : "application/json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          { "header_field" : u"Content-type",  "header_value" : "application/json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          { "header_field" : u"Authorization", "header_value" : None,               "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
         ],
         "app_version"    : version,
         "method"         : "GET",
@@ -995,7 +997,7 @@ default_data_endpoints_config = [
             "id"      : "filter_3",
             "col_name" : "source",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
+            "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
             "choices"	: [
               # {"name" : u"AG2R La mondiale", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "AG2R La mondiale" }]},
               # {"name" : u"Apriles",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Apriles" }]},
@@ -1021,7 +1023,7 @@ default_data_endpoints_config = [
             "id"      : "filter_1",
             "col_name" : "coding APCIS N1",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Domains"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématiques" }],
+            "filter_title" : [{"locale" : "en", "text" : "Topics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématiques" }],
             "choices"	: [
               # {"name" : u"CV", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cadre de vie" }]},
               # {"name" : u"DD", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développement durable" }]},
@@ -1054,7 +1056,7 @@ default_data_endpoints_config = [
             "id"      : "filter_2",
             "col_name" : "coding APCIS N2",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sous-thématiques" }],
+            "filter_title" : [{"locale" : "en", "text" : "Sub-topics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sous-thématiques" }],
             "choices"	: [
               # {"name" : u"ha", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Handicap" }]},
               # {"name" : u"je", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jeunesse" }]},
@@ -1098,20 +1100,20 @@ default_data_endpoints_config = [
               {"name" : u"PAT", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Patrimoine" }]},
             ]
           },
-          {	"name"		: u"département__", # TODO 
-            "id"      : "filter_4",
-            "col_name" : "département",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
-            "choices"	: [
-              {"name" : u"75", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Paris" }]},
-            ],
-          },
+          # {	"name"		: u"département__", # TODO 
+          #   "id"      : "filter_4",
+          #   "col_name" : "département",
+          #   "dataType" : "text",
+          #   "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+          #   "choices"	: [
+          #     {"name" : u"75", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Paris" }]},
+          #   ],
+          # },
           {	"name"		: u"région__", # TODO 
             "id"      : "filter_5",
             "col_name" : "région",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Régions" }],
+            "filter_title" : [{"locale" : "en", "text" : "Regions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Régions" }],
             "choices"	: [
               {"name" : u"IDF", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ile de France" }]},
             ],
@@ -1120,7 +1122,7 @@ default_data_endpoints_config = [
             "id"      : "filter_6",
             "col_name" : "type de contenu",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Types de contenu" }],
+            "filter_title" : [{"locale" : "en", "text" : "Content type"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Types de contenu" }],
             "choices"	: [
               {"name" : u"TPRO", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }]},
             ],
@@ -1189,16 +1191,17 @@ default_data_endpoints_config = [
 
       ### DATA STATS
       { "field"         : "cis_data_API_stats",
-        "is_visible"    : False,
+        "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "stat",
-        "dataset_uri"    : "cis",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5c7f0438328ed72e431f338e", ## V2
-        
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_sstats/5c89636d328ed70609be03ab",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5d5fca92328ed71684ce1785", ## V2
+
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
           {  "app_arg" : "query",     "arg" : "search_for",     "optional" : True, "in" : ["url"],          "default" : "", "type": "str" },
@@ -1211,30 +1214,30 @@ default_data_endpoints_config = [
 
           "payload_queries" : [
             { 
-              "serie_id" : "apcis-carto-stat-bar-horiz",
+              "serie_id" : "apcis-stat-bar-horiz",
               "agg_fields" : [
                 { 
                   "agg_field" : "source",
                   "agg_sum_type" : "count_items", 
                   "agg_needs_unwind" : False,
-                  "agg_unwind_separator" : "-",
+                  "agg_unwind_separator" : "-"
                 },
                 { 
                   "agg_field" : "coding APCIS N1",
                   "agg_sum_type" : "count_items",
                   "agg_needs_unwind" : True,
-                  "agg_unwind_separator" : "-", 
+                  "agg_unwind_separator" : "-" 
                 }  
               ]
             },
             { 
-              "serie_id" : "apcis-carto-stat-donut",
+              "serie_id" : "apcis-stat-donut",
               "agg_fields" : [
                 { 
                   "agg_field" : "source",
                   "agg_sum_type" : "count_items", 
                   "agg_needs_unwind" : False,
-                  "agg_unwind_separator" : "-",
+                  "agg_unwind_separator" : "-"
                 }
               ]
             },

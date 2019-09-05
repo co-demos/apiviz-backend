@@ -703,13 +703,31 @@ default_routes_config = [
 
                   "need_remap" : True,
                   "data_value" : "count",
+                  "label_field" : "tag_name",
 
                   "need_list_only" : False,
 
                   "add_missing_values" : True,
                   "missing_data_by" : {
-                    "val_fields_list" : [ "ACC", "FOR", "ACL", "NR" ],
-                    "val_field" : "tag_name",
+                    "val_fields_list" : [ 
+                      "ACC", 
+                      "FOR", 
+                      "ACL", 
+                      "NR" 
+                    ],
+                    # "val_field" : "tag_name",
+                  },
+
+                  "need_labels_remap" : False,
+                  "need_labels_rename" : False,
+                  "labels_mapping" : {
+                    "chart_options_label_path" : "xaxis/categories",
+                    "labels_dict" : {
+                      "ACC" : "accompagnement",
+                      "FOR" : "formation",
+                      "ACL" : "aclimmatation",
+                      "NR"  : "non renseigné",
+                    }
                   },
 
                   "need_sorting" : True,
@@ -808,12 +826,13 @@ default_routes_config = [
 
                   "need_remap" : False,
                   "data_value" : "count",
+                  "label_field" : None,
 
                   "need_list_only" : True,
 
                   "add_missing_values" : False,
                   "missing_data_by" : {
-                    "val_fields_list" : None,
+                    # "val_fields_list" : None,
                   },
 
                   "need_sorting" : False,
@@ -1940,8 +1959,8 @@ default_routes_config = [
             "locale" : "fr"
           },
           # { "field" : "adresse structure", # SONUM
-          { "field" : "adresse du projet", # CIS
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          { "field" : "address", # CIS
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
             # "trim" : 20,
@@ -1949,7 +1968,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "ville structure",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
             # "trim" : 20,
@@ -1958,31 +1977,31 @@ default_routes_config = [
           },
           # { "field" : "intitulé structure", # SONUM
           { "field" : "titre du projet", # CIS
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "image(s) du projet",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_image",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field" : "image(s) du projet",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          #   # "trim" : 20,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           { "field" : "résumé du projet",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
             
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "link_src", # spider/sourceur
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          { "field" : "source", # spider/sourceur
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
             
@@ -1990,7 +2009,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_tags",
             "filter_correspondance" : True,
@@ -2142,7 +2161,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "link_src",
+          { "field" : "source",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "position" : "block_src",
@@ -2290,7 +2309,7 @@ default_routes_config = [
             "custom_title" : "Résumé du projet",
             "locale" : "fr"
           },
-          { "field" : "link_src",
+          { "field" : "source",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -2401,6 +2420,311 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
+        "deactivate_btn"    : False,
+        "is_visible"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
+        "is_default"        : True
+      },
+
+      ## PAGE - stats
+      { "field"             : "cis_stats",
+        "is_global_app_homepage" : False,
+        "route_title"       : u"Rechercher stats",
+        "route_description" : u"Page de recherche stats LM d'Apiviz",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-apcis-carto"
+        },
+        "is_dataset_homepage" : False,
+
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "only_in_navbar_for_this_dataset" : True,
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "urls"              : ["/recherche/stats"],
+        "template_urls"     : [
+        ],
+        
+        "help"              : u"helper stats...",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main search route in french",
+        "is_dynamic"        : True,
+        "dataset_uri"       : "recherche",
+        "dynamic_template"  : 'DynamicStats',
+        "endpoint_type"     : "stat",
+
+        "contents_fields"  : [
+          { "field" : "sd_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_id",
+            "locale" : "fr"
+          },
+        ],
+
+        "images_fields"   : {
+          "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+          "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
+        },
+
+        "ui_options" : {
+          "card_color"    : { "value" : None, "default" : "white", },
+          "text_color"    : { "value" : None, "default" : "black", },
+          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir prochain document" }] },
+          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+        },
+
+        "charts_list" : [ 
+          
+          ### apexCharts configs
+          ### cf : https://apexcharts.com/vue-chart-demos/
+
+          { ### BAR HORIZ - SETTINGS EXAMPLE
+            "serie_id" : "apcis-stat-bar-horiz",
+            "is_activated" : True,
+            "chart_type": "bar", 
+            "help" : "bar horiz + stacked example",
+            "position": 0,
+            "col_size" : 6,
+            "height": "400px",
+            "width" : "100%", 
+
+            "data_mapping" : {
+
+              "serie_path" : "results/data",
+              "serie_name_field" : "_id",
+              "serie_data" : {
+
+                "subpath" : "subcounts",
+
+                "need_remap" : True,
+                "data_value" : "count",
+                "label_field" : "tag_name",
+
+                "need_list_only" : False,
+
+                "add_missing_values" : True,
+                "missing_data_by" : {
+                  "val_fields_list" : [ 
+                    "EDU",
+                    "EMP",
+                    "ENV",
+                    "SAN",
+                    "SOL",
+                    "TER",
+                    "ART",
+                    "COM",
+                    "CON",
+                    "DEM",
+                    "GOU",
+                    "NUM",
+                    "SPO",
+                    "TOU",
+                    "FIN",
+                    "PAT",
+                  ],
+                  # "val_field" : "tag_name",
+                },
+
+                "need_labels_remap" : True,
+                "need_labels_rename" : True,
+                "labels_mapping" : {
+                  "chart_options_label_path" : "xaxis/categories",
+                  "labels_dict" : {
+                    "EDU" : "éducation",
+                    "EMP" : "emploi",
+                    "ENV" : "environnement",
+                    "SAN" : "santé",
+                    "SOL" : "solidarité",
+                    "TER" : "territoires",
+                    "ART" : "arts",
+                    "COM" : "communication",
+                    "CON" : "consommation",
+                    "DEM" : "démocratie",
+                    "GOU" : "gouvernance",
+                    "NUM" : "numérique",
+                    "SPO" : "sport",
+                    "TOU" : "tourisme",
+                    "FIN" : "finance",
+                    "PAT" : "patrimoine",
+                    "None" : "( non renseigné )",
+                  }
+                },
+
+                "need_sorting" : True,
+                "sorting_by" : {
+                  "sort_field" : "tag_name",
+                },
+
+              },
+
+              "serie_chart_options" : [ 
+                # { 
+                #   "options_field_path" : "xaxis/categories",
+                #   "build_list_from" : "results/data/subcounts/tag_name"
+                # },
+              ],
+            },  
+
+            "chart_options": {
+
+              "chart": {
+                "stacked": True,
+                # "stackType": '100%'
+              },
+              "plotOptions": {
+                "bar": {
+                  "horizontal": True,
+                }
+              },
+              "theme" : {
+                "palette" : "palette10", ### cf : https://apexcharts.com/docs/options/theme/#palette
+              },
+              "stroke": {
+                "width": 1,
+                "colors": [
+                  "#fff",
+                  "#fff",
+                  "#fff",
+                  "#fff",
+                  "#fff"
+                ]
+              },
+              "title": {
+                "text": "categories / sources"
+              },
+              "xaxis": {
+                # "categories": [
+                #   2008,
+                #   2009,
+                #   2010,
+                #   2011,
+                #   2012,
+                #   2013,
+                #   2014
+                # ],
+                "categories": [
+                  "EDUCATION",
+                  "EMPLOI",
+                  "ENVIRONNEMENT",
+                  "SANTE",
+                  "SOLIDARITE",
+                  "TERRITOIRE",
+                  "ARTS",
+                  "COMMUNICATION",
+                  "CONSOMMATION",
+                  "DEMOCRATIE",
+                  "GOUVERNANCE",
+                  "NUMERIQUE",
+                  "SPORT",
+                  "TOURISME",
+                  "FINANCE",
+                  "PATRIMOINE",
+                ],
+                "labels": {}
+              },
+              "yaxis": {
+                "title": {}
+              },
+              "tooltip": {
+                "y": {}
+              },
+              "fill": {
+                "opacity": 1
+              },
+              "legend": {
+                "position": "top",
+                "horizontalAlign": "left",
+                "offsetX": 40
+              }
+            }
+          },
+
+          { ### DOUGHNUT - SETTINGS EXAMPLE
+            "serie_id" : "apcis-stat-donut",
+            "is_activated" : True,
+            "chart_type": "donut", 
+            "position": 0,
+            "col_size" : 6,
+            "height": "375px",
+            "width" : "100%", 
+
+            "data_mapping" : {
+              
+              "serie_path" : "results/data",
+              "serie_name_field" : "_id",
+              "serie_data" : {
+
+                "subpath" : None,
+
+                "need_remap" : False,
+                "data_value" : "count",
+                "label_field" : None,
+
+                "need_list_only" : True,
+
+                "add_missing_values" : False,
+                "missing_data_by" : {
+                  # "val_fields_list" : None,
+                },
+
+                "need_sorting" : False,
+                "sorting_by" : {
+                  "sort_field" : "_id",
+                },
+
+              },
+              "serie_chart_options" : [ 
+                { 
+                  "step" : "before_list",
+                  "options_field_path" : "labels",
+                  "build_list_from" : "_id"
+                },
+              ],
+            },
+
+            "chart_options": {
+              "title": {
+                "text": "sources (%)",
+              },
+              "theme" : {
+                "palette" : "palette3", ### cf : https://apexcharts.com/docs/options/theme/#palette 
+              },
+              "responsive": [{
+                "breakpoint": 480,
+                "options": {
+                  "chart": {
+                    "width": 200
+                  },
+                  "legend": {
+                    "position": 'bottom'
+                  }
+                }
+              }]
+            },
+
+          },
+
+
+        ],
+
+        "links_options"  : {
+        },
+
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : None,
         "deactivate_btn"    : False,
         "is_visible"        : True,
         "apiviz_front_uuid" : uuid_models["uuid_apcis"],
