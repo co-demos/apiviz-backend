@@ -2494,8 +2494,8 @@ default_routes_config = [
             "is_activated" : True,
             "chart_type": "bar", 
             "help" : "bar horiz + stacked example",
-            "position": 0,
-            "col_size" : 6,
+            "position": 1,
+            "col_size" : 8,
             "height": "400px",
             "width" : "100%", 
 
@@ -2655,7 +2655,7 @@ default_routes_config = [
             "is_activated" : True,
             "chart_type": "donut", 
             "position": 0,
-            "col_size" : 6,
+            "col_size" : 4,
             "height": "375px",
             "width" : "100%", 
 
