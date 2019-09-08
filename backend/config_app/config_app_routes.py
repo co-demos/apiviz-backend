@@ -2009,7 +2009,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field"       : "coding APCIS N1",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_tags",
             "filter_correspondance" : True,
@@ -2180,7 +2180,7 @@ default_routes_config = [
           #   "locale" : "fr"
           # },
           { "field"       : "coding APCIS N1",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
             "filter_correspondance" : True,
@@ -2611,7 +2611,7 @@ default_routes_config = [
                 ]
               },
               "title": {
-                "text": "categories / sources"
+                "text": "Categories / Sources"
               },
               "xaxis": {
                 # "categories": [
@@ -2666,7 +2666,7 @@ default_routes_config = [
             "chart_type": "donut", 
             "position": 0,
             "col_size" : 6,
-            "height": "375px",
+            "height": "350px",
             "width" : "100%", 
 
             "data_mapping" : {
@@ -2705,7 +2705,7 @@ default_routes_config = [
 
             "chart_options": {
               "title": {
-                "text": "sources (%)",
+                "text": "Sources (%)",
               },
               "theme" : {
                 "palette" : "palette3", ### cf : https://apexcharts.com/docs/options/theme/#palette 
