@@ -45,9 +45,9 @@ config_docker  = os.getenv('DOCKER_MODE',  'docker_off')
 config_auth    = os.getenv('AUTH_MODE',    'default')
 
 print
-log_app.info("$ config_name : %s", config_name)  
+log_app.info("$ config_name : %s",    config_name)  
 log_app.info("$ config_mongodb : %s", config_mongodb)  
-log_app.info("$ config_docker : %s", config_docker)  
+log_app.info("$ config_docker : %s",  config_docker)  
 
 
 ### + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + ###
