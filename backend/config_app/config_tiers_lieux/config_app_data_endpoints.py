@@ -284,60 +284,67 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"source__", # TODO 
-            "id"      : "filter_3",
-            "col_name" : "source",
+          {	"name"		: u"SOURCE__", # TODO 
+            "id"      : "filter_1",
+            "col_name" : "SOURCE",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
             "choices"	: [
-              # {"name" : u"AG2R La mondiale", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "AG2R La mondiale" }]},
-              # {"name" : u"Apriles",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Apriles" }]},
-              # {"name" : u"Avise",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Avise" }]},
-              # {"name" : u"Banque des territoires", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Banque des territoires" }]},
-              # {"name" : u"Bleu Blanc Zèbre",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bleu Blanc Zèbre" }]},
-              # {"name" : u"Bretagne Créative", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bretagne Créative" }]},
-              # {"name" : u"Coorace",           "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Coorace" }]},
-              {"name" : u"La Fondation La France s’Engage", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation la France s’engage" }]},
-              # {"name" : u"Fondation Veolia",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fondation Veolia" }]},
-              # {"name" : u"Lab Innovation et Territoires", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lab Innovation et Territoires" }]},
-              # {"name" : u"My Positive Impact",  "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "My Positive Impact" }]},
-              # {"name" : u"Nov Impact",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nov Impact" }]},
-              # {"name" : u"Prix de l’innovation périurbaine", "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Prix de l’innovation périurbaine" }]},
-              # {"name" : u"Réseau Rural",      "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Réseau Rural" }]},
-              # {"name" : u"Ronalpia",          "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ronalpia" }]},
-              # {"name" : u"Semeoz",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Semeoz" }]},
-              # {"name" : u"Solidarum",         "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Solidarum" }]},
-              # {"name" : u"UNCCAS",            "choice_title" : [{"locale" : "en", "text" : "Source"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "UNCCAS" }]},
+              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
             ],
           },
-          {	"name"		: u"region-CODE__", # TODO 
-            "id"      : "filter_5",
-            "col_name" : "region-CODE",
+          {	"name"		: u"NOMMETRO_CODE__", # TODO 
+            "id"      : "filter_2",
+            "col_name" : "NOMMETRO_CODE",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Regions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Régions" }],
+            "filter_title" : [{"locale" : "en", "text" : "Metropolis"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Métropole" }],
             "choices"	: [
-              {"name" : u"84R", "choice_title" : [{"locale" : "en", "text" : "Auvergne-Rhône-Alpes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Auvergne-Rhône-Alpes" }]},
-              {"name" : u"27R", "choice_title" : [{"locale" : "en", "text" : "Bourgogne-Franche-Comté"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bourgogne-Franche-Comté" }]},
-              {"name" : u"53R", "choice_title" : [{"locale" : "en", "text" : "Bretagne"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bretagne" }]},
-              {"name" : u"24R", "choice_title" : [{"locale" : "en", "text" : "Centre-Val de Loire"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Centre-Val de Loire" }]},
-              {"name" : u"32R", "choice_title" : [{"locale" : "en", "text" : "Hauts-de-France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hauts-de-France" }]},
-              {"name" : u"11R", "choice_title" : [{"locale" : "en", "text" : "Ile de France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ile de France" }]},
-              {"name" : u"52R", "choice_title" : [{"locale" : "en", "text" : "Pays-de-la-Loire"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pays-de-la-Loire" }]},
-              {"name" : u"93R", "choice_title" : [{"locale" : "en", "text" : "Provence-Alpes-Côte-d'Azur"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Provence-Alpes-Côte-d'Azur" }]},
-
-              # {"name" : u"", "choice_title" : [{"locale" : "en", "text" : "Occitanie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Occitanie" }]},
-              # {"name" : u"", "choice_title" : [{"locale" : "en", "text" : "Nouvelle-Aquitaine"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nouvelle-Aquitaine" }]},
-              # {"name" : u"", "choice_title" : [{"locale" : "en", "text" : "Grand-Est"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Grand-Est" }]},
+              {'name' : u'BDX', 'choice_title' : [{'locale' : 'en', 'text' : 'Bordeaux Métropole'},{'locale' : 'es', 'text' : 'Bordeaux Métropole'},{'locale' : 'tr', 'text' : 'Bordeaux Métropole'},{'locale' : 'de', 'text' : 'Bordeaux Métropole'}, {'locale' : 'fr', 'text' : 'Bordeaux Métropole' }]},
+              {'name' : u'BRS', 'choice_title' : [{'locale' : 'en', 'text' : 'Brest Métropole'},{'locale' : 'es', 'text' : 'Brest Métropole'},{'locale' : 'tr', 'text' : 'Brest Métropole'},{'locale' : 'de', 'text' : 'Brest Métropole'}, {'locale' : 'fr', 'text' : 'Brest Métropole' }]},
+              {'name' : u'CLT', 'choice_title' : [{'locale' : 'en', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'es', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'tr', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'de', 'text' : 'Clermont Auvergne Métropole'}, {'locale' : 'fr', 'text' : 'Clermont Auvergne Métropole' }]},
+              {'name' : u'DJN', 'choice_title' : [{'locale' : 'en', 'text' : 'Dijon Métropole'},{'locale' : 'es', 'text' : 'Dijon Métropole'},{'locale' : 'tr', 'text' : 'Dijon Métropole'},{'locale' : 'de', 'text' : 'Dijon Métropole'}, {'locale' : 'fr', 'text' : 'Dijon Métropole' }]},
+              {'name' : u'STR', 'choice_title' : [{'locale' : 'en', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'es', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'tr', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'de', 'text' : 'Eurométropole de Strasbourg'}, {'locale' : 'fr', 'text' : 'Eurométropole de Strasbourg' }]},
+              {'name' : u'AIX', 'choice_title' : [{'locale' : 'en', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'es', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'tr', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'de', 'text' : "Métropole d'Aix-Marseille-Provence"}, {'locale' : 'fr', 'text' : "Métropole d'Aix-Marseille-Provence" }]},
+              {'name' : u'LYO', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole de Lyon'},{'locale' : 'es', 'text' : 'Métropole de Lyon'},{'locale' : 'tr', 'text' : 'Métropole de Lyon'},{'locale' : 'de', 'text' : 'Métropole de Lyon'}, {'locale' : 'fr', 'text' : 'Métropole de Lyon' }]},
+              {'name' : u'NCY', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'es', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'tr', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'de', 'text' : 'Métropole du Grand Nancy'}, {'locale' : 'fr', 'text' : 'Métropole du Grand Nancy' }]},
+              {'name' : u'PAR', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole du Grand Paris'},{'locale' : 'es', 'text' : 'Métropole du Grand Paris'},{'locale' : 'tr', 'text' : 'Métropole du Grand Paris'},{'locale' : 'de', 'text' : 'Métropole du Grand Paris'}, {'locale' : 'fr', 'text' : 'Métropole du Grand Paris' }]},
+              {'name' : u'LIL', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'es', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'tr', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'de', 'text' : 'Métropole Européenne de Lille'}, {'locale' : 'fr', 'text' : 'Métropole Européenne de Lille' }]},
+              {'name' : u'GRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'es', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'tr', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'de', 'text' : 'Métropole Grenoble-Alpes-Métropole'}, {'locale' : 'fr', 'text' : 'Métropole Grenoble-Alpes-Métropole' }]},
+              {'name' : u'NIC', 'choice_title' : [{'locale' : 'en', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'es', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'tr', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'de', 'text' : "Métropole Nice Côte d'Azur"}, {'locale' : 'fr', 'text' : "Métropole Nice Côte d'Azur" }]},
+              {'name' : u'NRM', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'es', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'tr', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'de', 'text' : 'Métropole Rouen Normandie'}, {'locale' : 'fr', 'text' : 'Métropole Rouen Normandie' }]},
+              {'name' : u'PRV', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'es', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'tr', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'de', 'text' : 'Métropole Toulon-Provence-Méditerranée'}, {'locale' : 'fr', 'text' : 'Métropole Toulon-Provence-Méditerranée' }]},
+              {'name' : u'MTZ', 'choice_title' : [{'locale' : 'en', 'text' : 'Metz Métropole'},{'locale' : 'es', 'text' : 'Metz Métropole'},{'locale' : 'tr', 'text' : 'Metz Métropole'},{'locale' : 'de', 'text' : 'Metz Métropole'}, {'locale' : 'fr', 'text' : 'Metz Métropole' }]},
+              {'name' : u'MPT', 'choice_title' : [{'locale' : 'en', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'es', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'tr', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'de', 'text' : 'Montpellier Méditerranée Métropole'}, {'locale' : 'fr', 'text' : 'Montpellier Méditerranée Métropole' }]},
+              {'name' : u'NTS', 'choice_title' : [{'locale' : 'en', 'text' : 'Nantes Métropole'},{'locale' : 'es', 'text' : 'Nantes Métropole'},{'locale' : 'tr', 'text' : 'Nantes Métropole'},{'locale' : 'de', 'text' : 'Nantes Métropole'}, {'locale' : 'fr', 'text' : 'Nantes Métropole' }]},
+              {'name' : u'ORL', 'choice_title' : [{'locale' : 'en', 'text' : 'Orléans Métropole'},{'locale' : 'es', 'text' : 'Orléans Métropole'},{'locale' : 'tr', 'text' : 'Orléans Métropole'},{'locale' : 'de', 'text' : 'Orléans Métropole'}, {'locale' : 'fr', 'text' : 'Orléans Métropole' }]},
+              {'name' : u'REN', 'choice_title' : [{'locale' : 'en', 'text' : 'Rennes Métropole'},{'locale' : 'es', 'text' : 'Rennes Métropole'},{'locale' : 'tr', 'text' : 'Rennes Métropole'},{'locale' : 'de', 'text' : 'Rennes Métropole'}, {'locale' : 'fr', 'text' : 'Rennes Métropole' }]},
+              {'name' : u'SET', 'choice_title' : [{'locale' : 'en', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'es', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'tr', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'de', 'text' : 'Saint-Etienne Métropole'}, {'locale' : 'fr', 'text' : 'Saint-Etienne Métropole' }]},
+              {'name' : u'TLS', 'choice_title' : [{'locale' : 'en', 'text' : 'Toulouse Métropole'},{'locale' : 'es', 'text' : 'Toulouse Métropole'},{'locale' : 'tr', 'text' : 'Toulouse Métropole'},{'locale' : 'de', 'text' : 'Toulouse Métropole'}, {'locale' : 'fr', 'text' : 'Toulouse Métropole' }]},
+              {'name' : u'TRS', 'choice_title' : [{'locale' : 'en', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'es', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'tr', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'de', 'text' : 'Tours Métropole Val de Loire'}, {'locale' : 'fr', 'text' : 'Tours Métropole Val de Loire' }]},
+              {'name' : u'-', 'choice_title' : [{'locale' : 'en', 'text' : 'hors aire métropolitaine'},{'locale' : 'es', 'text' : 'hors aire métropolitaine'},{'locale' : 'tr', 'text' : 'hors aire métropolitaine'},{'locale' : 'de', 'text' : 'hors aire métropolitaine'}, {'locale' : 'fr', 'text' : 'hors aire métropolitaine' }]},
             ],
           },
-          {	"name"		: u"type de contenu__", # TODO 
-            "id"      : "filter_6",
-            "col_name" : "type de contenu",
+          {	"name"		: u"COMCLASS_CODE__",
+            "id"      : "filter_3",
+            "col_name" : "COMCLASS_CODE",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Content type"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Types de contenu" }],
+            "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Population" }],
             "choices"	: [
-              {"name" : u"TPRO", "choice_title" : [{"locale" : "en", "text" : "Project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }]},
+              {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
+              {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
+              {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
+              {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
+              {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
             ],
+          },
+          {	"name"		: u"TYPO_CODE__",  
+            "id"      : "filter_4",
+            "col_name" : "TYPO_CODE",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Typology"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologie" }],
+            "choices"	: [
+              {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante coworking'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante coworking' }]},
+              {'name' : u'FABLAB', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante fablab' }]},            ],
           },
         ],
         "app_version"    : version,
@@ -355,8 +362,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -384,8 +390,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "detail",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -410,9 +415,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_sstats/5c89636d328ed70609be03ab",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one_stats/5d5fca92328ed71684ce1785", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5d63b8d1328ed71684ce24b9", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -426,27 +429,27 @@ default_data_endpoints_config = [
 
           "payload_queries" : [
             { 
-              "serie_id" : "apcis-stat-bar-horiz",
+              "serie_id" : "tl-stat-bar-horiz",
               "agg_fields" : [
                 { 
-                  "agg_field" : "source",
+                  "agg_field" : "TYPO_CODE",
                   "agg_sum_type" : "count_items", 
                   "agg_needs_unwind" : False,
                   "agg_unwind_separator" : "-"
                 },
                 { 
-                  "agg_field" : "coding APCIS N1",
+                  "agg_field" : "NOMREG",
                   "agg_sum_type" : "count_items",
-                  "agg_needs_unwind" : True,
+                  "agg_needs_unwind" : False,
                   "agg_unwind_separator" : "-" 
                 }  
               ]
             },
             { 
-              "serie_id" : "apcis-stat-donut",
+              "serie_id" : "tl-stat-donut",
               "agg_fields" : [
                 { 
-                  "agg_field" : "source",
+                  "agg_field" : "TYPO_CODE",
                   "agg_sum_type" : "count_items", 
                   "agg_needs_unwind" : False,
                   "agg_unwind_separator" : "-"
@@ -499,14 +502,13 @@ default_data_endpoints_config = [
         },
 
         "content"       : u"apiviz default API endpoint for map results",
-        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
           {  "app_arg" : "forMap",     "arg" : "map_list",         "optional" : False, "in" : ["url"],         "default" : True, "type": "bool" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",        "optional" : False, "in" : ["url"],         "default" : True, "type": "bool" },
-          {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded",  "optional" : False, "in" : ["url"],         "default" : True, "type": "bool" },
+          # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded",  "optional" : False, "in" : ["url"],         "default" : True, "type": "bool" },
 
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],          "default" : 1,    "type": "int" },
           # {  "app_arg" : "perPage",    "arg" : "per_page", "optional" : True, "in" : ["url"],          "default" : 100,  "type": "int" },

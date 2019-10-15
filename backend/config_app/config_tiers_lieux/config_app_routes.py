@@ -123,8 +123,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "adresse structure", # SONUM
-          { "field" : "address", # CIS
+          { "field" : "GEOCOD", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -132,7 +131,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "ville structure",
+          { "field" : "NOMREG",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -140,8 +139,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "intitulé structure", # SONUM
-          { "field" : "titre du projet", # CIS
+          { "field" : "NOM_TL", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -149,23 +147,16 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
+
+          # { "field" : "résumé du projet",
           #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
+          #   "position" : "block_abstract",
+            
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "résumé du projet",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_abstract",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "source", # spider/sourceur
+          { "field" : "SOURCE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -173,16 +164,16 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "coding APCIS N1",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_tags",
-            "filter_correspondance" : True,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field"       : "coding APCIS N1",
+          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_tags",
+          #   "filter_correspondance" : True,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
 
         ],
 
@@ -286,15 +277,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "address",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_city",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field" : "ville structure",
+          { "field" : "NOMCOM",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -302,7 +285,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "titre du projet",
+          { "field" : "NOM_TL",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -310,23 +293,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field" : "résumé du projet",
-            "field_format" : { "trim" : 75, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_abstract",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "source",
+          { "field" : "SOURCE",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "position" : "block_src",
@@ -334,21 +301,11 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "tags",
-          #   "field_format" : { "trim" : 10, "type" : "list_tags", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-          #   "filter_correspondance" : True,
-          #   "is_tag_like" : False,
-          #   "tags_separator" : ";",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field"       : "coding APCIS N1",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          { "field"       : "TYPO_CODE",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
-            "filter_correspondance" : True,
+            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "custom_title" : "Thématiques",
@@ -443,8 +400,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          # { "field" : "intitulé structure", #SONUM
-          { "field" : "titre du projet", #CIS
+          { "field" : "NOM_TL", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -460,7 +416,7 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "ville structure",
+          { "field" : "GEOCOD",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -476,15 +432,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "résumé du projet",
-            "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-            "is_visible" : True,
-            "position" : "block_abstract",
+          # { "field" : "résumé du projet",
+          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+          #   "is_visible" : True,
+          #   "position" : "block_abstract",
             
-            "custom_title" : "Résumé du projet",
-            "locale" : "fr"
-          },
-          { "field" : "source",
+          #   "custom_title" : "Résumé du projet",
+          #   "locale" : "fr"
+          # },
+          { "field" : "SOURCE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -492,17 +448,17 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "services",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_tags",
+          # { "field" : "services",
+          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_tags",
             
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "link_data",
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          { "field" : "WEB",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
@@ -510,11 +466,11 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "coding APCIS N1",
+          { "field"       : "TYPO",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
-            "filter_correspondance" : True,
+            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "custom_title" : "Thématiques",
@@ -665,12 +621,12 @@ default_routes_config = [
           ### cf : https://apexcharts.com/vue-chart-demos/
 
           { ### BAR HORIZ - SETTINGS EXAMPLE
-            "serie_id" : "apcis-stat-bar-horiz",
+            "serie_id" : "tl-stat-bar-horiz",
             "is_activated" : True,
             "chart_type": "bar", 
             "help" : "bar horiz + stacked example",
             "position": 1,
-            "col_size" : 6,
+            "col_size" : 12,
             "height": "400px",
             "width" : "100%", 
 
@@ -688,7 +644,7 @@ default_routes_config = [
 
                 "need_list_only" : False,
 
-                "add_missing_values" : True,
+                "add_missing_values" : False,
                 "missing_data_by" : {
                   "val_fields_list" : [ 
                     "EDU",
@@ -711,8 +667,8 @@ default_routes_config = [
                   # "val_field" : "tag_name",
                 },
 
-                "need_labels_remap" : True,
-                "need_labels_rename" : True,
+                "need_labels_remap" : False,
+                "need_labels_rename" : False,
                 "labels_mapping" : {
                   "chart_options_label_path" : "xaxis/categories",
                   "labels_dict" : {
@@ -763,7 +719,7 @@ default_routes_config = [
                 }
               },
               "theme" : {
-                "palette" : "palette10", ### cf : https://apexcharts.com/docs/options/theme/#palette
+                "palette" : "palette8", ### cf : https://apexcharts.com/docs/options/theme/#palette
               },
               "stroke": {
                 "width": 1,
@@ -776,7 +732,7 @@ default_routes_config = [
                 ]
               },
               "title": {
-                "text": "Categories / Sources"
+                "text": "Typologies / Régions"
               },
               "xaxis": {
                 # "categories": [
@@ -788,24 +744,24 @@ default_routes_config = [
                 #   2013,
                 #   2014
                 # ],
-                "categories": [
-                  "EDUCATION",
-                  "EMPLOI",
-                  "ENVIRONNEMENT",
-                  "SANTE",
-                  "SOLIDARITE",
-                  "TERRITOIRE",
-                  "ARTS",
-                  "COMMUNICATION",
-                  "CONSOMMATION",
-                  "DEMOCRATIE",
-                  "GOUVERNANCE",
-                  "NUMERIQUE",
-                  "SPORT",
-                  "TOURISME",
-                  "FINANCE",
-                  "PATRIMOINE",
-                ],
+                # "categories": [
+                #   "EDUCATION",
+                #   "EMPLOI",
+                #   "ENVIRONNEMENT",
+                #   "SANTE",
+                #   "SOLIDARITE",
+                #   "TERRITOIRE",
+                #   "ARTS",
+                #   "COMMUNICATION",
+                #   "CONSOMMATION",
+                #   "DEMOCRATIE",
+                #   "GOUVERNANCE",
+                #   "NUMERIQUE",
+                #   "SPORT",
+                #   "TOURISME",
+                #   "FINANCE",
+                #   "PATRIMOINE",
+                # ],
                 "labels": {}
               },
               "yaxis": {
@@ -826,12 +782,12 @@ default_routes_config = [
           },
 
           { ### DOUGHNUT - SETTINGS EXAMPLE
-            "serie_id" : "apcis-stat-donut",
+            "serie_id" : "tl-stat-donut",
             "is_activated" : True,
             "chart_type": "donut", 
             "position": 0,
-            "col_size" : 6,
-            "height": "350px",
+            "col_size" : 12,
+            "height": "250px",
             "width" : "100%", 
 
             "data_mapping" : {
@@ -870,10 +826,10 @@ default_routes_config = [
 
             "chart_options": {
               "title": {
-                "text": "Sources (%)",
+                "text": "Typologies (%)",
               },
               "theme" : {
-                "palette" : "palette3", ### cf : https://apexcharts.com/docs/options/theme/#palette 
+                "palette" : "palette8", ### cf : https://apexcharts.com/docs/options/theme/#palette 
               },
               "responsive": [{
                 "breakpoint": 480,
