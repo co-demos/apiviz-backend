@@ -173,7 +173,9 @@ default_global_config = [
         "can_be_used_as_model" : True,
         "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
 
-        "content"     : u"CIS - ApiBêta",
+        "content"     : u"APCIS - ApiBêta",
+        "content_text" : [{"locale" : "en", "text" : "APCIS - ApiBêta"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APCIS - ApiBêta"}],
+        "is_in_navbar" : False,
         "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"  : True
       },

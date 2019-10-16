@@ -35,6 +35,7 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : False,
               "dropdowns"  : [
+                # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
             { "is_visible" : True,
