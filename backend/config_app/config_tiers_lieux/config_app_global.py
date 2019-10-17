@@ -158,7 +158,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/cget_officiel.png",
+        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/favicon/favicon.ico",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
