@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home-en.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home-en.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
         
 
@@ -780,6 +780,26 @@ default_routes_config = [
                 "horizontalAlign": "left",
                 "offsetX": 40
               }
+            },
+
+            "chart_texts": {
+              "is_activated" : True,
+              "inner_col_size" : 3,
+              "placement" : "left",
+              "text_title" : [
+                {"locale" : "en", "text" : "Title h-chart"},
+                {"locale" : "es", "text" : "pendiente"},
+                {"locale" : "tr", "text" : "yapılmamış"},
+                {"locale" : "de", "text" : "ungemacht"}, 
+                {"locale" : "fr", "text" : "Titre h-chart" }
+              ],
+              "text_content_a" : [
+                {"locale" : "en", "text" : "Text test h-chart"},
+                {"locale" : "es", "text" : "pendiente"},
+                {"locale" : "tr", "text" : "yapılmamış"},
+                {"locale" : "de", "text" : "ungemacht"}, 
+                {"locale" : "fr", "text" : "Test texte h-chart" }
+              ]
             }
           },
 
@@ -853,6 +873,26 @@ default_routes_config = [
               }]
             },
 
+            "chart_texts": {
+              "is_activated" : True,
+              "inner_col_size" : 5,
+              "placement" : "right",
+              "text_title" : [
+                {"locale" : "en", "text" : "Title donut"},
+                {"locale" : "es", "text" : "pendiente"},
+                {"locale" : "tr", "text" : "yapılmamış"},
+                {"locale" : "de", "text" : "ungemacht"}, 
+                {"locale" : "fr", "text" : "Titre donut" }
+              ],
+              "text_content_a" : [
+                {"locale" : "en", "text" : "Text test donut"},
+                {"locale" : "es", "text" : "pendiente"},
+                {"locale" : "tr", "text" : "yapılmamış"},
+                {"locale" : "de", "text" : "ungemacht"}, 
+                {"locale" : "fr", "text" : "Test texte donut" }
+              ]
+            }
+
           },
 
 
@@ -876,7 +916,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "cis_project",
+      { "field"             : "tl_project",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -900,10 +940,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
         
 
@@ -933,7 +973,7 @@ default_routes_config = [
       },
 
       ### PAGE : PROJECT/TOOLS (CIS)
-      { "field"             : "cis_tools",
+      { "field"             : "tl_tools",
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
         "route_description" : u"apiviz default tools page",
@@ -956,10 +996,10 @@ default_routes_config = [
         "urls"              : ["/le-projet/outils"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
         ],
         
         "has_ext_script"    : False,
