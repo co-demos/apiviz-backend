@@ -176,6 +176,8 @@ default_global_config = [
         "content"      : u"Mission co-working",
         "content_text" : [{"locale" : "en", "text" : "Co-working mission"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
         "is_in_navbar" : True,
+        # "title_color" : "primary",
+
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
         "is_default"  : True
       },

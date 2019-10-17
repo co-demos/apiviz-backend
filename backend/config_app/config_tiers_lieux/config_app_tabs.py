@@ -18,7 +18,7 @@ default_app_tabs = [
           "background_color" : { "value" : "white" },
           "top_margin"       : { "value" : 2 },
           "bottom_margin"    : { "value" : 1 },
-          "class"            : { "value" : "cis-tabs" },
+          "class"            : { "value" : "tabs" },
           "position"         : { "value" : "is-centered"},
           "size"             : { "value" : "is-small"},
         }, 
