@@ -76,7 +76,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - map
-      { "field"             : "cis_carte",
+      { "field"             : "tl_carte",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche d'Apiviz",
@@ -194,6 +194,67 @@ default_routes_config = [
           "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
+        "map_options"   : {
+          
+          ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+          "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          "subdomains"       : 'abcd',
+          "center"           : [46.2276, 2.2137],
+          "currentCenter"    : [46.2276, 2.2137],
+          "zoom"             : 5,
+          "maxZoom"          : 18,
+          "minZoom"          : 2,
+          "useMarkerCluster" : True,
+          "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
+
+          "mapbox_layers" : {
+
+            "all_points" : {
+              "is_activated"        : True,
+              "radius_min"          : 1,
+              "radius_max"          : 10,
+              "circle_color"        : "#004494",
+              "circle_stroke_color" : "#fff",
+              "circle_opacity"      : 0.8,
+            },
+
+            "cluster_circles_layer" : {
+              "is_activated"     : True,
+              "circle_color"     : "#e5ecf4", 
+              "circle_color_100" : "#b2c6de", 
+              "circle_color_250" : "#668ebe", 
+              "circle_color_500" : "#3269a9", 
+              "circle_color_750" : "#004494", 
+
+              "circle_radius"     : 15, 
+              "circle_radius_100" : 20, 
+              "circle_radius_250" : 25, 
+              "circle_radius_500" : 30, 
+              "circle_radius_750" : 35, 
+
+              "circle_stroke_color" : "#fff",
+              "circle_stroke_width" : 1,
+            },
+
+            "cluster_count_layer" : {
+              "is_activated" : True,
+              "text_size"    : 11,
+              "text_color"   : "#ffffff"
+            },
+
+            "cluster_unclustered_layer" : {
+              "is_activated"        : True,
+              "circle_color"        : "#fff", 
+              "circle_troke_color"  : "#004494",
+              "circle_radius"       : 5, 
+              "circle_stroke_width" : 5, 
+            },
+          },
+        
+        },
+
         "links_options"  : {
 
           "block_contents_links" : {
@@ -230,7 +291,7 @@ default_routes_config = [
       },
 
       ### PAGE - list
-      { "field"             : "cis_liste",
+      { "field"             : "tl_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -361,7 +422,7 @@ default_routes_config = [
       },
 
       ### PAGE - detail
-      { "field"             : "cis_detail",
+      { "field"             : "tl_detail",
         "is_global_app_homepage" : False,
         "route_title"        : u"Rechercher",
         "route_description"  : u"Page de recherche d'Apiviz",
@@ -557,7 +618,7 @@ default_routes_config = [
       },
 
       ## PAGE - stats
-      { "field"             : "cis_stats",
+      { "field"             : "tl_stats",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",

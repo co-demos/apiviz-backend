@@ -204,6 +204,67 @@ default_routes_config = [
           "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
+        "map_options"   : {
+          
+          ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+          "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          "subdomains"       : 'abcd',
+          "center"           : [46.2276, 2.2137],
+          "currentCenter"    : [46.2276, 2.2137],
+          "zoom"             : 5,
+          "maxZoom"          : 18,
+          "minZoom"          : 2,
+          "useMarkerCluster" : True,
+          "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
+
+          "mapbox_layers" : {
+
+            "all_points" : {
+              "is_activated"        : True,
+              "radius_min"          : 1,
+              "radius_max"          : 10,
+              "circle_color"        : "#a174ac",
+              "circle_stroke_color" : "#fff",
+              "circle_opacity"      : 0.8,
+            },
+
+            "cluster_circles_layer" : {
+              "is_activated"        : True,
+              "circle_color"     : "#a174ac", 
+              "circle_color_100" : "#90689a", 
+              "circle_color_250" : "#805c89", 
+              "circle_color_500" : "#705178", 
+              "circle_color_750" : "#503a56", 
+
+              "circle_radius"     : 20, 
+              "circle_radius_100" : 20, 
+              "circle_radius_250" : 30, 
+              "circle_radius_500" : 40, 
+              "circle_radius_750" : 50, 
+
+              "circle_stroke_color" : "#fff",
+              "circle_stroke_width" : 1,
+            },
+
+            "cluster_count_layer" : {
+              "is_activated"        : True,
+              "text_size"  : 12,
+              "text_color" : "#ffffff"
+            },
+
+            "cluster_unclustered_layer" : {
+              "is_activated"        : True,
+              "circle_color"        : "#fff", 
+              "circle_troke_color"  : "#a174ac",
+              "circle_radius"       : 5, 
+              "circle_stroke_width" : 5, 
+            },
+          },
+        
+        },
+        
         "links_options"  : {
 
           "block_contents_links" : {
