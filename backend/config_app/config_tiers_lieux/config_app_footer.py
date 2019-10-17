@@ -74,7 +74,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La Fondation Travailler autrement" }],
+                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La Fondation Travailler Autrement" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
