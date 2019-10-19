@@ -148,8 +148,8 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_03.png",
+        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
+        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
