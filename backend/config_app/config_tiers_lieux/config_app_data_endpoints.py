@@ -242,7 +242,7 @@ default_data_endpoints_config = [
     ### - - - - - - - - - - - - - - - ###
 
       ### DATA FILTERS
-      { "field"         : "cis_data_API_filters",
+      { "field"         : "tl_data_API_filters",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
@@ -251,6 +251,7 @@ default_data_endpoints_config = [
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
         "has_shuffle"  : False,
         "has_pagination" : False,
+        "has_export" : True,
         "pagination_options" : {
           "per_page" : [ 5, 10, 25, 100 ],
         },
@@ -357,7 +358,7 @@ default_data_endpoints_config = [
       },
 
       ### DATA LIST
-      { "field"         : "cis_data_API_list",
+      { "field"         : "tl_data_API_list",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
@@ -385,7 +386,7 @@ default_data_endpoints_config = [
       },
 
       ### DATA DETAIL
-      { "field"         : "cis_data_API_detail",
+      { "field"         : "tl_data_API_detail",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
@@ -409,7 +410,7 @@ default_data_endpoints_config = [
       },
 
       ### DATA STATS
-      { "field"         : "cis_data_API_stats",
+      { "field"         : "tl_data_API_stats",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
@@ -479,7 +480,7 @@ default_data_endpoints_config = [
       },
 
       ### DATA MAP
-      { "field"         : "cis_data_API_map",
+      { "field"         : "tl_data_API_map",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
@@ -526,6 +527,34 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : map results",
+        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "is_default"    : True
+      },
+
+      ### DATA EXPORT
+      { "field"         : "tl_data_API_export",
+        "is_visible"    : True,
+        "is_disabled"   : False,
+        "data_type"     : "data",
+        "endpoint_type" : "export",
+        "dataset_uri"   : "recherche",
+        "content"       : u"apiviz default API endpoint for export results",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5d63b8d1328ed71684ce24b9", ## V2
+        "args_options"  : [
+          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+          # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+          # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+          # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+        ],
+        "resp_fields" : {
+          # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+        },
+        "app_version"    : version,
+        "method"        : "GET",
+        "help"          : u"define the endpoint to get data for : export dataset as csv",
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
         "is_default"    : True
       },

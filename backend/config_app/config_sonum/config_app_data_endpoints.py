@@ -250,6 +250,7 @@ default_data_endpoints_config = [
           "available_views" : ['VIEW_LIST', 'VIEW_MAP', 'VIEW_STATS'],
           "has_shuffle"  : False,
           "has_pagination" : False,
+          "has_export" : True,
           "pagination_options" : {
             "per_page" : [ 5, 10, 25, 100 ],
           },
@@ -512,6 +513,33 @@ default_data_endpoints_config = [
           "is_default"    : True
         },
 
+        ### DATA EXPORT
+        { "field"         : "sonum_carto_data_API_export",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "export",
+          "dataset_uri"   : "recherche",
+          "content"       : u"apiviz default API endpoint for export results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dso/exports/as_csv/5c89636d328ed70609be03ab", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+            # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+            # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+            # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+          ],
+          "resp_fields" : {
+            # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : export dataset as csv",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
+          "is_default"    : True
+        },
 
       ####### SONUM / XP #######
 
@@ -525,6 +553,7 @@ default_data_endpoints_config = [
           "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
           "has_shuffle"  : False,
           "has_pagination" : False,
+          "has_export" : True,
           "pagination_options" : {
             "per_page" : [ 5, 10, 25, 100 ],
           },
@@ -716,5 +745,32 @@ default_data_endpoints_config = [
           "is_default"    : True
         },
 
+        ### DATA EXPORT
+        { "field"         : "sonum_xp_data_API_export",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "export",
+          "dataset_uri"   : "recherche",
+          "content"       : u"apiviz default API endpoint for export results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dso/exports/as_csv/5c7ebc7d328ed724cebd7fc0", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+            # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+            # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+            # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+          ],
+          "resp_fields" : {
+            # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : export dataset as csv",
+          "apiviz_front_uuid" : uuid_models["uuid_sonum"],
+          "is_default"    : True
+        },
 
 ]
