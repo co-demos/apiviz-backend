@@ -83,7 +83,7 @@ default_routes_config = [
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,
-          "banner_uri" : "banner-sonum-carto" # TODO
+          "banner_uri" : "banner-TL-carto" # TODO
         },
         "is_dataset_homepage" : True,
 

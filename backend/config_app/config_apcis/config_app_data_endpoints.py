@@ -251,7 +251,7 @@ default_data_endpoints_config = [
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
         "has_shuffle"  : False,
         "has_pagination" : False,
-        "has_export" : True,
+        "has_export" : False,
         "pagination_options" : {
           "per_page" : [ 5, 10, 25, 100 ],
         },
