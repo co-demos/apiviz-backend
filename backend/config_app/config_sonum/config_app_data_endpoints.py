@@ -519,7 +519,7 @@ default_data_endpoints_config = [
           "is_disabled"   : False,
           "data_type"     : "data",
           "endpoint_type" : "export",
-          "dataset_uri"   : "recherche",
+          "dataset_uri"   : "sonum-carto",
           "content"       : u"apiviz default API endpoint for export results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/exports/as_csv/5c89636d328ed70609be03ab", ## V2
           "args_options"  : [
@@ -751,7 +751,7 @@ default_data_endpoints_config = [
           "is_disabled"   : False,
           "data_type"     : "data",
           "endpoint_type" : "export",
-          "dataset_uri"   : "recherche",
+          "dataset_uri"   : "sonum-xp",
           "content"       : u"apiviz default API endpoint for export results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/exports/as_csv/5c7ebc7d328ed724cebd7fc0", ## V2
           "args_options"  : [
