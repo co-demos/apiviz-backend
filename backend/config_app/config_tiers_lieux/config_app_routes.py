@@ -465,8 +465,8 @@ default_routes_config = [
         "endpoint_type"     : "list",
         "pagination"        : {
           "is_visible" : True,
-          "position" : "bottom",
-          "feedback" : "bottom"
+          "position" : "top_and_bottom",
+          "feedback" : "top_and_bottom"
         },
 
         "contents_fields"  : [
