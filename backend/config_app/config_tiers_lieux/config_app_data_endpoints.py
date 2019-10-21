@@ -147,7 +147,7 @@ default_data_endpoints_config = [
         "root_url"      : "/usr/infos/list",
         "args_options"  : [
           { "app_arg" : "authToken",    "arg" : "token",    "optional" : False,  "in" : ["url","header"],  "default" : "", "type" : "str" },
-          { "app_arg" : "pageUser",     "arg" : "page_n",   "optional" : True,   "in" : ["url"],           "default" : 1,  "type": "int" },
+          { "app_arg" : "pageUser",     "arg" : "page",     "optional" : True,   "in" : ["url"],           "default" : 1,  "type": "int" },
           { "app_arg" : "perPageUser",  "arg" : "per_page", "optional" : True,   "in" : ["url"],           "default" : 50, "type": "int" },
         ],
         "resp_fields" : {
@@ -357,6 +357,34 @@ default_data_endpoints_config = [
         "is_default"    : True
       },
 
+      ### DATA TABLE
+      { "field"         : "tl_data_API_table",
+        "is_visible"    : True,
+        "is_disabled"   : False,
+        "data_type"     : "data",
+        "endpoint_type" : "table",
+        "dataset_uri"   : "recherche",
+        "content"       : u"apiviz default API endpoint for list results",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "args_options"  : [
+          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+          {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 10, "type": "int", "authorized" : [10, 25, 50, 75, 100] },
+          {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+        ],
+        "resp_fields" : {
+          "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+        },
+        "app_version"    : version,
+        "method"        : "GET",
+        "help"          : u"define the endpoint to get data for : a view list",
+        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "is_default"    : True
+      },
+
       ### DATA LIST
       { "field"         : "tl_data_API_list",
         "is_visible"    : True,
@@ -368,8 +396,8 @@ default_data_endpoints_config = [
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
-          {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+          {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int", "authorized" : [10, 25, 50, 75, 100, 200, 300] },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },

@@ -290,6 +290,143 @@ default_routes_config = [
         "is_default"      : True
       },
 
+      ### PAGE - table
+      { "field"             : "tl_table",
+        "is_global_app_homepage" : False,
+        "route_title"       : u"Rechercher",
+        "route_description" : u"Page de recherche du CIS",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-TL-carto"
+        },
+        "is_dataset_homepage" : False,
+
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "only_in_navbar_for_this_dataset" : True,
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "urls"              : ["/recherche/table"],
+        # "template_url"      : "/static/spa.html",
+        "template_urls"     : [
+        ],
+        
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Table search route in french",
+        "is_dynamic"        : True,
+        "dataset_uri"       : "recherche",
+        "dynamic_template"  : 'DynamicTable',
+        "endpoint_type"     : "table",
+        "pagination"        : {
+          "is_visible" : True,
+          "position" : "top_and_bottom",
+          "feedback" : "bottom"
+        },
+
+        "contents_fields"  : [
+
+          { "field" : "sd_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : False,
+            "is_id_field" : True,
+            "position" : "col_id",
+            
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field" : "NOM_TL",
+            "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "has_link_to_detail" : True,
+            "position" : "col_1",
+            # "trim" : 20,
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field" : "NOMCOM",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_2",
+            # "trim" : 20,
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field"       : "TYPO",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "col_3",
+            "filter_correspondance" : False,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "custom_title" : "Thématiques",
+            "locale" : "fr"
+          },
+          { "field" : "SOURCE",
+            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_4",
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+
+        ],
+
+        "images_fields"        : {
+          "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+          "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
+        },
+        "ui_options" : {
+          "card_color"    : { "value" : None, "default" : "white", },
+          "text_color"    : { "value" : None, "default" : "black", },
+          "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+          "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le prochain document" }] },
+          "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+        },
+
+        "links_options"  : {
+
+          # "block_contents_links" : {
+          # "is_visible"  : False,
+          # "position"    : "block_bottom_1",
+          # "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+          # "links"       : []
+          # },
+
+          # "block_data_infos" : {
+          # "is_visible"  : False,
+          # "position"    : "block_bottom_2",
+          # "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+          # "links"       : []
+          # },
+
+          # "block_share" : {
+          # "is_visible"  : False,
+          # "position"    : "block_bottom_3",
+          # "title_block" : [{"locale" : "en", "text" : "share this place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+          # "links"       : []
+          # },
+
+        },
+
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "TL-tabs",
+        "deactivate_btn"    : False,
+        "is_visible"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "is_default"        : True
+      },
+
       ### PAGE - list
       { "field"             : "tl_liste",
         "is_global_app_homepage" : False,
@@ -298,7 +435,7 @@ default_routes_config = [
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,
-          "banner_uri" : "banner-apcis-carto"
+          "banner_uri" : "banner-TL-carto"
         },
         "is_dataset_homepage" : False,
 
@@ -326,6 +463,11 @@ default_routes_config = [
         "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicList',
         "endpoint_type"     : "list",
+        "pagination"        : {
+          "is_visible" : True,
+          "position" : "bottom",
+          "feedback" : "bottom"
+        },
 
         "contents_fields"  : [
 
