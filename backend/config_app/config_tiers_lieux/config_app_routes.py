@@ -296,7 +296,7 @@ default_routes_config = [
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
         "route_activated"   : True,
-        "has_shuffle"       : False,
+        "has_shuffle"       : True,
         "shuffle_minnmax"   : { "min": 0, "max":  2000 },
         "banner" : {
           "activated"  : False,
@@ -444,7 +444,7 @@ default_routes_config = [
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
         "route_activated"   : True,
-        "has_shuffle"       : False,
+        "has_shuffle"       : True,
         "shuffle_minnmax"   : { "min": 0, "max":  4000 },
         "banner" : {
           "activated"  : False,
