@@ -296,6 +296,8 @@ default_routes_config = [
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
         "route_activated"   : True,
+        "has_shuffle"       : False,
+        "shuffle_minnmax"   : { "min": 0, "max":  2000 },
         "banner" : {
           "activated"  : False,
           "banner_uri" : "banner-TL-carto"
@@ -332,6 +334,10 @@ default_routes_config = [
           "feedback" : "bottom"
         },
 
+        "table_options" : {
+          "has_link_col" : True,
+        },
+
         "contents_fields"  : [
 
           { "field" : "sd_id",
@@ -347,7 +353,9 @@ default_routes_config = [
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
+            "is_table_head" : True,
             "position" : "col_1",
+            "is_sortable" : True,
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
@@ -356,6 +364,7 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
+            "is_sortable" : True,
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
@@ -364,6 +373,7 @@ default_routes_config = [
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
+            "is_sortable" : True,
             "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
@@ -374,6 +384,7 @@ default_routes_config = [
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
+            "is_sortable" : False,
             "custom_title" : "to do",
             "locale" : "fr"
           },
@@ -433,6 +444,8 @@ default_routes_config = [
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
         "route_activated"   : True,
+        "has_shuffle"       : False,
+        "shuffle_minnmax"   : { "min": 0, "max":  4000 },
         "banner" : {
           "activated"  : False,
           "banner_uri" : "banner-TL-carto"
