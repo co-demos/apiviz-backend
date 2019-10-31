@@ -211,17 +211,38 @@ default_routes_config = [
 
           "mapbox_layers" : {
 
-            "all_points" : {
+            ### all points source and layer
+            "all_points_layer" : {
               "is_activated"        : True,
+              # "source_id"           : "allPointsSource",
+              # "layer_id"            : "all-points",
+              "is_default_visible"  : True,
+              "is_source_distant"   : False,
+
+              "is_live_data"        : False,
+              "refresh_delay"       : 3000,
+
+              "is_clickable"        : True,
+
               "radius_min"          : 1,
               "radius_max"          : 10,
+              "max_zoom"            : 14,
+              "min_zoom"            : 4,
               "circle_color"        : "#004494",
               "circle_stroke_color" : "#fff",
               "circle_opacity"      : 0.8,
             },
 
+            ### clusters source and layer
             "cluster_circles_layer" : {
               "is_activated"     : True,
+              # "source_id"           : "clusterSource",
+              # "layer_id"            : "cluster-circles",
+              "is_default_visible"  : False,
+
+              "is_source_distant"   : False, ### clusters all points sources by default
+              "is_clickable"        : True,
+
               "circle_color"     : "#e5ecf4", 
               "circle_color_100" : "#b2c6de", 
               "circle_color_250" : "#668ebe", 
@@ -240,19 +261,140 @@ default_routes_config = [
 
             "cluster_count_layer" : {
               "is_activated" : True,
+              # "source_id"           : "clusterSource",
+              # "layer_id"            : "cluster-counts",
+              "is_default_visible"  : False,
+              "is_source_distant"   : False,
+              "is_clickable"        : True,
+
               "text_size"    : 11,
               "text_color"   : "#ffffff"
             },
 
             "cluster_unclustered_layer" : {
-              "is_activated"        : True,
+              "is_activated"        : False,
+              # "source_id"           : "clusterSource",
+              # "layer_id"            : "unclustered-point",
+              "is_default_visible"  : True,
+              "is_source_distant"   : False,
+              "is_clickable"        : True,
+
               "circle_color"        : "#fff", 
-              "circle_troke_color"  : "#004494",
+              "circle_stroke_color" : "#004494",
               "circle_radius"       : 5, 
               "circle_stroke_width" : 5, 
             },
+
+            ### choropleth source and layer
+            "choropleth_layer" : {
+              "is_activated"        : True,
+              # "source_id"           : "choroSource",
+              # "layer_id"            : "choropleth",
+              "is_live_data"        : False,
+              "refresh_delay"       : 3000,
+
+              "is_source_distant"   : True,
+              "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+              # "distant_source_url"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
+              
+              "change_source_by_zoom" : True,
+              "sources" : [
+                { 
+                  "is_activated" : True,
+                  "source_id" : "chorosource-departements",
+                  "layer_id"  : "chorolayer-departements",
+                  "is_default_visible" : True,
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  "max_zoom" : 18,
+                  "min_zoom" : 0,
+
+                  "need_aggregation" : True,
+                  "polygon_prop_id" : "code",
+                  "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "INSEEDEP",
+                  "agregated_data_field"      : "count_dep",
+                  # "fill_color"          : "#888888",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_dep' ],
+                    0,  "#888888",
+                    1,  '#EED322',
+                    3,  '#E6B71E',
+                    5,  '#DA9C20',
+                    10, '#CA8323',
+                    20, '#B86B25',
+                    30, '#A25626',
+                    40, '#8B4225',
+                    50, '#723122'
+                  ],
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "rgb(256,256,256)",
+                },
+                { 
+                  "is_activated" : False,
+                  "source_id" : "chorosource-communes",
+                  "layer_id"  : "chorolayer-communes",
+                  "is_default_visible" : True,
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
+                  "max_zoom" : 18,
+                  "min_zoom" : 6,
+
+                  "need_aggregation" : True,
+                  "polygon_prop_id" : "code",
+                  "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "INSEECOM",
+                  "agregated_data_field"      : "count_com",
+                  # "fill_color"          : "#888888",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_com' ],
+                    0,  "#888888",
+                    1,  '#EED322',
+                    2,  '#DA9C20',
+                    5,  '#B86B25',
+                    7,  '#8B4225',
+                    10, '#723122'
+                  ],
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "rgb(256,256,256)",
+                }
+              ],
+              
+              "is_clickable"        : False,
+
+
+              # "fill_color"          : "#888888",
+              # "fill_opacity"        : 0.5,
+              # "fill_outline_color"  : "rgb(256,256,256)",
+
+            },
+
+            ### heatmap source and layer
+            "heatmap_layer" : {
+              "is_activated"        : False,
+              # "source_id"           : "clusterSource",
+              # "layer_id"            : "heatmap-layer",
+              "source"              : "all-points",
+              "prop_weight"         : "weight",
+              "max_zoom"            : 18
+            },
+
           },
         
+          "legend_options" :{
+            "is_activated" : False,
+            "legend_layers" : [ 
+              { "layers" : [ "all_points_layer" ],      "default_visible" : True }, 
+              { "layers" : [ "cluster_circles_layer" ], "default_visible" : False }, 
+              { "layers" : [ "choropleth_layer" ],      "default_visible" : False }, 
+              { "layers" : [ "heatmap_layer" ],         "default_visible" : False }
+            ],
+            "legend_scales" : None
+          },
+
+
         },
 
         "links_options"  : {
