@@ -427,7 +427,9 @@ default_routes_config = [
               "layer_id"            : "heatmap-layer",
               "source"              : "all-points",
               "prop_weight"         : "weight",
-              "max_zoom"            : 18
+              "max_zoom"            : 18,
+              "radius_min"          : 6,
+              "radius_max"          : 25,
             },
 
           },
