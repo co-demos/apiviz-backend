@@ -214,8 +214,8 @@ default_routes_config = [
             ### all points source and layer
             "all_points_layer" : {
               "is_activated"        : True,
-              # "source_id"           : "allPointsSource",
-              # "layer_id"            : "all-points",
+              "source_id"           : "allPointsSource",
+              "layer_id"            : "all-points",
               "is_default_visible"  : True,
               "is_source_distant"   : False,
 
@@ -236,8 +236,8 @@ default_routes_config = [
             ### clusters source and layer
             "cluster_circles_layer" : {
               "is_activated"     : True,
-              # "source_id"           : "clusterSource",
-              # "layer_id"            : "cluster-circles",
+              "source_id"           : "clusterSource",
+              "layer_id"            : "cluster-circles",
               "is_default_visible"  : False,
 
               "is_source_distant"   : False, ### clusters all points sources by default
@@ -260,9 +260,9 @@ default_routes_config = [
             },
 
             "cluster_count_layer" : {
-              "is_activated" : True,
-              # "source_id"           : "clusterSource",
-              # "layer_id"            : "cluster-counts",
+              "is_activated"        : True,
+              "source_id"           : "clusterSource",
+              "layer_id"            : "cluster-counts",
               "is_default_visible"  : False,
               "is_source_distant"   : False,
               "is_clickable"        : True,
@@ -273,8 +273,8 @@ default_routes_config = [
 
             "cluster_unclustered_layer" : {
               "is_activated"        : False,
-              # "source_id"           : "clusterSource",
-              # "layer_id"            : "unclustered-point",
+              "source_id"           : "clusterSource",
+              "layer_id"            : "unclustered-point",
               "is_default_visible"  : True,
               "is_source_distant"   : False,
               "is_clickable"        : True,
@@ -293,6 +293,8 @@ default_routes_config = [
               "is_live_data"        : False,
               "refresh_delay"       : 3000,
 
+              "is_drawer_open"      : True,
+
               "is_source_distant"   : True,
               "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
               # "distant_source_url"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
@@ -305,12 +307,12 @@ default_routes_config = [
                   "layer_id"  : "chorolayer-departements",
                   "is_default_visible" : True,
                   "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
-                  "max_zoom" : 18,
+                  "max_zoom" : 7.5,
                   "min_zoom" : 0,
 
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
-                  "agregate_data_from_source" : "allPointsSource",
+                  # "agregate_data_from_source" : "allPointsSource",
                   "join_polygon_id_to_field"  : "INSEEDEP",
                   "agregated_data_field"      : "count_dep",
                   # "fill_color"          : "#888888",
@@ -324,12 +326,38 @@ default_routes_config = [
                     5,  '#DA9C20',
                     10, '#CA8323',
                     20, '#B86B25',
-                    30, '#A25626',
-                    40, '#8B4225',
-                    50, '#723122'
+                    35, '#A25626',
+                    50, '#8B4225',
+                    100, '#723122'
                   ],
-                  "fill_opacity"        : 0.5,
-                  "fill_outline_color"  : "rgb(256,256,256)",
+                  "fill_opacity"        : 0.4,
+                  "fill_outline_color"  : "#004494",
+
+                  "has_popup" : True, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Tiers-lieux / département",
+                    "scales" : [
+                      { 'value' : '>100',  'color' : '#723122'},
+                      { 'value' : '50',   'color' : '#8B4225'},
+                      { 'value' : '35',   'color' : '#A25626'},
+                      { 'value' : '20',   'color' : '#B86B25'},
+                      { 'value' : '10',   'color' : '#CA8323'},
+                      { 'value' : '5',    'color' : '#DA9C20'},
+                      { 'value' : '3',    'color' : '#E6B71E'},
+                      { 'value' : '1',    'color' : '#EED322'},
+                      { 'value' : '0',    'color' : "#888888"},
+                    ]
+                  }
+
                 },
                 { 
                   "is_activated" : False,
@@ -338,11 +366,11 @@ default_routes_config = [
                   "is_default_visible" : True,
                   "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
                   "max_zoom" : 18,
-                  "min_zoom" : 6,
+                  "min_zoom" : 7.5,
 
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
-                  "agregate_data_from_source" : "allPointsSource",
+                  # "agregate_data_from_source" : "allPointsSource",
                   "join_polygon_id_to_field"  : "INSEECOM",
                   "agregated_data_field"      : "count_com",
                   # "fill_color"          : "#888888",
@@ -359,11 +387,31 @@ default_routes_config = [
                   ],
                   "fill_opacity"        : 0.5,
                   "fill_outline_color"  : "rgb(256,256,256)",
+                  "has_popup" : True, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_com', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Tiers-lieux / communes",
+                    "scales" : [
+                      { 'value' : '>10',  'color' : '#723122'},
+                      { 'value' : '7',   'color' : '#8B4225'},
+                      { 'value' : '5',    'color' : '#B86B25'},
+                      { 'value' : '2',    'color' : '#DA9C20'},
+                      { 'value' : '1',    'color' : '#EED322'},
+                      { 'value' : '0',    'color' : "#888888"},
+                    ]
+                  }
                 }
               ],
               
               "is_clickable"        : False,
-
 
               # "fill_color"          : "#888888",
               # "fill_opacity"        : 0.5,
@@ -373,9 +421,10 @@ default_routes_config = [
 
             ### heatmap source and layer
             "heatmap_layer" : {
-              "is_activated"        : False,
-              # "source_id"           : "clusterSource",
-              # "layer_id"            : "heatmap-layer",
+              "is_activated"        : True,
+              "is_default_visible"  : False,
+              "source_id"           : "allPointsSource",
+              "layer_id"            : "heatmap-layer",
               "source"              : "all-points",
               "prop_weight"         : "weight",
               "max_zoom"            : 18
@@ -383,15 +432,16 @@ default_routes_config = [
 
           },
         
-          "legend_options" :{
-            "is_activated" : False,
-            "legend_layers" : [ 
-              { "layers" : [ "all_points_layer" ],      "default_visible" : True }, 
-              { "layers" : [ "cluster_circles_layer" ], "default_visible" : False }, 
-              { "layers" : [ "choropleth_layer" ],      "default_visible" : False }, 
-              { "layers" : [ "heatmap_layer" ],         "default_visible" : False }
+          "layers_visibility" :{
+            "is_activated" : True,
+            "is_drawer_open" : False,
+            "layers_switches" : [ 
+              { "label" : "lieux",         "layers" : [ "all-points" ],              "default_visible" : True }, 
+              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
+              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ],     "default_visible" : False }, 
+              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ],           "default_visible" : False }
             ],
-            "legend_scales" : None
           },
 
 
