@@ -1015,7 +1015,7 @@ default_routes_config = [
           "is_global_app_homepage" : False,
           "route_title"        : u"Rechercher",
           "route_description"  : u"Page de recherche carto XP d'Apiviz",
-          "route_activated"    : True,
+          "route_activated"    : False,
           "banner" : {
             "activated"  : False,
             "banner_uri" : "banner-sonum-xp"
@@ -1228,7 +1228,7 @@ default_routes_config = [
             },
 
           },
-          
+
           "links_options"  : {
 
             "block_contents_links" : {
