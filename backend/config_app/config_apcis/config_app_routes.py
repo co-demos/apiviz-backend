@@ -221,8 +221,18 @@ default_routes_config = [
 
           "mapbox_layers" : {
 
-            "all_points" : {
+            "all_points_layer" : {
               "is_activated"        : True,
+              "source_id"           : "allPointsSource",
+              "layer_id"            : "all-points",
+              "is_default_visible"  : True,
+              "is_source_distant"   : False,
+
+              "is_live_data"        : False,
+              "refresh_delay"       : 3000,
+
+              "is_clickable"        : True,
+
               "radius_min"          : 1,
               "radius_max"          : 10,
               "circle_color"        : "#a174ac",
@@ -232,6 +242,13 @@ default_routes_config = [
 
             "cluster_circles_layer" : {
               "is_activated"        : True,
+              "source_id"           : "clusterSource",
+              "layer_id"            : "cluster-circles",
+              "is_default_visible"  : False,
+
+              "is_source_distant"   : False, ### clusters all points sources by default
+              "is_clickable"        : True,
+
               "circle_color"     : "#a174ac", 
               "circle_color_100" : "#90689a", 
               "circle_color_250" : "#805c89", 
@@ -250,12 +267,24 @@ default_routes_config = [
 
             "cluster_count_layer" : {
               "is_activated"        : True,
+              "source_id"           : "clusterSource",
+              "layer_id"            : "cluster-counts",
+              "is_default_visible"  : True,
+              "is_source_distant"   : False,
+              "is_clickable"        : True,
+
               "text_size"  : 12,
               "text_color" : "#ffffff"
             },
 
             "cluster_unclustered_layer" : {
               "is_activated"        : True,
+              "source_id"           : "clusterSource",
+              "layer_id"            : "unclustered-point",
+              "is_default_visible"  : False,
+              "is_source_distant"   : False,
+              "is_clickable"        : True,
+
               "circle_color"        : "#fff", 
               "circle_troke_color"  : "#a174ac",
               "circle_radius"       : 5, 

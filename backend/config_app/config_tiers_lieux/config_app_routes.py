@@ -346,15 +346,15 @@ default_routes_config = [
                     "position" : "bottom-right", 
                     "title" : "Tiers-lieux / département",
                     "scales" : [
-                      { 'value' : '>100',  'color' : '#723122'},
-                      { 'value' : '50',   'color' : '#8B4225'},
-                      { 'value' : '35',   'color' : '#A25626'},
-                      { 'value' : '20',   'color' : '#B86B25'},
-                      { 'value' : '10',   'color' : '#CA8323'},
-                      { 'value' : '5',    'color' : '#DA9C20'},
-                      { 'value' : '3',    'color' : '#E6B71E'},
-                      { 'value' : '1',    'color' : '#EED322'},
-                      { 'value' : '0',    'color' : "#888888"},
+                      { 'value' : '>100 lieux', 'color' : '#723122'},
+                      { 'value' : '50 lieux',   'color' : '#8B4225'},
+                      { 'value' : '35 lieux',   'color' : '#A25626'},
+                      { 'value' : '20 lieux',   'color' : '#B86B25'},
+                      { 'value' : '10 lieux',   'color' : '#CA8323'},
+                      { 'value' : '5 lieux',    'color' : '#DA9C20'},
+                      { 'value' : '3 lieux',    'color' : '#E6B71E'},
+                      { 'value' : '1 lieu',    'color' : '#EED322'},
+                      { 'value' : '0 lieu',    'color' : "#888888"},
                     ]
                   }
 
@@ -400,12 +400,12 @@ default_routes_config = [
                     "position" : "bottom-right", 
                     "title" : "Tiers-lieux / communes",
                     "scales" : [
-                      { 'value' : '>10',  'color' : '#723122'},
-                      { 'value' : '7',   'color' : '#8B4225'},
-                      { 'value' : '5',    'color' : '#B86B25'},
-                      { 'value' : '2',    'color' : '#DA9C20'},
-                      { 'value' : '1',    'color' : '#EED322'},
-                      { 'value' : '0',    'color' : "#888888"},
+                      { 'value' : '>10 lieux',  'color' : '#723122'},
+                      { 'value' : '7 lieux',   'color' : '#8B4225'},
+                      { 'value' : '5 lieux',    'color' : '#B86B25'},
+                      { 'value' : '2 lieux',    'color' : '#DA9C20'},
+                      { 'value' : '1 lieu',    'color' : '#EED322'},
+                      { 'value' : '0 lieu',    'color' : "#888888"},
                     ]
                   }
                 }
