@@ -438,11 +438,11 @@ default_routes_config = [
             "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "lieux",         "layers" : [ "all-points" ],              "default_visible" : True }, 
+              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
               { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
-              # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ],     "default_visible" : False }, 
-              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ],           "default_visible" : False }
+              # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
+              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
 

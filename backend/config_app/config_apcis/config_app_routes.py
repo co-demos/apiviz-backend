@@ -296,7 +296,7 @@ default_routes_config = [
         
           "layers_visibility" :{
             "is_activated" : True,
-            "is_drawer_open" : False,
+            "is_drawer_open" : True,
             "layers_switches" : [ 
               { "label" : "projets", "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" , "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 

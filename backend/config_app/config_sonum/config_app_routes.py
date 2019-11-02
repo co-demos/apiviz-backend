@@ -250,17 +250,38 @@ default_routes_config = [
 
             "mapbox_layers" : {
 
-              "all_points" : {
+              ### all points source and layer
+              "all_points_layer" : {
                 "is_activated"        : True,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "all-points",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+
+                "is_live_data"        : False,
+                "refresh_delay"       : 3000,
+
+                "is_clickable"        : True,
+
                 "radius_min"          : 1,
                 "radius_max"          : 10,
+                "max_zoom"            : 14,
+                "min_zoom"            : 4,
                 "circle_color"        : "#a174ac",
                 "circle_stroke_color" : "#fff",
                 "circle_opacity"      : 0.8,
               },
 
+              ### clusters source and layer
               "cluster_circles_layer" : {
                 "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-circles",
+                "is_default_visible"  : True,
+
+                "is_source_distant"   : False, ### clusters all points sources by default
+                "is_clickable"        : True,
+
                 "circle_color"     : "#a174ac", 
                 "circle_color_100" : "#90689a", 
                 "circle_color_250" : "#805c89", 
@@ -279,19 +300,58 @@ default_routes_config = [
 
               "cluster_count_layer" : {
                 "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-counts",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
                 "text_size"  : 12,
                 "text_color" : "#ffffff"
               },
 
               "cluster_unclustered_layer" : {
                 "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "unclustered-point",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
                 "circle_color"        : "#fff", 
                 "circle_troke_color"  : "#a174ac",
                 "circle_radius"       : 5, 
                 "circle_stroke_width" : 5, 
               },
+
+              ### heatmap source and layer
+              "heatmap_layer" : {
+                "is_activated"        : True,
+                "is_default_visible"  : False,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "heatmap-layer",
+                "source"              : "all-points",
+                "prop_weight"         : "weight",
+                "max_zoom"            : 18,
+                "radius_min"          : 6,
+                "radius_max"          : 25,
+              },
+
             },
           
+
+            "layers_visibility" :{
+              "is_activated" : True,
+              "is_drawer_open" : True,
+              "layers_switches" : [ 
+                { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
+                { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+                # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+                # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
+                { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              ],
+            },
+
           },
           
           "links_options"  : {
