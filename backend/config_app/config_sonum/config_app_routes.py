@@ -333,8 +333,8 @@ default_routes_config = [
                 "source"              : "all-points",
                 "prop_weight"         : "weight",
                 "max_zoom"            : 18,
-                "radius_min"          : 6,
-                "radius_max"          : 25,
+                "radius_min"          : 5,
+                "radius_max"          : 15,
               },
 
             },
