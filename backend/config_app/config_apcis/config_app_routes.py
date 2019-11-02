@@ -235,6 +235,8 @@ default_routes_config = [
 
               "radius_min"          : 1,
               "radius_max"          : 10,
+              "max_zoom"            : 14,
+              "min_zoom"            : 4,
               "circle_color"        : "#a174ac",
               "circle_stroke_color" : "#fff",
               "circle_opacity"      : 0.8,
@@ -292,6 +294,19 @@ default_routes_config = [
             },
           },
         
+          "layers_visibility" :{
+            "is_activated" : True,
+            "is_drawer_open" : False,
+            "layers_switches" : [ 
+              { "label" : "projets", "layers" : [ "all-points" ], "default_visible" : True }, 
+              { "label" : "clusters" , "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ],     "default_visible" : False }, 
+              # { "label" : "radar" ,        "layers" : [ "heatmap-layer" ],           "default_visible" : False }
+            ],
+          },
+
+
         },
         
         "links_options"  : {
