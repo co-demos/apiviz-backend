@@ -246,7 +246,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-circles",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
 
               "is_source_distant"   : False, ### clusters all points sources by default
               "is_clickable"        : True,
