@@ -301,15 +301,21 @@ default_routes_config = [
               
               "change_source_by_zoom" : True,
               "is_clickable"        : False,
+
+              ### list of choropleth sources
               "sources" : [
-                { 
+
+                { ### FR - departements
                   "is_activated" : True,
                   "source_id" : "chorosource-departements",
                   "layer_id"  : "chorolayer-departements",
                   "is_default_visible" : True,
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
-                  "max_zoom" : 7.5,
+                  "max_zoom" : 8.5,
                   "min_zoom" : 0,
+
+                  # "next_layer_id"  : "chorolayer-communes",
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  "update_src_from_previous_layer" : False,
 
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
@@ -360,16 +366,34 @@ default_routes_config = [
                   }
 
                 },
-                { 
-                  "is_activated" : False,
+
+                { ### FR - communes
+                  "is_activated" : True,
                   "source_id" : "chorosource-communes",
                   "layer_id"  : "chorolayer-communes",
                   "is_default_visible" : True,
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
                   "max_zoom" : 18,
-                  "min_zoom" : 7.5,
+                  "min_zoom" : 8,
 
-                  "need_aggregation" : True,
+                  # "next_layer_id"  : "chorolayer-cadaste",
+                  "source_url" : None, # "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
+                  "update_src_from_previous_source" : True,
+                  "update_src_options" : [ 
+                    { 
+                      "url_base" : "https://geo.api.gouv.fr/departements/<dep_code>/communes?geometry=contour&format=geojson&type=commune-actuelle", 
+                      "response_format" : "geojson",
+                      "upper_source_id" : "chorosource-departements", 
+                      "upper_layer_id" : "chorolayer-departements", 
+                      "slugs_map" : [
+                        {
+                          "value_property" : "code", ### field in property to retrieve
+                          "value_slug_code" : "dep_code" , 
+                        }
+                      ],
+                    },
+                  ],
+
+                  "need_aggregation" : False,
                   "polygon_prop_id" : "code",
                   # "agregate_data_from_source" : "allPointsSource",
                   "join_polygon_id_to_field"  : "INSEECOM",
@@ -401,15 +425,17 @@ default_routes_config = [
                     "position" : "bottom-right", 
                     "title" : "Tiers-lieux / communes",
                     "scales" : [
-                      { 'value' : '>10 lieux',  'color' : '#723122'},
+                      { 'value' : '>10 lieux', 'color' : '#723122'},
                       { 'value' : '7 lieux',   'color' : '#8B4225'},
-                      { 'value' : '5 lieux',    'color' : '#B86B25'},
-                      { 'value' : '2 lieux',    'color' : '#DA9C20'},
+                      { 'value' : '5 lieux',   'color' : '#B86B25'},
+                      { 'value' : '2 lieux',   'color' : '#DA9C20'},
                       { 'value' : '1 lieu',    'color' : '#EED322'},
                       { 'value' : '0 lieu',    'color' : "#888888"},
                     ]
                   }
-                }
+                },
+
+
               ],
               
 
@@ -442,6 +468,7 @@ default_routes_config = [
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
               { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
+              # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
