@@ -67,7 +67,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "",
         "dataset_uri"       : "recherche",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -480,7 +480,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"      : True
       },
 
@@ -628,7 +628,7 @@ default_routes_config = [
         "tabs_uri"          : "TL-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -766,7 +766,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -962,7 +962,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1317,7 +1317,7 @@ default_routes_config = [
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1378,7 +1378,7 @@ default_routes_config = [
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1425,7 +1425,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1465,7 +1465,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1500,7 +1500,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1535,7 +1535,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1570,7 +1570,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
@@ -1605,7 +1605,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
       },
 
