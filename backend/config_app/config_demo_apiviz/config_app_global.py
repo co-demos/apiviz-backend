@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_global_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING CARTO
+  ### CONFIG TIERS LIEUX
 
     ### LANGUAGES
       { "field"       : "app_languages",
@@ -14,7 +14,7 @@ default_global_config = [
         "locale"      : "fr",
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -125,7 +125,7 @@ default_global_config = [
         # "password_new"        : [{"locale" : "en", "text" : "your new password"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "votre nouveau mot de passe" }],
         # "password_send"       : [{"locale" : "en", "text" : "update my password"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "enregister le nouveau mot de passe" }],
 
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -141,7 +141,7 @@ default_global_config = [
       #   "tab_stat"    : {
       #     "link_text"  : [ {"locale" : "en", "text" : "data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
       #   },
-      #   "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      #   "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       #   "is_default"  : True
       # },
 
@@ -149,22 +149,22 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_TLF_carré_04.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/favicon/favicon.ico",
-        "url"         : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_TLF_carré_mini_01.png",
+        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/favicon/favicon.ico",
+        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_mini_01.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -175,14 +175,14 @@ default_global_config = [
 
         "can_be_used_as_model" : True,
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
-        "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
+        "image_preview" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Association PiNG",
+        "content"      : u"Association France Tiers-Lieux",
         "content_text" : [{"locale" : "en", "text" : "Co-working mission"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
         "is_in_navbar" : False,
         # "title_color" : "primary",
 
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -190,7 +190,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a description for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -198,7 +198,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a set of keywords for your ApiViz instance",
         "content"     : u"""dataviz,data visualisation,data visualization,SIG,commons,digital commons,API,opensource,open source,open data,opendata,MIT licence,github,sJS,javascript,python,flask,HTML,CSS,JSON,bulma,Vue.js,sEtalab,co-demos, codemos""",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -207,7 +207,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a welcoming phrase for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bienvenue"}],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -215,7 +215,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a pitch/catchphrase for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -227,7 +227,7 @@ default_global_config = [
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source"}],
         "in_navbar"   : False,
         "in_footer"   : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True,
       },
 
@@ -237,7 +237,7 @@ default_global_config = [
         "help"        : u"Choose a token for indexing your ApiViz instance",
         "content"     : u"",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -248,7 +248,7 @@ default_global_config = [
         "content"     : u"your_id_or_token",
         "url"         : "",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -259,7 +259,7 @@ default_global_config = [
         "content"     : u"your_id_or_token",
         "url"         : "",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 

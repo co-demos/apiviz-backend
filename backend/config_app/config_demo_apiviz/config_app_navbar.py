@@ -7,7 +7,7 @@ default_app_navbar = [
   ### MAIN NAVBAR
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG TIERS LIEUX
       { "field"       : "app_navbar",
         "content"     : u"TL navbar",
         "app_version" : version,
@@ -57,7 +57,7 @@ default_app_navbar = [
 
           ]
         },
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 

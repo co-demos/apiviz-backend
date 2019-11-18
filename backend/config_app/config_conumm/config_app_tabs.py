@@ -43,7 +43,7 @@ default_app_tabs = [
           },
 
         ],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_conumm"],
         "is_default"  : True
       },
 

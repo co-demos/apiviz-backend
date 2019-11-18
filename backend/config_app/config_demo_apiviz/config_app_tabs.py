@@ -7,7 +7,7 @@ default_app_tabs = [
   ### MAIN TABS
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG TIERS LIEUX
 
       { "field"       : "app_tabs_test",
         "tabs_uri"     : "tabs-tl-test",
@@ -43,7 +43,7 @@ default_app_tabs = [
           },
 
         ],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 

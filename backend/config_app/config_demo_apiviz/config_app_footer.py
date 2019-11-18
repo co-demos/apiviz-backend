@@ -6,7 +6,7 @@ default_app_footer = [
 
   ### FOOTER
 
-    ### CONFIG PING CARTO 
+    ### CONFIG TIERS LIEUX 
       { "field"       : "app_footer",
         "app_version" : version,
         "help"        : u"The default footer for your ApiViz instance",
@@ -147,7 +147,7 @@ default_app_footer = [
 
         ],
 
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 

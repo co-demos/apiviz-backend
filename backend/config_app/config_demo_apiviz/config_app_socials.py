@@ -5,30 +5,30 @@ from . import version, uuid_models
 default_socials_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING
+  ### CONFIG TIERS LIEUX 
   
     ### SOCIAL NETWORKS
     { "field"       : "app_twitter",
       "content"     : u"twitter",
       "icon_class"  : "fab fa-twitter",
-      "url"         : "https://twitter.com/assoping",
+      "url"         : "https://twitter.com/cget_gouv",
       "app_version" : version,
       "help"        : u"Choose the twitter account for your ApiViz instance",
       "in_footer"   : True,
       "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       "is_default"  : True
     },
 
     { "field"       : "app_facebook",
       "content"     : u"facebook",
       "icon_class"  : "fab fa-facebook-f",
-      "url"         : "https://www.facebook.com/AssociationPiNG/",
+      "url"         : "https://www.facebook.com/CGETgouv",
       "app_version" : version,
       "help"        : u"Choose the facebook account for your ApiViz instance",
       "in_footer"   : True,
       "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       "is_default"  : True
     },
 
@@ -39,8 +39,8 @@ default_socials_config = [
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Github" }],
+      "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       "is_default"  : True
     },
 

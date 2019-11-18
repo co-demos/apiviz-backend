@@ -4,7 +4,7 @@ from . import version, uuid_models
 
 default_app_styles_config = [
 
-  ### CONFIG PING CARTO STYLES
+  ### TIERS LIEUX STYLES
 
     ### GLOBAL STYLES
       { "field"       : "app_colors",
@@ -22,7 +22,7 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
+          'primary'    : '#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#40529d',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
@@ -37,7 +37,7 @@ default_app_styles_config = [
         },
         "app_version" : version,
         "help"        : u"Choose a set of colors (an hexa for example) for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -67,7 +67,7 @@ default_app_styles_config = [
       #   },
       #   "app_version" : version,
       #   "help"        : u"Choose a set of colors for your typo for your ApiViz instance",
-      #   "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      #   "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       #   "is_default"  : True
       # },
 
@@ -79,7 +79,7 @@ default_app_styles_config = [
         "url"         : "",
         "app_version" : version,
         "help"        : u"Choose a typo for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True
       },
 
@@ -123,7 +123,7 @@ default_app_styles_config = [
             "disapearing_timeout" : 5, ## in seconds
           },
         ],
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"     : True
       },
 
@@ -157,7 +157,7 @@ default_app_styles_config = [
         }
       ],
 
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
       "is_default"  : True
     },
 

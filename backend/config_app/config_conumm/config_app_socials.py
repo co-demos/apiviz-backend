@@ -16,7 +16,7 @@ default_socials_config = [
       "help"        : u"Choose the twitter account for your ApiViz instance",
       "in_footer"   : True,
       "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_conumm"],
       "is_default"  : True
     },
 
@@ -28,7 +28,7 @@ default_socials_config = [
       "help"        : u"Choose the facebook account for your ApiViz instance",
       "in_footer"   : True,
       "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_conumm"],
       "is_default"  : True
     },
 
@@ -40,7 +40,7 @@ default_socials_config = [
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,
       "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
-      "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+      "apiviz_front_uuid" : uuid_models["uuid_conumm"],
       "is_default"  : True
     },
 

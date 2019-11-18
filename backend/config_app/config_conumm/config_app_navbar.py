@@ -57,7 +57,7 @@ default_app_navbar = [
 
           ]
         },
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_conumm"],
         "is_default"  : True
       },
 

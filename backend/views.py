@@ -819,7 +819,7 @@ def create_new_config():
         
         # get corresponding documents without _id
         mongoColl = mongoConfigColls[coll]
-        results = list(mongoColl.find(query, {'_id':0 } ))
+        results = list(mongoColl.find(query, { '_id' : 0 } ))
         
         # replace 'apiviz_front_uuid' field's value by new_uuid
         # set 'is_default' field's value as False
