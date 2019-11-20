@@ -6,7 +6,7 @@ default_app_footer = [
 
   ### FOOTER
 
-    ### CONFIG TIERS LIEUX 
+    ### CONFIG 
       { "field"       : "app_footer",
         "app_version" : version,
         "help"        : u"The default footer for your ApiViz instance",
@@ -36,20 +36,10 @@ default_app_footer = [
 
           {
             # "block_left" : {
-            "is_visible"  : False,
-            "has_socials" : False,
-            "position"    : "block_top_left",
-            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
-            "title_visible" : True,
-            "links"       : []
-          },
-
-          {
-            # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
-            "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Mission co-working"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
+            "position"    : "block_top_left",
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Informations"}],
             "title_visible" : True,
             "links"       : [
 
@@ -58,7 +48,28 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La mission co-working du CGET" }],
+                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+
+            ]
+          },
+
+          {
+            # "block_center_left" : {
+            "is_visible"  : True,
+            "has_socials" : True,
+            "position"    : "block_top_center_left",
+            "title_block" : [{"locale" : "en", "text" : "Mission co-working"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet Tadata"}],
+            "title_visible" : True,
+            "links"       : [
+
+              { "is_visible" : True,
+                "link_to"    : "/le-projet",
+                "is_external_link" : False,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La vision" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
@@ -66,7 +77,7 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "The tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils de valorisation des données" }],
+                "link_text"  : [{"locale" : "en", "text" : "The tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Valoriser les données ouvertes" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
@@ -74,7 +85,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La Fondation Travailler Autrement" }],
+                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ouvrir des données" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
@@ -82,7 +93,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus sur la mission co-working" }],
+                "link_text"  : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus ..." }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
@@ -112,26 +123,42 @@ default_app_footer = [
           {
             # "block_right" : {
             "is_visible"  : True,
-            "has_socials" : True,
+            "has_socials" : False,
             
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participer"}],
+            "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nos applicatifs"}],
             "title_visible" : True,
             "links"       : [
-              { "is_visible" : True,
-                "link_to"    : "https://github.com/cget-carto/mission_coworking",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Improve the data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Améliorer les données sur les tiers-lieux" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-              },
               { "is_visible" : True,
                 "link_to"    : "https://github.com/co-demos/apiviz-frontend",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Apps' source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source des applications" }],
+                "link_text"  : [{"locale" : "en", "text" : "apiviz-frontend"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Apiviz frontend - documentation" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://github.com/co-demos/apiviz-backend",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "apiviz-backend"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Apiviz frontend - documentation" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://github.com/co-demos/solidata-frontend",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "solidata-frontend"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Solidata frontend - documentation" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://github.com/co-demos/solidata-backend",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "solidata-backend"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Solidata backend - documentation" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               # { "is_visible" : True,

@@ -25,7 +25,7 @@ uuid_models = {
 
 config_folders = [
   
-  # "config_demo_apiviz",
+  "config_demo_apiviz",
 
   "config_apcis",
   "config_sonum",

@@ -149,7 +149,7 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_TLF_carré_04.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",

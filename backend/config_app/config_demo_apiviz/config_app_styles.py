@@ -22,7 +22,7 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#FF9300' , #'#004494', # '#592d7b',
+          'primary'    : '#592d7b' , #'#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#40529d',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
@@ -135,7 +135,7 @@ default_app_styles_config = [
 
       "images_sets" : [
         {
-          "dataset_uri" : "recherche",
+          "dataset_uri" : "tiers-lieux",
           "images_set"  : [
             { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_1.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?r:aw=true", "credits" : "Élise Lalique", "licence" : "" },
@@ -154,7 +154,19 @@ default_app_styles_config = [
             { "dft_text" : "img_15", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_15.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_16", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_16.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
           ]
-        }
+        },
+        {
+          "dataset_uri" : "mediation",
+          "images_set"  : [
+              { "dft_text" : "img_1", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgA.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+              { "dft_text" : "img_2", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgB.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+              { "dft_text" : "img_3", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgC.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+              { "dft_text" : "img_4", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgD.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+              { "dft_text" : "img_5", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgE.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+              { "dft_text" : "img_6", "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/illustrations/illustrations_sonum_png/imgF.png?raw=true", "credits" : "Laurie Chapotte", "licence" : "" },
+          ]
+        },
+
       ],
 
       "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],

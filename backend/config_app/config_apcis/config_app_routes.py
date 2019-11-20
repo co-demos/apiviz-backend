@@ -288,7 +288,7 @@ default_routes_config = [
               "is_clickable"        : True,
 
               "circle_color"        : "#fff", 
-              "circle_troke_color"  : "#a174ac",
+              "circle_stroke_color"  : "#a174ac",
               "circle_radius"       : 5, 
               "circle_stroke_width" : 5, 
             },
