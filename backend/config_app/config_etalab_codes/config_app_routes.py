@@ -1911,10 +1911,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/site-etalab-code-apiviz/master/pages-html/a-propos.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/site-etalab-code-apiviz/master/pages-html/a-propos.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/site-etalab-code-apiviz/master/pages-html/a-propos.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/site-etalab-code-apiviz/master/pages-html/a-propos.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }, 
         ],
         
 
