@@ -43,9 +43,9 @@ default_routes_config = [
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-en.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -2287,8 +2287,8 @@ default_routes_config = [
         "dataset_uri"       : "mediation",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
