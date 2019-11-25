@@ -26,8 +26,26 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/mediation",
+              "link_to"    : "/le-projet",
               "help"       : u"First menu in navbar",
+              "is_external_link" : False,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : True,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Contact"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+              ]
+            },
+
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "/mediation",
+              "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -46,7 +64,7 @@ default_app_navbar = [
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/tiers-lieux",
-              "help"       : u"Second menu in navbar",
+              "help"       : u"Third menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
@@ -59,22 +77,7 @@ default_app_navbar = [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/tiers-lieux/liste", "link_text" : [{"locale" : "en", "text" : "List of place for digital mediation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste des tiers-lieux"}] },
               ]
             },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/le-projet",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : True,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
+
 
           ]
         },
