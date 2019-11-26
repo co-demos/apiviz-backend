@@ -471,22 +471,22 @@ default_data_endpoints_config = [
           "endpoint_type" : "map",
           "dataset_uri"   : "mediation",
 
-          "map_options"   : {
+          # "map_options"   : {
 
-            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            "subdomains"       : 'abcd',
-            "center"           : [46.2276, 2.2137],
-            "currentCenter"    : [46.2276, 2.2137],
-            "zoom"             : 6,
-            "maxZoom"          : 18,
-            "minZoom"          : 3,
-            "useMarkerCluster" : True,
-            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+          #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+          #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          #   "subdomains"       : 'abcd',
+          #   "center"           : [46.2276, 2.2137],
+          #   "currentCenter"    : [46.2276, 2.2137],
+          #   "zoom"             : 6,
+          #   "maxZoom"          : 18,
+          #   "minZoom"          : 3,
+          #   "useMarkerCluster" : True,
+          #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
 
-          },
+          # },
           
           "content"       : u"apiviz default API endpoint for map results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c89636d328ed70609be03ab",
@@ -823,22 +823,22 @@ default_data_endpoints_config = [
           "endpoint_type" : "map",
           "dataset_uri"   : "tiers-lieux",
 
-          "map_options"   : {
+          # "map_options"   : {
             
-            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            "subdomains"       : 'abcd',
-            "center"           : [46.2276, 2.2137],
-            "currentCenter"    : [46.2276, 2.2137],
-            "zoom"             : 5,
-            "maxZoom"          : 18,
-            "minZoom"          : 2,
-            "useMarkerCluster" : True,
-            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+          #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+          #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          #   "subdomains"       : 'abcd',
+          #   "center"           : [46.2276, 2.2137],
+          #   "currentCenter"    : [46.2276, 2.2137],
+          #   "zoom"             : 5,
+          #   "maxZoom"          : 18,
+          #   "minZoom"          : 2,
+          #   "useMarkerCluster" : True,
+          #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
           
-          },
+          # },
 
           "content"       : u"apiviz default API endpoint for map results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2

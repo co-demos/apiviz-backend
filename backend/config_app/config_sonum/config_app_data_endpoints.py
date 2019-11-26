@@ -468,22 +468,22 @@ default_data_endpoints_config = [
           "endpoint_type" : "map",
           "dataset_uri"   : "sonum-carto",
 
-          "map_options"   : {
+          # "map_options"   : {
 
-            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            "subdomains"       : 'abcd',
-            "center"           : [46.2276, 2.2137],
-            "currentCenter"    : [46.2276, 2.2137],
-            "zoom"             : 6,
-            "maxZoom"          : 18,
-            "minZoom"          : 3,
-            "useMarkerCluster" : True,
-            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+          #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+          #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          #   "subdomains"       : 'abcd',
+          #   "center"           : [46.2276, 2.2137],
+          #   "currentCenter"    : [46.2276, 2.2137],
+          #   "zoom"             : 6,
+          #   "maxZoom"          : 18,
+          #   "minZoom"          : 3,
+          #   "useMarkerCluster" : True,
+          #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
 
-          },
+          # },
           
           "content"       : u"apiviz default API endpoint for map results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c89636d328ed70609be03ab",
@@ -707,19 +707,19 @@ default_data_endpoints_config = [
           "data_type"     : "data",
           "endpoint_type" : "map",
           "dataset_uri"   : "sonum-xp",
-          "map_options"   : {
-            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            "subdomains"       : 'abcd',
-            "center"           : [46.2276, 2.2137],
-            "currentCenter"    : [46.2276, 2.2137],
-            "zoom"             : 6,
-            "maxZoom"          : 18,
-            "minZoom"          : 5,
-            "useMarkerCluster" : True,
-            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
-          },
+          # "map_options"   : {
+          #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+          #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+          #   "subdomains"       : 'abcd',
+          #   "center"           : [46.2276, 2.2137],
+          #   "currentCenter"    : [46.2276, 2.2137],
+          #   "zoom"             : 6,
+          #   "maxZoom"          : 18,
+          #   "minZoom"          : 5,
+          #   "useMarkerCluster" : True,
+          #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+          #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+          # },
           "content"       : u"apiviz default API endpoint for map results",
           "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7ebc7d328ed724cebd7fc0",
           "args_options"  : [

@@ -148,8 +148,8 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
+        "url"         : None,
+        # "url"           : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
@@ -178,8 +178,8 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Orgues de France",
-        "content_text" : [{"locale" : "en", "text" : "Organon"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Orgues"}],
-        "is_in_navbar" : False,
+        "content_text" : [{"locale" : "en", "text" : "Organons inn France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Orgues de France"}],
+        "is_in_navbar" : True,
         # "title_color" : "primary",
 
         "apiviz_front_uuid" : uuid_models["uuid_orgues"],

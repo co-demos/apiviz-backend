@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/carte"],
+        "urls"              : ["/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -122,7 +122,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "GEOCOD", 
+          { "field" : "Commune_insee", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -130,15 +130,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMREG",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "NOM_TL", 
+          # { "field" : "NOMREG",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_city",
+          #   # "trim" : 20,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          { "field" : "Edifice", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -147,15 +147,15 @@ default_routes_config = [
             "locale" : "fr"
           },
 
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
+          { "field" : "Info_edifice",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_abstract",
             
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field" : "SOURCE",
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field" : "Codification_instrument",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -163,16 +163,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field"       : "coding APCIS N1",
-          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-          #   "filter_correspondance" : True,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
+
 
         ],
 
@@ -228,7 +219,7 @@ default_routes_config = [
               "radius_max"          : 10,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
-              "circle_color"        : "#004494",
+              "circle_color"        : "#8b4513",
               "circle_stroke_color" : "#fff",
               "circle_opacity"      : 0.8,
             },
@@ -238,16 +229,16 @@ default_routes_config = [
               "is_activated"     : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-circles",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
 
               "is_source_distant"   : False, ### clusters all points sources by default
               "is_clickable"        : True,
 
-              "circle_color"     : "#e5ecf4", 
-              "circle_color_100" : "#b2c6de", 
-              "circle_color_250" : "#668ebe", 
-              "circle_color_500" : "#3269a9", 
-              "circle_color_750" : "#004494", 
+              "circle_color"     : "#d0b4a0", 
+              "circle_color_100" : "#b98f71", 
+              "circle_color_250" : "#ad7c59", 
+              "circle_color_500" : "#a26a42", 
+              "circle_color_750" : "#96572a", 
 
               "circle_radius"     : 15, 
               "circle_radius_100" : 20, 
@@ -263,7 +254,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-counts",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
               "is_source_distant"   : False,
               "is_clickable"        : True,
 
@@ -272,7 +263,7 @@ default_routes_config = [
             },
 
             "cluster_unclustered_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "unclustered-point",
               "is_default_visible"  : True,
@@ -280,14 +271,14 @@ default_routes_config = [
               "is_clickable"        : True,
 
               "circle_color"        : "#fff", 
-              "circle_stroke_color" : "#004494",
+              "circle_stroke_color" : "#8b4513",
               "circle_radius"       : 5, 
               "circle_stroke_width" : 5, 
             },
 
             ### choropleth source and layer
             "choropleth_layer" : {
-              "is_activated"        : True,
+              "is_activated"        : False,
               # "source_id"           : "choroSource",
               # "layer_id"            : "choropleth",
               "is_live_data"        : False,
@@ -306,10 +297,10 @@ default_routes_config = [
               "sources" : [
 
                 { ### FR - departements
-                  "is_activated" : True,
+                  "is_activated" : False,
                   "source_id" : "chorosource-departements",
                   "layer_id"  : "chorolayer-departements",
-                  "is_default_visible" : True,
+                  "is_default_visible" : False,
                   "max_zoom" : 9,
                   "min_zoom" : 0,
 
@@ -351,17 +342,17 @@ default_routes_config = [
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Tiers-lieux / département",
+                    "title" : "Orgues / département",
                     "scales" : [
-                      { 'value' : '>100 lieux', 'color' : '#723122'},
-                      { 'value' : '50 lieux',   'color' : '#8B4225'},
-                      { 'value' : '35 lieux',   'color' : '#A25626'},
-                      { 'value' : '20 lieux',   'color' : '#B86B25'},
-                      { 'value' : '10 lieux',   'color' : '#CA8323'},
-                      { 'value' : '5 lieux',    'color' : '#DA9C20'},
-                      { 'value' : '3 lieux',    'color' : '#E6B71E'},
-                      { 'value' : '1 lieu',    'color' : '#EED322'},
-                      { 'value' : '0 lieu',    'color' : "#888888"},
+                      { 'value' : '>100 orgues', 'color' : '#723122'},
+                      { 'value' : '50 orgues',   'color' : '#8B4225'},
+                      { 'value' : '35 orgues',   'color' : '#A25626'},
+                      { 'value' : '20 orgues',   'color' : '#B86B25'},
+                      { 'value' : '10 orgues',   'color' : '#CA8323'},
+                      { 'value' : '5 orgues',    'color' : '#DA9C20'},
+                      { 'value' : '3 orgues',    'color' : '#E6B71E'},
+                      { 'value' : '1 orgue',    'color' : '#EED322'},
+                      { 'value' : '0 orgue',    'color' : "#888888"},
                     ]
                   }
 
@@ -371,7 +362,7 @@ default_routes_config = [
                   "is_activated" : False,
                   "source_id" : "chorosource-communes",
                   "layer_id"  : "chorolayer-communes",
-                  "is_default_visible" : True,
+                  "is_default_visible" : False,
                   "max_zoom" : 18,
                   "min_zoom" : 8,
 
@@ -469,7 +460,7 @@ default_routes_config = [
             "layers_switches" : [ 
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
-              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
@@ -573,42 +564,51 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL",
+          { "field" : "Edifice",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
-            "is_table_head" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          { "field" : "Commune_insee",
+            "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPO",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "col_3",
+          { "field" : "Nom_departement",
+            "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "has_link_to_detail" : False,
+            "is_table_head" : True,
+            "position" : "col_3",
             "is_sortable" : True,
-            "filter_correspondance" : False,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "Thématiques",
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          # { "field"       : "Edifice",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_3",
+          #   "is_sortable" : True,
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : False,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
+          { "field" : "Info_edifice",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
-            "is_sortable" : False,
+            "is_sortable" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
             "custom_title" : "to do",
             "locale" : "fr"
           },
@@ -687,7 +687,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche", "/recherche/liste"],
+        "urls"              : ["/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -716,7 +716,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
+          { "field" : "Commune_insee",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -724,7 +724,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL",
+          { "field" : "Edifice",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -732,15 +732,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : False,
-            "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field"       : "TYPO_CODE",
+          { "field"       : "Info_edifice",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
@@ -839,7 +831,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "NOM_TL", 
+          { "field" : "Info_edifice", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -847,15 +839,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field" : "GEOCOD",
+          { "field" : "Commune_insee",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -863,7 +847,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "code postal structure",
+          { "field" : "Nom_departement",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
@@ -871,15 +855,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
+          { "field" : "Edifice",
+            "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+            "is_visible" : True,
+            "position" : "block_abstract",
             
-          #   "custom_title" : "Résumé du projet",
-          #   "locale" : "fr"
-          # },
-          { "field" : "SOURCE",
+            "custom_title" : "Edifice",
+            "locale" : "fr"
+          },
+          { "field" : "Codification_instrument",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -887,32 +871,23 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          { "field" : "WEB",
+
+          { "field" : "Livre",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
             
-            "custom_title" : "to do",
+            "custom_title" : "Livre",
             "locale" : "fr"
           },
-          { "field"       : "TYPO",
+          { "field"       : "Info_edifice",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
             "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
+            "custom_title" : "Info édifice",
             "locale" : "fr"
           },
 

@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/carte"],
+        "urls"              : [ "/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -687,7 +687,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche", "/recherche/liste"],
+        "urls"              : ["/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
