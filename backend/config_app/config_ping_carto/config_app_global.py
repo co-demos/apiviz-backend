@@ -161,7 +161,7 @@ default_global_config = [
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
         # "url"         : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/favicon/favicon.ico",
-        "url"         : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_TLF_carré_mini_01.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
