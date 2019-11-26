@@ -20,6 +20,8 @@ uuid_models = {
   "uuid_conumm" :         "2f658fb8-f00a-4b1a-ab73-7064433c98bc",
   "uuid_etalab_codes" :   "a44de08d-12a1-4182-a06e-78058928c1e1",
 
+  "uuid_orgues" :         "3f3fd562-5202-427f-8ba3-f58d5660aabf",
+
   "uuid_ocf" :            "305ab50d-c976-44d7-a8f2-a7594155c292",
   "uuid_open_archives" :  "07c6f4e3-c98a-4f1d-b242-f9fa95a19c1d",
 
@@ -36,6 +38,7 @@ config_folders = [
   "config_conumm",
 
   "config_etalab_codes",
+  "config_orgues",
 
   # "config_ocf",
   # "config_open_archives",

@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG TIERS LIEUX 
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home-en.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
@@ -67,7 +67,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "",
         "dataset_uri"       : "recherche",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -510,7 +510,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"      : True
       },
 
@@ -658,7 +658,7 @@ default_routes_config = [
         "tabs_uri"          : "TL-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -796,7 +796,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -992,7 +992,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1347,7 +1347,7 @@ default_routes_config = [
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1380,8 +1380,8 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
@@ -1408,7 +1408,7 @@ default_routes_config = [
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1436,8 +1436,8 @@ default_routes_config = [
         "urls"              : ["/le-projet/outils"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/les-outils.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
         ],
@@ -1455,7 +1455,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1495,7 +1495,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1530,7 +1530,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1565,7 +1565,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1600,7 +1600,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
@@ -1635,7 +1635,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_orgues"],
         "is_default"        : True
       },
 
