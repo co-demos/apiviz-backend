@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-en.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-orgues.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-orgues.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
@@ -831,7 +831,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "Info_edifice", 
+          { "field" : "Edifice", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -855,7 +855,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "Edifice",
+          { "field" : "Info_edifice",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
@@ -976,7 +976,7 @@ default_routes_config = [
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",
-        "route_activated"   : True,
+        "route_activated"   : False,
         "banner" : {
           "activated"  : False,
           "banner_uri" : "banner-apcis-carto"
@@ -1354,9 +1354,11 @@ default_routes_config = [
         "urls"              : ["/le-projet"],
         "dataset_uri"       : "project-cis",
         
+        # https://www.inventaire-des-orgues.fr/
+        # https://entrepreneur-interet-general.etalab.gouv.fr/defis/2017/mcc-inventaire-des-orgues.html
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-orgues.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-orgues.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
