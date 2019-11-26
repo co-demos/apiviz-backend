@@ -368,7 +368,7 @@ default_routes_config = [
                 },
 
                 { ### FR - communes
-                  "is_activated" : True,
+                  "is_activated" : False,
                   "source_id" : "chorosource-communes",
                   "layer_id"  : "chorolayer-communes",
                   "is_default_visible" : True,
