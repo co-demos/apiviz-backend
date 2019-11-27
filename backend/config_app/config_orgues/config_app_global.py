@@ -148,9 +148,7 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        "url"         : None,
-        # "url"           : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
+        "url"         : "https://inventaire-des-orgues.fr/img/profile.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_orgues"],
@@ -160,8 +158,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/favicon/favicon.ico",
-        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_mini_01.png",
+        "url"         : "https://inventaire-des-orgues.fr/img/profile.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_orgues"],
