@@ -148,9 +148,12 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
+
+        ### logos tadata : https://docs.google.com/drawings/d/1RfT8NQ3YCWDW34a0TurX-rPy5rf82v9ixIq_2k31E9Q/edit
         "url"           : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/logos/logo_apiviz_15_white.png",
+        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
         # "url"           : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/logos/logo_apiviz_15.png",
+
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
