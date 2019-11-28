@@ -44,7 +44,7 @@ default_app_footer = [
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "/le-projet",
+                "link_to"    : "/le-projet/contact",
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",

@@ -68,7 +68,15 @@ default_app_tabs = [
             "link_text"    : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nos outils" }],
             "tooltip"      : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir les outils" }],
           },
-
+          { "is_visible"   : True, 
+            "tab_code"     : "tab-5",
+            "is_activated" : True,
+            "link_to"      : "/le-projet/contact",
+            "has_icon"     : False,
+            "icon_class"   : "", 
+            "link_text"    : [{"locale" : "en", "text" : "Contact"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Contact" }],
+            "tooltip"      : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir les outils" }],
+          },
         ],
         "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
         "is_default"  : True

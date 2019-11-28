@@ -40,8 +40,9 @@ default_app_navbar = [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/apiviz-benchmark",          "link_text" : [{"locale" : "en", "text" : "Benchmark"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Benchmark"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-opendata",       "link_text" : [{"locale" : "en", "text" : "Ressources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our free tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils libres"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/contact",          "link_text" : [{"locale" : "en", "text" : "Contact"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Contact"}] },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Contact"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
 
