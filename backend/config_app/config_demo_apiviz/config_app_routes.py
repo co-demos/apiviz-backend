@@ -2459,9 +2459,9 @@ default_routes_config = [
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/apiviz-benchmark.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/apiviz-benchmark.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/apiviz-benchmark-en.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/apiviz-benchmark.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/apiviz-benchmark.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/apiviz-benchmark-en.html" }, 
         ],
         
 
@@ -2469,8 +2469,8 @@ default_routes_config = [
         "ext_script_urls"   : [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
 
-          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
           {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
         ],
 
         # "has_carousel"      : True,
