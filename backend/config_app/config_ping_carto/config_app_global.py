@@ -231,6 +231,16 @@ default_global_config = [
         "is_default"  : True,
       },
 
+    ### FAVORITES
+      { "field"       : "app_favorites",
+        "app_version" : version,
+        "help"        : u"Choose is users can use favorites (cookies)",
+        "content"     : u"",
+        "activated"   : False,
+        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "is_default"  : True
+      },
+
     ### SEO / INDEXING
       { "field"       : "app_indexing",
         "app_version" : version,
