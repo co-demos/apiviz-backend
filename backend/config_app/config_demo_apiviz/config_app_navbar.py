@@ -62,7 +62,8 @@ default_app_navbar = [
                 # { "is_divider" : True,  "is_external_link" : False },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/mediation/carte", "link_text" : [{"locale" : "en", "text" : "Map of places for digital mediation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cartographie des lieux de médiation numérique"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/mediation/liste", "link_text" : [{"locale" : "en", "text" : "List of place for digital mediation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste des lieux de médiation numérique"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
+                  { "is_divider" : True,  "is_external_link" : False },
+                  { "is_divider" : False, "is_external_link" : False, "link_to" : "/mediation/calendar", "link_text" : [{"locale" : "en", "text" : "Calendar of place for digital mediation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Calendrier des lieux de médiation numérique"}] },
                 # { "is_divider" : False, "is_external_link" : True, "link_to" : "https://forum.societenumerique.gouv.fr/category/10/cartographie-des-services-de-m%C3%A9diation-et-d-inclusion-num%C3%A9rique", "link_text" : [{"locale" : "en", "text" : "Contribute to the map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participez à la cartographie"}] },
               ]
             },

@@ -337,6 +337,43 @@ default_data_endpoints_config = [
           "is_default"    : True
         },
 
+        ### DATA CALENDAR
+        ### cf : https://gitlab.com/latitudes-exploring-tech-for-good/hackathon-a-lasso-des-donnees/sujet-3-transiscope
+        ### cf : https://grappe.io/data/api/5c961ef44a490f002e4598f6-agenda-comme-un-nantes-events-all
+        { "field"         : "sonum_carto_data_API_calendar",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "calendar",
+          "dataset_uri"   : "mediation",
+          "content"       : u"apiviz default API endpoint for list results",
+          # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c89636d328ed70609be03ab",
+          # "root_url"      : "https://grappe.io/data/api/5c961ef44a490f002e4598f6-agenda-comme-un-nantes-events-all",
+          "root_url"      : "https://grappe.io/data/api/5de28a759865ec009a839b58-agenda-comme-un-pour-julien",
+          "args_options"  : [
+            # {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
+            # {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,   "type": "int" },
+            # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 100, "type": "int" },
+            # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 0 , "type": "int" },
+            # {  "app_arg" : "descending","arg" : "descending",     "optional" : True, "in" : ["url"],           "default" : False , "type": "bool" },
+
+          ],
+          "resp_fields" : {
+            # "projects" : { "resp_format" : "dict", "path" : "data/data_raw/f_data" },
+            # "projects" : { "resp_format" : "list", "path" : "" },
+            "projects" : { "resp_format" : "list", "path" : "objects" },
+            "total" :    { "resp_format" : "int",  "path" : "stats/total" },
+            # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : a view list",
+          "apiviz_front_uuid" : uuid_models["uuid_demo_apiviz"],
+          "is_default"    : True
+        },
+
         ### DATA LIST
         { "field"         : "sonum_carto_data_API_list",
           "is_visible"    : True,
