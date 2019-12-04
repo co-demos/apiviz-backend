@@ -708,7 +708,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "id",
+          { "field" : "sd_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
