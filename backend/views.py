@@ -10,8 +10,8 @@ import sys
 ### import all from app.__init__
 from . 	import *
 from flask 	import 	jsonify, flash, render_template, \
-                  url_for, make_response, request, redirect, \
-                  send_file
+                    url_for, make_response, request, redirect, \
+                    send_file
 
 from .config_app.config_env import formatEnvVar
 from .config_app.default_uuids_auth import uuid_auth_model
@@ -784,6 +784,8 @@ def create_new_config():
   new_admin_name = req_json['model_admin_name']
   new_admin_surname = req_json['model_admin_surname']
 
+  new_endpoint_data = req_json.get('new_endpoint_data', None)
+
   ### target right config collection
   allowedCollections = ["global" , "footer", "navbar", "tabs", "endpoints" , "styles" , "routes", "socials" ]
   
@@ -817,7 +819,7 @@ def create_new_config():
         
         # get corresponding documents without _id
         mongoColl = mongoConfigColls[coll]
-        results = list(mongoColl.find(query, {'_id':0 } ))
+        results = list(mongoColl.find(query, { '_id' : 0 } ))
         
         # replace 'apiviz_front_uuid' field's value by new_uuid
         # set 'is_default' field's value as False
