@@ -473,7 +473,48 @@ default_data_endpoints_config = [
           # { "header_field" : u"Authorization", "header_value" : None,                  "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
         ],
 
+        "has_resp_callbacks" : True,
+        "resp_callbacks" : [
+          {
+            "root_url"      : "http://opencorporatefacts.fr/api/compte_de_resultats",
+            "args_options"  : [
+              {  
+                "app_arg" : "itemId", 
+                "resp_field_id" : "id", 
+                "arg" : "Corporate", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              },
+            ],
+          },
+          {
+            "root_url"      : "http://api.cquest.org/apicompany/",
+            "root_sufix"    : [
+              { 
+                "resp_field_id" : "CompanyNumber", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              }
+            ],
+            # "args_options"  : [
+            #   {  
+            #     "app_arg" : "itemId", 
+            #     "resp_id" : "id", 
+            #     "arg" : "Corporate", 
+            #     "optional" : False, 
+            #     "in" : ["url"], 
+            #     "default" : None,
+            #     "type": "str" 
+            #   },
+            # ],
+          },
 
+
+        ],
 
         "app_version"    : version,
         "method"        : "GET",
