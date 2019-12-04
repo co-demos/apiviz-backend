@@ -823,7 +823,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/project", "/cis/detail", "/recherche/detail"],
+        "urls"              : ["/recherche/detail"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -839,7 +839,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "NOM_TL", 
+          { "field" : "Name", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -847,30 +847,24 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          # { "field" : "IndustryCode",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
+          #   "position" : "block_address",
+            
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "GEOCOD",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_address",
+
+
+          # { "field" : "code postal structure",
+          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_cp",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "code postal structure",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_cp",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           # { "field" : "résumé du projet",
           #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
           #   "is_visible" : True,
@@ -879,42 +873,32 @@ default_routes_config = [
           #   "custom_title" : "Résumé du projet",
           #   "locale" : "fr"
           # },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
-          #   "position" : "block_tags",
+          #   "position" : "block_src",
             
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "WEB",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_wesite",
+          # { "field" : "WEB",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_wesite",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field"       : "TYPO",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_rb1_tags",
-            "filter_correspondance" : False,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          # { "field"       : "TYPO",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "block_rb1_tags",
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
 
         ],
 
