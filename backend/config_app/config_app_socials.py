@@ -1,8 +1,24 @@
 # -*- encoding: utf-8 -*-
 
-from . import version, uuid_models
+from . import version, uuid_models, config_folders
 
-default_socials_config = [
+file_name = "config_app_socials"
+class_name = "default_socials_config"
+
+default_socials_config = []
+
+for folder in config_folders : 
+  folder_module = ".{}.{}".format(folder, file_name)
+  print ("... -> folder_module : ", folder_module)
+  exec( 'from {} import {} as temp_config_list'.format(folder_module, class_name) )
+  # print ("... -> temp_config_list : ", temp_config_list)
+  default_socials_config = default_socials_config + temp_config_list
+  print
+
+print ("... -> default_socials_config : ", default_socials_config)
+
+
+default_socials_config_ = [
 
   ### - - - - - - - - - - - - - - - ###
   ### CONFIG SONUM 

@@ -1,8 +1,27 @@
 # -*- encoding: utf-8 -*-
 
-from . import version, uuid_models
+import importlib
+from . import version, uuid_models, config_folders
 
-default_global_config = [
+file_name = "config_app_global"
+class_name = "default_global_config"
+
+default_global_config = []
+
+for folder in config_folders : 
+  folder_module = ".{}.{}".format(folder, file_name)
+  print ("... -> folder_module : ", folder_module)
+  exec( 'from {} import {} as temp_config_list'.format(folder_module, class_name) )
+  # print ("... -> temp_config_list : ", temp_config_list)
+  default_global_config = default_global_config + temp_config_list
+  print
+
+print ("... -> default_global_config : ", default_global_config)
+
+
+
+
+default_global_config_ = [
 
   ### - - - - - - - - - - - - - - - ###
   ### CONFIG SONUM 

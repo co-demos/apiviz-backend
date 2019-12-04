@@ -1,64 +1,10 @@
 # -*- encoding: utf-8 -*-
 
-from . import version, uuid_models, config_folders
+from . import version, uuid_models
 
-file_name = "config_app_tabs"
-class_name = "default_app_tabs"
-
-default_app_tabs = []
-
-for folder in config_folders : 
-  folder_module = ".{}.{}".format(folder, file_name)
-  print ("... -> folder_module : ", folder_module)
-  exec( 'from {} import {} as temp_config_list'.format(folder_module, class_name) )
-  # print ("... -> temp_config_list : ", temp_config_list)
-  default_app_tabs = default_app_tabs + temp_config_list
-  print
-
-print ("... -> default_app_tabs : ", default_app_tabs)
-
-default_app_tabs_ = [
+default_app_tabs = [
 
   ### MAIN TABS
-
-    ### - - - - - - - - - - - - - - - ###
-    ### CONFIG SONUM
-      { "field"       : "app_tabs_default",
-        "tabs_uri"     : "sonum-tabs",
-        "content"     : u"apiviz default tabs",
-        "app_version" : version,
-        "help"        : u"The tabs of your ApiViz instance",
-        "ui_options"  : {
-          "background_color" : { "value" : "white" },
-          "top_margin"       : { "value" : 2 },
-          "bottom_margin"    : { "value" : 2 },
-          "class"            : { "value" : "" },
-          "position"         : { "value" : "is-centered"},
-          "size"             : { "value" : "is-large"},
-        }, 
-        "tabs_options" : [ 
-
-          { "is_visible" : True, 
-            "tab_code"   : "tab-1",
-            "link_to"    : "/sonum-carto/carte",
-            "has_icon"   : False,
-            "icon_class" : "", 
-            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte" }],
-            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir la carte" }],
-          },
-          { "is_visible" : True, 
-            "tab_code"   : "tab-2",
-            "link_to"    : "/sonum-carto/projet",
-            "has_icon"   : False,
-            "icon_class" : "", 
-            "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "projet" }],
-            "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "le projet" }],
-          },
-
-        ],
-        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
-        "is_default"  : True
-      },
 
     ### - - - - - - - - - - - - - - - ###
     ### CONFIG APCIS
