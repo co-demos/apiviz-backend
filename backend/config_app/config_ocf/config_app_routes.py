@@ -708,7 +708,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "sd_id",
+          { "field" : "id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
@@ -716,15 +716,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "NOM_TL",
+          # { "field" : "Name",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_city",
+          #   # "trim" : 20,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          { "field" : "Name",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -732,7 +732,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          { "field" : "CompanyNumber",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "position" : "block_src",
@@ -740,16 +740,16 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPO_CODE",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_tags",
-            "filter_correspondance" : False,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
-          },
+          # { "field"       : "TYPO_CODE",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "block_tags",
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
 
         ],
 
