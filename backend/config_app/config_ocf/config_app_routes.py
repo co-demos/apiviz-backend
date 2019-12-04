@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home-en.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-ocf.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-ocf-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
@@ -76,7 +76,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - map
-      { "field"             : "tl_carte",
+      { "field"             : "ocf_carte",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche d'Apiviz",
@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/recherche", "/recherche/carte"],
+        "urls"              : [ "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -515,7 +515,7 @@ default_routes_config = [
       },
 
       ### PAGE - table
-      { "field"             : "tl_table",
+      { "field"             : "ocf_table",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -539,7 +539,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/table"],
+        "urls"              : [ "/recherche", "/recherche/table"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -564,7 +564,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "sd_id",
+          { "field" : "id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "is_id_field" : True,
@@ -573,45 +573,45 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL",
+          { "field" : "Name",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
             "is_table_head" : True,
             "position" : "col_1",
-            "is_sortable" : True,
+            "is_sortable" : False,
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
+          { "field" : "CompanyNumber",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
-            "is_sortable" : True,
+            "is_sortable" : False,
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPO",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "col_3",
-            "is_sortable" : True,
-            "filter_correspondance" : False,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
-          },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "col_4",
-            "is_sortable" : False,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field"       : "TYPO",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_3",
+          #   "is_sortable" : True,
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "col_4",
+          #   "is_sortable" : False,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
 
         ],
 
@@ -663,7 +663,7 @@ default_routes_config = [
       },
 
       ### PAGE - list
-      { "field"             : "tl_liste",
+      { "field"             : "ocf_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -801,7 +801,7 @@ default_routes_config = [
       },
 
       ### PAGE - detail
-      { "field"             : "tl_detail",
+      { "field"             : "ocf_detail",
         "is_global_app_homepage" : False,
         "route_title"        : u"Rechercher",
         "route_description"  : u"Page de recherche d'Apiviz",
@@ -997,7 +997,7 @@ default_routes_config = [
       },
 
       ## PAGE - stats
-      { "field"             : "tl_stats",
+      { "field"             : "ocf_stats",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",
@@ -1356,7 +1356,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "tl_project",
+      { "field"             : "ocf_project",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1380,8 +1380,8 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
         ],
@@ -1392,7 +1392,7 @@ default_routes_config = [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
 
           # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
-          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/apiviz-website-demo/scripts/le-projet.js"},
         ],
 
         # "has_carousel"      : True,
@@ -1413,7 +1413,7 @@ default_routes_config = [
       },
 
       ### PAGE : PROJECT/TOOLS (CIS)
-      { "field"             : "tl_tools",
+      { "field"             : "ocf_tools",
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
         "route_description" : u"apiviz default tools page",
