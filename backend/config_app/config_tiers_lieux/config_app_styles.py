@@ -13,7 +13,7 @@ default_app_styles_config = [
         "content"     : {
 
           ### DEFAULTS
-          "navbar-border-color"        : "#592d7b",
+          "navbar-border-color"       : '#3D3A39' , #'#004494', # '#592d7b',
           "default_background_app"    : "#fafafa",
           "default_background_navbar" : "#ffffff",
 
@@ -21,8 +21,8 @@ default_app_styles_config = [
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
-          'link-hover' : '#592d7b',
-          'primary'    : '#592d7b',
+          'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
+          'primary'    : '#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#40529d',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',

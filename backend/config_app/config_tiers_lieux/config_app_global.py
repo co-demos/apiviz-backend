@@ -148,7 +148,9 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        "url"         : "https://raw.githubusercontent.com/co-demos/cis-data/master/logos/CIS/CIS_logo.png",
+        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_04.png",
+        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
@@ -158,7 +160,8 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"         : "https://raw.githubusercontent.com/co-demos/cis-data/master/logos/CIS/CIS_logo.png",
+        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/favicon/favicon.ico",
+        "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/logos/logo_TLF_carré_mini_01.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
@@ -171,9 +174,14 @@ default_global_config = [
         "help"        : u"Choose a title for your ApiViz instance",
 
         "can_be_used_as_model" : True,
-        "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
+        # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
+        "image_preview" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"     : u"CIS - ApiBêta",
+        "content"      : u"Association France Tiers-Lieux",
+        "content_text" : [{"locale" : "en", "text" : "Co-working mission"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
+        "is_in_navbar" : False,
+        # "title_color" : "primary",
+
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
         "is_default"  : True
       },
@@ -221,6 +229,16 @@ default_global_config = [
         "in_footer"   : True,
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
         "is_default"  : True,
+      },
+
+    ### FAVORITES
+      { "field"       : "app_favorites",
+        "app_version" : version,
+        "help"        : u"Choose is users can use favorites (cookies)",
+        "content"     : u"",
+        "activated"   : False,
+        "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],
+        "is_default"  : True
       },
 
     ### SEO / INDEXING

@@ -233,6 +233,127 @@ default_routes_config = [
             "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "See the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
           },
 
+          "map_options"   : {
+            
+            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            "subdomains"       : 'abcd',
+            "center"           : [46.2276, 2.2137],
+            "currentCenter"    : [46.2276, 2.2137],
+            "zoom"             : 5,
+            "maxZoom"          : 18,
+            "minZoom"          : 2,
+            "useMarkerCluster" : True,
+            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
+
+            "mapbox_layers" : {
+
+              ### all points source and layer
+              "all_points_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "all-points",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+
+                "is_live_data"        : False,
+                "refresh_delay"       : 3000,
+
+                "is_clickable"        : True,
+
+                "radius_min"          : 1,
+                "radius_max"          : 10,
+                "max_zoom"            : 14,
+                "min_zoom"            : 4,
+                "circle_color"        : "#a174ac",
+                "circle_stroke_color" : "#fff",
+                "circle_opacity"      : 0.8,
+              },
+
+              ### clusters source and layer
+              "cluster_circles_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-circles",
+                "is_default_visible"  : True,
+
+                "is_source_distant"   : False, ### clusters all points sources by default
+                "is_clickable"        : True,
+
+                "circle_color"     : "#a174ac", 
+                "circle_color_100" : "#90689a", 
+                "circle_color_250" : "#805c89", 
+                "circle_color_500" : "#705178", 
+                "circle_color_750" : "#503a56", 
+
+                "circle_radius"     : 20, 
+                "circle_radius_100" : 20, 
+                "circle_radius_250" : 30, 
+                "circle_radius_500" : 40, 
+                "circle_radius_750" : 50, 
+
+                "circle_stroke_color" : "#fff",
+                "circle_stroke_width" : 1,
+              },
+
+              "cluster_count_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-counts",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
+                "text_size"  : 12,
+                "text_color" : "#ffffff"
+              },
+
+              "cluster_unclustered_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "unclustered-point",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
+                "circle_color"        : "#fff", 
+                "circle_stroke_color"  : "#a174ac",
+                "circle_radius"       : 5, 
+                "circle_stroke_width" : 5, 
+              },
+
+              ### heatmap source and layer
+              "heatmap_layer" : {
+                "is_activated"        : True,
+                "is_default_visible"  : False,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "heatmap-layer",
+                "source"              : "all-points",
+                "prop_weight"         : "weight",
+                "max_zoom"            : 18,
+                "radius_min"          : 5,
+                "radius_max"          : 15,
+              },
+
+            },
+          
+
+            "layers_visibility" :{
+              "is_activated" : True,
+              "is_drawer_open" : True,
+              "layers_switches" : [ 
+                { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
+                { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+                # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+                # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
+                { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              ],
+            },
+
+          },
+          
           "links_options"  : {
 
             "block_contents_links" : {
@@ -894,7 +1015,7 @@ default_routes_config = [
           "is_global_app_homepage" : False,
           "route_title"        : u"Rechercher",
           "route_description"  : u"Page de recherche carto XP d'Apiviz",
-          "route_activated"    : True,
+          "route_activated"    : False,
           "banner" : {
             "activated"  : False,
             "banner_uri" : "banner-sonum-xp"
@@ -985,6 +1106,127 @@ default_routes_config = [
             "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
             "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le prochain document" }] },
             "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+          },
+
+          "map_options"   : {
+            
+            ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+            "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+            "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+            "subdomains"       : 'abcd',
+            "center"           : [46.2276, 2.2137],
+            "currentCenter"    : [46.2276, 2.2137],
+            "zoom"             : 5,
+            "maxZoom"          : 18,
+            "minZoom"          : 2,
+            "useMarkerCluster" : True,
+            "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+            "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
+
+            "mapbox_layers" : {
+
+              ### all points source and layer
+              "all_points_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "all-points",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+
+                "is_live_data"        : False,
+                "refresh_delay"       : 3000,
+
+                "is_clickable"        : True,
+
+                "radius_min"          : 1,
+                "radius_max"          : 10,
+                "max_zoom"            : 14,
+                "min_zoom"            : 4,
+                "circle_color"        : "#a174ac",
+                "circle_stroke_color" : "#fff",
+                "circle_opacity"      : 0.8,
+              },
+
+              ### clusters source and layer
+              "cluster_circles_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-circles",
+                "is_default_visible"  : True,
+
+                "is_source_distant"   : False, ### clusters all points sources by default
+                "is_clickable"        : True,
+
+                "circle_color"     : "#a174ac", 
+                "circle_color_100" : "#90689a", 
+                "circle_color_250" : "#805c89", 
+                "circle_color_500" : "#705178", 
+                "circle_color_750" : "#503a56", 
+
+                "circle_radius"     : 20, 
+                "circle_radius_100" : 20, 
+                "circle_radius_250" : 30, 
+                "circle_radius_500" : 40, 
+                "circle_radius_750" : 50, 
+
+                "circle_stroke_color" : "#fff",
+                "circle_stroke_width" : 1,
+              },
+
+              "cluster_count_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "cluster-counts",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
+                "text_size"  : 12,
+                "text_color" : "#ffffff"
+              },
+
+              "cluster_unclustered_layer" : {
+                "is_activated"        : True,
+                "source_id"           : "clusterSource",
+                "layer_id"            : "unclustered-point",
+                "is_default_visible"  : True,
+                "is_source_distant"   : False,
+                "is_clickable"        : True,
+
+                "circle_color"        : "#fff", 
+                "circle_stroke_color"  : "#a174ac",
+                "circle_radius"       : 5, 
+                "circle_stroke_width" : 5, 
+              },
+
+              ### heatmap source and layer
+              "heatmap_layer" : {
+                "is_activated"        : True,
+                "is_default_visible"  : False,
+                "source_id"           : "allPointsSource",
+                "layer_id"            : "heatmap-layer",
+                "source"              : "all-points",
+                "prop_weight"         : "weight",
+                "max_zoom"            : 18,
+                "radius_min"          : 5,
+                "radius_max"          : 15,
+              },
+
+            },
+          
+
+            "layers_visibility" :{
+              "is_activated" : True,
+              "is_drawer_open" : True,
+              "layers_switches" : [ 
+                { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
+                { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+                # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+                # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
+                { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              ],
+            },
+
           },
 
           "links_options"  : {

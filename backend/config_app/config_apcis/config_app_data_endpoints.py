@@ -147,7 +147,7 @@ default_data_endpoints_config = [
         "root_url"      : "/usr/infos/list",
         "args_options"  : [
           { "app_arg" : "authToken",    "arg" : "token",    "optional" : False,  "in" : ["url","header"],  "default" : "", "type" : "str" },
-          { "app_arg" : "pageUser",     "arg" : "page_n",   "optional" : True,   "in" : ["url"],           "default" : 1,  "type": "int" },
+          { "app_arg" : "pageUser",     "arg" : "page",     "optional" : True,   "in" : ["url"],           "default" : 1,  "type": "int" },
           { "app_arg" : "perPageUser",  "arg" : "per_page", "optional" : True,   "in" : ["url"],           "default" : 50, "type": "int" },
         ],
         "resp_fields" : {
@@ -251,6 +251,7 @@ default_data_endpoints_config = [
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
         "has_shuffle"  : False,
         "has_pagination" : False,
+        "has_export" : False,
         "pagination_options" : {
           "per_page" : [ 5, 10, 25, 100 ],
         },
@@ -449,7 +450,7 @@ default_data_endpoints_config = [
         "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5d5fca92328ed71684ce1785", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
-          {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+          {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
           {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
@@ -571,22 +572,22 @@ default_data_endpoints_config = [
         "endpoint_type" : "map",
         "dataset_uri"   : "recherche",
 
-        "map_options"   : {
+        # "map_options"   : {
           
-          ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-          "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-          "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-          "subdomains"       : 'abcd',
-          "center"           : [46.2276, 2.2137],
-          "currentCenter"    : [46.2276, 2.2137],
-          "zoom"             : 5,
-          "maxZoom"          : 18,
-          "minZoom"          : 2,
-          "useMarkerCluster" : True,
-          "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-          "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
+        #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
+        #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
+        #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+        #   "subdomains"       : 'abcd',
+        #   "center"           : [46.2276, 2.2137],
+        #   "currentCenter"    : [46.2276, 2.2137],
+        #   "zoom"             : 5,
+        #   "maxZoom"          : 18,
+        #   "minZoom"          : 2,
+        #   "useMarkerCluster" : True,
+        #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
+        #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
         
-        },
+        # },
 
         "content"       : u"apiviz default API endpoint for map results",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5c7f0438328ed72e431f338e",
@@ -612,6 +613,34 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : map results",
+        "apiviz_front_uuid" : uuid_models["uuid_apcis"],
+        "is_default"    : True
+      },
+
+      ### DATA EXPORT
+      { "field"         : "cis_data_API_export",
+        "is_visible"    : True,
+        "is_disabled"   : False,
+        "data_type"     : "data",
+        "endpoint_type" : "export",
+        "dataset_uri"   : "recherche",
+        "content"       : u"apiviz default API endpoint for export results",
+        "root_url"      : "https://solidata-api.co-demos.com/api/dso/exports/as_csv/5d5fca92328ed71684ce1785", ## V2
+        "args_options"  : [
+          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+          # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+          # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+          # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+        ],
+        "resp_fields" : {
+          # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+          # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+        },
+        "app_version"    : version,
+        "method"        : "GET",
+        "help"          : u"define the endpoint to get data for : export dataset as csv",
         "apiviz_front_uuid" : uuid_models["uuid_apcis"],
         "is_default"    : True
       },

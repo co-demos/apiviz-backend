@@ -82,14 +82,14 @@ def setupDefaultConfig(collection, defaultList) :
 
 ### - - - - - - - - - - - - - - - - - - - - - - - - - - - - ###
 
-from backend.config_app.config_app_global         import default_global_config
-from backend.config_app.config_app_navbar         import default_app_navbar
-from backend.config_app.config_app_tabs           import default_app_tabs
-from backend.config_app.config_app_data_endpoints import default_data_endpoints_config
-from backend.config_app.config_app_styles         import default_app_styles_config
-from backend.config_app.config_app_routes         import default_routes_config
-from backend.config_app.config_app_footer         import default_app_footer
-from backend.config_app.config_app_socials        import default_socials_config
+from backend.config_app.boot import default_global_config, \
+                                    default_app_navbar, \
+                                    default_app_tabs,\
+                                    default_data_endpoints_config,\
+                                    default_app_styles_config,\
+                                    default_routes_config,\
+                                    default_app_footer,\
+                                    default_socials_config
 
 from backend.config_app.default_uuids_auth        import default_uuids_auth
 log_app.debug(">>> MongoDB / default_uuids_auth : \n%s", pformat(default_uuids_auth) )

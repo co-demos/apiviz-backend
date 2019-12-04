@@ -175,8 +175,11 @@ default_global_config = [
       { "field"       : "app_title",
         "app_version" : version,
         "help"        : u"Choose a title for your ApiViz instance",
+
         "content"     : u"SoNum",
-        
+        "content_text" : [{"locale" : "en", "text" : "SoNum"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "SoNum"}],
+        "is_in_navbar" : False,
+
         "can_be_used_as_model" : True,
         "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/map-view-sonum-03.png",
 
@@ -233,7 +236,17 @@ default_global_config = [
         "apiviz_front_uuid" : uuid_models["uuid_sonum"],
         "is_default"  : True,
       },
-    
+
+    ### FAVORITES
+      { "field"       : "app_favorites",
+        "app_version" : version,
+        "help"        : u"Choose is users can use favorites (cookies)",
+        "content"     : u"",
+        "activated"   : False,
+        "apiviz_front_uuid" : uuid_models["uuid_sonum"],
+        "is_default"  : True
+      },
+
     ### SEO / INDEXING
       { "field"       : "app_indexing",
         "app_version" : version,

@@ -49,24 +49,40 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : False,
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Social Innovations Crossroads"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Carrefour des Innovations Sociales"}],
+            "title_block" : [{"locale" : "en", "text" : "Mission co-working"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
             "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "/le-collectif",
+                "link_to"    : "/le-projet",
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Who are we"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui sommes-nous ?" }],
+                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La mission co-working du CGET" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
+                "link_to"    : "/le-projet/outils",
+                "is_external_link" : False,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "The tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils de valorisation des données" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://www.fondation-travailler-autrement.org/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source" }],
+                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La Fondation Travailler Autrement" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://www.cget.gouv.fr/actualites/l-etat-s-engage-pour-soutenir-et-accelerer-la-dynamique-des-tiers-lieux-dans-les-territoires",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus sur la mission co-working" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
@@ -74,7 +90,7 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }],
+                "link_text"  : [{"locale" : "en", "text" : "Login back-office"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login back-office" }],
                 "tooltip"    : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }]
               },
             ]
@@ -99,17 +115,33 @@ default_app_footer = [
             "has_socials" : True,
             
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "Stay in touch"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nous rejoindre"}],
+            "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participer"}],
             "title_visible" : True,
             "links"       : [
               { "is_visible" : True,
-                "link_to"    : "/nous-rejoindre",
+                "link_to"    : "https://github.com/cget-carto/mission_coworking",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Social innovations crossroad's newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter du Carrefour des Innovations Sociales" }],
-                "tooltip"    : [{"locale" : "en", "text" : "Newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter" }]
+                "link_text"  : [{"locale" : "en", "text" : "Improve the data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Améliorer les données sur les tiers-lieux" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
+              { "is_visible" : True,
+                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Apps' source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source des applications" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              # { "is_visible" : True,
+              #   "link_to"    : "/nous-rejoindre",
+              #   "is_external_link" : True,
+              #   "link_type"  : "text",
+              #   "icon_class" : "",
+              #   "link_text"  : [{"locale" : "en", "text" : "Social innovations crossroad's newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter du Carrefour des Innovations Sociales" }],
+              #   "tooltip"    : [{"locale" : "en", "text" : "Newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter" }]
+              # },
             ]
           },
 
