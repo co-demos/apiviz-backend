@@ -23,9 +23,9 @@ uuid_models = {
   "uuid_orgues" :         "3f3fd562-5202-427f-8ba3-f58d5660aabf",
 
   "uuid_ocf" :            "305ab50d-c976-44d7-a8f2-a7594155c292",
+  "uuid_transiscope"   :  "1c6fbb31-9953-4bc0-83a7-d71c9ffbd2c3",
   
   "uuid_open_archives" :  "07c6f4e3-c98a-4f1d-b242-f9fa95a19c1d",
-  "uuid_transiscope"   :  "1c6fbb31-9953-4bc0-83a7-d71c9ffbd2c3",
 
 }
 
@@ -43,8 +43,8 @@ config_folders = [
   "config_orgues",
 
   "config_ocf",
+  # "config_transiscope",
 
   # "config_open_archives",
-  # "config_transiscope",
 
 ]
