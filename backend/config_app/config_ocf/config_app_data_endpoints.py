@@ -366,11 +366,13 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9",
-        "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        # "root_url"      : "http://api.cquest.org/company/433842044",
+        # "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        "root_url"      : "https://opencorporatefacts.fr/api/corporates",
         "args_options"  : [
           # {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          # {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 30, "type": "int", "authorized" : [ 30 ] },
+          {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 30, "type": "int", "authorized" : [ 30 ] },
           # {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "Name", "type": "str" },
           # {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",            "arg" : "Name",             "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
@@ -387,14 +389,46 @@ default_data_endpoints_config = [
 
         },
 
+        # overwrites header from app_data_API_root_auth
         "request_header_options" : [
-          { "header_field" : u"Accept", "header_value" : "application/ld+json",   "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
-          # { "header_field" : u"Host",   "header_value" : "opencorporatefacts.fr", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
-          # { "header_field" : u"Content-type",  "header_value" : "application/ld+json", "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
-          # { "header_field" : u"Authorization", "header_value" : None,                  "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
+          { "header_field" : u"Accept",   "header_value" : "application/ld+json",       "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          # { "header_field" : u"Host",   "header_value" : "opencorporatefacts.fr",     "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          # { "header_field" : u"Content-type",  "header_value" : "application/ld+json",    "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          # { "header_field" : u"Access-Control-Allow-Credentials",  "header_value" : True,   "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          # { "header_field" : u"Access-Control-Allow-Headers",      "header_value" : "*",    "is_var" : False, "app_var_name" : None,    "header_value_prefix" : None },
+          # { "header_field" : u"Authorization", "header_value" : None,                 "is_var" : True,  "app_var_name" : "token", "header_value_prefix" : None },
         ],
 
-
+        "has_resp_callbacks" : True,
+        "resp_callbacks" : [
+          {
+            # "root_url"      : "http://opencorporatefacts.fr/api/compte_de_resultats",
+            "root_url"      : "https://opencorporatefacts.fr/api/compte_de_resultats",
+            "args_options"  : [
+              {  
+                "app_arg" : "itemId", 
+                "resp_field_id" : "id", 
+                "arg" : "Corporate", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              },
+            ],
+          },
+          {
+            "root_url"      : "http://api.cquest.org/apicompany/",
+            "root_sufix"    : [
+              { 
+                "resp_field_id" : "CompanyNumber", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              }
+            ]
+          },
+        ],
 
         "app_version"    : version,
         "method"        : "GET",
@@ -413,7 +447,8 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
-        "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        # "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        "root_url"      : "https://opencorporatefacts.fr/api/corporates",
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "id",        "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -427,6 +462,38 @@ default_data_endpoints_config = [
           # "total" :    { "resp_format" : "int",  "path" : "" },
 
         },
+
+        "has_resp_callbacks" : True,
+        "resp_callbacks" : [
+          {
+            # "root_url"      : "http://opencorporatefacts.fr/api/compte_de_resultats",
+            "root_url"      : "https://opencorporatefacts.fr/api/compte_de_resultats",
+            "args_options"  : [
+              {  
+                "app_arg" : "itemId", 
+                "resp_field_id" : "id", 
+                "arg" : "Corporate", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              },
+            ],
+          },
+          {
+            "root_url"      : "http://api.cquest.org/apicompany/",
+            "root_sufix"    : [
+              { 
+                "resp_field_id" : "CompanyNumber", 
+                "optional" : False, 
+                "in" : ["url"], 
+                "default" : None,
+                "type": "str" 
+              }
+            ]
+          },
+        ],
+
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a detailled data",
@@ -448,12 +515,13 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9",
-        "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        # "root_url"      : "http://opencorporatefacts.fr/api/corporates",
+        "root_url"      : "https://opencorporatefacts.fr/api/corporates",
         "args_options"  : [
           # {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 30, "type": "int", "authorized" : [ 30 ] },
-          # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 30, "type": "int", "authorized" : [ 30 ] },
+          {  "app_arg" : "query",      "arg" : "Name",            "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
         ],
@@ -476,7 +544,8 @@ default_data_endpoints_config = [
         "has_resp_callbacks" : True,
         "resp_callbacks" : [
           {
-            "root_url"      : "http://opencorporatefacts.fr/api/compte_de_resultats",
+            # "root_url"      : "http://opencorporatefacts.fr/api/compte_de_resultats",
+            "root_url"      : "https://opencorporatefacts.fr/api/compte_de_resultats",
             "args_options"  : [
               {  
                 "app_arg" : "itemId", 

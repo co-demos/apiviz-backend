@@ -518,9 +518,9 @@ default_routes_config = [
       { "field"             : "ocf_table",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
-        "route_description" : u"Page de recherche du CIS",
+        "route_description" : u"Page de recherche de OCF",
         "route_activated"   : True,
-        "has_shuffle"       : True,
+        "has_shuffle"       : False,
         "shuffle_minnmax"   : { "min": 0, "max":  2000 },
         "banner" : {
           "activated"  : False,
@@ -666,9 +666,9 @@ default_routes_config = [
       { "field"             : "ocf_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
-        "route_description" : u"Page de recherche du CIS",
+        "route_description" : u"Page de recherche OCF list",
         "route_activated"   : False,
-        "has_shuffle"       : True,
+        "has_shuffle"       : False,
         "shuffle_minnmax"   : { "min": 0, "max":  4000 },
         "banner" : {
           "activated"  : False,
