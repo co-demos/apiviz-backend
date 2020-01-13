@@ -146,11 +146,13 @@ The environment variables are stored in a couple of files at the root of the pro
 
 - `example.env.global`
 - `example.env.mongodb`
+- `example.env.superadmins`
 
 If you want or need to use Apiviz in production you will have to duplicate those files at the same level with those new names : 
 
 - `.env.global`
 - `.env.mongodb`
+- `.env.superadmins`
 
 ... then you will be able to change the environment variable you want and begin to use all of the available arguments like :
 
