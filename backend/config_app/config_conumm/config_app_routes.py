@@ -39,13 +39,12 @@ default_routes_config = [
         "link_in_logo"      : True,
         "urls"              : ["/"],
 
-        # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
-        # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/home-en.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
+
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" }
         ],
         
 
@@ -1380,10 +1379,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/master/pages-html/le-projet.html" }, 
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
         ],
         
 
@@ -1392,7 +1391,7 @@ default_routes_config = [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
 
           # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
-          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/PING-carto/scripts/le-projet.js"},
         ],
 
         # "has_carousel"      : True,
@@ -1404,7 +1403,121 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : True,
+        "has_tabs"          : False,
+        "tabs_uri"          : "tabs-tl-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_conumm"],
+        "is_default"        : True
+      },
+
+      ### PAGE - WHO ARE WE
+      { "field"             : "tl_who",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/qui-sommes-nous"],
+        "dataset_uri"       : "project-cis",
+        
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+        ],
+        
+
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/PING-carto/scripts/le-projet.js"},
+        ],
+
+        # "has_carousel"      : True,
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main project route in french",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : False,
+        "tabs_uri"          : "tabs-tl-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_conumm"],
+        "is_default"        : True
+      },
+
+      ### PAGE - PARTNNERS
+      { "field"             : "tl_partners",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partenaires" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/partenaires"],
+        # "dataset_uri"       : "project-cis",
+        
+        "template_urls"     : [
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
+        ],
+        
+
+        "has_ext_script"    : False,
+        "ext_script_urls"   : [
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/PING-carto/scripts/le-projet.js"},
+        ],
+
+        # "has_carousel"      : True,
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main project route in french",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
@@ -1438,8 +1551,8 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils-en.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils-en.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/les-outils.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/les-outils-en.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -1453,7 +1566,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
         "apiviz_front_uuid" : uuid_models["uuid_conumm"],
         "is_default"        : True
