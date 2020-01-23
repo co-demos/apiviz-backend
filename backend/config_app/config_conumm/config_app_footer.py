@@ -44,19 +44,19 @@ default_app_footer = [
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "https://www.fondation-travailler-autrement.org/",
+                "link_to"    : "https://societenumerique.gouv.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission Société Numérique "}],
+                "link_text"  : [{"locale" : "en", "text" : "Mission digital society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission Société Numérique "}],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://www.fondation-travailler-autrement.org/",
+                "link_to"    : "https://www.banquedesterritoires.fr",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Banque des Territoires" }],
+                "link_text"  : [{"locale" : "en", "text" : "Banque des Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Banque des Territoires" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
 

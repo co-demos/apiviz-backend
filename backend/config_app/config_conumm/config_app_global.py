@@ -180,7 +180,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"CONUMM",
-        "content_text" : [{"locale" : "en", "text" : "CONuMM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CONUMM carto"}],
+        "content_text" : [{"locale" : "en", "text" : "Mapping Hub CONUMM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie Hub CONUMM"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
