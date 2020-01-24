@@ -40,11 +40,10 @@ default_routes_config = [
         "urls"              : ["/"],
 
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
-
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/home.html" }
         ],
         
 
@@ -121,15 +120,16 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "GEOCOD", 
+
+          { "field" : "result_label", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_address",
+            "position" : "block_abstract",
             # "trim" : 20,
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMREG",
+          { "field" : "dep_nom",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -137,7 +137,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL", 
+          { "field" : "Nom de la structure", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -154,14 +154,14 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src",
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           # { "field"       : "coding APCIS N1",
           #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
@@ -199,9 +199,10 @@ default_routes_config = [
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
-          "center"           : [46.2276, 2.2137],
-          "currentCenter"    : [46.2276, 2.2137],
-          "zoom"             : 5,
+          ###  getCenter => ( lng : -0.8840854133939047, lat : 47.442479912260694 ) 
+          "center"           : [47.4424799, -0.8840854],
+          "currentCenter"    : [47.4424799, -0.8840854],
+          "zoom"             : 7.3,
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
@@ -286,7 +287,7 @@ default_routes_config = [
 
             ### choropleth source and layer
             "choropleth_layer" : {
-              "is_activated"        : True,
+              "is_activated"        : False,
               # "source_id"           : "choroSource",
               # "layer_id"            : "choropleth",
               "is_live_data"        : False,
@@ -305,7 +306,7 @@ default_routes_config = [
               "sources" : [
 
                 { ### FR - departements
-                  "is_activated" : True,
+                  "is_activated" : False,
                   "source_id" : "chorosource-departements",
                   "layer_id"  : "chorolayer-departements",
                   "is_default_visible" : True,
@@ -367,7 +368,7 @@ default_routes_config = [
                 },
 
                 { ### FR - communes
-                  "is_activated" : True,
+                  "is_activated" : False,
                   "source_id" : "chorosource-communes",
                   "layer_id"  : "chorolayer-communes",
                   "is_default_visible" : True,
@@ -464,11 +465,11 @@ default_routes_config = [
         
           "layers_visibility" :{
             "is_activated" : True,
-            "is_drawer_open" : False,
+            "is_drawer_open" : True,
             "layers_switches" : [ 
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
-              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
-              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
@@ -572,7 +573,8 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL",
+
+          { "field" : "Nom de la structure", 
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
@@ -583,7 +585,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
+          { "field" : "result_label",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
@@ -592,18 +594,18 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPO",
+          { "field"       : "result_city",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
             "is_sortable" : True,
             "filter_correspondance" : False,
-            "is_tag_like" : True,
+            "is_tag_like" : False,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
+            "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          { "field" : "Site Web",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
@@ -715,7 +717,8 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOMCOM",
+
+          { "field" : "result_city",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -723,7 +726,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM_TL",
+          { "field" : "Nom de la structure",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -731,14 +734,14 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : False,
-            "position" : "block_src",
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : False,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           { "field"       : "TYPO_CODE",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
@@ -838,7 +841,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "NOM_TL", 
+          { "field" : "Nom de la structure", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -854,7 +857,7 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "GEOCOD",
+          { "field" : "result_label",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -862,7 +865,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "code postal structure",
+          { "field" : "result_postcode",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
@@ -878,14 +881,14 @@ default_routes_config = [
           #   "custom_title" : "Résumé du projet",
           #   "locale" : "fr"
           # },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src",
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           # { "field" : "services",
           #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
           #   "is_visible" : True,
@@ -896,7 +899,7 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "WEB",
+          { "field" : "Site web",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
@@ -904,7 +907,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPO",
+          { "field"       : "services_tags",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
@@ -1379,10 +1382,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/le-projet.html" }, 
         ],
         
 
@@ -1436,10 +1439,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
         ],
         
 
@@ -1493,10 +1496,10 @@ default_routes_config = [
         # "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/partenaires.html" }, 
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/partenaires.html" }, 
         ],
         
 
@@ -1596,10 +1599,10 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/mentions-legales-fr.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/mentions-legales-fr.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/mentions-legales-fr.html" }, 
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/mentions-legales-fr.html" }, 
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/mentions-legales-fr.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/mentions-legales-fr.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_CONUMM/mentions-legales-fr.html" }, 
         ],
         
         "has_ext_script"    : False,

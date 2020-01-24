@@ -275,7 +275,7 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785", 
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e2ad662328ed7246c290601", 
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -285,30 +285,30 @@ default_data_endpoints_config = [
         "filter_options" : [
 
           ### départements
-          {	"name"		: u"departement__",
+          {	"name"		: u"dep_nom__",
             "id"      : "filter_1",
-            "col_name" : "departement",
+            "col_name" : "dep_nom",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Metropolis"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+            "filter_title" : [{"locale" : "en", "text" : "Area"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
             "choices"	: [
 
               
-              {'name' : u'44', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : 'Loire-Atlantique'},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
-              {'name' : u'49', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : 'Maine-et-Loire'},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
-              {'name' : u'53', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : 'Mayenne'},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
-              {'name' : u'72', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : 'Sarthe'},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
-              {'name' : u'85', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : 'Vendée'},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
+              {'name' : u'Loire-Atlantique', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : 'Loire-Atlantique'},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
+              {'name' : u'Maine-et-Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : 'Maine-et-Loire'},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
+              {'name' : u'Mayenne', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : 'Mayenne'},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
+              {'name' : u'Sarthe', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : 'Sarthe'},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
+              {'name' : u'Vendée', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : 'Vendée'},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
   
               {'name' : u'-', 'choice_title' : [{'locale' : 'en', 'text' : 'NA'},{'locale' : 'es', 'text' : 'NA'},{'locale' : 'tr', 'text' : 'NA'},{'locale' : 'de', 'text' : 'NA'}, {'locale' : 'fr', 'text' : 'NA' }]},
             ],
           },
 
           ### Services
-          {	"name"		: u"COMCLASS_CODE__",
+          {	"name"		: u"services_tags__",
             "id"      : "filter_3",
-            "col_name" : "COMCLASS_CODE",
+            "col_name" : "services_tags",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services" }],
+            "filter_title" : [{"locale" : "en", "text" : "Services"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services" }],
             "choices"	: [
               {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
               {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
@@ -319,9 +319,9 @@ default_data_endpoints_config = [
           },
 
           ### Accompagnements
-          {	"name"		: u"TYPO_CODE__",  
+          {	"name"		: u"accompagnement_tags__",  
             "id"      : "filter_4",
-            "col_name" : "TYPO_CODE",
+            "col_name" : "accompagnement_tags",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Typology"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }],
             "choices"	: [
@@ -332,11 +332,11 @@ default_data_endpoints_config = [
           },
 
           ### Formations
-          {	"name"		: u"SOURCE__",
+          {	"name"		: u"formations_tags__",
             "id"      : "filter_1",
-            "col_name" : "SOURCE",
+            "col_name" : "formations_tags",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formations" }],
+            "filter_title" : [{"locale" : "en", "text" : "Formations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formations" }],
             "choices"	: [
               {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
             ],
@@ -359,7 +359,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "table",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e2ad662328ed7246c290601", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -389,7 +389,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e2ad662328ed7246c290601", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -417,7 +417,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "detail",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e2ad662328ed7246c290601", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -442,7 +442,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e2ad662328ed7246c290601", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -529,13 +529,13 @@ default_data_endpoints_config = [
         # },
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e2ad662328ed7246c290601", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP,INSEECOM",  "type": "str" },
+          # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP,INSEECOM",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 
@@ -563,7 +563,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e2ad662328ed7246c290601", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
