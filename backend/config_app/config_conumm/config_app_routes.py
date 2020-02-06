@@ -96,7 +96,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/carte"],
+        "urls"              : [ "/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -688,7 +688,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche", "/recherche/liste"],
+        "urls"              : ["/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -1003,7 +1003,7 @@ default_routes_config = [
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",
-        "route_activated"   : True,
+        "route_activated"   : False,
         "banner" : {
           "activated"  : False,
           "banner_uri" : "banner-apcis-carto"
@@ -1348,7 +1348,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
-        "is_visible"        : True,
+        "is_visible"        : False,
         "apiviz_front_uuid" : uuid_models["uuid_conumm"],
         "is_default"        : True
       },

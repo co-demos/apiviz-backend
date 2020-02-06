@@ -15,9 +15,9 @@ default_app_navbar = [
         "logo_to"     : "/",
         "has_login"   : False,
         "ui_options"  : {
-          "background_isdark" : False,
+          "background_isdark" : True,
           "background_color" : { 
-            "bulma_color" : "white"
+            "bulma_color" : "primary"
           },
 
         },

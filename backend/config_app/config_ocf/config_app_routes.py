@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG OCF
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-ocf.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/home-ocf-en.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/OCF-website/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/OCF-website/master/pages-html/home.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home-en.html" }
         ],
