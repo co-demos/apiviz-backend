@@ -19,7 +19,9 @@ default_app_navbar = [
           "background_color" : { 
             "bulma_color" : "primary"
           },
-
+          "navbar_items_hover_color" : { 
+            "bulma_color" : "link-hover"
+          },
         },
         "links_options" : {
           "extra_buttons" : [ ### for buttons not declared in routes/pages
@@ -43,7 +45,7 @@ default_app_navbar = [
               "link_to"    : "/le-projet",
               "help"       : u"Second menu in navbar",
               "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
+              "link_type"  : "link", ### link | button / show btn border
               "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Projet" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
@@ -54,7 +56,22 @@ default_app_navbar = [
                 # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
-
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "https://francetierslieux.fr/",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : True,
+              "link_type"  : "link", ### link | button / show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : False,
+              "dropdowns"  : [
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+              ]
+            },
           ]
         },
         "apiviz_front_uuid" : uuid_models["uuid_tiers_lieux"],

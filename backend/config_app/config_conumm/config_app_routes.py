@@ -1471,7 +1471,7 @@ default_routes_config = [
         "is_default"        : True
       },
 
-      ### PAGE - PARTNNERS
+      ### PAGE - PARTNERS
       { "field"             : "tl_partners",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",

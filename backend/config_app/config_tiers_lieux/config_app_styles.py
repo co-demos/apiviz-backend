@@ -21,7 +21,7 @@ default_app_styles_config = [
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
-          'link-hover' : '#4623c9', #'#FF9300' , #'#004494', # '#592d7b',
+          'link-hover' : '#2a1578', #'#FF9300' , #'#004494', # '#592d7b',
           'primary'    : '#4623c9', #'#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#ff286b', #'#40529d',
           'success'    : '#80C2BD',
