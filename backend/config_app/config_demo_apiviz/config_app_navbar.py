@@ -97,12 +97,13 @@ default_app_navbar = [
               "has_dropdown" : True,
               "dropdowns"  : [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/galery/summary",               "link_text" : [{"locale" : "en", "text" : "Summary"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sommaire"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://orgues-apiviz.netlify.com/",         "link_text" : [{"locale" : "en", "text" : "Organons"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Inventaire des orgues"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://tiers-lieux-dataviz.netlify.com/",   "link_text" : [{"locale" : "en", "text" : "Third places"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tiers lieux"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://apiviz-preprod-sonum.netlify.com/",  "link_text" : [{"locale" : "en", "text" : "Sonum"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carto Sonum"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://etalab-codes.netlify.com/a-propos",  "link_text" : [{"locale" : "en", "text" : "Etalab codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Codes Etalab"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://ping-carto.netlify.com/",            "link_text" : [{"locale" : "en", "text" : "PiNG carto"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carto Ping"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/digital-lexicon",  "link_text" : [{"locale" : "en", "text" : "Digital lexicon"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lexique du numérique"}] },
               ]
             },
 
