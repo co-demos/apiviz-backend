@@ -68,7 +68,7 @@ default_app_navbar = [
                 # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
-            { "is_visible" : True,
+            { "is_visible" : False,
               "position"   : "exterior_right",
               "link_to"    : "/partenaires",
               "help"       : u"Third menu in navbar",

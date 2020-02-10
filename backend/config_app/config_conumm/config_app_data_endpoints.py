@@ -304,43 +304,43 @@ default_data_endpoints_config = [
           },
 
           ### Services
-          {	"name"		: u"services_tags__",
-            "id"      : "filter_3",
-            "col_name" : "services_tags",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Services"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services" }],
-            "choices"	: [
-              {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
-              {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
-              {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
-              {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
-              {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
-            ],
-          },
+          # {	"name"		: u"services_tags__",
+          #   "id"      : "filter_3",
+          #   "col_name" : "services_tags",
+          #   "dataType" : "text",
+          #   "filter_title" : [{"locale" : "en", "text" : "Services"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Services" }],
+          #   "choices"	: [
+          #     {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
+          #     {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
+          #     {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
+          #     {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
+          #     {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
+          #   ],
+          # },
 
           ### Accompagnements
-          {	"name"		: u"accompagnement_tags__",  
-            "id"      : "filter_4",
-            "col_name" : "accompagnement_tags",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Typology"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }],
-            "choices"	: [
-              {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante coworking'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante coworking' }]},
-              {'name' : u'FABLAB', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante fablab' }]},
-              {'name' : u'info manquante', 'choice_title' : [{'locale' : 'en', 'text' : 'missing info'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'info manquante' }]},
-            ],
-          },
+          # {	"name"		: u"accompagnement_tags__",  
+          #   "id"      : "filter_4",
+          #   "col_name" : "accompagnement_tags",
+          #   "dataType" : "text",
+          #   "filter_title" : [{"locale" : "en", "text" : "Typology"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }],
+          #   "choices"	: [
+          #     {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante coworking'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante coworking' }]},
+          #     {'name' : u'FABLAB', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante fablab' }]},
+          #     {'name' : u'info manquante', 'choice_title' : [{'locale' : 'en', 'text' : 'missing info'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'info manquante' }]},
+          #   ],
+          # },
 
           ### Formations
-          {	"name"		: u"formations_tags__",
-            "id"      : "filter_1",
-            "col_name" : "formations_tags",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Formations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formations" }],
-            "choices"	: [
-              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
-            ],
-          },
+          # {	"name"		: u"formations_tags__",
+          #   "id"      : "filter_1",
+          #   "col_name" : "formations_tags",
+          #   "dataType" : "text",
+          #   "filter_title" : [{"locale" : "en", "text" : "Formations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formations" }],
+          #   "choices"	: [
+          #     {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
+          #   ],
+          # },
 
 
         ],
