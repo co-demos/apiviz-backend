@@ -1528,7 +1528,7 @@ default_routes_config = [
         "is_default"        : True
       },
 
-      ### PAGE : PROJECT/TOOLS (CIS)
+      ### PAGE : PROJECT/TOOLS
       { "field"             : "tl_tools",
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
@@ -1575,11 +1575,11 @@ default_routes_config = [
         "is_default"        : True
       },
 
-      ### PAGE : PROJECT/TOOLS (CIS)
+      ### PAGE : LEGAL 
       { "field"             : "tl_legal",
         "is_global_app_homepage" : True,
         "route_title"       : u"Mentions légales",
-        "route_description" : u"apiviz default tools page",
+        "route_description" : u"apiviz default legal page",
         "route_activated"   : True,
         "banner" : {
           "activated"  : False,

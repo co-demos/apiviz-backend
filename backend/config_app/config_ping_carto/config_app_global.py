@@ -150,7 +150,6 @@ default_global_config = [
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
         "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/cget-tiers-lieux/raw/master/logos/cget_officiel.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
@@ -160,7 +159,6 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        # "url"         : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/favicon/favicon.ico",
         "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
@@ -177,9 +175,9 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Association PiNG",
-        "content_text" : [{"locale" : "en", "text" : "Co-working mission"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
-        "is_in_navbar" : False,
+        "content"      : u"Carto PiNG",
+        "content_text" : [{"locale" : "en", "text" : "Mapping"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie"}],
+        "is_in_navbar" : True,
         # "title_color" : "primary",
 
         "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],

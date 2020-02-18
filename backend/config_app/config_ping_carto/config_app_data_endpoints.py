@@ -276,7 +276,7 @@ default_data_endpoints_config = [
 
         "content"       : u"apiviz default API endpoint for navbar filters",
         # "root_url"      : "https://solidata-api.co-demos.com/api/dso/infos/get_one/5c7f0438328ed72e431f338e",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785",  ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d5fca92328ed71684ce1785",  
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -285,68 +285,54 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"NOMMETRO_CODE__",
+          {	"name"		: u"DEPARTEMENT__",
+            "id"      : "filter_1",
+            "col_name" : "DEPARTEMENT",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Areas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+            "choices"	: [
+              {'name' : u'44', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
+              {'name' : u'49', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
+              {'name' : u'53', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
+              {'name' : u'72', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
+              {'name' : u'85', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
+
+            ],
+          },
+          # {	"name"		: u"COMCLASS_CODE__",
+          #   "id"      : "filter_0",
+          #   "col_name" : "COMCLASS_CODE",
+          #   "dataType" : "text",
+          #   "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Population" }],
+          #   "choices"	: [
+          #     {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
+          #     {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
+          #     {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
+          #     {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
+          #     {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
+          #   ],
+          # },
+          {	"name"		: u"TYPOLOGIE__",  
             "id"      : "filter_2",
-            "col_name" : "NOMMETRO_CODE",
+            "col_name" : "TYPOLOGIE",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Metropolis"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Métropole" }],
+            "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
             "choices"	: [
-              {'name' : u'BDX', 'choice_title' : [{'locale' : 'en', 'text' : 'Bordeaux Métropole'},{'locale' : 'es', 'text' : 'Bordeaux Métropole'},{'locale' : 'tr', 'text' : 'Bordeaux Métropole'},{'locale' : 'de', 'text' : 'Bordeaux Métropole'}, {'locale' : 'fr', 'text' : 'Bordeaux Métropole' }]},
-              {'name' : u'BRS', 'choice_title' : [{'locale' : 'en', 'text' : 'Brest Métropole'},{'locale' : 'es', 'text' : 'Brest Métropole'},{'locale' : 'tr', 'text' : 'Brest Métropole'},{'locale' : 'de', 'text' : 'Brest Métropole'}, {'locale' : 'fr', 'text' : 'Brest Métropole' }]},
-              {'name' : u'CLT', 'choice_title' : [{'locale' : 'en', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'es', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'tr', 'text' : 'Clermont Auvergne Métropole'},{'locale' : 'de', 'text' : 'Clermont Auvergne Métropole'}, {'locale' : 'fr', 'text' : 'Clermont Auvergne Métropole' }]},
-              {'name' : u'DJN', 'choice_title' : [{'locale' : 'en', 'text' : 'Dijon Métropole'},{'locale' : 'es', 'text' : 'Dijon Métropole'},{'locale' : 'tr', 'text' : 'Dijon Métropole'},{'locale' : 'de', 'text' : 'Dijon Métropole'}, {'locale' : 'fr', 'text' : 'Dijon Métropole' }]},
-              {'name' : u'STR', 'choice_title' : [{'locale' : 'en', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'es', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'tr', 'text' : 'Eurométropole de Strasbourg'},{'locale' : 'de', 'text' : 'Eurométropole de Strasbourg'}, {'locale' : 'fr', 'text' : 'Eurométropole de Strasbourg' }]},
-              {'name' : u'AIX', 'choice_title' : [{'locale' : 'en', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'es', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'tr', 'text' : "Métropole d'Aix-Marseille-Provence"},{'locale' : 'de', 'text' : "Métropole d'Aix-Marseille-Provence"}, {'locale' : 'fr', 'text' : "Métropole d'Aix-Marseille-Provence" }]},
-              {'name' : u'LYO', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole de Lyon'},{'locale' : 'es', 'text' : 'Métropole de Lyon'},{'locale' : 'tr', 'text' : 'Métropole de Lyon'},{'locale' : 'de', 'text' : 'Métropole de Lyon'}, {'locale' : 'fr', 'text' : 'Métropole de Lyon' }]},
-              {'name' : u'NCY', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'es', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'tr', 'text' : 'Métropole du Grand Nancy'},{'locale' : 'de', 'text' : 'Métropole du Grand Nancy'}, {'locale' : 'fr', 'text' : 'Métropole du Grand Nancy' }]},
-              {'name' : u'PAR', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole du Grand Paris'},{'locale' : 'es', 'text' : 'Métropole du Grand Paris'},{'locale' : 'tr', 'text' : 'Métropole du Grand Paris'},{'locale' : 'de', 'text' : 'Métropole du Grand Paris'}, {'locale' : 'fr', 'text' : 'Métropole du Grand Paris' }]},
-              {'name' : u'LIL', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'es', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'tr', 'text' : 'Métropole Européenne de Lille'},{'locale' : 'de', 'text' : 'Métropole Européenne de Lille'}, {'locale' : 'fr', 'text' : 'Métropole Européenne de Lille' }]},
-              {'name' : u'GRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'es', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'tr', 'text' : 'Métropole Grenoble-Alpes-Métropole'},{'locale' : 'de', 'text' : 'Métropole Grenoble-Alpes-Métropole'}, {'locale' : 'fr', 'text' : 'Métropole Grenoble-Alpes-Métropole' }]},
-              {'name' : u'NIC', 'choice_title' : [{'locale' : 'en', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'es', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'tr', 'text' : "Métropole Nice Côte d'Azur"},{'locale' : 'de', 'text' : "Métropole Nice Côte d'Azur"}, {'locale' : 'fr', 'text' : "Métropole Nice Côte d'Azur" }]},
-              {'name' : u'NRM', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'es', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'tr', 'text' : 'Métropole Rouen Normandie'},{'locale' : 'de', 'text' : 'Métropole Rouen Normandie'}, {'locale' : 'fr', 'text' : 'Métropole Rouen Normandie' }]},
-              {'name' : u'PRV', 'choice_title' : [{'locale' : 'en', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'es', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'tr', 'text' : 'Métropole Toulon-Provence-Méditerranée'},{'locale' : 'de', 'text' : 'Métropole Toulon-Provence-Méditerranée'}, {'locale' : 'fr', 'text' : 'Métropole Toulon-Provence-Méditerranée' }]},
-              {'name' : u'MTZ', 'choice_title' : [{'locale' : 'en', 'text' : 'Metz Métropole'},{'locale' : 'es', 'text' : 'Metz Métropole'},{'locale' : 'tr', 'text' : 'Metz Métropole'},{'locale' : 'de', 'text' : 'Metz Métropole'}, {'locale' : 'fr', 'text' : 'Metz Métropole' }]},
-              {'name' : u'MPT', 'choice_title' : [{'locale' : 'en', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'es', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'tr', 'text' : 'Montpellier Méditerranée Métropole'},{'locale' : 'de', 'text' : 'Montpellier Méditerranée Métropole'}, {'locale' : 'fr', 'text' : 'Montpellier Méditerranée Métropole' }]},
-              {'name' : u'NTS', 'choice_title' : [{'locale' : 'en', 'text' : 'Nantes Métropole'},{'locale' : 'es', 'text' : 'Nantes Métropole'},{'locale' : 'tr', 'text' : 'Nantes Métropole'},{'locale' : 'de', 'text' : 'Nantes Métropole'}, {'locale' : 'fr', 'text' : 'Nantes Métropole' }]},
-              {'name' : u'ORL', 'choice_title' : [{'locale' : 'en', 'text' : 'Orléans Métropole'},{'locale' : 'es', 'text' : 'Orléans Métropole'},{'locale' : 'tr', 'text' : 'Orléans Métropole'},{'locale' : 'de', 'text' : 'Orléans Métropole'}, {'locale' : 'fr', 'text' : 'Orléans Métropole' }]},
-              {'name' : u'REN', 'choice_title' : [{'locale' : 'en', 'text' : 'Rennes Métropole'},{'locale' : 'es', 'text' : 'Rennes Métropole'},{'locale' : 'tr', 'text' : 'Rennes Métropole'},{'locale' : 'de', 'text' : 'Rennes Métropole'}, {'locale' : 'fr', 'text' : 'Rennes Métropole' }]},
-              {'name' : u'SET', 'choice_title' : [{'locale' : 'en', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'es', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'tr', 'text' : 'Saint-Etienne Métropole'},{'locale' : 'de', 'text' : 'Saint-Etienne Métropole'}, {'locale' : 'fr', 'text' : 'Saint-Etienne Métropole' }]},
-              {'name' : u'TLS', 'choice_title' : [{'locale' : 'en', 'text' : 'Toulouse Métropole'},{'locale' : 'es', 'text' : 'Toulouse Métropole'},{'locale' : 'tr', 'text' : 'Toulouse Métropole'},{'locale' : 'de', 'text' : 'Toulouse Métropole'}, {'locale' : 'fr', 'text' : 'Toulouse Métropole' }]},
-              {'name' : u'TRS', 'choice_title' : [{'locale' : 'en', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'es', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'tr', 'text' : 'Tours Métropole Val de Loire'},{'locale' : 'de', 'text' : 'Tours Métropole Val de Loire'}, {'locale' : 'fr', 'text' : 'Tours Métropole Val de Loire' }]},
-              {'name' : u'-', 'choice_title' : [{'locale' : 'en', 'text' : 'hors aire métropolitaine'},{'locale' : 'es', 'text' : 'hors aire métropolitaine'},{'locale' : 'tr', 'text' : 'hors aire métropolitaine'},{'locale' : 'de', 'text' : 'hors aire métropolitaine'}, {'locale' : 'fr', 'text' : 'hors aire métropolitaine' }]},
-            ],
-          },
-          {	"name"		: u"COMCLASS_CODE__",
-            "id"      : "filter_3",
-            "col_name" : "COMCLASS_CODE",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Population" }],
-            "choices"	: [
-              {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
-              {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
-              {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
-              {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
-              {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
-            ],
-          },
-          {	"name"		: u"TYPO_CODE__",  
-            "id"      : "filter_4",
-            "col_name" : "TYPO_CODE",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Typology"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologie" }],
-            "choices"	: [
-              {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante coworking'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante coworking'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante coworking' }]},
-              {'name' : u'FABLAB', 'choice_title' : [{'locale' : 'en', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'Tiers lieux à dominante fablab' }]},
-              {'name' : u'info manquante', 'choice_title' : [{'locale' : 'en', 'text' : 'missing info'},{'locale' : 'es', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'tr', 'text' : 'Tiers lieux à dominante fablab'},{'locale' : 'de', 'text' : 'Tiers lieux à dominante fablab'}, {'locale' : 'fr', 'text' : 'info manquante' }]},
+              {'name' : u'T', 'choice_title' : [{'locale' : 'en', 'text' : 'Renew work'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Renouveler le travail' }]},
+              {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Work together'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Œuvrer ensemble' }]},
+              {'name' : u'D', 'choice_title' : [{'locale' : 'en', 'text' : 'Collectively discover'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Découvrir collectivement' }]},
+              {'name' : u'C', 'choice_title' : [{'locale' : 'en', 'text' : 'Rethink our consumption'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Repenser sa consommation' }]},
             ],
           },
           {	"name"		: u"SOURCE__",
-            "id"      : "filter_1",
+            "id"      : "filter_3",
             "col_name" : "SOURCE",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
             "choices"	: [
-              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "Fondation la France s’engage"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
+              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "CGET"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
+              {"name" : u"PiNG", "choice_title" : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "PiNG" }]},
+              {"name" : u"CRESS", "choice_title" : [{"locale" : "en", "text" : "CRESS"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CRESS" }]},
             ],
           },
         ],
@@ -365,7 +351,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "table",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -395,7 +381,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -423,7 +409,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "detail",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -448,7 +434,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e4bac5d328ed74937e075b1", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -535,7 +521,7 @@ default_data_endpoints_config = [
         # },
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
@@ -569,7 +555,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5d63b8d1328ed71684ce24b9", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
