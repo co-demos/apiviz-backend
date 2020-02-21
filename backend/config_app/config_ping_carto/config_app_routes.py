@@ -320,7 +320,7 @@ default_routes_config = [
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
                   # "agregate_data_from_source" : "allPointsSource",
-                  "join_polygon_id_to_field"  : "INSEEDEP",
+                  "join_polygon_id_to_field"  : "DEPARTEMENT",
                   "agregated_data_field"      : "count_dep",
                   # "fill_color"          : "#888888",
                   'fill_color': [
