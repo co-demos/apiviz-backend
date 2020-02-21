@@ -456,13 +456,13 @@ default_data_endpoints_config = [
               "serie_id" : "tl-stat-bar-horiz",
               "agg_fields" : [
                 { 
-                  "agg_field" : "TYPO_CODE",
+                  "agg_field" : "TYPOLOGIE",
                   "agg_sum_type" : "count_items", 
-                  "agg_needs_unwind" : False,
+                  "agg_needs_unwind" : True,
                   "agg_unwind_separator" : "-"
                 },
                 { 
-                  "agg_field" : "NOMREG",
+                  "agg_field" : "result_context",
                   "agg_sum_type" : "count_items",
                   "agg_needs_unwind" : False,
                   "agg_unwind_separator" : "-" 
@@ -473,9 +473,9 @@ default_data_endpoints_config = [
               "serie_id" : "tl-stat-donut",
               "agg_fields" : [
                 { 
-                  "agg_field" : "TYPO_CODE",
+                  "agg_field" : "TYPOLOGIE",
                   "agg_sum_type" : "count_items", 
-                  "agg_needs_unwind" : False,
+                  "agg_needs_unwind" : True,
                   "agg_unwind_separator" : "-"
                 }
               ]
