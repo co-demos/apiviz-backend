@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
         ],
         
 
@@ -1356,7 +1356,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "tl_project",
+      { "field"             : "tl_demarche",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1376,14 +1376,14 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/le-projet"],
+        "urls"              : ["/la-demarche"],
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/le-projet.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/le-projet.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/le-projet.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/le-projet.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/la-demarche.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/la-demarche.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/la-demarche.html" }
         ],
         
 
@@ -1399,7 +1399,7 @@ default_routes_config = [
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
-        "comment"           : u"Main project route in french",
+        "comment"           : u"Main demarche route",
         "is_dynamic"        : True,
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
@@ -1433,7 +1433,7 @@ default_routes_config = [
 
         "in_footer"         : True,
         "link_in_logo"      : False,
-        "urls"              : ["/le-projet/outils"],
+        "urls"              : ["/outils"],
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils.html" },
@@ -1500,7 +1500,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : False,
+        "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
         "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
         "is_default"        : True
