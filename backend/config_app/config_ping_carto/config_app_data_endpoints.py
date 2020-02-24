@@ -329,6 +329,16 @@ default_data_endpoints_config = [
               {'name' : u'C', 'choice_title' : [{'locale' : 'en', 'text' : 'Rethink our consumption'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Repenser sa consommation' }]},
             ],
           },
+          {	"name"		: u"PUBLICS__",  
+            "id"      : "filter_2",
+            "col_name" : "PUBLICS",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
+            "choices"	: [
+              {'name' : u'Professionnels', 'choice_title' : [{'locale' : 'en', 'text' : 'Professionals'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Professionnels' }]},
+              {'name' : u'Citoyens', 'choice_title' : [{'locale' : 'en', 'text' : 'Citizens'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyens' }]},
+            ],
+          },
           {	"name"		: u"SOURCE__",
             "id"      : "filter_3",
             "col_name" : "SOURCE",
@@ -432,7 +442,7 @@ default_data_endpoints_config = [
 
       ### DATA STATS
       { "field"         : "tl_data_API_stats",
-        "is_visible"    : True,
+        "is_visible"    : False,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "stat",

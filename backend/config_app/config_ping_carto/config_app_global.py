@@ -176,7 +176,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Carto PiNG",
-        "content_text" : [{"locale" : "en", "text" : "Mapping"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie"}],
+        "content_text" : [{"locale" : "en", "text" : "A lookout at third places in Loire region"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Regards sur les tiers-lieux en Pays de la Loire"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
