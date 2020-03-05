@@ -163,6 +163,14 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
+          { "field" : "IMAGE",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_image",
+            # "trim" : 20,
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
           # { "field"       : "coding APCIS N1",
           #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
