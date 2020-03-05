@@ -740,7 +740,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPOLOGIE",
+          { "field" : "IMAGE",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_image",
+            # "trim" : 20,
+            "custom_title" : "to do",
+            "locale" : "fr"
+          },
+          { "field"       : "CONCAT_TYPO",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
@@ -848,7 +856,7 @@ default_routes_config = [
             "locale" : "fr"
           },
           { "field" : "IMAGE",
-            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
             # "trim" : 20,
@@ -905,7 +913,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPOLOGIE",
+          { "field"       : "CONCAT_TYPO",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
