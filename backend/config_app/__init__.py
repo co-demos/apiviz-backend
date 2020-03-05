@@ -20,6 +20,8 @@ uuid_models = {
   "uuid_conumm" :         "2f658fb8-f00a-4b1a-ab73-7064433c98bc",
   "uuid_etalab_codes" :   "a44de08d-12a1-4182-a06e-78058928c1e1",
 
+  "uuid_decider_ensemble" : "b8b52f0c-e66f-4018-bc0b-9ec7d17f8ccc",
+
   "uuid_orgues" :         "3f3fd562-5202-427f-8ba3-f58d5660aabf",
 
   "uuid_ocf" :            "305ab50d-c976-44d7-a8f2-a7594155c292",
@@ -38,6 +40,8 @@ config_folders = [
   "config_tiers_lieux",
   "config_ping_carto",
   "config_conumm",
+
+  "config_decider_ensemble",
 
   "config_etalab_codes",
   "config_orgues",
