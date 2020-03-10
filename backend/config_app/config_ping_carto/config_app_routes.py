@@ -608,6 +608,17 @@ default_routes_config = [
             "custom_title" : "Thématiques",
             "locale" : "fr"
           },
+          # { "field"       : "CONCAT_TYPO",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_3",
+          #   "is_sortable" : True,
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
           { "field" : "SOURCE",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
