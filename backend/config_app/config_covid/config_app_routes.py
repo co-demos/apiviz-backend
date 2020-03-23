@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -1431,7 +1431,7 @@ default_routes_config = [
       ### PAGE - CHARTS FR
       { "field"             : "tl_charts_fr",
         "is_global_app_homepage" : True,
-        "route_title"       : u"Home",
+        "route_title"       : u"charts france",
         "route_description" : u"apiviz default home page",
         "route_activated"   : True,
         "banner" : {
@@ -1453,10 +1453,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-FR.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-FR.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-france.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-france.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-france.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-france.html" }
         ],
         
 
@@ -1477,7 +1477,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
@@ -1485,10 +1485,10 @@ default_routes_config = [
         "is_default"        : True
       },
 
-      ### PAGE - CHARTS WORLD
+      ### PAGE - CHARTS EUROPE
       { "field"             : "tl_charts_europe",
         "is_global_app_homepage" : True,
-        "route_title"       : u"Home",
+        "route_title"       : u"charts europe",
         "route_description" : u"apiviz default home page",
         "route_activated"   : True,
         "banner" : {
@@ -1510,10 +1510,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-EUROPE.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-EUROPE.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-europe.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-europe.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-europe.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-europe.html" }
         ],
         
 
@@ -1534,7 +1534,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
@@ -1545,7 +1545,7 @@ default_routes_config = [
       ### PAGE - CHARTS WORLD
       { "field"             : "tl_charts_world",
         "is_global_app_homepage" : True,
-        "route_title"       : u"Home",
+        "route_title"       : u"charts world",
         "route_description" : u"apiviz default home page",
         "route_activated"   : True,
         "banner" : {
@@ -1567,10 +1567,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-WORLD.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-WORLD.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-world.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-world.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-world.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-world.html" }
         ],
         
 
@@ -1591,13 +1591,61 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
+
+      ### PAGE SOURCES 
+      { "field"             : "tl_sources",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Sources",
+        "route_description" : u"apiviz default legal page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : ""
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+        },
+
+        "in_footer"         : True,
+        "link_in_logo"      : False,
+        "urls"              : ["/charts-sources"],
+        
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-sources.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-sources.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-sources.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-sources.html" }
+        ],
+        
+        "has_ext_script"    : False,
+        "ext_script_urls"   : "",
+        
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main apiviz tools route in french",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-tl-test",
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
+        "is_default"        : True
+      },
+
 
       ### PAGE : PROJECT/TOOLS
       { "field"             : "tl_tools",
