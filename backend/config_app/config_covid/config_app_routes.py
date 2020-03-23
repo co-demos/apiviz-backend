@@ -1371,7 +1371,7 @@ default_routes_config = [
     ### CUSTOM ROUTES-PAGES --> TO BE ADDED VIA BACK OFFICE BY ADMIN USER
     ### - - - - - - - - - - - - - - - - - ###
 
-      ### PAGE - PROJECT
+      ### PAGE - DEMARCHE
       { "field"             : "tl_demarche",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
