@@ -55,26 +55,10 @@ default_app_navbar = [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
               ]
             },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "https://www.deciderensemble.com",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : True,
-              "link_type"  : "link", ### link | button / show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
 
           ]
         },
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 

@@ -14,7 +14,7 @@ default_global_config = [
         "locale"      : "fr",
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -125,7 +125,7 @@ default_global_config = [
         # "password_new"        : [{"locale" : "en", "text" : "your new password"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "votre nouveau mot de passe" }],
         # "password_send"       : [{"locale" : "en", "text" : "update my password"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "enregister le nouveau mot de passe" }],
 
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -141,7 +141,7 @@ default_global_config = [
       #   "tab_stat"    : {
       #     "link_text"  : [ {"locale" : "en", "text" : "data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "données" }],
       #   },
-      #   "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+      #   "apiviz_front_uuid" : uuid_models["uuid_ternum"],
       #   "is_default"  : True
       # },
 
@@ -149,20 +149,20 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/logos/LOGO-decider-ensemble-01.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/logos/LOGO-decider-ensemble-01.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -175,12 +175,12 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Ressources décider ensemble",
-        "content_text" : [{"locale" : "en", "text" : "Ressouces"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources Décider Ensemble"}],
+        "content"      : u"BFC-TERNUM",
+        "content_text" : [{"locale" : "en", "text" : "BFC-TERNUM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "BFC-TERNUM"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -188,7 +188,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a description for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -196,7 +196,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a set of keywords for your ApiViz instance",
         "content"     : u"""dataviz,data visualisation,data visualization,SIG,commons,digital commons,API,opensource,open source,open data,opendata,MIT licence,github,sJS,javascript,python,flask,HTML,CSS,JSON,bulma,Vue.js,sEtalab,co-demos, codemos""",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -205,7 +205,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a welcoming phrase for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Bienvenue"}],
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -213,7 +213,7 @@ default_global_config = [
         "app_version" : version,
         "help"        : u"Choose a pitch/catchphrase for your ApiViz instance",
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -225,7 +225,7 @@ default_global_config = [
         "content"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source"}],
         "in_navbar"   : False,
         "in_footer"   : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True,
       },
 
@@ -235,7 +235,7 @@ default_global_config = [
         "help"        : u"Choose is users can use favorites (cookies)",
         "content"     : u"",
         "activated"   : False,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -245,7 +245,7 @@ default_global_config = [
         "help"        : u"Choose a token for indexing your ApiViz instance",
         "content"     : u"",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -256,7 +256,7 @@ default_global_config = [
         "content"     : u"your_id_or_token",
         "url"         : "",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 
@@ -267,7 +267,7 @@ default_global_config = [
         "content"     : u"your_id_or_token",
         "url"         : "",
         "activated"    : False,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"  : True
       },
 

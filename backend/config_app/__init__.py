@@ -21,6 +21,9 @@ uuid_models = {
   "uuid_etalab_codes" :   "a44de08d-12a1-4182-a06e-78058928c1e1",
 
   "uuid_decider_ensemble" : "b8b52f0c-e66f-4018-bc0b-9ec7d17f8ccc",
+  "uuid_ternum"           : "e8aff5a7-64b1-46b0-942a-8b16ac53aa3b",
+
+  "uuid_covid"           : "ebd7910d-5c98-4701-883a-6003a288b37d",
 
   "uuid_orgues" :         "3f3fd562-5202-427f-8ba3-f58d5660aabf",
 
@@ -42,6 +45,8 @@ config_folders = [
   "config_conumm",
 
   "config_decider_ensemble",
+  "config_ternum",
+  "config_covid",
 
   "config_etalab_codes",
   "config_orgues",

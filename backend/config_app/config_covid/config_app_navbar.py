@@ -40,41 +40,26 @@ default_app_navbar = [
             },
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/la-demarche",
+              "link_to"    : "/charts-france",
               "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Démarche" }],
+              "link_text"  : [{"locale" : "en", "text" : "Charts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Charts" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : True,
               "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche",        "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La démarche"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales",   "link_text" : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-france", "link_text" : [{"locale" : "en", "text" : "charts France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "charts France"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-europe", "link_text" : [{"locale" : "en", "text" : "charts Europe"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "charts Europe"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-world",  "link_text" : [{"locale" : "en", "text" : "charts World"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "charts World"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
-              ]
-            },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "https://www.deciderensemble.com",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : True,
-              "link_type"  : "link", ### link | button / show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
 
           ]
         },
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"  : True
       },
 

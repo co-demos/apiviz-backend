@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG COVID  
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -67,7 +67,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "",
         "dataset_uri"       : "recherche",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -518,7 +518,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"      : True
       },
 
@@ -666,7 +666,7 @@ default_routes_config = [
         "tabs_uri"          : "TL-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -812,7 +812,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1008,7 +1008,7 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1363,7 +1363,7 @@ default_routes_config = [
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1396,8 +1396,8 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/la-demarche.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/la-demarche.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
         ],
@@ -1424,7 +1424,178 @@ default_routes_config = [
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
+        "is_default"        : True
+      },
+
+      ### PAGE - CHARTS FR
+      { "field"             : "tl_charts_fr",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/charts-france"],
+        "dataset_uri"       : "project-cis",
+        
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-FR.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-FR.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+        ],
+        
+
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+        ],
+
+        # "has_carousel"      : True,
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main demarche route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-tl-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
+        "is_default"        : True
+      },
+
+      ### PAGE - CHARTS WORLD
+      { "field"             : "tl_charts_europe",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/charts-europe"],
+        "dataset_uri"       : "project-cis",
+        
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-EUROPE.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-EUROPE.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+        ],
+        
+
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+        ],
+
+        # "has_carousel"      : True,
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main demarche route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-tl-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
+        "is_default"        : True
+      },
+
+      ### PAGE - CHARTS WORLD
+      { "field"             : "tl_charts_world",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/charts-world"],
+        "dataset_uri"       : "project-cis",
+        
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-WORLD.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-WORLD.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+        ],
+        
+
+        "has_ext_script"    : True,
+        "ext_script_urls"   : [
+          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+        ],
+
+        # "has_carousel"      : True,
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main demarche route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-tl-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1471,7 +1642,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1499,8 +1670,8 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
@@ -1518,7 +1689,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1558,7 +1729,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1593,7 +1764,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1628,7 +1799,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1663,7 +1834,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
@@ -1698,7 +1869,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
 
