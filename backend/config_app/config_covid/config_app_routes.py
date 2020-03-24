@@ -80,7 +80,7 @@ default_routes_config = [
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche d'Apiviz",
-        "route_activated"   : True,
+        "route_activated"   : False,
         "banner" : {
           "activated"  : False,
           "banner_uri" : "banner-TL-carto" # TODO
@@ -695,7 +695,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/liste"],
+        "urls"              : ["/recherche", "/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -839,7 +839,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/project", "/cis/detail", "/recherche/detail"],
+        "urls"              : ["/recherche/detail"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
