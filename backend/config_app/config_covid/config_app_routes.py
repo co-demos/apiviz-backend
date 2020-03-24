@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/recherche", "/recherche/carte"],
+        "urls"              : [ "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -517,7 +517,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
-        "is_visible"        : True,
+        "is_visible"        : False,
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"      : True
       },
@@ -581,7 +581,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM DU LIEU",
+          { "field" : "titre_initiative",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
@@ -592,7 +592,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "tag_besoin_niv1_code",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
@@ -601,7 +601,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPOLOGIE",
+          { "field"       : "tag_produit_niv1_code",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
@@ -612,7 +612,7 @@ default_routes_config = [
             "custom_title" : "Thématiques",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          { "field" : "tag_structure_niv1_code",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
@@ -724,7 +724,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -732,7 +732,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM DU LIEU",
+          { "field" : "titre_initiative",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -740,7 +740,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          { "field" : "source",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "position" : "block_src",
@@ -748,7 +748,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "IMAGE",
+          { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
@@ -756,7 +756,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "CONCAT_TYPO",
+          { "field"       : "tag_besoin_niv_1_code",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
@@ -855,7 +855,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "NOM DU LIEU", 
+          { "field" : "titre_initiative", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -863,7 +863,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "IMAGE",
+          { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
@@ -871,7 +871,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "ADRESSE",
+          { "field" : "adresse",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -879,7 +879,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_postcode",
+          { "field" : "code_postal",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
@@ -887,7 +887,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "DESCRIPTION",
+          { "field" : "resume_initiative",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
@@ -895,7 +895,7 @@ default_routes_config = [
             "custom_title" : "Description",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
+          { "field" : "source",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
@@ -913,7 +913,7 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "URL",
+          { "field" : "url_initiative",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
@@ -921,7 +921,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "CONCAT_TYPO",
+          { "field"       : "tag_besoin_niv1_code",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
@@ -1362,7 +1362,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
-        "is_visible"        : True,
+        "is_visible"        : False,
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },

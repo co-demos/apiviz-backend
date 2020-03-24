@@ -275,7 +275,7 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1",  
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e7a3778328ed76a89d25794",  
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -284,44 +284,21 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          # 44, Loire-Atlantique, Pays de la Loire
-          # 49, Maine-et-Loire, Pays de la Loire
-          # 53, Mayenne, Pays de la Loire
-          # 72, Sarthe, Pays de la Loire
-          # 85, Vendée, Pays de la Loire
-
           {	"name"		: u"result_context__",
             "id"      : "filter_1",
             "col_name" : "result_context",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Areas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+            "filter_title" : [{"locale" : "en", "text" : "Needs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins" }],
             "choices"	: [
               {'name' : u'44, Loire-Atlantique, Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
-              {'name' : u'49, Maine-et-Loire, Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
-              {'name' : u'53, Mayenne, Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
-              {'name' : u'72, Sarthe, Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
-              {'name' : u'85, Vendée, Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
 
             ],
           },
-          # {	"name"		: u"COMCLASS_CODE__",
-          #   "id"      : "filter_0",
-          #   "col_name" : "COMCLASS_CODE",
-          #   "dataType" : "text",
-          #   "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Population" }],
-          #   "choices"	: [
-          #     {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
-          #     {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
-          #     {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
-          #     {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
-          #     {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
-          #   ],
-          # },
           {	"name"		: u"TYPOLOGIE__",  
             "id"      : "filter_2",
             "col_name" : "TYPOLOGIE",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
+            "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits" }],
             "choices"	: [
               {'name' : u'T', 'choice_title' : [{'locale' : 'en', 'text' : 'Renew work'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Renouveler le travail' }]},
               {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Work together'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Œuvrer ensemble' }]},
@@ -333,23 +310,13 @@ default_data_endpoints_config = [
             "id"      : "filter_2",
             "col_name" : "PUBLICS",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
+            "filter_title" : [{"locale" : "en", "text" : "Structures"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Structures" }],
             "choices"	: [
               {'name' : u'Professionnels', 'choice_title' : [{'locale' : 'en', 'text' : 'Professionals'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Professionnels' }]},
               {'name' : u'Citoyens', 'choice_title' : [{'locale' : 'en', 'text' : 'Citizens'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyens' }]},
             ],
           },
-          {	"name"		: u"SOURCE__",
-            "id"      : "filter_3",
-            "col_name" : "SOURCE",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
-            "choices"	: [
-              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "CGET"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
-              {"name" : u"PiNG", "choice_title" : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "PiNG" }]},
-              {"name" : u"CRESS", "choice_title" : [{"locale" : "en", "text" : "CRESS"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CRESS" }]},
-            ],
-          },
+
         ],
         "app_version"    : version,
         "method"        : "GET",
@@ -366,7 +333,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "table",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e7a3778328ed76a89d25794", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -396,7 +363,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e7a3778328ed76a89d25794", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -424,7 +391,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "detail",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e7a3778328ed76a89d25794", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -449,7 +416,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e7a3778328ed76a89d25794", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -536,7 +503,7 @@ default_data_endpoints_config = [
         # },
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e7a3778328ed76a89d25794", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
@@ -570,7 +537,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e7a3778328ed76a89d25794", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
