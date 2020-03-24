@@ -510,7 +510,7 @@ default_data_endpoints_config = [
 
       ### DATA MAP
       { "field"         : "tl_data_API_map",
-        "is_visible"    : True,
+        "is_visible"    : False,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "map",
