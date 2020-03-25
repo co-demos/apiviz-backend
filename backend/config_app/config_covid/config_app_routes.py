@@ -756,13 +756,13 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "tag_besoin_niv_1_code",
+          { "field"       : "tag_besoin_niv1_code",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
             "filter_correspondance" : False,
             "is_tag_like" : True,
-            "tags_separator" : "-",
+            "tags_separator" : "/",
             "custom_title" : "Thématiques",
             "locale" : "fr"
           },
