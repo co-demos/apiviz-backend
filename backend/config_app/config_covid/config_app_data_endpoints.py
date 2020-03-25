@@ -290,6 +290,7 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Needs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins" }],
             "choices"	: [
+              {'name' : u'NA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               # ADMINISTRATIF
               # ALIMENTAIRE
               # DATA
@@ -319,6 +320,7 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Needs 2"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins 2" }],
             "choices"	: [
+              {'name' : u'NA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               # CARTO
               # HELP
               # HOPITAL
@@ -346,6 +348,7 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits" }],
             "choices"	: [
+              {'name' : u'NA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               # APP
               # COURS
               # DATA
@@ -375,6 +378,7 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Products 2"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits 2" }],
             "choices"	: [
+              {'name' : u'NA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               # CARTO
               # DIY
               # GEL
@@ -403,7 +407,6 @@ default_data_endpoints_config = [
               {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TESTKIT' }]},
               {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VENTILATOR' }]},
               {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VISIERE' }]},
-
             ],
           },
           {	"name"		: u"validation__",  
@@ -412,9 +415,16 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Validation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Validation" }],
             "choices"	: [
-              {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Yes'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Oui' }]},
-              {'name' : u'N', 'choice_title' : [{'locale' : 'en', 'text' : 'No'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non' }]},
-              {'name' : u'P', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Partielle' }]},
+              # OUI
+              # NON
+              # PARTIELLE
+              # NR
+              # ?
+              {'name' : u'OUI', 'choice_title' : [{'locale' : 'en', 'text' : 'Yes'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Oui' }]},
+              {'name' : u'NON', 'choice_title' : [{'locale' : 'en', 'text' : 'No'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non' }]},
+              {'name' : u'PARTIELLE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Partielle' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
+              {'name' : u'?', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : '?' }]},
             ],
           },
           {	"name"		: u"tag_structure_niv1_code__",  
@@ -423,14 +433,20 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Structures"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Structures" }],
             "choices"	: [
-              # ANON
+              # ANONYME
               # ASSO
-              # INDIV
-              # INSTIT
-              {'name' : u'ANON', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ANON' }]},
+              # GROUPE
+              # INDIVIDU
+              # INSTITUTION
+              # NR
+              # ?
+              {'name' : u'ANONYME', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ANONYME' }]},
               {'name' : u'ASSO', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ASSO' }]},
-              {'name' : u'INDIV', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'INDIV' }]},
-              {'name' : u'INSTIT', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'INSTIT' }]},
+              {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'GROUPE' }]},
+              {'name' : u'INDIVIDU', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'INDIVIDU' }]},
+              {'name' : u'INSTITUTION', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'INSTITUTION' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NR' }]},
+              {'name' : u'?', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : '?' }]},
 
             ],
           },
