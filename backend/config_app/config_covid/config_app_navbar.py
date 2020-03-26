@@ -7,7 +7,7 @@ default_app_navbar = [
   ### MAIN NAVBAR
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG COVID 
       { "field"       : "app_navbar",
         "content"     : u"TL navbar",
         "app_version" : version,

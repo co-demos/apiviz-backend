@@ -809,7 +809,7 @@ default_data_endpoints_config = [
               "id"      : "filter_4",
               "col_name" : "tag_produit_niv2_code",
               "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Products 2"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits (niv.2)" }],
+              "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels" }],
               "choices"	: [
                 # CARTO
                 # DIY
