@@ -393,6 +393,7 @@ default_data_endpoints_config = [
                 # RESPIRATEUR
                 # TEST
                 # TESTKIT
+                # VALVE
                 # VENTILATOR
                 # VISIERE
                 # PORTE
@@ -405,11 +406,13 @@ default_data_endpoints_config = [
                 {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'LUNETTES' }]},
                 {'name' : u'MASQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE' }]},
                 {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE_TISSU' }]},
+                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE_SNORKLING' }]},
                 {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'POUSSE_SERINGUE' }]},
                 {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PROTECTION' }]},
                 {'name' : u'RESPIRATEUR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'RESPIRATEUR' }]},
                 {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TEST' }]},
                 {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TESTKIT' }]},
+                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VALVE' }]},
                 {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VENTILATOR' }]},
                 {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VISIERE' }]},
                 {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PORTE' }]},
@@ -796,6 +799,7 @@ default_data_endpoints_config = [
                 # RESPIRATEUR
                 # TEST
                 # TESTKIT
+                # VALVE
                 # VENTILATOR
                 # VISIERE
                 # PORTE
@@ -808,11 +812,13 @@ default_data_endpoints_config = [
                 {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'LUNETTES' }]},
                 {'name' : u'MASQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE' }]},
                 {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE_TISSU' }]},
+                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MASQUE_SNORKLING' }]},
                 {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'POUSSE_SERINGUE' }]},
                 {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PROTECTION' }]},
                 {'name' : u'RESPIRATEUR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'RESPIRATEUR' }]},
                 {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TEST' }]},
                 {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TESTKIT' }]},
+                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VALVE' }]},
                 {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VENTILATOR' }]},
                 {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'VISIERE' }]},
                 {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PORTE' }]},
