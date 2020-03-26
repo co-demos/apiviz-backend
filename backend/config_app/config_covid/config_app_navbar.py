@@ -15,9 +15,9 @@ default_app_navbar = [
         "logo_to"     : "/",
         "has_login"   : False,
         "ui_options"  : {
-          "background_isdark" : False,
+          "background_isdark" : True,
           "background_color" : { 
-            "bulma_color" : "white"
+            "bulma_color" : "primary"
           },
 
         },
@@ -26,7 +26,7 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/diy",
+              "link_to"    : "/diy/liste",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
@@ -41,7 +41,7 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/recherche",
+              "link_to"    : "/recherche/liste",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
