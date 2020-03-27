@@ -292,32 +292,7 @@ default_data_endpoints_config = [
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Needs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins" }],
               "choices"	: [
-                # ADMINISTRATIF
-                # ALIMENTAIRE
-                # DATA
-                # EDUCATION
-                # FINANCE
-                # HELP
-                # INFOS
-                # LOISIRS
-                # NUMERIQUE
-                # SANTE
-                # SOCIAL
-                # NR
 
-                # Administratif
-                # Alimentaire
-                # Data
-                # Education
-                # Finance
-                # Help
-                # Infos
-                # Loisirs
-                # Numerique
-                # Sante
-                # Social
-                # non renseigné
-                
                 {'name' : u'ADMINISTRATIF', 'choice_title' : [{'locale' : 'en', 'text' : 'ADMINISTRATIF'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Administratif' }]},
                 {'name' : u'ALIMENTAIRE', 'choice_title' : [{'locale' : 'en', 'text' : 'ALIMENTAIRE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Alimentaire' }]},
                 {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'DATA'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Data' }]},
@@ -333,60 +308,25 @@ default_data_endpoints_config = [
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
               ],
             },
-            # {	"name"		: u"tag_besoin_niv2_code__",
-            #   "id"      : "filter_2",
-            #   "col_name" : "tag_besoin_niv2_code",
-            #   "dataType" : "text",
-            #   "filter_title" : [{"locale" : "en", "text" : "Needs 2"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins 2" }],
-            #   "choices"	: [
-            #     {'name' : u'NA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
-            #     # CARTO
-            #     # HELP
-            #     # HOPITAL
-            #     # HYGIENE
-            #     # REA
-            #     # TEST
-            #     # DEV
-            #     # PROTECTION
-            #     # SCIENCE
-            #     {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'CARTO' }]},
-            #     {'name' : u'HELP', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'HELP' }]},
-            #     {'name' : u'HOPITAL', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'HOPITAL' }]},
-            #     {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'HYGIENE' }]},
-            #     {'name' : u'REA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'REA' }]},
-            #     {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'TEST' }]},
-            #     {'name' : u'DEV', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DEV' }]},
-            #     {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PROTECTION' }]},
-            #     {'name' : u'SCIENCE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'SCIENCE' }]},
 
-            #   ],
-            # },
             {	"name"		: u"tag_produit_niv1_code__",  
               "id"      : "filter_3",
               "col_name" : "tag_produit_niv1_code",
               "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits (niv.1)" }],
+              "filter_title" : [{"locale" : "en", "text" : "Solutions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Solutions" }],
               "choices"	: [
-                # APP
-                # COURS
-                # DATA
-                # DIY
-                # GROUPE
-                # INDUSTRIEL
-                # LISTE
-                # MEDIA
-                # PRO
-                # REPO
-                {'name' : u'APP', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'APP' }]},
-                {'name' : u'COURS', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'COURS' }]},
-                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DATA' }]},
-                {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DIY' }]},
-                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'GROUPE' }]},
-                {'name' : u'INDUSTRIEL', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'INDUSTRIEL' }]},
-                {'name' : u'LISTE', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'LISTE' }]},
-                {'name' : u'MEDIA', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'MEDIA' }]},
-                {'name' : u'PRO', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'PRO' }]},
-                {'name' : u'REPO', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'REPO' }]},
+
+                {'name' : u'APP', 'choice_title' : [{'locale' : 'en', 'text' : 'APP'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Appication' }]},
+                {'name' : u'COURS', 'choice_title' : [{'locale' : 'en', 'text' : 'COURS'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cours en ligne' }]},
+                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'DATA'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Données' }]},
+                {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DIY' }]},
+                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe de discussion' }]},
+                {'name' : u'INDUSTRIEL', 'choice_title' : [{'locale' : 'en', 'text' : 'INDUSTRIEL'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Produit industriel' }]},
+                {'name' : u'LISTE', 'choice_title' : [{'locale' : 'en', 'text' : 'LISTE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Liste de ressources' }]},
+                {'name' : u'MEDIA', 'choice_title' : [{'locale' : 'en', 'text' : 'MEDIA'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Média' }]},
+                {'name' : u'PRO', 'choice_title' : [{'locale' : 'en', 'text' : 'PRO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Professiionnel' }]},
+                {'name' : u'RECHERCHE', 'choice_title' : [{'locale' : 'en', 'text' : 'RECHERCHE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Recherche scientifique' }]},
+                {'name' : u'REPO', 'choice_title' : [{'locale' : 'en', 'text' : 'REPO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Code source' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               ],
@@ -395,128 +335,71 @@ default_data_endpoints_config = [
               "id"      : "filter_4",
               "col_name" : "tag_produit_niv2_code",
               "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Products 2"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Produits (niv.2)" }],
+              "filter_title" : [{"locale" : "en", "text" : "Sub-types of solutions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sous-types de solution" }],
               "choices"	: [
-                # CARTO
-                # DIY
-                # GEL
-                # HYGIENE
-                # LUNETTES
-                # MASQUE
-                # MASQUE_TISSU
-                # MASQUE_SNORKLING
-                # POUSSE_SERINGUE
-                # PROTECTION
-                # RESPIRATEUR
-                # TEST
-                # TESTKIT
-                # VALVE
-                # VENTILATOR
-                # VISIERE
-                # PORTE
-                # AUTRE
-                # NR
 
-                # cartographie
-                # plans DIY
-                # gel hydroalcoolique
-                # hygiène
-                # lunetttes
-                # masques
-                # masque de tissu
-                # masque de plongée
-                # pousse-seringue
-                # protection
-                # respirateur
-                # test de dépistage
-                # kit de dépistage
-                # valve
-                # ventilateur
-                # visère
-                # ouvre-porte
-                # autre
-                # non renseigné
-
-                {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'CARTO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'cartographie' }]},
-                {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'plans DIY' }]},
-                {'name' : u'GEL', 'choice_title' : [{'locale' : 'en', 'text' : 'GEL'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'gel hydroalcoolique' }]},
-                {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'HYGIENE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'hygiène' }]},
-                {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'LUNETTES'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'lunetttes' }]},
-                {'name' : u'MASQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masques' }]},
-                {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_TISSU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de tissu' }]},
-                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_SNORKLING'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de plongée' }]},
-                {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'POUSSE_SERINGUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'pousse-seringue' }]},
-                {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'PROTECTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'protection' }]},
-                {'name' : u'RESPIRATEUR', 'choice_title' : [{'locale' : 'en', 'text' : 'RESPIRATEUR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'respirateur' }]},
-                {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'TEST'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'test de dépistage' }]},
-                {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'TESTKIT'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'kit de dépistage' }]},
-                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALVE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'valve' }]},
-                {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'VENTILATOR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ventilateur' }]},
-                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VISIERE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'visère' }]},
-                {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'PORTE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ouvre-porte' }]},
-                {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'AUTRE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'autre' }]},
+                {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'CARTO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cartographie' }]},
+                {'name' : u'DEFI', 'choice_title' : [{'locale' : 'en', 'text' : 'DEFI'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Défi' }]},
+                # {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DIY' }]},
+                {'name' : u'ENTRAIDE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTRAIDE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entraide' }]},
+                {'name' : u'MAKERS', 'choice_title' : [{'locale' : 'en', 'text' : 'MAKERS'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Makers' }]},
+                {'name' : u'MISE_RELATION', 'choice_title' : [{'locale' : 'en', 'text' : 'MISE_RELATION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Mise en relation' }]},
+                {'name' : u'STAT', 'choice_title' : [{'locale' : 'en', 'text' : 'STAT'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Statistiques' }]},
+                # {'name' : u'GEL', 'choice_title' : [{'locale' : 'en', 'text' : 'GEL'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'gel hydroalcoolique' }]},
+                # {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'HYGIENE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'hygiène' }]},
+                # {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'LUNETTES'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'lunetttes' }]},
+                # {'name' : u'MASQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masques' }]},
+                # {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_TISSU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de tissu' }]},
+                # {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_SNORKLING'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de plongée' }]},
+                # {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'POUSSE_SERINGUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'pousse-seringue' }]},
+                # {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'PROTECTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'protection' }]},
+                # {'name' : u'RESPIRATEUR', 'choice_title' : [{'locale' : 'en', 'text' : 'RESPIRATEUR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'respirateur' }]},
+                # {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'TEST'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'test de dépistage' }]},
+                # {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'TESTKIT'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'kit de dépistage' }]},
+                # {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALVE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'valve' }]},
+                # {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'VENTILATOR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ventilateur' }]},
+                # {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VISIERE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'visère' }]},
+                # {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'PORTE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ouvre-porte' }]},
+                # {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'AUTRE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'autre' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
               ],
             },
-            {	"name"		: u"tag_structure_niv1_code__",
-              "id"      : "filter_4",
-              "col_name" : "tag_structure_niv1_code",
-              "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Initiators"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiateurs" }],
-              "choices"	: [
 
-                # ANONYME
-                # ASSO
-                # GROUPE
-                # INDIVIDU
-                # INSTITUTION
-                # ENTREPRISE
-                # NR
+            # {	"name"		: u"tag_structure_niv1_code__",
+            #   "id"      : "filter_4",
+            #   "col_name" : "tag_structure_niv1_code",
+            #   "dataType" : "text",
+            #   "filter_title" : [{"locale" : "en", "text" : "Initiators"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiateurs" }],
+            #   "choices"	: [
 
-                # Anonyme
-                # Association 
-                # Groupe / réseau social
-                # Initiative individuelle
-                # Institutionnel
-                # Entreprise / personne morale 
-                # non renseigné
+            #     # ANONYME
+            #     # ASSO
+            #     # GROUPE
+            #     # INDIVIDU
+            #     # INSTITUTION
+            #     # ENTREPRISE
+            #     # NR
 
-                {'name' : u'ANONYME', 'choice_title' : [{'locale' : 'en', 'text' : 'ANONYME'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Anonyme' }]},
-                {'name' : u'ASSO', 'choice_title' : [{'locale' : 'en', 'text' : 'ASSO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Association' }]},
-                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe / réseau social' }]},
-                {'name' : u'INDIVIDU', 'choice_title' : [{'locale' : 'en', 'text' : 'INDIVIDU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Initiative individuelle' }]},
-                {'name' : u'INSTITUTION', 'choice_title' : [{'locale' : 'en', 'text' : 'INSTITUTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Institutionnel' }]},
-                {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTREPRISE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise / personne morale ' }]},
+            #     # Anonyme
+            #     # Association 
+            #     # Groupe / réseau social
+            #     # Initiative individuelle
+            #     # Institutionnel
+            #     # Entreprise / personne morale 
+            #     # non renseigné
 
-                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
-              ],
-            },
-            {	"name"		: u"validation__",  
-              "id"      : "filter_4",
-              "col_name" : "validation",
-              "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Validation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Validation" }],
-              "choices"	: [
-                # OUI
-                # NON
-                # PARTIELLE
-                # UTILISE_DANS_STRUCT_MEDICALE
-                # VALIDE_PAR_AUTORITE_ETRANGERE
-                # VALIDE_PAR_AUTORITE_FR
-                # NR
-                # ?
-                {'name' : u'OUI', 'choice_title' : [{'locale' : 'en', 'text' : 'Yes'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Oui' }]},
-                {'name' : u'NON', 'choice_title' : [{'locale' : 'en', 'text' : 'No'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non' }]},
-                {'name' : u'PARTIELLE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Partielle' }]},
-                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale' }]},
-                {'name' : u'VALIDE_PAR_AUTORITE_ETRANGERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité autre que française' }]},
-                {'name' : u'VALIDE_PAR_AUTORITE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité française' }]},
+            #     {'name' : u'ANONYME', 'choice_title' : [{'locale' : 'en', 'text' : 'ANONYME'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Anonyme' }]},
+            #     {'name' : u'ASSO', 'choice_title' : [{'locale' : 'en', 'text' : 'ASSO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Association' }]},
+            #     {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe / réseau social' }]},
+            #     {'name' : u'INDIVIDU', 'choice_title' : [{'locale' : 'en', 'text' : 'INDIVIDU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Initiative individuelle' }]},
+            #     {'name' : u'INSTITUTION', 'choice_title' : [{'locale' : 'en', 'text' : 'INSTITUTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Institutionnel' }]},
+            #     {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTREPRISE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise / personne morale ' }]},
 
-                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
-                {'name' : u'?', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : '?' }]},
-              ],
-            },
+            #     {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
+            #   ],
+            # },
+
 
 
           ],
@@ -811,58 +694,20 @@ default_data_endpoints_config = [
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels" }],
               "choices"	: [
-                # CARTO
-                # DIY
-                # GEL
-                # HYGIENE
-                # LUNETTES
-                # MASQUE
-                # MASQUE_TISSU
-                # MASQUE_SNORKLING
-                # POUSSE_SERINGUE
-                # PROTECTION
-                # RESPIRATEUR
-                # TEST
-                # TESTKIT
-                # VALVE
-                # VENTILATOR
-                # VISIERE
-                # PORTE
-                # AUTRE
-                # NR
 
-                # cartographie
-                # plans DIY
-                # gel hydroalcoolique
-                # hygiène
-                # lunetttes
-                # masques
-                # masque de tissu
-                # masque de plongée
-                # pousse-seringue
-                # protection
-                # respirateur
-                # test de dépistage
-                # kit de dépistage
-                # valve
-                # ventilateur
-                # visère
-                # ouvre-porte
-                # autre
-                # non renseigné
 
-                {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'CARTO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'cartographie' }]},
-                {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'plans DIY' }]},
+                # {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'CARTO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'cartographie' }]},
+                # {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'plans DIY' }]},
                 {'name' : u'GEL', 'choice_title' : [{'locale' : 'en', 'text' : 'GEL'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'gel hydroalcoolique' }]},
                 {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'HYGIENE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'hygiène' }]},
-                {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'LUNETTES'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'lunetttes' }]},
+                # {'name' : u'LUNETTES', 'choice_title' : [{'locale' : 'en', 'text' : 'LUNETTES'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'lunetttes' }]},
                 {'name' : u'MASQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masques' }]},
                 {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_TISSU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de tissu' }]},
                 {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_SNORKLING'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'masque de plongée' }]},
                 {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'POUSSE_SERINGUE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'pousse-seringue' }]},
-                {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'PROTECTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'protection' }]},
+                # {'name' : u'PROTECTION', 'choice_title' : [{'locale' : 'en', 'text' : 'PROTECTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'protection' }]},
                 {'name' : u'RESPIRATEUR', 'choice_title' : [{'locale' : 'en', 'text' : 'RESPIRATEUR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'respirateur' }]},
-                {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'TEST'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'test de dépistage' }]},
+                # {'name' : u'TEST', 'choice_title' : [{'locale' : 'en', 'text' : 'TEST'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'test de dépistage' }]},
                 {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'TESTKIT'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'kit de dépistage' }]},
                 {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALVE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'valve' }]},
                 {'name' : u'VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'VENTILATOR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'ventilateur' }]},
@@ -874,62 +719,56 @@ default_data_endpoints_config = [
               ],
             },
 
-            {	"name"		: u"tag_structure_niv1_code__",
-              "id"      : "filter_4",
-              "col_name" : "tag_structure_niv1_code",
-              "dataType" : "text",
-              "filter_title" : [{"locale" : "en", "text" : "Initiators"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiateurs" }],
-              "choices"	: [
+            # {	"name"		: u"tag_structure_niv1_code__",
+            #   "id"      : "filter_4",
+            #   "col_name" : "tag_structure_niv1_code",
+            #   "dataType" : "text",
+            #   "filter_title" : [{"locale" : "en", "text" : "Initiators"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiateurs" }],
+            #   "choices"	: [
 
-                # ANONYME
-                # ASSO
-                # GROUPE
-                # INDIVIDU
-                # INSTITUTION
-                # ENTREPRISE
-                # NR
+            #     # ANONYME
+            #     # ASSO
+            #     # GROUPE
+            #     # INDIVIDU
+            #     # INSTITUTION
+            #     # ENTREPRISE
+            #     # NR
 
-                # Anonyme
-                # Association 
-                # Groupe / réseau social
-                # Initiative individuelle
-                # Institutionnel
-                # Entreprise / personne morale 
-                # non renseigné
+            #     # Anonyme
+            #     # Association 
+            #     # Groupe / réseau social
+            #     # Initiative individuelle
+            #     # Institutionnel
+            #     # Entreprise / personne morale 
+            #     # non renseigné
 
-                {'name' : u'ANONYME', 'choice_title' : [{'locale' : 'en', 'text' : 'ANONYME'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Anonyme' }]},
-                {'name' : u'ASSO', 'choice_title' : [{'locale' : 'en', 'text' : 'ASSO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Association' }]},
-                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe / réseau social' }]},
-                {'name' : u'INDIVIDU', 'choice_title' : [{'locale' : 'en', 'text' : 'INDIVIDU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Initiative individuelle' }]},
-                {'name' : u'INSTITUTION', 'choice_title' : [{'locale' : 'en', 'text' : 'INSTITUTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Institutionnel' }]},
-                {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTREPRISE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise / personne morale ' }]},
+            #     {'name' : u'ANONYME', 'choice_title' : [{'locale' : 'en', 'text' : 'ANONYME'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Anonyme' }]},
+            #     {'name' : u'ASSO', 'choice_title' : [{'locale' : 'en', 'text' : 'ASSO'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Association' }]},
+            #     {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe / réseau social' }]},
+            #     {'name' : u'INDIVIDU', 'choice_title' : [{'locale' : 'en', 'text' : 'INDIVIDU'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Initiative individuelle' }]},
+            #     {'name' : u'INSTITUTION', 'choice_title' : [{'locale' : 'en', 'text' : 'INSTITUTION'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Institutionnel' }]},
+            #     {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTREPRISE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise / personne morale ' }]},
 
-                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
-              ],
-            },
+            #     {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
+            #   ],
+            # },
             {	"name"		: u"validation__",  
               "id"      : "filter_4",
               "col_name" : "validation",
               "dataType" : "text",
               "filter_title" : [{"locale" : "en", "text" : "Validation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Validation" }],
               "choices"	: [
-                # OUI
-                # NON
-                # PARTIELLE
-                # UTILISE_DANS_STRUCT_MEDICALE
-                # VALIDE_PAR_AUTORITE_ETRANGERE
-                # VALIDE_PAR_AUTORITE_FR
-                # NR
-                # ?
-                {'name' : u'OUI', 'choice_title' : [{'locale' : 'en', 'text' : 'Yes'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Oui' }]},
-                {'name' : u'NON', 'choice_title' : [{'locale' : 'en', 'text' : 'No'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non' }]},
-                {'name' : u'PARTIELLE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Partielle' }]},
-                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale' }]},
+
+                # {'name' : u'OUI', 'choice_title' : [{'locale' : 'en', 'text' : 'Yes'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Oui' }]},
+                # {'name' : u'NON', 'choice_title' : [{'locale' : 'en', 'text' : 'No'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non' }]},
+                # {'name' : u'PARTIELLE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Partielle' }]},
+                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale française' }]},
+                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_ETR', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale étrangère' }]},
                 {'name' : u'VALIDE_PAR_AUTORITE_ETRANGERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité autre que française' }]},
                 {'name' : u'VALIDE_PAR_AUTORITE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'Partially'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité française' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
-                {'name' : u'?', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : '?' }]},
+                # {'name' : u'?', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : '?' }]},
               ],
             },
 

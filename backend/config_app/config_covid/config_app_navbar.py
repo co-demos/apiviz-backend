@@ -47,7 +47,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Initiatives"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les initiatives" }],
+              "link_text"  : [{"locale" : "en", "text" : "Initiatives"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les initiatives solidaires" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
