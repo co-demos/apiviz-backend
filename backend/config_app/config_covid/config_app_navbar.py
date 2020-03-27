@@ -86,6 +86,27 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Our selection"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre sélection" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : True,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Latitudes contre le Covid"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://bzg.fr/covid19-developpeurs-datascientistes-comment-aider/", "link_text" : [{"locale" : "en", "text" : "Our goals"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développeurs/data-scientists..."}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://enpremiereligne.fr/", "link_text" : [{"locale" : "en", "text" : "En première ligne"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En première ligne"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.continuitepedagogique.org/", "link_text" : [{"locale" : "en", "text" : "Continuité pédagogique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Continuité pédagogique"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "What to read ? "},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Que lire ?"}] },
+
+              ]
+            },
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "/la-demarche",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : False,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Our goals"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : True,
