@@ -90,6 +90,8 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : True,
               "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.mur-project.org/", "link_text" : [{"locale" : "en", "text" : "Minimal Universal Respirator"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Minimal Universal Respirator"}] },
+                { "is_divider" : True,  "is_external_link" : False },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Latitudes contre le Covid"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://bzg.fr/covid19-developpeurs-datascientistes-comment-aider/", "link_text" : [{"locale" : "en", "text" : "Our goals"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développeurs/data-scientists..."}] },
                 { "is_divider" : True,  "is_external_link" : False },
