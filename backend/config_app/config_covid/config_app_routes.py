@@ -2007,10 +2007,10 @@ default_routes_config = [
         "dataset_uri"       : "recherche",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/map-printers.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/map-printers.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/map-printers.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/map-printers.html" }
         ],
         
 
