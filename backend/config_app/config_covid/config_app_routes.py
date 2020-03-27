@@ -1946,14 +1946,14 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/nous-contacter"],
+        "urls"              : ["/contact"],
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/nous-contacter.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/nous-contacter.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/nous-contacter.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/nous-contacter.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" }
         ],
         
 
