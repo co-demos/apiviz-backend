@@ -727,7 +727,7 @@ default_routes_config = [
               "custom_title" : "to do",
               "locale" : "fr"
             },
-            { "field" : "ville",
+            { "field" : "pays",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
@@ -874,7 +874,7 @@ default_routes_config = [
               "custom_title" : "to do",
               "locale" : "fr"
             },
-            { "field" : "adresse",
+            { "field" : "pays",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
@@ -1721,7 +1721,7 @@ default_routes_config = [
               "custom_title" : "to do",
               "locale" : "fr"
             },
-            { "field" : "adresse",
+            { "field" : "pays",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
