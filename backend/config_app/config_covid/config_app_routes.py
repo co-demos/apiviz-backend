@@ -1869,7 +1869,7 @@ default_routes_config = [
           "is_global_app_homepage" : False,
           "route_title"       : u"Rechercher",
           "route_description" : u"Page de recherche d'Apiviz",
-          "route_activated"   : False,
+          "route_activated"   : True,
           "banner" : {
             "activated"  : False,
             "banner_uri" : "banner-TL-carto" # TODO
