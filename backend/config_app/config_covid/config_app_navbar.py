@@ -31,7 +31,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "DIY"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels DIY" }],
+              "link_text"  : [{"locale" : "en", "text" : "DIY materials"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels DIY" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
