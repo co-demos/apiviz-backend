@@ -9,7 +9,7 @@ default_global_config = [
 
     ### LANGUAGES
       { "field"       : "app_languages",
-        "languages"   : ["fr", "en"],
+        "languages"   : ["fr", "en", "es"],
         "is_multi_lang" : True,
         "locale"      : "fr",
         "app_version" : version,
@@ -176,7 +176,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Covid-initiatives",
-        "content_text" : [{"locale" : "en", "text" : "COVID-INITIATIVES"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "COVID-INITIATIVES"}],
+        "content_text" : [{"locale" : "en", "text" : "COVID-INITIATIVES"},{"locale" : "es", "text" : "COVID-INITIATIVES"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "COVID-INITIATIVES"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 

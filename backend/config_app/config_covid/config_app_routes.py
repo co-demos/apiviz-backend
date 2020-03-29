@@ -44,8 +44,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home-en.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/home-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -2835,8 +2837,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-en.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
         ],
         
 
@@ -2893,8 +2897,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-en.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" }
         ],
         
 
@@ -2950,8 +2956,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/map-printers.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/map-printers.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/map-printers.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/map-printers.html" }
         ],
         
 
@@ -3009,8 +3017,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-france.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-france.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-france.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-france.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-france.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/charts-france.html" }
         ],
         
 
@@ -3066,8 +3076,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-europe.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-europe.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-europe.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-europe.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-europe.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/charts-europe.html" }
         ],
         
 
@@ -3123,8 +3135,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-world.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-world.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-world.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-world.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-world.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/charts-world.html" }
         ],
         
 
@@ -3179,8 +3193,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-sources.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-sources.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/charts-sources.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/charts-sources.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/charts-sources.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/charts-sources.html" }
         ],
         
         "has_ext_script"    : False,
@@ -3227,8 +3243,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils-en.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/les-outils-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-outils.html" }, 
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-outils-en.html" }, 
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/les-outils-en.html" }, 
         ],
         
         "has_ext_script"    : False,
@@ -3274,8 +3292,10 @@ default_routes_config = [
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
         
         "has_ext_script"    : False,
