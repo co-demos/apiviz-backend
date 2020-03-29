@@ -81,6 +81,15 @@ default_app_footer = [
               },
 
               { "is_visible" : True,
+                "link_to"    : "https://mapthenews.maps.arcgis.com/apps/opsdashboard/index.html#/5df19abcf8714bc590a3b143e14a548c",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "ESRI / suivi des patients"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "ESRI / suivi des patients" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+
+              { "is_visible" : True,
                 "link_to"    : "https://github.com/CSSEGISandData/COVID-19",
                 "is_external_link" : True,
                 "link_type"  : "text",
