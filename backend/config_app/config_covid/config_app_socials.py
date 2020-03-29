@@ -8,29 +8,29 @@ default_socials_config = [
   ### CONFIG PING
   
     ### SOCIAL NETWORKS
-    { "field"       : "app_twitter",
-      "content"     : u"twitter",
-      "icon_class"  : "fab fa-twitter",
-      "url"         : "https://twitter.com/assoping",
-      "app_version" : version,
-      "help"        : u"Choose the twitter account for your ApiViz instance",
-      "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
-      "apiviz_front_uuid" : uuid_models["uuid_covid"],
-      "is_default"  : True
-    },
+    # { "field"       : "app_twitter",
+    #   "content"     : u"twitter",
+    #   "icon_class"  : "fab fa-twitter",
+    #   "url"         : "https://twitter.com/assoping",
+    #   "app_version" : version,
+    #   "help"        : u"Choose the twitter account for your ApiViz instance",
+    #   "in_footer"   : True,
+    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
+    #   "apiviz_front_uuid" : uuid_models["uuid_covid"],
+    #   "is_default"  : True
+    # },
 
-    { "field"       : "app_facebook",
-      "content"     : u"facebook",
-      "icon_class"  : "fab fa-facebook-f",
-      "url"         : "https://www.facebook.com/AssociationPiNG/",
-      "app_version" : version,
-      "help"        : u"Choose the facebook account for your ApiViz instance",
-      "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
-      "apiviz_front_uuid" : uuid_models["uuid_covid"],
-      "is_default"  : True
-    },
+    # { "field"       : "app_facebook",
+    #   "content"     : u"facebook",
+    #   "icon_class"  : "fab fa-facebook-f",
+    #   "url"         : "https://www.facebook.com/AssociationPiNG/",
+    #   "app_version" : version,
+    #   "help"        : u"Choose the facebook account for your ApiViz instance",
+    #   "in_footer"   : True,
+    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
+    #   "apiviz_front_uuid" : uuid_models["uuid_covid"],
+    #   "is_default"  : True
+    # },
 
     { "field"       : "app_github",
       "content"     : u"github",
