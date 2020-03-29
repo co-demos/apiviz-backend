@@ -32,6 +32,18 @@ default_socials_config = [
     #   "is_default"  : True
     # },
 
+    { "field"       : "app_email",
+      "content"     : u"email",
+      "icon_class"  : "far fa-envelope",
+      "url"         : "mailto:covid.initiatives@gmail.com?subject=[Covid] Contact",
+      "app_version" : version,
+      "help"        : u"Choose the github account for your ApiViz instance",
+      "in_footer"   : True,
+      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
+      "apiviz_front_uuid" : uuid_models["uuid_covid"],
+      "is_default"  : True
+    },
+
     { "field"       : "app_github",
       "content"     : u"github",
       "icon_class"  : "fab fa-github",
