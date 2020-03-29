@@ -58,7 +58,7 @@ default_app_footer = [
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Le Monde"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Monde / les décodeurs" }],
+                "link_text"  : [{"locale" : "en", "text" : "Le Monde / decoders"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Monde / les décodeurs" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
 
@@ -156,7 +156,7 @@ default_app_footer = [
                 "is_external_link" : False,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Our goals"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche" }],
+                "link_text"  : [{"locale" : "en", "text" : "Our approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
