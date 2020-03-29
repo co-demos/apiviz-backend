@@ -35,7 +35,7 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/diy/liste", "link_text" : [{"locale" : "en", "text" : "DIY materials"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste de matériels DIY"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/diy/liste", "link_text" : [{"locale" : "en", "text" : "DIY materials inventory"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste de matériels DIY"}] },
                 { "is_divider" : True,  "is_external_link" : False },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.mur-project.org/", "link_text" : [{"locale" : "en", "text" : "-->   Minimal Universal Respirator"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Minimal Universal Respirator"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://e-vent.mit.edu/", "link_text" : [{"locale" : "en", "text" : "-->   MIT Emergency Ventilator (E-Vent)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   MIT Emergency Ventilator (E-Vent)"}] },
@@ -59,7 +59,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "3D Printers map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Imprimeurs 3D volontaires" }],
+              "link_text"  : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Imprimeurs 3D volontaires" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
@@ -80,7 +80,7 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/recherche", "link_text" : [{"locale" : "en", "text" : "Initiatives"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste des initiatives"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/recherche", "link_text" : [{"locale" : "en", "text" : "Initiatives inventory"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste des initiatives"}] },
                 { "is_divider" : True,  "is_external_link" : False },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.continuitepedagogique.org/", "link_text" : [{"locale" : "en", "text" : "-->   Continuité pédagogique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Continuité pédagogique"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "-->   Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Latitudes contre le Covid"}] },
