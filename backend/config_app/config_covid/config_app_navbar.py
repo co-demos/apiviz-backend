@@ -47,7 +47,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "3D Printers map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D" }],
+              "link_text"  : [{"locale" : "en", "text" : "3D Printers map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Imprimeurs 3D volontaires" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : False,
               "dropdowns"  : [
@@ -63,7 +63,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Initiatives"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les initiatives solidaires" }],
+              "link_text"  : [{"locale" : "en", "text" : "Initiatives"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiatives solidaires" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
@@ -74,6 +74,44 @@ default_app_navbar = [
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Latitudes contre le Covid"}] },
               ]
             },
+
+
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "/la-demarche",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : False,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Our selection"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre sélection" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : True,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/", "link_text" : [{"locale" : "en", "text" : "French government official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel du gouvernement sur le Covid19"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/carte-et-donnees", "link_text" : [{"locale" : "en", "text" : "Covid map for France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte et données officielles"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.mur-project.org/", "link_text" : [{"locale" : "en", "text" : "Minimal Universal Respirator"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Minimal Universal Respirator"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://e-vent.mit.edu/", "link_text" : [{"locale" : "en", "text" : "MIT Emergency Ventilator (E-Vent)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "MIT Emergency Ventilator (E-Vent)"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.avosmasques.fr/", "link_text" : [{"locale" : "en", "text" : "A vos masques"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "A vos masques"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://app.jogl.io/project/118#about", "link_text" : [{"locale" : "en", "text" : "Low-cost & Open-Source Covid19 Detection kits"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Low-cost & Open-Source Covid19 Detection kits"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Latitudes contre le Covid"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://bzg.fr/covid19-developpeurs-datascientistes-comment-aider/", "link_text" : [{"locale" : "en", "text" : "Devs/data-scientists..."},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développeurs/data-scientists..."}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://enpremiereligne.fr/", "link_text" : [{"locale" : "en", "text" : "En première ligne"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En première ligne"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.continuitepedagogique.org/", "link_text" : [{"locale" : "en", "text" : "Continuité pédagogique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Continuité pédagogique"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://covid19.reserve-civique.gouv.fr/", "link_text" : [{"locale" : "en", "text" : "Réserve civique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Réserve civique"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.lemonde.fr/les-decodeurs/article/2020/02/27/en-carte-visualisez-la-propagation-mondiale-de-l-epidemie-de-coronavirus_6031092_4355770.html", "link_text" : [{"locale" : "en", "text" : "Le Monde - Covid charts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le Monde - évolution du Covid"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html", "link_text" : [{"locale" : "en", "text" : "NY Times Covid maps"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "New York Times - cartes et données "}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/03/22/world/coronavirus-spread.html", "link_text" : [{"locale" : "en", "text" : "NY Times - how the virus got out"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "New York Times - how the virus got out"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://mapthenews.maps.arcgis.com/apps/opsdashboard/index.html#/5df19abcf8714bc590a3b143e14a548c", "link_text" : [{"locale" : "en", "text" : "ESRI - suivi des patients"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "ESRI - suivi des patients"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "What to read ? "},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Que lire ?"}] },
+
+              ]
+            },
+
 
             { "is_visible" : True,
               "position"   : "exterior_right",
@@ -95,35 +133,8 @@ default_app_navbar = [
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://veille-coronavirus.fr/",   "link_text" : [{"locale" : "en", "text" : "Dataviz France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Veille Coronavirus France"}] },
               ]
             },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/la-demarche",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Our selection"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre sélection" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : True,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/", "link_text" : [{"locale" : "en", "text" : "French government official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel du gouvernement sur le Covid19"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/carte-et-donnees", "link_text" : [{"locale" : "en", "text" : "Covid map for France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte et données officielles"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.mur-project.org/", "link_text" : [{"locale" : "en", "text" : "Minimal Universal Respirator"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Minimal Universal Respirator"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.avosmasques.fr/", "link_text" : [{"locale" : "en", "text" : "A vos masques"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "A vos masques"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://app.jogl.io/project/118#about", "link_text" : [{"locale" : "en", "text" : "Low-cost & Open-Source Covid19 Detection kits"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Low-cost & Open-Source Covid19 Detection kits"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.latitudes.cc/covid19", "link_text" : [{"locale" : "en", "text" : "Latitudes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Latitudes contre le Covid"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://bzg.fr/covid19-developpeurs-datascientistes-comment-aider/", "link_text" : [{"locale" : "en", "text" : "Devs/data-scientists..."},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Développeurs/data-scientists..."}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://enpremiereligne.fr/", "link_text" : [{"locale" : "en", "text" : "En première ligne"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En première ligne"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.continuitepedagogique.org/", "link_text" : [{"locale" : "en", "text" : "Continuité pédagogique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Continuité pédagogique"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://covid19.reserve-civique.gouv.fr/", "link_text" : [{"locale" : "en", "text" : "Réserve civique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Réserve civique"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "What to read ? "},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Que lire ?"}] },
+            
 
-              ]
-            },
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/la-demarche",

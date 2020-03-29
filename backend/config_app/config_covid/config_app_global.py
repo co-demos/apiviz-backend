@@ -175,8 +175,8 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Covid-19 initiatives",
-        "content_text" : [{"locale" : "en", "text" : "Initiatives against covid-19"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiatives contre le covid-19"}],
+        "content"      : u"Covid-initiatives",
+        "content_text" : [{"locale" : "en", "text" : "Initiatives against covid-19"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "covid-initiatives.org"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
