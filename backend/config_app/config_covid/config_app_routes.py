@@ -2892,7 +2892,7 @@ default_routes_config = [
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-en.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" }
         ],
