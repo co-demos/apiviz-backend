@@ -94,22 +94,7 @@ default_app_navbar = [
               ]
             },
 
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/printers/carte",
-              "help"       : u"First menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Makers' map"},{"locale" : "es", "text" : "Mapa de los makers"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des makers" }],
-              "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/map-printers", "link_text" : [{"locale" : "en", "text" : "-->   Handdle Map 3D printers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Handdle impression 3D"}] },
-              ]
-            },
+
 
             { "is_visible" : True,
               "position"   : "exterior_right",
@@ -170,7 +155,22 @@ default_app_navbar = [
             
 
 
-
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "/printers/carte",
+              "help"       : u"First menu in navbar",
+              "is_external_link" : False,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Makers' map"},{"locale" : "es", "text" : "Mapa de los makers"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des makers" }],
+              "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
+              "has_dropdown" : False,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/map-printers", "link_text" : [{"locale" : "en", "text" : "-->   Handdle Map 3D printers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Handdle impression 3D"}] },
+              ]
+            },
 
 
           ]
