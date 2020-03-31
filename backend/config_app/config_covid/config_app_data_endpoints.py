@@ -688,7 +688,7 @@ default_data_endpoints_config = [
                 {'name' : u'RESPIRATEUR_VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'Ventilator'},{'locale' : 'es', 'text' : 'Respiradora'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Respirateur' }]},
                 {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'Test kit'},{'locale' : 'es', 'text' : 'Kit de test'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Kit de dépistage' }]},
                 {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'Valve'},{'locale' : 'es', 'text' : 'Valvula'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Valve' }]},
-                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Visor'},{'locale' : 'es', 'text' : 'Visera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visère' }]},
+                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Visor'},{'locale' : 'es', 'text' : 'Visera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visière' }]},
                 {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'Open door'},{'locale' : 'es', 'text' : 'Abre-puerta'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ouvre-porte' }]},
                 {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Other'},{'locale' : 'es', 'text' : 'Otro'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
 
@@ -925,7 +925,7 @@ default_data_endpoints_config = [
             #     {'name' : u'RESPIRATEUR_VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'VENTILATOR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Respirateur' }]},
             #     {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'TESTKIT'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Kit de dépistage' }]},
             #     {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALVE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Valve' }]},
-            #     {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VISIERE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visère' }]},
+            #     {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VISIERE'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visière' }]},
             #     {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'DOOR'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ouvre-porte' }]},
             #     {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'OTHER'},{'locale' : 'es', 'text' : '-'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
 
