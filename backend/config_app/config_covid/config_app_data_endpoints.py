@@ -273,7 +273,7 @@ default_data_endpoints_config = [
             {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
           ],
           "reset"   : [
-            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "borrar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
+            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "reiniciar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
@@ -293,17 +293,17 @@ default_data_endpoints_config = [
               "filter_title" : [{"locale" : "en", "text" : "Needs"},{"locale" : "es", "text" : "Necesidades"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Besoins" }],
               "choices"	: [
 
-                {'name' : u'ADMINISTRATIF', 'choice_title' : [{'locale' : 'en', 'text' : 'ADMINISTRATIF'},{'locale' : 'es', 'text' : 'ADMINISTRATIF'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Administratif' }]},
-                {'name' : u'ALIMENTAIRE', 'choice_title' : [{'locale' : 'en', 'text' : 'ALIMENTAIRE'},{'locale' : 'es', 'text' : 'ALIMENTAIRE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Alimentaire' }]},
-                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'DATA'},{'locale' : 'es', 'text' : 'DATA'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Data' }]},
-                {'name' : u'EDUCATION', 'choice_title' : [{'locale' : 'en', 'text' : 'EDUCATION'},{'locale' : 'es', 'text' : 'EDUCATION'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Education' }]},
-                {'name' : u'FINANCE', 'choice_title' : [{'locale' : 'en', 'text' : 'FINANCE'},{'locale' : 'es', 'text' : 'FINANCE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Finance' }]},
-                {'name' : u'HELP', 'choice_title' : [{'locale' : 'en', 'text' : 'HELP'},{'locale' : 'es', 'text' : 'HELP'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Help' }]},
-                {'name' : u'INFOS', 'choice_title' : [{'locale' : 'en', 'text' : 'INFOS'},{'locale' : 'es', 'text' : 'INFOS'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Infos' }]},
-                {'name' : u'LOISIRS', 'choice_title' : [{'locale' : 'en', 'text' : 'LOISIRS'},{'locale' : 'es', 'text' : 'LOISIRS'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Loisirs' }]},
-                {'name' : u'NUMERIQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'NUMERIQUE'},{'locale' : 'es', 'text' : 'NUMERIQUE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Numerique' }]},
-                {'name' : u'SANTE', 'choice_title' : [{'locale' : 'en', 'text' : 'SANTE'},{'locale' : 'es', 'text' : 'SANTE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Sante' }]},
-                {'name' : u'SOCIAL', 'choice_title' : [{'locale' : 'en', 'text' : 'SOCIAL'},{'locale' : 'es', 'text' : 'SOCIAL'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Social' }]},
+                {'name' : u'ADMINISTRATIF', 'choice_title' : [{'locale' : 'en', 'text' : 'Administrative'},{'locale' : 'es', 'text' : 'Administrativo'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Administratif' }]},
+                {'name' : u'ALIMENTAIRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Food'},{'locale' : 'es', 'text' : 'Alimentario'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Alimentaire' }]},
+                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'Data'},{'locale' : 'es', 'text' : 'Datos'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Data' }]},
+                {'name' : u'EDUCATION', 'choice_title' : [{'locale' : 'en', 'text' : 'Eduction'},{'locale' : 'es', 'text' : 'Educación'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Education' }]},
+                {'name' : u'FINANCE', 'choice_title' : [{'locale' : 'en', 'text' : 'Finance'},{'locale' : 'es', 'text' : 'Financias'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Finance' }]},
+                {'name' : u'HELP', 'choice_title' : [{'locale' : 'en', 'text' : 'Help'},{'locale' : 'es', 'text' : 'Ayuda'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Help' }]},
+                {'name' : u'INFOS', 'choice_title' : [{'locale' : 'en', 'text' : 'Informations'},{'locale' : 'es', 'text' : 'Informaciones'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Infos' }]},
+                {'name' : u'LOISIRS', 'choice_title' : [{'locale' : 'en', 'text' : 'Leisure'},{'locale' : 'es', 'text' : 'Ocio'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Loisirs' }]},
+                {'name' : u'NUMERIQUE', 'choice_title' : [{'locale' : 'en', 'text' : 'Digital'},{'locale' : 'es', 'text' : 'Digital'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Numerique' }]},
+                {'name' : u'SANTE', 'choice_title' : [{'locale' : 'en', 'text' : 'Health'},{'locale' : 'es', 'text' : 'Salud'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Sante' }]},
+                {'name' : u'SOCIAL', 'choice_title' : [{'locale' : 'en', 'text' : 'Social'},{'locale' : 'es', 'text' : 'Social'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Social' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
               ],
@@ -316,19 +316,19 @@ default_data_endpoints_config = [
               "filter_title" : [{"locale" : "en", "text" : "Solutions"},{"locale" : "es", "text" : "Soluciones"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Initiatives" }],
               "choices"	: [
 
-                {'name' : u'APP', 'choice_title' : [{'locale' : 'en', 'text' : 'APP'},{'locale' : 'es', 'text' : 'APP'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Application' }]},
-                {'name' : u'COURS', 'choice_title' : [{'locale' : 'en', 'text' : 'COURS'},{'locale' : 'es', 'text' : 'COURS'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cours en ligne' }]},
-                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'DATA'},{'locale' : 'es', 'text' : 'DATA'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Données' }]},
+                {'name' : u'APP', 'choice_title' : [{'locale' : 'en', 'text' : 'Application'},{'locale' : 'es', 'text' : 'Applicación'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Application' }]},
+                {'name' : u'COURS', 'choice_title' : [{'locale' : 'en', 'text' : 'Online course'},{'locale' : 'es', 'text' : 'Cursos en linea'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cours en ligne' }]},
+                {'name' : u'DATA', 'choice_title' : [{'locale' : 'en', 'text' : 'Data'},{'locale' : 'es', 'text' : 'Datos'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Données' }]},
                 # {'name' : u'DIY', 'choice_title' : [{'locale' : 'en', 'text' : 'DIY'},{'locale' : 'es', 'text' : 'DIY'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'DIY' }]},
-                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'GROUPE'},{'locale' : 'es', 'text' : 'GROUPE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe de discussion' }]},
+                {'name' : u'GROUPE', 'choice_title' : [{'locale' : 'en', 'text' : 'Group'},{'locale' : 'es', 'text' : 'Grupo'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe de discussion' }]},
                 # {'name' : u'INDUSTRIEL', 'choice_title' : [{'locale' : 'en', 'text' : 'INDUSTRIEL'},{'locale' : 'es', 'text' : 'INDUSTRIEL'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Produit industriel' }]},
-                {'name' : u'LISTE', 'choice_title' : [{'locale' : 'en', 'text' : 'LISTE'},{'locale' : 'es', 'text' : 'LISTE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Liste de ressources' }]},
-                {'name' : u'MEDIA', 'choice_title' : [{'locale' : 'en', 'text' : 'MEDIA'},{'locale' : 'es', 'text' : 'MEDIA'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Média' }]},
+                {'name' : u'LISTE', 'choice_title' : [{'locale' : 'en', 'text' : 'List'},{'locale' : 'es', 'text' : 'Lista'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Liste de ressources' }]},
+                {'name' : u'MEDIA', 'choice_title' : [{'locale' : 'en', 'text' : 'Media'},{'locale' : 'es', 'text' : 'Media'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Média' }]},
                 # {'name' : u'PRO', 'choice_title' : [{'locale' : 'en', 'text' : 'PRO'},{'locale' : 'es', 'text' : 'PRO'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Professionnel' }]},
-                {'name' : u'RECHERCHE', 'choice_title' : [{'locale' : 'en', 'text' : 'RECHERCHE'},{'locale' : 'es', 'text' : 'RECHERCHE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Recherche scientifique' }]},
+                {'name' : u'RECHERCHE', 'choice_title' : [{'locale' : 'en', 'text' : 'Research'},{'locale' : 'es', 'text' : 'Investigación'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Recherche scientifique' }]},
                 # {'name' : u'REPO', 'choice_title' : [{'locale' : 'en', 'text' : 'REPO'},{'locale' : 'es', 'text' : 'REPO'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Code source' }]},
 
-                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'HEALTH'},{'locale' : 'es', 'text' : 'HEALTH'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
+                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'NA' }]},
               ],
             },
 
@@ -339,12 +339,12 @@ default_data_endpoints_config = [
               "filter_title" : [{"locale" : "en", "text" : "Sub-types of solutions"},{"locale" : "es", "text" : "Sub-tipos de soluciones"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Types d'initiative" }],
               "choices"	: [
 
-                {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'CARTO'},{'locale' : 'es', 'text' : 'CARTO'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cartographie' }]},
-                {'name' : u'DEFI', 'choice_title' : [{'locale' : 'en', 'text' : 'DEFI'},{'locale' : 'es', 'text' : 'DEFI'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Défi' }]},
-                {'name' : u'ENTRAIDE', 'choice_title' : [{'locale' : 'en', 'text' : 'ENTRAIDE'},{'locale' : 'es', 'text' : 'ENTRAIDE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entraide' }]},
-                {'name' : u'MAKERS', 'choice_title' : [{'locale' : 'en', 'text' : 'MAKERS'},{'locale' : 'es', 'text' : 'MAKERS'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Makers' }]},
-                {'name' : u'MISE_RELATION', 'choice_title' : [{'locale' : 'en', 'text' : 'MISE_RELATION'},{'locale' : 'es', 'text' : 'MISE_RELATION'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Mise en relation' }]},
-                {'name' : u'STAT', 'choice_title' : [{'locale' : 'en', 'text' : 'STAT'},{'locale' : 'es', 'text' : 'STAT'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Statistiques' }]},
+                {'name' : u'CARTO', 'choice_title' : [{'locale' : 'en', 'text' : 'Map'},{'locale' : 'es', 'text' : 'Mapa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Cartographie' }]},
+                {'name' : u'DEFI', 'choice_title' : [{'locale' : 'en', 'text' : 'Challenge'},{'locale' : 'es', 'text' : 'Desafio'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Défi' }]},
+                {'name' : u'ENTRAIDE', 'choice_title' : [{'locale' : 'en', 'text' : 'Mutual help'},{'locale' : 'es', 'text' : 'Ayuda mutua'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entraide' }]},
+                {'name' : u'MAKERS', 'choice_title' : [{'locale' : 'en', 'text' : 'Makers'},{'locale' : 'es', 'text' : 'Makers'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Makers' }]},
+                {'name' : u'MISE_RELATION', 'choice_title' : [{'locale' : 'en', 'text' : 'Interlinks'},{'locale' : 'es', 'text' : 'Conectar con gente'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Mise en relation' }]},
+                {'name' : u'STAT', 'choice_title' : [{'locale' : 'en', 'text' : 'Stats'},{'locale' : 'es', 'text' : 'Estatisticas'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Statistiques' }]},
         
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
               ],
@@ -659,7 +659,7 @@ default_data_endpoints_config = [
             {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
           ],
           "reset"   : [
-            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "borrar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
+            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "reiniciar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
@@ -679,18 +679,18 @@ default_data_endpoints_config = [
               "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "Productos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels" }],
               "choices"	: [
 
-                {'name' : u'GEL', 'choice_title' : [{'locale' : 'en', 'text' : 'GEL'},{'locale' : 'es', 'text' : 'GEL'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Gel hydroalcoolique' }]},
-                {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'HYGIENE'},{'locale' : 'es', 'text' : 'HYGIENE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Hygiène' }]},
-                {'name' : u'MASQUE_I3D', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE 3D'},{'locale' : 'es', 'text' : 'MASQUE_I3D'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masques 3D' }]},
-                {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_TISSU'},{'locale' : 'es', 'text' : 'MASQUE_TISSU'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de tissu' }]},
-                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'MASQUE_SNORKLING'},{'locale' : 'es', 'text' : 'MASQUE_SNORKLING'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de plongée' }]},
-                {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'POUSSE_SERINGUE'},{'locale' : 'es', 'text' : 'POUSSE_SERINGUE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Pousse-seringue' }]},
-                {'name' : u'RESPIRATEUR_VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'VENTILATOR'},{'locale' : 'es', 'text' : 'RESPIRATEUR_VENTILATOR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Respirateur' }]},
-                {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'TESTKIT'},{'locale' : 'es', 'text' : 'TESTKIT'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Kit de dépistage' }]},
-                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALVE'},{'locale' : 'es', 'text' : 'VALVE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Valve' }]},
-                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VISIERE'},{'locale' : 'es', 'text' : 'VISIERE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visère' }]},
-                {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'DOOR'},{'locale' : 'es', 'text' : 'PORTE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ouvre-porte' }]},
-                {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'OTHER'},{'locale' : 'es', 'text' : 'AUTRE'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
+                {'name' : u'GEL', 'choice_title' : [{'locale' : 'en', 'text' : 'Gel'},{'locale' : 'es', 'text' : 'Gel'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Gel hydroalcoolique' }]},
+                {'name' : u'HYGIENE', 'choice_title' : [{'locale' : 'en', 'text' : 'Hygiene'},{'locale' : 'es', 'text' : 'Higiene'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Hygiène' }]},
+                {'name' : u'MASQUE_I3D', 'choice_title' : [{'locale' : 'en', 'text' : '3D mask'},{'locale' : 'es', 'text' : 'Máscara 3D'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masques 3D' }]},
+                {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'Cloth mask'},{'locale' : 'es', 'text' : 'Máscara de tela'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de tissu' }]},
+                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'Snorkling mask'},{'locale' : 'es', 'text' : 'Máscara de snorkel'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de plongée' }]},
+                {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'Syringe driver'},{'locale' : 'es', 'text' : 'Bomba de jeringa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Pousse-seringue' }]},
+                {'name' : u'RESPIRATEUR_VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'Ventilator'},{'locale' : 'es', 'text' : 'Respiradora'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Respirateur' }]},
+                {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'Test kit'},{'locale' : 'es', 'text' : 'Kit de test'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Kit de dépistage' }]},
+                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'Valve'},{'locale' : 'es', 'text' : 'Valvula'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Valve' }]},
+                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Visor'},{'locale' : 'es', 'text' : 'Visera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visère' }]},
+                {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'Open door'},{'locale' : 'es', 'text' : 'Abre-puerta'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ouvre-porte' }]},
+                {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Other'},{'locale' : 'es', 'text' : 'Otro'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
               ],
@@ -736,10 +736,10 @@ default_data_endpoints_config = [
               "filter_title" : [{"locale" : "en", "text" : "Validation"},{"locale" : "es", "text" : "Validacion"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Validation" }],
               "choices"	: [
 
-                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'UTILISE_DANS_STRUCT_MEDICALE_FR'},{'locale' : 'es', 'text' : 'Validado en un estructura medica francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale française' }]},
-                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_ETR', 'choice_title' : [{'locale' : 'en', 'text' : 'UTILISE_DANS_STRUCT_MEDICALE_ETR'},{'locale' : 'es', 'text' : 'Validado en un estructura medica extranjera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale étrangère' }]},
-                {'name' : u'VALIDE_PAR_AUTORITE_ETRANGERE', 'choice_title' : [{'locale' : 'en', 'text' : 'VALIDE_PAR_AUTORITE_ETRANGERE'},{'locale' : 'es', 'text' : 'Validado por una autoridad francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité autre que française' }]},
-                {'name' : u'VALIDE_PAR_AUTORITE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'VALIDE_PAR_AUTORITE_FR'},{'locale' : 'es', 'text' : 'Validado por una autoridad extranjera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité française' }]},
+                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'Used in a French medical structure'},{'locale' : 'es', 'text' : 'Validado en un estructura medica francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale française' }]},
+                {'name' : u'UTILISE_DANS_STRUCT_MEDICALE_ETR', 'choice_title' : [{'locale' : 'en', 'text' : 'Used in a medical structure outside France'},{'locale' : 'es', 'text' : 'Validado en un estructura medica otra que francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Utilisé dans structure médicale étrangère' }]},
+                {'name' : u'VALIDE_PAR_AUTORITE_ETRANGERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Validated by a medical structure outside France'},{'locale' : 'es', 'text' : 'Validado por una autoridad francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité autre que française' }]},
+                {'name' : u'VALIDE_PAR_AUTORITE_FR', 'choice_title' : [{'locale' : 'en', 'text' : 'Validated by a French medical structure'},{'locale' : 'es', 'text' : 'Validado por una autoridad otra que francesa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Validé par autorité française' }]},
 
                 {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
               ],
@@ -896,7 +896,7 @@ default_data_endpoints_config = [
             {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
           ],
           "reset"   : [
-            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "borrar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
+            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "reiniciar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
           ],
 
           "content"       : u"apiviz default API endpoint for navbar filters",
