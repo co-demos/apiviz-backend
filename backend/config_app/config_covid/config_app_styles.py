@@ -20,7 +20,7 @@ default_app_styles_config = [
           ### SIMILI - BULMA
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
-          'link'       : '#4b4d58',
+          'link'       : '#5e616e',
           'link-hover' : '#FF9300', #'#004494', # '#592d7b',
           'primary'    : '#EC1657', ##00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#40529d',

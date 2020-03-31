@@ -24,6 +24,47 @@ default_app_navbar = [
         "links_options" : {
           "extra_buttons" : [ ### for buttons not declared in routes/pages
 
+
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "/la-demarche",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : False,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "Our approach"},{"locale" : "es", "text" : "Nuestro enfoque"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : True,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche", "link_text" : [{"locale" : "en", "text" : "Our approach"},{"locale" : "es", "text" : "Nuestro enfoque"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/contact", "link_text" : [{"locale" : "en", "text" : "Contact us"},{"locale" : "es", "text" : "Contactarnos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nous contacter"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/utiliser-le-site", "link_text" : [{"locale" : "en", "text" : "charts France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Utiliser le site"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales", "link_text" : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "Menciones legales"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-officielles", "link_text" : [{"locale" : "en", "text" : "Ressources - official"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources officielles"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-makers", "link_text" : [{"locale" : "en", "text" : "Ressources - makers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources makers"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-données", "link_text" : [{"locale" : "en", "text" : "Ressources - datasets"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources données"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-france", "link_text" : [{"locale" : "en", "text" : "Covid-19 data France"},{"locale" : "es", "text" : "Datos Francia"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données covid-19 France"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-europe", "link_text" : [{"locale" : "en", "text" : "Covid-19 data Europe"},{"locale" : "es", "text" : "Datos Europa"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données covid-19 Europe"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-world",  "link_text" : [{"locale" : "en", "text" : "Covid-19 data World"},{"locale" : "es", "text" : "Datos mundo"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données covid-19 Monde"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-sources",   "link_text" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "Fuentes de los datos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/", "link_text" : [{"locale" : "en", "text" : "-->   French government official website"},{"locale" : "es", "text" : "-->   French government official website"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Site officiel du gouvernement sur le Covid19"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/carte-et-donnees", "link_text" : [{"locale" : "en", "text" : "-->   Covid map for France"},{"locale" : "es", "text" : "-->   Covid map for France"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte et données officielles"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.lemonde.fr/les-decodeurs/article/2020/02/27/en-carte-visualisez-la-propagation-mondiale-de-l-epidemie-de-coronavirus_6031092_4355770.html", "link_text" : [{"locale" : "en", "text" : "-->   Le Monde - Covid charts"},{"locale" : "es", "text" : "-->   Le Monde - Covid charts"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Le Monde - évolution du Covid"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html", "link_text" : [{"locale" : "en", "text" : "-->   NY Times Covid maps"},{"locale" : "es", "text" : "-->   NY Times Covid maps"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   New York Times - cartes et données "}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/03/22/world/coronavirus-spread.html", "link_text" : [{"locale" : "en", "text" : "-->   NY Times - how the virus got out"},{"locale" : "es", "text" : "-->   NY Times - how the virus got ou"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   New York Times - how the virus got out"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://mapthenews.maps.arcgis.com/apps/opsdashboard/index.html#/5df19abcf8714bc590a3b143e14a548c", "link_text" : [{"locale" : "en", "text" : "-->   ESRI - suivi des patients"},{"locale" : "es", "text" : "-->   ESRI - suivi des patients"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   ESRI - suivi des patients"}] },
+                # { "is_divider" : False, "is_external_link" : True, "link_to" : "https://veille-coronavirus.fr/",   "link_text" : [{"locale" : "en", "text" : "-->   Dataviz France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Veille Coronavirus France"}] },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "-->   What to read ? "},{"locale" : "es", "text" : "-->   What to read ? "},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Que lire ?"}] },
+              ]
+            },
+            
+
             { "is_visible" : True,
               "position"   : "exterior_right",
               "link_to"    : "/diy/liste",
@@ -59,9 +100,9 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Imprimeurs 3D volontaires" }],
+              "link_text"  : [{"locale" : "en", "text" : "Makers' map"},{"locale" : "es", "text" : "Mapa de los makers"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des makers" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : True,
+              "has_dropdown" : False,
               "dropdowns"  : [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
@@ -111,59 +152,26 @@ default_app_navbar = [
             # },
 
 
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/charts-europe",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Charts Covid-19"},{"locale" : "es", "text" : "Datos sobre el Covid"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Graphiques" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : True,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-france", "link_text" : [{"locale" : "en", "text" : "Data France"},{"locale" : "es", "text" : "Datos Francia"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données France"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-europe", "link_text" : [{"locale" : "en", "text" : "Data Europe"},{"locale" : "es", "text" : "Datos Europa"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données Europe"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-world",  "link_text" : [{"locale" : "en", "text" : "Data World"},{"locale" : "es", "text" : "Datos mundo"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Données Monde"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/charts-sources",   "link_text" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "Fuentes de los datos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/", "link_text" : [{"locale" : "en", "text" : "-->   French government official website"},{"locale" : "es", "text" : "-->   French government official website"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Site officiel du gouvernement sur le Covid19"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.gouvernement.fr/info-coronavirus/carte-et-donnees", "link_text" : [{"locale" : "en", "text" : "-->   Covid map for France"},{"locale" : "es", "text" : "-->   Covid map for France"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte et données officielles"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.lemonde.fr/les-decodeurs/article/2020/02/27/en-carte-visualisez-la-propagation-mondiale-de-l-epidemie-de-coronavirus_6031092_4355770.html", "link_text" : [{"locale" : "en", "text" : "-->   Le Monde - Covid charts"},{"locale" : "es", "text" : "-->   Le Monde - Covid charts"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Le Monde - évolution du Covid"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/world/coronavirus-maps.html", "link_text" : [{"locale" : "en", "text" : "-->   NY Times Covid maps"},{"locale" : "es", "text" : "-->   NY Times Covid maps"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   New York Times - cartes et données "}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.nytimes.com/interactive/2020/03/22/world/coronavirus-spread.html", "link_text" : [{"locale" : "en", "text" : "-->   NY Times - how the virus got out"},{"locale" : "es", "text" : "-->   NY Times - how the virus got ou"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   New York Times - how the virus got out"}] },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://mapthenews.maps.arcgis.com/apps/opsdashboard/index.html#/5df19abcf8714bc590a3b143e14a548c", "link_text" : [{"locale" : "en", "text" : "-->   ESRI - suivi des patients"},{"locale" : "es", "text" : "-->   ESRI - suivi des patients"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   ESRI - suivi des patients"}] },
-                # { "is_divider" : False, "is_external_link" : True, "link_to" : "https://veille-coronavirus.fr/",   "link_text" : [{"locale" : "en", "text" : "-->   Dataviz France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Veille Coronavirus France"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "-->   What to read ? "},{"locale" : "es", "text" : "-->   What to read ? "},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Que lire ?"}] },
-              ]
-            },
+            # { "is_visible" : True,
+            #   "position"   : "exterior_right",
+            #   "link_to"    : "/charts-europe",
+            #   "help"       : u"Second menu in navbar",
+            #   "is_external_link" : False,
+            #   "link_type"  : "link", ### show btn border
+            #   "icon_class" : "",
+            #   "link_text"  : [{"locale" : "en", "text" : "Charts Covid-19"},{"locale" : "es", "text" : "Datos sobre el Covid"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Graphiques" }],
+            #   "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+            #   "has_dropdown" : True,
+            #   "dropdowns"  : [
+
+            #   ]
+            # },
             
 
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/la-demarche",
-              "help"       : u"Second menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Our approach"},{"locale" : "es", "text" : "Nuestro enfoque"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : True,
-              "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche", "link_text" : [{"locale" : "en", "text" : "Our approach"},{"locale" : "es", "text" : "Nuestro enfoque"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre démarche"}] },
-                { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/contact", "link_text" : [{"locale" : "en", "text" : "Contact us"},{"locale" : "es", "text" : "Contactarnos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nous contacter"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/utiliser-le-site", "link_text" : [{"locale" : "en", "text" : "charts France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Utiliser le site"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales", "link_text" : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "Menciones legales"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-officielles", "link_text" : [{"locale" : "en", "text" : "Ressources - official"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources officielles"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-makers", "link_text" : [{"locale" : "en", "text" : "Ressources - makers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources makers"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-données", "link_text" : [{"locale" : "en", "text" : "Ressources - datasets"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources données"}] },
-              ]
-            },
+
+
+
+
           ]
         },
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
