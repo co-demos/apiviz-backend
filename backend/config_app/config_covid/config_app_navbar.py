@@ -63,7 +63,7 @@ default_app_navbar = [
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.covid19-que-lire.fr/", "link_text" : [{"locale" : "en", "text" : "-->   What to read ? "},{"locale" : "es", "text" : "-->   What to read ? "},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Que lire ?"}] },
               ]
             },
-            
+
 
             { "is_visible" : True,
               "position"   : "exterior_right",
@@ -78,6 +78,7 @@ default_app_navbar = [
               "dropdowns"  : [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/diy/liste", "link_text" : [{"locale" : "en", "text" : "DIY materials inventory"},{"locale" : "es", "text" : "Materiales DIY"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste de matériels DIY"}] },
                 { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "http://covid3d.org/", "link_text" : [{"locale" : "en", "text" : "-->   3D Covid APHP"},{"locale" : "es", "text" : "-->  3D Covid APHP"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   3D Covid APHP"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.mur-project.org/", "link_text" : [{"locale" : "en", "text" : "-->   Minimal Universal Respirator"},{"locale" : "es", "text" : "-->  Minimal Universal Respirator"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Minimal Universal Respirator"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://e-vent.mit.edu/", "link_text" : [{"locale" : "en", "text" : "-->   MIT Emergency Ventilator (E-Vent)"},{"locale" : "es", "text" : "--> MIT Emergency Ventilator (E-Vent)"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   MIT Emergency Ventilator (E-Vent)"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://app.jogl.io/project/118#about", "link_text" : [{"locale" : "en", "text" : "-->   Low-cost & Open-Source Covid19 Detection kits"},{"locale" : "es", "text" : "-->  Low-cost & Open-Source Covid19 Detection kits"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Low-cost & Open-Source Covid19 Detection kits"}] },
