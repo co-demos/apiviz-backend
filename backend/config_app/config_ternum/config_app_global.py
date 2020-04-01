@@ -9,8 +9,8 @@ default_global_config = [
 
     ### LANGUAGES
       { "field"       : "app_languages",
-        "languages"   : ["fr", "en"],
-        "is_multi_lang" : True,
+        "languages"   : ["fr"],
+        "is_multi_lang" : False,
         "locale"      : "fr",
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
@@ -149,7 +149,7 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
@@ -159,7 +159,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
