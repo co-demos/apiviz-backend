@@ -149,7 +149,8 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
+        "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
+        # "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid_init_logo_001.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
@@ -178,6 +179,7 @@ default_global_config = [
         "content"      : u"Covid-initiatives",
         "content_text" : [{"locale" : "en", "text" : "COVID-INITIATIVES"},{"locale" : "es", "text" : "COVID-INITIATIVES"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "COVID-INITIATIVES"}],
         "is_in_navbar" : True,
+        # "is_in_navbar" : False,
         # "title_color" : "primary",
 
         "apiviz_front_uuid" : uuid_models["uuid_covid"],

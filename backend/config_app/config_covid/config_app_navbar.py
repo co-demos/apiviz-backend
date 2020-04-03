@@ -72,7 +72,7 @@ default_app_navbar = [
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "DIY materials"},{"locale" : "es", "text" : "Materiales DIY"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels DIY" }],
+              "link_text"  : [{"locale" : "en", "text" : "DIY designs"},{"locale" : "es", "text" : "Diseños DIY"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Designs DIY" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
@@ -168,10 +168,12 @@ default_app_navbar = [
               "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Makers' map"},{"locale" : "es", "text" : "Mapa de los makers"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des makers" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : False,
+              "has_dropdown" : True,
               "dropdowns"  : [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://antoineh1.carto.com/builder/ee0ce4e3-847d-4c7b-beb0-24972dc154c3/embed", "link_text" : [{"locale" : "en", "text" : "-->   Map 3D printers Carto"},{"locale" : "es", "text" : "--> Mapa impresion 3D Carto"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte impression 3D Carto"}] },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.google.com/maps/d/u/0/viewer?mid=1RMGwwBX6djxep-8XqWhAWtTWr30tNECE&ll=46.72403044880883%2C2.5414200499999424&z=6", "link_text" : [{"locale" : "en", "text" : "-->   Groupes Facebook Visières Solidaires"},{"locale" : "es", "text" : "--> Groupes Facebook Visières Solidaires"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Groupes Facebook Visières Solidaires"}] },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/map-printers", "link_text" : [{"locale" : "en", "text" : "-->   Handdle Map 3D printers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Handdle impression 3D"}] },
               ]
             },

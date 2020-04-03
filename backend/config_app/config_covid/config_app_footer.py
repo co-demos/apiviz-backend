@@ -19,8 +19,8 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color" : { "value" : None, "default" : "grey", },
-            "text_color" : { "value" : None, "default" : "white", },
+            "card_color" : { "value" : "dark", "default" : "grey",  "custom_color" : None },
+            "text_color" : { "value" : None,   "default" : "white", "custom_color" : None },
 
             "footer_logos" : [
               { "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/logos/bloc-web-le-maire-darmanin.png?raw=true",
