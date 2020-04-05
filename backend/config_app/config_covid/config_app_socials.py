@@ -56,6 +56,18 @@ default_socials_config = [
       "is_default"  : True
     },
 
+    { "field"       : "app_datagouv",
+      "content"     : u"github",
+      "icon_class"  : "fas fa-database",
+      "url"         : "https://www.data.gouv.fr/fr/organizations/covid-initiatives",
+      "app_version" : version,
+      "help"        : u"Choose the github account for your ApiViz instance",
+      "in_footer"   : True,
+      "tooltip"     : [{"locale" : "en", "text" : "open data"},{"locale" : "es", "text" : "open data"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "openn data" }],
+      "apiviz_front_uuid" : uuid_models["uuid_covid"],
+      "is_default"  : True
+    },
+
   ### CUSTOM SOCIAL NETWORKS --> TO BE ADDED VIA BACK OFFICE BY ADMIN USER 
   ### ...
 

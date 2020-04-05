@@ -150,6 +150,7 @@ default_global_config = [
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
         "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
+        # "url"         : "http://localhost:8800/statics/logos/test_logos/covid-initiative-001-square.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid_init_logo_001.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
