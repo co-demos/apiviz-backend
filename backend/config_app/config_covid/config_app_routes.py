@@ -1873,8 +1873,8 @@ default_routes_config = [
           "route_description" : u"Page de recherche d'Apiviz",
           "route_activated"   : True,
           "banner" : {
-            "activated"  : False,
-            "banner_uri" : "banner-TL-carto" # TODO
+            "activated"  : True,
+            "banner_uri" : "banner-covid-carto-printers" # TODO
           },
           "is_dataset_homepage" : True,
 
@@ -2929,6 +2929,7 @@ default_routes_config = [
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
+
       ### PAGE - SELECTION INIITIATIVES FR
       { "field"             : "tl_selection_initiatives_fr",
         "is_global_app_homepage" : True,

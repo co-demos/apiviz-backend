@@ -89,10 +89,17 @@ default_app_styles_config = [
         "app_version" : version,
         "help"        : u"The dataset banners for your ApiViz instance (between navbar and filter)",
         "banners_set" : [
+
           {
-            "banner_uri"       : "apiviz_default",
-            "dataset_uri"      : None,
-            "template_url"     : "",
+            "banner_uri"       : "banner-covid-carto-printers",
+            "dataset_uri"      : "printers",
+            "template_url"     : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-map-fr.html",
+            "template_urls"    : [
+              { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-map-fr.html" },
+              { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-map-fr.html" },
+              # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/banner-covid-map-fr.html" },
+              # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/banner-covid-map-fr.html" },
+            ],
             "is_dynamic"       : False,
             "dynamic_template" : 'DynamicBanner',
             "is_visible"          : False,
@@ -100,28 +107,7 @@ default_app_styles_config = [
             "is_disapearing"      : False,
             "disapearing_timeout" : 5, ## in seconds
           },
-          {
-            "banner_uri"       : "banner-cis-carto",
-            "dataset_uri"      : "cis-carto",
-            "template_url"     : "",
-            "is_dynamic"       : False,
-            "dynamic_template" : 'DynamicBanner',
-            "is_visible"          : False,
-            "is_dismisible"       : True,
-            "is_disapearing"      : False,
-            "disapearing_timeout" : 5, ## in seconds
-          },
-          {
-            "banner_uri"       : "banner-cis-xp",
-            "dataset_uri"      : "cis-xp",
-            "template_url"     : "",
-            "is_dynamic"       : False,
-            "dynamic_template" : 'DynamicBanner',
-            "is_visible"          : False,
-            "is_dismisible"       : True,
-            "is_disapearing"      : False,
-            "disapearing_timeout" : 5, ## in seconds
-          },
+ 
         ],
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"     : True
