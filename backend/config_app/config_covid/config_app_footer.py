@@ -19,8 +19,13 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color" : { "value" : "dark", "default" : "grey",  "custom_color" : None },
-            "text_color" : { "value" : None,   "default" : "white", "custom_color" : None },
+
+            "card_color"  : { "value" : 'dark', "default" : "grey",    "custom_color" : None},
+            "title_color" : { "value" : 'primary',   "default" : "white",   "custom_color" : None},
+            "text_color"  : { "value" : 'white-bis',   "default" : "white",   "custom_color" : None},
+
+            "socials_color" : { "value" : "primary", "default" : "primary" } ,
+            "socials_class" : { "value" : "", "default" : "" } ,
 
             "footer_logos" : [
               { "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/logos/bloc-web-le-maire-darmanin.png?raw=true",
