@@ -148,9 +148,9 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        "url"         : "http://localhost:8800/statics/logos/logo_terrnum_mini_fb_white.png",
+        # "url"         : "http://localhost:8800/statics/logos/logo_terrnum_mini_fb_white.png",
         # "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
-        # "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/logo_terrnum_mini_fb_white.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/logo_terrnum_mini_fb_white.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
