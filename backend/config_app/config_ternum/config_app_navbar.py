@@ -55,6 +55,22 @@ default_app_navbar = [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
               ]
             },
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "https://www.mednum-bfc.fr/",
+              "help"       : u"Third menu in navbar",
+              "is_external_link" : True,
+              "link_type"  : "link", ### show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : False,
+              "dropdowns"  : [
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/mednum-bfc",        "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La MedNum BFC"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+              ]
+            },
 
           ]
         },

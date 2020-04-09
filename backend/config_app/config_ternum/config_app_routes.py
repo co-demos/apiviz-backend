@@ -122,7 +122,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "ADRESSE", 
+          { "field" : "adresse", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -130,7 +130,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -138,7 +138,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM DU LIEU", 
+          { "field" : "nom_structure", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -155,15 +155,15 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src",
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "IMAGE",
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
@@ -251,11 +251,11 @@ default_routes_config = [
               "is_source_distant"   : False, ### clusters all points sources by default
               "is_clickable"        : True,
 
-              "circle_color"     : "#e5ecf4", 
-              "circle_color_100" : "#b2c6de", 
-              "circle_color_250" : "#668ebe", 
-              "circle_color_500" : "#3269a9", 
-              "circle_color_750" : "#004494", 
+              "circle_color"     : "#E8385B", 
+              "circle_color_100" : "#E8385B", 
+              "circle_color_250" : "#E8385B", 
+              "circle_color_500" : "#E8385B", 
+              "circle_color_750" : "#E8385B", 
 
               "circle_radius"     : 15, 
               "circle_radius_100" : 20, 
@@ -318,7 +318,7 @@ default_routes_config = [
                   "source_id" : "chorosource-departements",
                   "layer_id"  : "chorolayer-departements",
                   "is_default_visible" : True,
-                  "max_zoom" : 9,
+                  "max_zoom" : 10,
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
@@ -335,18 +335,15 @@ default_routes_config = [
                     'interpolate',
                     ['linear'],
                     ['get', 'count_dep' ],
-                    0,  "#888888",
-                    1,  '#EED322',
-                    3,  '#E6B71E',
-                    5,  '#DA9C20',
-                    10, '#CA8323',
-                    20, '#B86B25',
-                    35, '#A25626',
-                    50, '#8B4225',
-                    100, '#723122'
+                    0,   '#fff',
+                    25,  '#4ABCC1',
+                    50,  '#719BA7',
+                    75,  '#997A8E',
+                    100, '#C05974',
+                    125, '#E8385B',
                   ],
                   "fill_opacity"        : 0.4,
-                  "fill_outline_color"  : "#004494",
+                  "fill_outline_color"  : "#28357f",
 
                   "has_popup" : True, 
                   "popup_config" : {
@@ -359,17 +356,15 @@ default_routes_config = [
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Tiers-lieux / département",
+                    "legend_color" : "primary",
+                    "title" : "Lieux / département",
                     "scales" : [
-                      { 'value' : '>100 lieux', 'color' : '#723122'},
-                      { 'value' : '50 lieux',   'color' : '#8B4225'},
-                      { 'value' : '35 lieux',   'color' : '#A25626'},
-                      { 'value' : '20 lieux',   'color' : '#B86B25'},
-                      { 'value' : '10 lieux',   'color' : '#CA8323'},
-                      { 'value' : '5 lieux',    'color' : '#DA9C20'},
-                      { 'value' : '3 lieux',    'color' : '#E6B71E'},
-                      { 'value' : '1 lieu',    'color' : '#EED322'},
-                      { 'value' : '0 lieu',    'color' : "#888888"},
+                      { 'value' : '>125 lieux',  'color' : '#E8385B'},
+                      { 'value' : '100 lieux',   'color' : '#C05974'},
+                      { 'value' : '75 lieux',    'color' : '#997A8E'},
+                      { 'value' : '50 lieux',    'color' : '#719BA7'},
+                      { 'value' : '25 lieux',    'color' : '#4ABCC1'},
+                      { 'value' : '0 lieu',      'color' : "#fff"},
                     ]
                   }
 
@@ -434,7 +429,7 @@ default_routes_config = [
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Tiers-lieux / communes",
+                    "title" : "Lieux / communes",
                     "scales" : [
                       { 'value' : '>10 lieux', 'color' : '#723122'},
                       { 'value' : '7 lieux',   'color' : '#8B4225'},
@@ -581,7 +576,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM DU LIEU",
+          { "field" : "nom_structure",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
@@ -592,7 +587,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
@@ -601,7 +596,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPOLOGIE",
+          { "field"       : "code_access",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
@@ -612,14 +607,14 @@ default_routes_config = [
             "custom_title" : "Thématiques",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "col_4",
-            "is_sortable" : False,
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "col_4",
+          #   "is_sortable" : False,
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
 
         ],
 
@@ -724,7 +719,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
@@ -732,7 +727,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "NOM DU LIEU",
+          { "field" : "nom_structure",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -740,15 +735,15 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible" : False,
-            "position" : "block_src",
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : False,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
-          { "field" : "IMAGE",
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
+          { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
@@ -756,7 +751,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "CONCAT_TYPO",
+          { "field"       : "code_access",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
@@ -839,7 +834,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/project", "/cis/detail", "/recherche/detail"],
+        "urls"              : ["/recherche/detail"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -855,7 +850,7 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "NOM DU LIEU", 
+          { "field" : "nom_structure", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
@@ -863,7 +858,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "IMAGE",
+          { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
@@ -871,7 +866,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "ADRESSE",
+          { "field" : "adresse",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
@@ -879,7 +874,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_postcode",
+          { "field" : "code_postal",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
@@ -887,22 +882,22 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "DESCRIPTION",
-            "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-            "is_visible" : True,
-            "position" : "block_abstract",
+          # { "field" : "DESCRIPTION",
+          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+          #   "is_visible" : True,
+          #   "position" : "block_abstract",
             
-            "custom_title" : "Description",
-            "locale" : "fr"
-          },
-          { "field" : "SOURCE",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src",
+          #   "custom_title" : "Description",
+          #   "locale" : "fr"
+          # },
+          # { "field" : "SOURCE",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_src",
             
-            "custom_title" : "to do",
-            "locale" : "fr"
-          },
+          #   "custom_title" : "to do",
+          #   "locale" : "fr"
+          # },
           # { "field" : "services",
           #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
           #   "is_visible" : True,
@@ -913,7 +908,7 @@ default_routes_config = [
           #   "custom_title" : "to do",
           #   "locale" : "fr"
           # },
-          { "field" : "URL",
+          { "field" : "url_lieu",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
@@ -921,7 +916,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "CONCAT_TYPO",
+          { "field"       : "code_access",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",

@@ -54,10 +54,50 @@ default_app_footer = [
           },
 
           {
-            # "block_center_left" : {
+            # "block_center_right" : {
             "is_visible"  : True,
             "has_socials" : False,
-            "block_class" : "is-2 is-offset-1",
+            "block_class" : "is-4",
+            "link_class"  : { "value" : 'has-text-right', "default" : "" },
+
+            "position"    : "block_top_center_right",
+            "title_block" : [{"locale" : "en", "text" : "Nos sites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nos sites"}],
+            "title_visible" : True,
+            "links"       : [
+
+              { "is_visible" : True,
+                "link_to"    : "https://humhub.bfc.link/",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Le réseau régional des acteurs du numérique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le réseau régional des acteurs du numérique" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://www.numerique-bfc.fr/",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Numérique & Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Numérique & Territoires" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://bfc-carto.netlify.com/",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Cartographie des structures de la médiation numérique en Bourgogne-Franche-Comté"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cartographie des structures de la médiation numérique en Bourgogne-Franche-Comté" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+
+            ]
+          },
+
+          {
+            # "block_center_left" : {
+            "is_visible"  : True,
+            "has_socials" : True,
+            "block_class" : "is-4",
             "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_center_left",
@@ -116,50 +156,14 @@ default_app_footer = [
             ]
           },
 
-          {
-            # "block_center_right" : {
-            "is_visible"  : True,
-            "has_socials" : False,
-            "block_class" : "is-4",
 
-            "position"    : "block_top_center_right",
-            "title_block" : [{"locale" : "en", "text" : "Nos sites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nos sites"}],
-            "title_visible" : True,
-            "links"       : [
-
-              { "is_visible" : True,
-                "link_to"    : "https://humhub.bfc.link/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Le réseau régional des acteurs du numérique"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le réseau régional des acteurs du numérique" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "https://www.numerique-bfc.fr/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Numérique & Territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Numérique & Territoires" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "https://bfc-carto.netlify.com/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Cartographie des structures de la médiation numérique en Bourgogne-Franche-Comté"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cartographie des structures de la médiation numérique en Bourgogne-Franche-Comté" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-              },
-
-            ]
-          },
 
           {
             # "block_right" : {
             "is_visible"  : True,
-            "has_socials" : True,
+            "has_socials" : False,
             "block_class" : "is-4",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "Nos partenaires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nos partenaires"}],

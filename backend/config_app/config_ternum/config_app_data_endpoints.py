@@ -320,7 +320,7 @@ default_data_endpoints_config = [
             "id"      : "filter_3",
             "col_name" : "code_label",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
+            "filter_title" : [{"locale" : "en", "text" : "Labellisation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Labellisation" }],
             "choices"	: [
               {'name' : u'A',    'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'APTIC' }]},
               {'name' : u'C',    'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Espace de coworking' }]},
@@ -341,7 +341,7 @@ default_data_endpoints_config = [
             "id"      : "filter_4",
             "col_name" : "code_accomp",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
+            "filter_title" : [{"locale" : "en", "text" : "Accompagnement"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement" }],
             "choices"	: [
               {'name' : u'A', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'En autonomie' }]},
               {'name' : u'L', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès libre avec accompagnement' }]},
@@ -542,7 +542,7 @@ default_data_endpoints_config = [
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "departement",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 

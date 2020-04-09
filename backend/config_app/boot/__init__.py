@@ -59,7 +59,7 @@ for config_file in list_config_files :
     default_app_vars = default_app_vars + temp_config_list
     print
 
-    print ("... -> default_app_vars : ", default_app_vars)
+    # print ("... -> default_app_vars : ", default_app_vars)
 
     if class_name == "default_global_config" : 
       default_global_config = default_app_vars
