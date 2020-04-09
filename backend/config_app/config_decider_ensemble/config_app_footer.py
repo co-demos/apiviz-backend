@@ -55,7 +55,7 @@ default_app_footer = [
 
           {
             # "block_center_left" : {
-            "is_visible"  : True,
+            "is_visible"  : False,
             "has_socials" : False,
             "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
@@ -110,7 +110,7 @@ default_app_footer = [
 
           {
             # "block_center_right" : {
-            "is_visible"  : True,
+            "is_visible"  : False,
             "has_socials" : False,
             "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
@@ -153,19 +153,35 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : True,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "PiNG association"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Association PiNG"}],
+            "title_block" : [{"locale" : "en", "text" : "Décider ensemble"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Décider ensemble"}],
             "title_visible" : True,
             "links"       : [
               
               { "is_visible" : True,
-                "link_to"    : "https://www.pingbase.net/",
+                "link_to"    : "https://www.deciderensemble.com",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Discover PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Découvrir PiNG" }],
+                "link_text"  : [{"locale" : "en", "text" : "Our platform"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Notre plateforme" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://www.deciderensemble.com/page/9348-qui-sommes-nous",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Who are we ?"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui sommes-nous ?" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://www.deciderensemble.com/page/724845-actuss",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Our news"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Actualités" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
