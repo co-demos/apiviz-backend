@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -1396,10 +1396,10 @@ default_routes_config = [
         "dataset_uri"       : "",
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" }
         ],
         
 
@@ -1499,10 +1499,10 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
         
         "has_ext_script"    : False,
