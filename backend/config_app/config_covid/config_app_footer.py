@@ -20,7 +20,9 @@ default_app_footer = [
         "ui_options" : {
 
 
-            "card_color"  : { "value" : 'dark', "default" : "grey",    "custom_color" : None},
+            "card_color"  : { "value" : 'dark', "default" : "default_background_app",    "custom_color" : None},
+            "card_class"  : { "value" : "", "default" : "" },
+
             "title_color" : { "value" : 'primary',   "default" : "white",   "custom_color" : None},
             "text_color"  : { "value" : 'white-bis',   "default" : "white",   "custom_color" : None},
 
@@ -53,6 +55,9 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
+            # "block_class" : "is-2 is-offset-1",
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "Medias & data"},{"locale" : "es", "text" : "Medias"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Médias & données"}],
             "title_visible" : True,
@@ -110,7 +115,8 @@ default_app_footer = [
             # "block_center_right" : {
             "is_visible"  : True,
             "has_socials" : False,
-            
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_center_right",
             "title_block" : [{"locale" : "en", "text" : "Institutions"},{"locale" : "es", "text" : "Instituciones"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Institutions"}],
             "title_visible" : True,
@@ -150,7 +156,8 @@ default_app_footer = [
             # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
-            
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "Covid-initiatives"},{"locale" : "es", "text" : "Covid-initiatives"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Covid-initiatives"}],
             "title_visible" : True,

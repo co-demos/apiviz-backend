@@ -19,7 +19,9 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color"  : { "value" : 'primary', "default" : "grey",    "custom_color" : None},
+            "card_color"  : { "value" : "primary", "default" : "default_background_app",    "custom_color" : None},
+            "card_class"  : { "value" : "", "default" : "" },
+            
             "title_color" : { "value" : 'white',   "default" : "white",   "custom_color" : None},
             "text_color"  : { "value" : 'white-bis',   "default" : "white",   "custom_color" : None},
 
@@ -42,6 +44,9 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
             "title_visible" : True,
@@ -53,6 +58,7 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : False,
             "block_class" : "is-2 is-offset-1",
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "Mednum BFC"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mednum BFC"}],

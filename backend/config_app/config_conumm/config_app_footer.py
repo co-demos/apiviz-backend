@@ -19,8 +19,14 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color" : { "value" : None, "default" : "grey", },
-            "text_color" : { "value" : None, "default" : "white", },
+            "card_color" : { "value" : "default_background_app", "default" : "light", },
+            "card_class"  : { "value" : "", "default" : "" },
+
+            "title_color" : { "value" : 'primary',   "default" : "white",   "custom_color" : None},
+            "text_color" : { "value" : "grey-dark", "default" : "black", },
+
+            "socials_color" : { "value" : "primary", "default" : "primary" } ,
+            "socials_class" : { "value" : "", "default" : "" } ,
 
             "footer_logos" : [
               { "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/logos/bloc-web-le-maire-darmanin.png?raw=true",
@@ -38,6 +44,9 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : True,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ils soutiennent le projet"}],
             "title_visible" : True,
@@ -67,6 +76,9 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "Others maps"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Autres cartographies"}],
             "title_visible" : True,
@@ -112,6 +124,9 @@ default_app_footer = [
             # "block_center_right" : {
             "is_visible"  : True,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            
             
             "position"    : "block_top_center_right",
             "title_block" : [{"locale" : "en", "text" : "CONNUMM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CONUMM"}],
@@ -176,41 +191,6 @@ default_app_footer = [
             ]
           },
 
-          # {
-          #   # "block_right" : {
-          #   "is_visible"  : False,
-          #   "has_socials" : True,
-            
-          #   "position"    : "block_top_right",
-          #   "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participer"}],
-          #   "title_visible" : True,
-          #   "links"       : [
-          #     { "is_visible" : True,
-          #       "link_to"    : "https://github.com/cget-carto/mission_coworking",
-          #       "is_external_link" : True,
-          #       "link_type"  : "text",
-          #       "icon_class" : "",
-          #       "link_text"  : [{"locale" : "en", "text" : "Improve the data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Améliorer les données sur les tiers-lieux" }],
-          #       "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-          #     },
-          #     { "is_visible" : True,
-          #       "link_to"    : "https://github.com/co-demos/apiviz-frontend",
-          #       "is_external_link" : True,
-          #       "link_type"  : "text",
-          #       "icon_class" : "",
-          #       "link_text"  : [{"locale" : "en", "text" : "Apps' source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source des applications" }],
-          #       "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-          #     },
-          #     # { "is_visible" : True,
-          #     #   "link_to"    : "/nous-rejoindre",
-          #     #   "is_external_link" : True,
-          #     #   "link_type"  : "text",
-          #     #   "icon_class" : "",
-          #     #   "link_text"  : [{"locale" : "en", "text" : "Social innovations crossroad's newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter du Carrefour des Innovations Sociales" }],
-          #     #   "tooltip"    : [{"locale" : "en", "text" : "Newsletter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Newsletter" }]
-          #     # },
-          #   ]
-          # },
 
         ],
 

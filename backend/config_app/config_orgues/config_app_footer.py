@@ -19,8 +19,14 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color" : { "value" : None, "default" : "grey", },
-            "text_color" : { "value" : None, "default" : "white", },
+            "card_color" : { "value" : "default_background_app", "default" : "light", },
+            "card_class"  : { "value" : "", "default" : "" },
+
+            "title_color" : { "value" : 'primary',   "default" : "white",   "custom_color" : None},
+            "text_color" : { "value" : "grey-dark", "default" : "black", },
+
+            "socials_color" : { "value" : "primary", "default" : "primary" } ,
+            "socials_class" : { "value" : "", "default" : "" } ,
 
             "footer_logos" : [
               { "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/logos/bloc-web-le-maire-darmanin.png?raw=true",
@@ -38,6 +44,9 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
             "title_visible" : True,
@@ -48,6 +57,9 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "Mission co-working"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les données de l'inventaire"}],
             "title_visible" : True,
@@ -92,6 +104,8 @@ default_app_footer = [
             # "block_center_right" : {
             "is_visible"  : False,
             "has_socials" : False,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_center_right",
             "title_block" : [{"locale" : "en", "text" : "Digital society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique"}],
@@ -112,6 +126,8 @@ default_app_footer = [
             # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
+            # "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participer"}],
