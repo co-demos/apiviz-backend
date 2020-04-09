@@ -45,9 +45,9 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
-            
+
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
             "title_visible" : True,
@@ -58,9 +58,9 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
-            
+
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "French Digital Agency"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "L'Agence du numérique"}],
             "title_visible" : True,
@@ -97,9 +97,9 @@ default_app_footer = [
             # "block_center_right" : {
             "is_visible"  : True,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
-            
+
             "position"    : "block_top_center_right",
             "title_block" : [{"locale" : "en", "text" : "Digital Society"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Société numérique"}],
             "title_visible" : True,
@@ -200,9 +200,9 @@ default_app_footer = [
             # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
-            
+
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "Public websites"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les sites publics"}],
             "title_visible" : True,

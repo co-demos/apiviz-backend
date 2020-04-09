@@ -44,7 +44,7 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_left",
@@ -57,7 +57,7 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_center_left",
@@ -104,7 +104,7 @@ default_app_footer = [
             # "block_center_right" : {
             "is_visible"  : False,
             "has_socials" : False,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_center_right",
@@ -126,7 +126,7 @@ default_app_footer = [
             # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
-            # "block_class" : "is-3",
+            "block_class" : "is-3",
             # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
             
             "position"    : "block_top_right",
