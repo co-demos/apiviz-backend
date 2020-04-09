@@ -45,7 +45,7 @@ default_app_footer = [
             "is_visible"  : False,
             "has_socials" : False,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],

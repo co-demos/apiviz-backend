@@ -45,7 +45,7 @@ default_app_footer = [
             "is_visible"  : False,
             "has_socials" : False,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
@@ -58,7 +58,7 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : False,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_center_left",
             "title_block" : [{"locale" : "en", "text" : "Partners"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partenaires"}],
@@ -113,7 +113,7 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : False,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_center_right",
             "title_block" : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pour aller plus loin"}],
@@ -153,7 +153,7 @@ default_app_footer = [
             "is_visible"  : True,
             "has_socials" : True,
             "block_class" : "is-3",
-            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+            "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "PiNG association"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Association PiNG"}],
