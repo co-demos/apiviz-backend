@@ -22,11 +22,11 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#4abcc1',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
-          'info'       : '#28357f',
+          'primary'    : '#293e86',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
+          'info'       : '#37bec1',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
-          'danger'     : '#e8385b',
+          'danger'     : '#f24c61',
           'text-color' : '#3D3A39',
 
           # ### EXTRA COLORS

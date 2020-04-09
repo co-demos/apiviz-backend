@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -1372,7 +1372,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "tl_demarche",
+      { "field"             : "tl_mednum_bfc",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1392,18 +1392,18 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/la-demarche"],
-        "dataset_uri"       : "project-cis",
+        "urls"              : ["/mednum-bfc"],
+        "dataset_uri"       : "",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/la-demarche.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/la-demarche.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" }
         ],
         
 
-        "has_ext_script"    : True,
+        "has_ext_script"    : False,
         "ext_script_urls"   : [
           {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
 
@@ -1420,7 +1420,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
@@ -1499,10 +1499,10 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
         
         "has_ext_script"    : False,
@@ -1516,7 +1516,7 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
         "has_footer"        : True,
-        "has_tabs"          : True,
+        "has_tabs"          : False,
         "tabs_uri"          : "tabs-tl-test",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"        : True

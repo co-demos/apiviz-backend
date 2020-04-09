@@ -148,8 +148,9 @@ default_global_config = [
     ### LOGO
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
-        # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
+        "url"         : "http://localhost:8800/statics/logos/logo_terrnum_mini_fb_white.png",
+        # "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
+        # "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/logo_terrnum_mini_fb_white.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
@@ -159,7 +160,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1-mini.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
@@ -175,8 +176,8 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"BFC-TERNUM",
-        "content_text" : [{"locale" : "en", "text" : "BFC-TERNUM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "BFC-TERNUM"}],
+        "content"      : u"cartographie MedNum BFC",
+        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
