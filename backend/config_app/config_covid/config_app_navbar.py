@@ -162,7 +162,8 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/printers/carte",
+              # "link_to"    : "/printers/carte",
+              "link_to"    : "/map-ext",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
@@ -173,6 +174,7 @@ default_app_navbar = [
               "dropdowns"  : [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D"}] },
                 { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.makery.info/labs-map/", "link_text" : [{"locale" : "en", "text" : "-->   Map Makery"},{"locale" : "es", "text" : "--> Mapa Makery"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Makery"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://antoineh1.carto.com/builder/ee0ce4e3-847d-4c7b-beb0-24972dc154c3/embed", "link_text" : [{"locale" : "en", "text" : "-->   Map 3D printers Carto"},{"locale" : "es", "text" : "--> Mapa impresion 3D Carto"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte impression 3D Carto"}] },
                 { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.google.com/maps/d/u/0/viewer?mid=1RMGwwBX6djxep-8XqWhAWtTWr30tNECE&ll=46.72403044880883%2C2.5414200499999424&z=6", "link_text" : [{"locale" : "en", "text" : "-->   Groupes Facebook Visières Solidaires"},{"locale" : "es", "text" : "--> Groupes Facebook Visières Solidaires"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Groupes Facebook Visières Solidaires"}] },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/map-printers", "link_text" : [{"locale" : "en", "text" : "-->   Handdle Map 3D printers"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Handdle impression 3D"}] },

@@ -109,7 +109,26 @@ default_app_styles_config = [
             "is_disapearing"      : False,
             "disapearing_timeout" : 5, ## in seconds
           },
- 
+           {
+            "banner_uri"       : "banner-covid-help",
+            "dataset_uri"      : "recherche",
+            "template_url"     : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-map-fr.html",
+            "template_urls"    : [
+              { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-help-fr.html" },
+              { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-help-en.html" },
+              { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/banner-covid-help-es.html" },
+              # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/banner-covid-help-fr.html" },
+              # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/banner-covid-help-en.html" },
+              # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/banner-covid-help-es.html" },
+            ],
+            "is_dynamic"       : False,
+            "dynamic_template" : 'DynamicBanner',
+            "is_visible"          : False,
+            "is_dismisible"       : True, #False,
+            "is_disapearing"      : False,
+            "disapearing_timeout" : 5, ## in seconds
+          },
+
         ],
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"     : True
