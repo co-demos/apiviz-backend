@@ -1864,6 +1864,542 @@ default_routes_config = [
           "is_default"        : True
         },
 
+      ####### KIFEKOI #######
+
+        ### PAGE - table
+        { "field"             : "tl_table",
+          "is_global_app_homepage" : False,
+          "route_title"       : u"Rechercher",
+          "route_description" : u"Page de recherche du CIS",
+          "route_activated"   : False,
+          "has_shuffle"       : True,
+          "shuffle_minnmax"   : { "min": 0, "max":  2000 },
+          "banner" : {
+            "activated"  : False,
+            "banner_uri" : "banner-TL-carto"
+          },
+          "is_dataset_homepage" : False,
+
+          "in_main_navbar"    : False,
+          "navbar_btn_options" : {
+            "only_in_navbar_for_this_dataset" : True,
+            "position"   : "middle_right",
+            "link_type"  : "link",
+            "icon_class" : "",
+            "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+          },
+
+          "in_footer"         : False,
+          "urls"              : ["/kifekoi/table"],
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
+          
+          "help"              : u"you can specify a remote template (f.e. a github url)",
+          "languages"         : ["fr"],
+          "app_version"       : version,
+          "comment"           : u"Table search route in french",
+          "is_dynamic"        : True,
+          "dataset_uri"       : "kifekoi",
+          "dynamic_template"  : 'DynamicTable',
+          "endpoint_type"     : "table",
+          "pagination"        : {
+            "is_visible" : True,
+            "position" : "top_and_bottom",
+            "feedback" : "bottom"
+          },
+
+          "table_options" : {
+            "has_link_col" : True,
+          },
+
+          "contents_fields"  : [
+
+            { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : False,
+              "is_id_field" : True,
+              "position" : "col_id",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "titre_initiative",
+              "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "has_link_to_detail" : True,
+              "is_table_head" : True,
+              "position" : "col_1",
+              "is_sortable" : True,
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "type_materiel",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "col_2",
+              "is_sortable" : True,
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field"       : "localisation_prod",
+              "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "col_3",
+              "is_sortable" : True,
+              "filter_correspondance" : False,
+              "is_tag_like" : True,
+              "tags_separator" : "-",
+              "custom_title" : "Thématiques",
+              "locale" : "fr"
+            },
+            { "field" : "code_postal",
+              "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "col_4",
+              "is_sortable" : False,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "commune",
+              "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "col_5",
+              "is_sortable" : False,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+
+          ],
+
+          "images_fields"        : {
+            "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+            "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
+          },
+          "ui_options" : {
+            "card_color"    : { "value" : None, "default" : "white", },
+            "text_color"    : { "value" : None, "default" : "black", },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+          },
+
+          "links_options"  : {
+
+            # "block_contents_links" : {
+            # "is_visible"  : False,
+            # "position"    : "block_bottom_1",
+            # "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            # "links"       : []
+            # },
+
+            # "block_data_infos" : {
+            # "is_visible"  : False,
+            # "position"    : "block_bottom_2",
+            # "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            # "links"       : []
+            # },
+
+            # "block_share" : {
+            # "is_visible"  : False,
+            # "position"    : "block_bottom_3",
+            # "title_block" : [{"locale" : "en", "text" : "share this place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+            # "links"       : []
+            # },
+
+          },
+
+          "has_navbar"        : True,
+          "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "TL-tabs",
+          "deactivate_btn"    : False,
+          "is_visible"        : True,
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"        : True
+        },
+
+        ### PAGE - list
+        { "field"             : "tl_liste",
+          "is_global_app_homepage" : False,
+          "route_title"       : u"Rechercher",
+          "route_description" : u"Page de recherche du CIS",
+          "route_activated"   : True,
+          "has_shuffle"       : True,
+          "shuffle_minnmax"   : { "min": 0, "max":  4000 },
+          "banner" : {
+            "activated"  : True,
+            "banner_uri" : "banner-covid-help" # TODO
+          },
+          "is_dataset_homepage" : False,
+
+          "in_main_navbar"    : False,
+          "navbar_btn_options" : {
+            "only_in_navbar_for_this_dataset" : True,
+            "position"   : "middle_right",
+            "link_type"  : "link",
+            "icon_class" : "",
+            "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+          },
+
+          "in_footer"         : False,
+          "urls"              : ["/kifekoi", "/kifekoi/liste"],
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
+          
+          "help"              : u"you can specify a remote template (f.e. a github url)",
+          "languages"         : ["fr"],
+          "app_version"       : version,
+          "comment"           : u"Main search route in french",
+          "is_dynamic"        : True,
+          "dataset_uri"       : "kifekoi",
+          "dynamic_template"  : 'DynamicList',
+          "endpoint_type"     : "list",
+          "pagination"        : {
+            "is_visible" : True,
+            "position" : "top_and_bottom",
+            "feedback" : "top_and_bottom"
+          },
+
+          "contents_fields"  : [
+
+            { "field" : "sd_id",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_id",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            # { "field" : "ville",
+            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            #   "is_visible" : True,
+            #   "position" : "block_city",
+            #   # "trim" : 20,
+            #   "custom_title" : "to do",
+            #   "locale" : "fr"
+            # },
+            { "field" : "titre_initiative",
+              "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_title",
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            # { "field" : "source",
+            #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+            #   "is_visible" : False,
+            #   "position" : "block_src",
+              
+            #   "custom_title" : "to do",
+            #   "locale" : "fr"
+            # },
+            { "field" : "url_illustration",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_image",
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field"       : "type_structure",
+              "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "block_tags",
+              "filter_correspondance" : False,
+              "is_tag_like" : True,
+              "tags_separator" : "/",
+              "custom_title" : "Thématiques",
+              "locale" : "fr"
+            },
+
+          ],
+
+          "images_fields"        : {
+            "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+            "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
+          },
+          "ui_options" : {
+            "card_color"    : { "value" : None, "default" : "white", },
+            "text_color"    : { "value" : None, "default" : "black", },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le prochain document" }] },
+            "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+          },
+
+          "links_options"  : {
+
+            "block_contents_links" : {
+            "is_visible"  : False,
+            "position"    : "block_bottom_1",
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            "links"       : []
+            },
+
+            "block_data_infos" : {
+            "is_visible"  : False,
+            "position"    : "block_bottom_2",
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            "links"       : []
+            },
+
+            "block_share" : {
+            "is_visible"  : False,
+            "position"    : "block_bottom_3",
+            "title_block" : [{"locale" : "en", "text" : "share this place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
+            "links"       : []
+            },
+
+          },
+
+          "has_navbar"        : True,
+          "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "cis-tabs",
+          "deactivate_btn"    : False,
+          "is_visible"        : True,
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"        : True
+        },
+
+        ### PAGE - detail
+        { "field"             : "tl_detail",
+          "is_global_app_homepage" : False,
+          "route_title"        : u"Rechercher",
+          "route_description"  : u"Page de recherche d'Apiviz",
+          "route_activated"    : True,
+          "banner" : {
+            "activated"  : False,
+            "banner_uri" : "banner-sonum-carto"
+          },
+          "is_dataset_homepage" : False,
+
+          "in_main_navbar"    : False,
+          "navbar_btn_options" : {
+            "only_in_navbar_for_this_dataset" : True,
+            "position"   : "middle_right",
+            "link_type"  : "link",
+            "icon_class" : "",
+            "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+            "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+          },
+
+          "in_footer"         : False,
+          "urls"              : ["/kifekoi/detail"],
+          # "template_url"      : "/static/spa.html",
+          "template_urls"     : [
+          ],
+          
+          "help"              : u"you can specify a remote template (f.e. a github url)",
+          "languages"         : ["fr"],
+          "app_version"       : version,
+          "comment"           : u"Main search route in french",
+          "is_dynamic"        : True,
+          "dataset_uri"       : "kifekoi",
+          "dynamic_template"  : 'DynamicDetail',
+          "endpoint_type"     : "detail",
+
+          "contents_fields"  : [
+
+            { "field" : "titre_initiative", 
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_title",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "url_illustration",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_image",
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "commune",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_address",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "code_postal",
+              "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_cp",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+
+            { "field" : "structure_utilisant_projet",
+              "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_abstract",
+              
+              "custom_title" : "Structures utilisant le projet",
+              "locale" : "fr"
+            },
+            { "field" : "description_projet",
+              "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_post_abstract_1",
+              
+              "custom_title" : "Description du projet",
+              "locale" : "fr"
+            },
+            { "field" : "retex",
+              "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_post_abstract_2",
+              
+              "custom_title" : "Retours d'expérience du public",
+              "locale" : "fr"
+            },
+
+            # { "field" : "source",
+            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            #   "is_visible" : True,
+            #   "position" : "block_src",
+              
+            #   "custom_title" : "to do",
+            #   "locale" : "fr"
+            # },
+            { "field"       : "type_materiel",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "block_rb1_tags",
+              "filter_correspondance" : False,
+              "is_tag_like" : True,
+              "tags_separator" : "/",
+              "custom_title" : "Type de matériel",
+              "locale" : "fr"
+            },
+            { "field"       : "type_structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "block_rb2_tags",
+              "filter_correspondance" : False,
+              "is_tag_like" : True,
+              "tags_separator" : "/",
+              "custom_title" : "Type de structure",
+              "locale" : "fr"
+            },
+            { "field" : "localisation_prod",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_rb3_tags",
+              
+              "is_tag_like" : True,
+              "tags_separator" : "/",
+              "custom_title" : "Localisation",
+              "locale" : "fr"
+            },
+            { "field" : "url_structure",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_wesite",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+            { "field" : "url_design",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_file_1",
+              
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
+
+          ],
+
+          "images_fields"     : {
+            "card_img_main"  : { "field" : "", "default" : "img_card",  "is_visible" : True,  "position" : "block_right_top_1" },
+            "card_img_top"   : { "field" : "", "default" : None,        "is_visible" : False, "position" : "block_right_middle" },
+          },
+
+          "ui_options"        : {
+            "card_color"     : { "value" : None, "default" : "white", },
+            "text_color"     : { "value" : None, "default" : "black", },
+            "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
+            "link_to_next"     : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "see the next document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le prochain document" }] },
+            "link_to_previous" : { "is_visible" : True,  "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
+          },
+
+          "links_options"  : {
+
+            "block_contents_links" : {
+            "is_visible"  : True,
+            "position"    : "block_left_middle_2",
+            "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "", "is_visible" : False}],
+            "links"       : [
+              { "field" : "website",
+                "is_visible" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "website" }],
+                "tooltip"    : [{"locale" : "en", "text" : "check the website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le site" }]
+              },
+              { "field" : "contact",
+                "is_visible" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "contact"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contact" }],
+                "tooltip"    : [{"locale" : "en", "text" : "contact the structure"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "contacter la structure" }]
+              },
+            ]
+            },
+
+            "block_share" : {
+            "is_visible"  : True,
+            "position"    : "block_left_bottom_2",
+            "title_block" : [{"locale" : "en", "text" : "Share this place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : True}],
+            "links"       : [
+              {
+                "is_visible" : True,
+                "link_type"  : "icon",
+                "icon_class" : "fas fa-link",
+                "link_text"  : [{"locale" : "en", "text" : "link"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lien" }],
+                "tooltip"    : [{"locale" : "en", "text" : "share this page"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager cette page (copier le lien)" }]
+              },
+              {
+                "is_visible" : True,
+                "link_type"  : "icon",
+                "icon_class" : "fab fa-facebook-f",
+                "link_text"  : [{"locale" : "en", "text" : "facebook"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "facebook" }],
+                "tooltip"    : [{"locale" : "en", "text" : "share on facebook"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur facebook" }]
+              },
+              {
+                "is_visible" : True,
+                "link_type"  : "icon",
+                "icon_class" : "fab fa-twitter",
+                "link_text"  : [{"locale" : "en", "text" : "twitter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "twitter" }],
+                "tooltip"    : [{"locale" : "en", "text" : "share on twitter"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "partager sur twitter" }]
+              },
+            ]
+            },
+
+          },
+
+          "has_navbar"        : True,
+          "has_footer"        : True,
+          "has_tabs"          : False,
+          "tabs_uri"          : "cis-tabs",
+          "deactivate_btn"    : False,
+          "is_visible"        : True,
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"        : True
+        },
+
       ####### PRINTERS #######
 
         ### PAGE - map

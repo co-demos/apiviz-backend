@@ -863,6 +863,232 @@ default_data_endpoints_config = [
           "is_default"    : True
         },
 
+      ####### KIFEKOI #######
+
+        ### DATA FILTERS
+        { "field"         : "tl_data_API_filters",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "filters",
+          "dataset_uri"   : "kifekoi",
+          "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
+          "has_shuffle"  : False,
+          "has_pagination" : False,
+          "has_export" : True,
+          "pagination_options" : {
+            "per_page" : [ 5, 10, 25, 100 ],
+          },
+          "has_infinite_scroll" : True,
+          "has_order_by" : False,
+          "order_by_options" : {
+            "order_by_list" : [],
+          },
+
+          "placeholder"   : [
+            {"locale" : "en", "text" : "Enter the name of a producer"},{"locale" : "es", "text" : "Entra el nombre de un productor"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un producteur" }
+          ],
+          "items_found"   : [
+            {"locale" : "en", "text" : "producers found"},{"locale" : "es", "text" : "productores"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "producteurs trouvés" }
+          ],
+          "stats_text"   : [
+            {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
+          ],
+          "reset"   : [
+            {"locale" : "en", "text" : "reset"},{"locale" : "es", "text" : "reiniciar"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "effacer" }
+          ],
+
+          "content"       : u"apiviz default API endpoint for navbar filters",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e90aef2328ed74e1eea498e",  
+          "args_options"  : [
+            {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
+            {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
+            {  "app_arg" : "filterChoices",  "arg" : "get_uniques",       "optional" : False, "in" : ["url"],           "default" : "tag", "type": "str" },
+          ],
+
+          "filter_options" : [
+
+            {	"name"		: u"type_structure__",
+              "id"      : "filter_1",
+              "col_name" : "type_structure",
+              "dataType" : "text",
+              "filter_title" : [{"locale" : "en", "text" : "Structure category"},{"locale" : "es", "text" : "Tipo de estructura"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type de structure" }],
+              "choices"	: [
+
+                {'name' : u'ASSO',       'choice_title' : [{'locale' : 'en', 'text' : 'Association'},{'locale' : 'es', 'text' : 'Associacion'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Association' }]},
+                {'name' : u'FABLAB',     'choice_title' : [{'locale' : 'en', 'text' : 'Fablab'},{'locale' : 'es', 'text' : 'Fablab'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Fablab' }]},
+                {'name' : u'GROUPE',     'choice_title' : [{'locale' : 'en', 'text' : 'Group'},{'locale' : 'es', 'text' : 'Grupo'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Groupe' }]},
+                {'name' : u'INDIVIDU',   'choice_title' : [{'locale' : 'en', 'text' : 'Individual'},{'locale' : 'es', 'text' : 'Individuo'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Individu' }]},
+                {'name' : u'MAKERSPACE', 'choice_title' : [{'locale' : 'en', 'text' : 'Makerspace'},{'locale' : 'es', 'text' : 'Makerspace'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Makerspace' }]},
+
+                {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'Enterprise'},{'locale' : 'es', 'text' : 'Empresa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise' }]},
+                {'name' : u'ECOLE',      'choice_title' : [{'locale' : 'en', 'text' : 'School'},{'locale' : 'es', 'text' : 'Escuela'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ecole' }]},
+                {'name' : u'UNIVERSITE', 'choice_title' : [{'locale' : 'en', 'text' : 'University'},{'locale' : 'es', 'text' : 'Universidad'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Université' }]},
+                {'name' : u'EPCI',       'choice_title' : [{'locale' : 'en', 'text' : 'EPCI'},{'locale' : 'es', 'text' : 'EPCI'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'EPCI' }]},
+                {'name' : u'SARL',       'choice_title' : [{'locale' : 'en', 'text' : 'SARL'},{'locale' : 'es', 'text' : 'SARL'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'SARL' }]},
+
+                # {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
+              ],
+            },
+
+            {	"name"		: u"localisation_prod__",
+              "id"      : "filter_2",
+              "col_name" : "localisation_prod",
+              "dataType" : "text",
+              "filter_title" : [{"locale" : "en", "text" : "Validation"},{"locale" : "es", "text" : "Validacion"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Validation" }],
+              "choices"	: [
+
+                {'name' : u'DOMICILE', 'choice_title' : [{'locale' : 'en', 'text' : 'Domicile'},{'locale' : 'es', 'text' : 'Domicilio'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Domicile' }]},
+                {'name' : u'ENTREPRISE', 'choice_title' : [{'locale' : 'en', 'text' : 'Enterprise'},{'locale' : 'es', 'text' : 'Empresa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Entreprise' }]},
+                {'name' : u'FABLAB',     'choice_title' : [{'locale' : 'en', 'text' : 'Fablab'},{'locale' : 'es', 'text' : 'Fablab'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Fablab' }]},
+                {'name' : u'MAKERSPACE', 'choice_title' : [{'locale' : 'en', 'text' : 'Makerspace'},{'locale' : 'es', 'text' : 'Makerspace'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Makerspace' }]},
+                {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Autre'},{'locale' : 'es', 'text' : 'Autre'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
+
+                # {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
+              ],
+            },
+
+            {	"name"		: u"type_materiel__",
+              "id"      : "filter_4",
+              "col_name" : "type_materiel",
+              "dataType" : "text",
+              "filter_title" : [{"locale" : "en", "text" : "Products"},{"locale" : "es", "text" : "Productos"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Matériels" }],
+              "choices"	: [
+
+                {'name' : u'MASQUE_I3D', 'choice_title' : [{'locale' : 'en', 'text' : '3D mask'},{'locale' : 'es', 'text' : 'Máscara 3D'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masques 3D' }]},
+                {'name' : u'MASQUE_TISSU', 'choice_title' : [{'locale' : 'en', 'text' : 'Cloth mask'},{'locale' : 'es', 'text' : 'Máscara de tela'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de tissu' }]},
+                {'name' : u'MASQUE_SNORKLING', 'choice_title' : [{'locale' : 'en', 'text' : 'Snorkling mask'},{'locale' : 'es', 'text' : 'Máscara de snorkel'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Masque de plongée' }]},
+                {'name' : u'POUSSE_SERINGUE', 'choice_title' : [{'locale' : 'en', 'text' : 'Syringe driver'},{'locale' : 'es', 'text' : 'Bomba de jeringa'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Pousse-seringue' }]},
+                {'name' : u'RESPIRATEUR_VENTILATOR', 'choice_title' : [{'locale' : 'en', 'text' : 'Ventilator'},{'locale' : 'es', 'text' : 'Respiradora'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Respirateur' }]},
+                {'name' : u'TESTKIT', 'choice_title' : [{'locale' : 'en', 'text' : 'Test kit'},{'locale' : 'es', 'text' : 'Kit de test'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Kit de dépistage' }]},
+                {'name' : u'VALVE', 'choice_title' : [{'locale' : 'en', 'text' : 'Valve'},{'locale' : 'es', 'text' : 'Valvula'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Valve' }]},
+                {'name' : u'VISIERE', 'choice_title' : [{'locale' : 'en', 'text' : 'Visor'},{'locale' : 'es', 'text' : 'Visera'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Visière' }]},
+                {'name' : u'PORTE', 'choice_title' : [{'locale' : 'en', 'text' : 'Open door'},{'locale' : 'es', 'text' : 'Abre-puerta'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Ouvre-porte' }]},
+                {'name' : u'AUTRE', 'choice_title' : [{'locale' : 'en', 'text' : 'Other'},{'locale' : 'es', 'text' : 'Otro'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'Autre' }]},
+
+                {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '-'}, {'locale' : 'fr', 'text' : 'non renseigné' }]},
+              ],
+            },
+
+
+          ],
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : filters in search navbar",
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"    : True
+        },
+
+        ### DATA TABLE
+        { "field"         : "tl_data_API_table",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "table",
+          "dataset_uri"   : "kifekoi",
+          "content"       : u"apiviz default API endpoint for list results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e90aef2328ed74e1eea498e", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+            {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+            {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
+            {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "NOM_TL", "type": "str" },
+            {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
+            {  "app_arg" : "query",            "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            {  "app_arg" : "filters",          "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            {  "app_arg" : "shuffleSeed",      "arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
+          ],
+          "resp_fields" : {
+            "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : a view list",
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"    : True
+        },
+
+        ### DATA LIST
+        { "field"         : "tl_data_API_list",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "list",
+          "dataset_uri"   : "kifekoi",
+          "content"       : u"apiviz default API endpoint for list results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e90aef2328ed74e1eea498e", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+            {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+            {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
+            {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
+          ],
+          "resp_fields" : {
+            "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : a view list",
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"    : True
+        },
+
+        ### DATA DETAIL
+        { "field"         : "tl_data_API_detail",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "detail",
+          "dataset_uri"   : "kifekoi",
+          "content"       : u"apiviz default API endpoint for detailled results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e90aef2328ed74e1eea498e", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
+            {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
+          ],
+          "resp_fields" : {
+            "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            "total"    : { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : a detailled data",
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"    : True
+        },
+
+        ### DATA EXPORT
+        { "field"         : "tl_data_API_export",
+          "is_visible"    : True,
+          "is_disabled"   : False,
+          "data_type"     : "data",
+          "endpoint_type" : "export",
+          "dataset_uri"   : "kifekoi",
+          "content"       : u"apiviz default API endpoint for export results",
+          "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e90aef2328ed74e1eea498e", ## V2
+          "args_options"  : [
+            {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+            # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+            # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+            # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+            # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+          ],
+          "resp_fields" : {
+            # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+            # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+          },
+          "app_version"    : version,
+          "method"        : "GET",
+          "help"          : u"define the endpoint to get data for : export dataset as csv",
+          "apiviz_front_uuid" : uuid_models["uuid_covid"],
+          "is_default"    : True
+        },
+
 
       ####### PRINTERS #######
 
