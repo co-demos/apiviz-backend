@@ -2076,14 +2076,14 @@ default_routes_config = [
               "custom_title" : "to do",
               "locale" : "fr"
             },
-            # { "field" : "ville",
-            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_city",
-            #   # "trim" : 20,
-            #   "custom_title" : "to do",
-            #   "locale" : "fr"
-            # },
+            { "field" : "commune",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_city",
+              # "trim" : 20,
+              "custom_title" : "to do",
+              "locale" : "fr"
+            },
             { "field" : "titre_initiative",
               "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
@@ -2100,6 +2100,18 @@ default_routes_config = [
             #   "custom_title" : "to do",
             #   "locale" : "fr"
             # },
+            { "field" : "description_projet",
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_abstract",
+              "locale" : "fr"
+            },
+            { "field" : "nombre_pieces_distribuees",
+              "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_abstract_2",
+              "locale" : "fr"
+            },
             { "field" : "url_illustration",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
@@ -2115,7 +2127,7 @@ default_routes_config = [
               "filter_correspondance" : False,
               "is_tag_like" : True,
               "tags_separator" : "/",
-              "custom_title" : "Thématiques",
+              "custom_title" : "Type structure",
               "locale" : "fr"
             },
 
@@ -2256,12 +2268,12 @@ default_routes_config = [
               "custom_title" : "Description du projet",
               "locale" : "fr"
             },
-            { "field" : "retex",
+            { "field" : "nombre_pieces_distribuees",
               "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
               "is_visible" : True,
               "position" : "block_post_abstract_2",
               
-              "custom_title" : "Retours d'expérience du public",
+              "custom_title" : "Nombre de pièces distriibuées",
               "locale" : "fr"
             },
 
