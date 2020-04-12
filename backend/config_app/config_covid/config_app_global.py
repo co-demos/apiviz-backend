@@ -149,9 +149,11 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
-        # "url"         : "http://localhost:8800/statics/logos/test_logos/covid-initiative-001-square.png",
+
+        # "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
         # "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid_init_logo_001.png",
+        # "url"         : "http://localhost:8800/statics/graphisme/logos/logo_covidinit_white_square_2.png",
+        "url"         : "https://raw.githubusercontent.com/co-demos/covid-viz/master/graphisme/logos/logo_covidinit_white_square_2.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
@@ -161,7 +163,8 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
+        # "url"           : "https://raw.githubusercontent.com/co-demos/covid-viz/master/logos/covid-19-4926456_640.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/covid-viz/master/graphisme/logos/logo_covidinit_white_square_2.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
@@ -178,7 +181,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Covid-initiatives",
-        "content_text" : [{"locale" : "en", "text" : "COVID-INITIATIVES"},{"locale" : "es", "text" : "COVID-INITIATIVES"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "COVID-INITIATIVES"}],
+        "content_text" : [{"locale" : "en", "text" : "COVID-initiatives"},{"locale" : "es", "text" : "COVID-initiatives"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "COVID-initiatives"}],
         "is_in_navbar" : True,
         # "is_in_navbar" : False,
         # "title_color" : "primary",
