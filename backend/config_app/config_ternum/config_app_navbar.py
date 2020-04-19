@@ -7,12 +7,14 @@ default_app_navbar = [
   ### MAIN NAVBAR
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG BFC CARTO
       { "field"       : "app_navbar",
         "content"     : u"TL navbar",
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
-        "logo_to"     : "/",
+        # "logo_to"     : "/",
+        "logo_to"     : "https://www.mednum-bfc.fr/",
+        "logo_to_external" : True,
         "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,
