@@ -55,6 +55,23 @@ default_app_navbar = [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
               ]
             },
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "https://www.pingbase.net/",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : True,
+              "link_type"  : "button", ### link | text | button --- show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "retour vers PING" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : False,
+              "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche",        "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La démarche"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales",   "link_text" : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+              ]
+            },
 
           ]
         },
