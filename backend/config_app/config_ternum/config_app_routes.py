@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -304,7 +304,8 @@ default_routes_config = [
               "is_drawer_open"      : True,
 
               "is_source_distant"   : True,
-              "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+              # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+              # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/bourgogne-franche-comte/departements-bourgogne-franche-comte.geojson", 
               # "distant_source_url"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
               
               "change_source_by_zoom" : True,
@@ -322,7 +323,7 @@ default_routes_config = [
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/bourgogne-franche-comte/departements-bourgogne-franche-comte.geojson", 
                   "update_src_from_previous_layer" : False,
 
                   "need_aggregation" : True,
@@ -336,11 +337,11 @@ default_routes_config = [
                     ['linear'],
                     ['get', 'count_dep' ],
                     0,   '#fff',
-                    25,  '#4ABCC1',
-                    50,  '#719BA7',
-                    75,  '#997A8E',
-                    100, '#C05974',
-                    125, '#E8385B',
+                    25,  '#b2f1e7',
+                    50,  '#7fe8d8',
+                    75,  '#4cdec9',
+                    100, '#00d1b2',
+                    125, '#00a78e',
                   ],
                   "fill_opacity"        : 0.4,
                   "fill_outline_color"  : "#28357f",
@@ -359,11 +360,11 @@ default_routes_config = [
                     "legend_color" : "primary",
                     "title" : "Lieux / département",
                     "scales" : [
-                      { 'value' : '>125 lieux',  'color' : '#E8385B'},
-                      { 'value' : '100 lieux',   'color' : '#C05974'},
-                      { 'value' : '75 lieux',    'color' : '#997A8E'},
-                      { 'value' : '50 lieux',    'color' : '#719BA7'},
-                      { 'value' : '25 lieux',    'color' : '#4ABCC1'},
+                      { 'value' : '>125 lieux',  'color' : '#00a78e'},
+                      { 'value' : '100 lieux',   'color' : '#00d1b2'},
+                      { 'value' : '75 lieux',    'color' : '#4cdec9'},
+                      { 'value' : '50 lieux',    'color' : '#7fe8d8'},
+                      { 'value' : '25 lieux',    'color' : '#b2f1e7'},
                       { 'value' : '0 lieu',      'color' : "#fff"},
                     ]
                   }
