@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
         ],
         
 
@@ -304,7 +304,7 @@ default_routes_config = [
               "is_drawer_open"      : True,
 
               "is_source_distant"   : True,
-              "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+              # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
               # "distant_source_url"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
               
               "change_source_by_zoom" : True,
@@ -322,7 +322,8 @@ default_routes_config = [
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  # "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/pays-de-la-loire/departements-pays-de-la-loire.geojson", 
                   "update_src_from_previous_layer" : False,
 
                   "need_aggregation" : True,
