@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
+          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_ping_carto/home.html" },
+          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
+          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
         ],
         
 
@@ -588,7 +588,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field" : "result_city",
+          { "field" : "COMMUNE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
@@ -597,7 +597,7 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "TYPOLOGIE",
+          { "field"       : "CONCAT_TYPO",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
@@ -608,17 +608,6 @@ default_routes_config = [
             "custom_title" : "Thématiques",
             "locale" : "fr"
           },
-          # { "field"       : "CONCAT_TYPO",
-          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "col_3",
-          #   "is_sortable" : True,
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
           { "field" : "SOURCE",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
