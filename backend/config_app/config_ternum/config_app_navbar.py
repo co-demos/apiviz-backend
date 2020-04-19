@@ -28,7 +28,7 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/recherche",
+              "link_to"    : "/",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link", ### show btn border
