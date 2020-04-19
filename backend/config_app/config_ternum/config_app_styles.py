@@ -137,10 +137,10 @@ default_app_styles_config = [
         {
           "dataset_uri" : "recherche",
           "images_set"  : [
-            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-3.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-4.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-5.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-6.png?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-3-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-4-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-5-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-6-rect-b.png?raw=true", "credits" : "", "licence" : "" },
             # { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/graphisme/texture_TL/texturePiNG_650-430.png?raw=true", "credits" : "Ping", "licence" : "" },
             # { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_1.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             # { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },

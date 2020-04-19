@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
-          { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -358,7 +358,7 @@ default_routes_config = [
                   "legend" : {
                     "position" : "bottom-right", 
                     "legend_color" : "primary",
-                    "title" : "Lieux / département",
+                    "title" : "Légende",
                     "scales" : [
                       { 'value' : '>125 lieux',  'color' : '#00a78e'},
                       { 'value' : '100 lieux',   'color' : '#00d1b2'},
@@ -468,15 +468,15 @@ default_routes_config = [
           },
         
           "layers_visibility" :{
-            "is_activated" : True,
+            "is_activated" : False,
             "is_drawer_open" : False,
             "layers_switches" : [ 
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
-              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
+              # { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
               # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
-              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              # { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
 
