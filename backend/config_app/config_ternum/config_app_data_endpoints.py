@@ -284,20 +284,20 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"departement__",
+          {	"name"		: u"dep_txt__",
             "id"      : "filter_1",
-            "col_name" : "departement",
+            "col_name" : "dep_txt",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Areas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
             "choices"	: [
-              {'name' : u'21', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Côte-d'Or" }]},
-              {'name' : u'25', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Doubs" }]},
-              {'name' : u'39', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Jura" }]},
-              {'name' : u'58', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Nièvre" }]},
-              {'name' : u'70', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Haute-Saône" }]},
-              {'name' : u'71', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Saône-et-Loiire" }]},
-              {'name' : u'89', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Yonne" }]},
-              {'name' : u'90', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Territoire de Belfort" }]},
+              {'name' : u'D_21', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Côte-d'Or" }]},
+              {'name' : u'D_25', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Doubs" }]},
+              {'name' : u'D_39', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Jura" }]},
+              {'name' : u'D_58', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Nièvre" }]},
+              {'name' : u'D_70', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Haute-Saône" }]},
+              {'name' : u'D_71', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Saône-et-Loiire" }]},
+              {'name' : u'D_89', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Yonne" }]},
+              {'name' : u'D_90', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : "Territoire de Belfort" }]},
 
             ],
           },
