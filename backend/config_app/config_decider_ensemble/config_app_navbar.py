@@ -29,7 +29,7 @@ default_app_navbar = [
               "link_to"    : "/fiches",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
+              "link_type"  : "link", ### link | button --- show btn border
               "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Cards"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
@@ -60,7 +60,7 @@ default_app_navbar = [
               "link_to"    : "https://www.deciderensemble.com",
               "help"       : u"Second menu in navbar",
               "is_external_link" : True,
-              "link_type"  : "link", ### link | button / show btn border
+              "link_type"  : "button", ### link | button / show btn border
               "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],

@@ -10,7 +10,7 @@ default_global_config = [
     ### LANGUAGES
       { "field"       : "app_languages",
         "languages"   : ["fr", "en"],
-        "is_multi_lang" : True,
+        "is_multi_lang" : False,
         "locale"      : "fr",
         "app_version" : version,
         "help"        : u"The default homepage for your ApiViz instance",
