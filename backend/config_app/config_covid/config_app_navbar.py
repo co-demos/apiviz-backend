@@ -41,6 +41,8 @@ default_app_navbar = [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/utiliser-le-site", "link_text" : [{"locale" : "en", "text" : "charts France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Utiliser le site"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales", "link_text" : [{"locale" : "en", "text" : "Legal mentions"},{"locale" : "es", "text" : "Menciones legales"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
                 { "is_divider" : True,  "is_external_link" : False },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/revue-presse", "link_text" : [{"locale" : "en", "text" : "Press review"},{"locale" : "es", "text" : "Revista de prensa"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Revue de presse"}] },
+                { "is_divider" : True,  "is_external_link" : False },
                 # { "is_divider" : True,  "is_external_link" : False },
                 # { "is_divider" : True,  "is_external_link" : False },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/ressources-officielles", "link_text" : [{"locale" : "en", "text" : "Ressources - official"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources officielles"}] },
