@@ -3468,10 +3468,59 @@ default_routes_config = [
         "dynamic_template"  : "DynamicStatic",
         "has_navbar"        : True,
 
-        "has_tabs"          : False,
+        "has_tabs"          : True,
         "tabs_uri"          : "tabs-tl-test",
 
         "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_covid"],
+        "is_default"        : True
+      },
+
+      ### PAGE : LEGAL 
+      { "field"             : "tl_who",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Qui sommes-nous",
+        "route_description" : u"apiviz default legal page",
+        "route_activated"   : True,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : ""
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+          "tooltip"    : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }],
+        },
+
+        "in_footer"         : True,
+        "link_in_logo"      : False,
+        "urls"              : ["/qui-sommes-nous"],
+        
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
+          { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
+        ],
+        
+        "has_ext_script"    : False,
+        "ext_script_urls"   : "",
+        
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main apiviz tools route in french",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+        "has_footer"        : True,
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-tl-test",
         "apiviz_front_uuid" : uuid_models["uuid_covid"],
         "is_default"        : True
       },
@@ -4082,8 +4131,8 @@ default_routes_config = [
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
           { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
-          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
         ],
         
         "has_ext_script"    : False,

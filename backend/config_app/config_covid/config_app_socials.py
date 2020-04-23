@@ -35,7 +35,7 @@ default_socials_config = [
     { "field"       : "app_email",
       "content"     : u"email",
       "icon_class"  : "far fa-envelope",
-      "url"         : "mailto:covid.initiatives@gmail.com?subject=[Covid] Contact",
+      "url"         : "mailto:contact@covid-initiatives.org?subject=[Covid] Contact",
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,

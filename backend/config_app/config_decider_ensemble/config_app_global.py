@@ -175,8 +175,8 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Ressources décider ensemble",
-        "content_text" : [{"locale" : "en", "text" : "Ressources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ressources"}],
+        "content"      : u"Ressources Décider ensemble",
+        "content_text" : [{"locale" : "en", "text" : "Centre de ressources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Centre de ressources"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 

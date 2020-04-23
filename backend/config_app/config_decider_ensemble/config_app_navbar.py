@@ -33,12 +33,15 @@ default_app_navbar = [
               "icon_class" : "",
               "link_text"  : [{"locale" : "en", "text" : "Cards"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : False,
+              "has_dropdown" : True,
               "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/liste",        "link_text" : [{"locale" : "en", "text" : "Cards (liste)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (liste)"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/table",        "link_text" : [{"locale" : "en", "text" : "Cards (tableur)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (tableur)"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/carte",       "link_text" : [{"locale" : "en", "text" : "Cards (map)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (carte)"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
-            { "is_visible" : True,
+            { "is_visible" : False,
               "position"   : "exterior_right",
               "link_to"    : "/a-propos",
               "help"       : u"Second menu in navbar",
