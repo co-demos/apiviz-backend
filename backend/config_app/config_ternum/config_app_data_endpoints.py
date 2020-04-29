@@ -565,6 +565,8 @@ default_data_endpoints_config = [
       { "field"         : "tl_data_API_export",
         "is_visible"    : True,
         "is_disabled"   : False,
+        # "redirect_to"   : "/recherche/export-data",
+        "redirect_to"   : "/les-données",
         "data_type"     : "data",
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",

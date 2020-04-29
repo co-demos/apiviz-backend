@@ -1413,7 +1413,7 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/mednum-bfc"],
-        "dataset_uri"       : "",
+        "dataset_uri"       : "recherche",
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
@@ -1470,7 +1470,7 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/les-données"],
-        "dataset_uri"       : "",
+        "dataset_uri"       : "recherche",
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/les-données.html" },
@@ -1504,6 +1504,63 @@ default_routes_config = [
         "apiviz_front_uuid" : uuid_models["uuid_ternum"],
         "is_default"        : True
       },
+
+      # ### PAGE - EXPORT DONNEES
+      # { "field"             : "tl_export_donnees",
+      #   "is_global_app_homepage" : True,
+      #   "route_title"       : u"Les données",
+      #   "route_description" : u"apiviz default home page",
+      #   "route_activated"   : True,
+      #   "banner" : {
+      #     "activated"  : False,
+      #     "banner_uri" : "banner-sonum-carto"
+      #   },
+      #   "in_main_navbar"    : False,
+      #   "navbar_btn_options" : {
+      #     "position"   : "middle_right",
+      #     "link_type"  : "link",
+      #     "icon_class" : "",
+      #     "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+      #     "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+      #   },
+
+      #   "in_footer"         : False,
+      #   "link_in_logo"      : True,
+      #   "urls"              : ["/recherche/export-data"],
+      #   "dataset_uri"       : "recherche",
+        
+      #   "template_urls"     : [
+      #     # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/export-data.html" },
+      #     # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/export-data.html" },
+      #     { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/export-data.html" },
+      #     { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/export-data.html" }
+      #   ],
+        
+
+      #   "has_ext_script"    : False,
+      #   "ext_script_urls"   : [
+      #     {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
+
+      #     # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+      #     {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+      #   ],
+
+      #   # "has_carousel"      : True,
+      #   "help"              : u"you can specify a remote template (f.e. a github url)",
+      #   "languages"         : ["fr"],
+      #   "app_version"       : version,
+      #   "comment"           : u"Main demarche route",
+      #   "is_dynamic"        : True,
+      #   "dynamic_template"  : "DynamicStatic",
+      #   "has_navbar"        : True,
+
+      #   "has_tabs"          : False,
+      #   "tabs_uri"          : "tabs-tl-test",
+
+      #   "has_footer"        : True,
+      #   "apiviz_front_uuid" : uuid_models["uuid_ternum"],
+      #   "is_default"        : True
+      # },
 
       ### PAGE : PROJECT/TOOLS
       { "field"             : "tl_tools",
@@ -1574,7 +1631,8 @@ default_routes_config = [
         "in_footer"         : True,
         "link_in_logo"      : False,
         "urls"              : ["/mentions-legales"],
-        
+        "dataset_uri"       : "recherche",
+
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
