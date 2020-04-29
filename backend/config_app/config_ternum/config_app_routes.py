@@ -231,14 +231,15 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "is_hoverable"        : True,
 
               "radius_min"          : 1,
-              "radius_max"          : 10,
+              "radius_max"          : 20,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
               "circle_color"        : "#004494",
               "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.8,
+              "circle_opacity"      : 0.6,
             },
 
             ### clusters source and layer
@@ -301,7 +302,7 @@ default_routes_config = [
               "is_live_data"        : False,
               "refresh_delay"       : 3000,
 
-              "is_drawer_open"      : True,
+              "is_drawer_open"      : False,
 
               "is_source_distant"   : True,
               # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
