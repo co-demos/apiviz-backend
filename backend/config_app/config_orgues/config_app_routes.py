@@ -119,7 +119,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Commune_insee", 
@@ -127,7 +127,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "NOMREG",
@@ -135,7 +135,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_city",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "Edifice", 
@@ -143,7 +143,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -152,7 +152,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Codification_instrument",
@@ -160,7 +160,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -561,7 +561,7 @@ default_routes_config = [
             "is_id_field" : True,
             "position" : "col_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Edifice",
@@ -570,7 +570,7 @@ default_routes_config = [
             "has_link_to_detail" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Commune_insee",
@@ -578,7 +578,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Nom_departement",
@@ -588,7 +588,7 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_3",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field"       : "Edifice",
@@ -609,7 +609,7 @@ default_routes_config = [
             "is_sortable" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -713,7 +713,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Commune_insee",
@@ -721,7 +721,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_city",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Edifice",
@@ -729,7 +729,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "Info_edifice",
@@ -836,7 +836,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Commune_insee",
@@ -844,7 +844,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Nom_departement",
@@ -852,7 +852,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_cp",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Info_edifice",
@@ -868,7 +868,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 

@@ -120,7 +120,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "adresse structure", # SONUM
@@ -129,7 +129,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "ville structure",
@@ -137,7 +137,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_city",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "intitulé structure", # SONUM
@@ -146,7 +146,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "image(s) du projet",
@@ -154,7 +154,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_image",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "résumé du projet",
@@ -162,7 +162,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "source", # spider/sourceur
@@ -170,7 +170,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "coding APCIS N1",
@@ -180,7 +180,7 @@ default_routes_config = [
             "filter_correspondance" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -388,7 +388,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "address",
@@ -396,7 +396,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_city",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "ville structure",
@@ -404,7 +404,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_city",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "titre du projet",
@@ -412,7 +412,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "image(s) du projet",
@@ -420,7 +420,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_image",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "résumé du projet",
@@ -428,7 +428,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "source",
@@ -436,7 +436,7 @@ default_routes_config = [
             "is_visible" : False,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "tags",
@@ -446,7 +446,7 @@ default_routes_config = [
           #   "filter_correspondance" : True,
           #   "is_tag_like" : False,
           #   "tags_separator" : ";",
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field"       : "coding APCIS N1",
@@ -554,7 +554,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "image(s) du projet",
@@ -562,7 +562,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_image",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "ville structure",
@@ -570,7 +570,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "code postal structure",
@@ -578,7 +578,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_cp",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "résumé du projet",
@@ -594,7 +594,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "services",
@@ -604,7 +604,7 @@ default_routes_config = [
             
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "link_data",
@@ -612,7 +612,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_wesite",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "coding APCIS N1",

@@ -133,7 +133,7 @@ default_routes_config = [
             "is_id_field" : True,
             "position" : "col_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "nom",
@@ -144,7 +144,7 @@ default_routes_config = [
             "position" : "col_1",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "organisation_nom",
@@ -153,7 +153,7 @@ default_routes_config = [
             "position" : "col_2",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "description",
@@ -172,7 +172,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "licence",
@@ -180,7 +180,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_5",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "langage",
@@ -188,7 +188,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_§",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
         ],
@@ -291,7 +291,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "nom",
@@ -299,7 +299,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "NOMCOM",
@@ -307,7 +307,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_city",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "organisation_nom",
@@ -315,7 +315,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "description",
@@ -323,7 +323,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field"       : "TYPO_CODE",
@@ -430,7 +430,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "image(s) du projet",
@@ -438,7 +438,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_image",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           # { "field" : "GEOCOD",
@@ -446,7 +446,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_address",
             
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           # { "field" : "code postal structure",
@@ -454,7 +454,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_cp",
             
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "description",
@@ -502,7 +502,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "services",
@@ -512,7 +512,7 @@ default_routes_config = [
             
           #   "is_tag_like" : True,
           #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "repertoire_url",
@@ -520,7 +520,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_wesite",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field"       : "TYPO",
@@ -1029,7 +1029,7 @@ default_routes_config = [
             "is_id_field" : True,
             "position" : "col_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "nom",
@@ -1040,7 +1040,7 @@ default_routes_config = [
             "position" : "col_1",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "organisation_nom",
@@ -1049,7 +1049,7 @@ default_routes_config = [
             "position" : "col_2",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "description",
@@ -1068,7 +1068,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "licence",
@@ -1076,7 +1076,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_5",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "langage",
@@ -1084,7 +1084,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_§",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
         ],
@@ -1187,7 +1187,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "nom",
@@ -1195,7 +1195,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "NOMCOM",
@@ -1203,7 +1203,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_city",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "organisation_nom",
@@ -1211,7 +1211,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "description",
@@ -1219,7 +1219,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field"       : "TYPO_CODE",
@@ -1326,7 +1326,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "image(s) du projet",
@@ -1334,7 +1334,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_image",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "adresse",
@@ -1342,7 +1342,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "code postal structure",
@@ -1350,7 +1350,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_cp",
             
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "description",
@@ -1406,7 +1406,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_src",
             
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           # { "field" : "services",
@@ -1416,7 +1416,7 @@ default_routes_config = [
             
           #   "is_tag_like" : True,
           #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "organisation_url",
@@ -1424,7 +1424,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_wesite",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "email",
@@ -1432,7 +1432,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_contact_email",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field"       : "TYPO",
