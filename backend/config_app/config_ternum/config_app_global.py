@@ -181,7 +181,8 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"cartographie MedNum BFC",
-        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie"}],
+        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie des lieux de médiation numérique en BFC"}],
+        "content_size" : 7,
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
