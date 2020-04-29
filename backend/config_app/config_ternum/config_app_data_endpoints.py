@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_data_endpoints_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING CARTO 
+  ### CONFIG TERNUM CARTO 
 
     ### - - - - - - - - - - - - - - - ###
     ### USER MANAGEMENT
