@@ -112,7 +112,7 @@ default_routes_config = [
         "dynamic_template"  : 'DynamicMap',
         "endpoint_type"     : "map",
 
-        "contents_fields"  : [
+        "contents_fields" : [
 
           { "field" : "sd_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
@@ -189,12 +189,12 @@ default_routes_config = [
           "longitude" : "lon"
         },
 
-        "images_fields"        : {
+        "images_fields" : {
           "card_img_main" : { "field" : "image(s) du projet", "default" : "img_card",  "is_visible" : True  },
           "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
         },
 
-        "ui_options"        : {
+        "ui_options" : {
           "card_color"    : { "value" : None, "default" : "white", },
           "text_color"    : { "value" : None, "default" : "black", },
           "link_to_detail"   : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document" }] },
@@ -202,7 +202,7 @@ default_routes_config = [
           "link_to_previous" : { "is_visible" : True, "tooltip" : [{"locale" : "en", "text" : "see the previous document"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "voir le document précédent" }] },
         },
 
-        "map_options"   : {
+        "map_options" : {
           
           ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -481,10 +481,9 @@ default_routes_config = [
             ],
           },
 
-
         },
 
-        "links_options"  : {
+        "links_options" : {
 
           "block_contents_links" : {
           "is_visible"  : False,
@@ -574,7 +573,6 @@ default_routes_config = [
             "is_visible" : False,
             "is_id_field" : True,
             "position" : "col_id",
-            
             "custom_title" : "to do",
             "locale" : "fr"
           },
@@ -585,8 +583,7 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : [ { "locale" : "fr", "text" : "nom du lieu" }],
             "locale" : "fr"
           },
           { "field" : "ville",
@@ -594,21 +591,37 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : [ { "locale" : "fr", "text" : "ville" }],
             "locale" : "fr"
           },
-          { "field"       : "code_access",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "col_3",
-            "is_sortable" : True,
-            "filter_correspondance" : False,
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "custom_title" : "Thématiques",
+          { "field" : "contact_tel",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_3",
+            "is_sortable" : False,
+            "custom_title" : [ { "locale" : "fr", "text" : "téléphone" }],
             "locale" : "fr"
           },
+          { "field" : "url_lieu",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_4",
+            "is_sortable" : False,
+            "custom_title" : [ { "locale" : "fr", "text" : "site internet" }],
+            "is_external_link" : True,
+            "locale" : "fr"
+          },
+          # { "field"       : "code_access",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_3",
+          #   "is_sortable" : True,
+          #   "filter_correspondance" : False,
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "custom_title" : "Thématiques",
+          #   "locale" : "fr"
+          # },
           # { "field" : "SOURCE",
           #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
@@ -737,14 +750,6 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          # { "field" : "SOURCE",
-          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : False,
-          #   "position" : "block_src",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
@@ -753,17 +758,30 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "code_access",
+          { "field"       : "code_typo",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
-            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : "Typologies",
+            "locale" : "fr",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-
+          { "field"       : "code_label",
+            "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_tags_bis",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "light",
+            "custom_title" : "Labellisation",
+            "locale" : "fr",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
         ],
 
         "images_fields"        : {
@@ -800,7 +818,6 @@ default_routes_config = [
           "title_block" : [{"locale" : "en", "text" : "share this place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partagez ce lieu", "is_visible" : False}],
           "links"       : []
           },
-
         },
 
         "has_navbar"        : True,
@@ -918,17 +935,34 @@ default_routes_config = [
             "custom_title" : "to do",
             "locale" : "fr"
           },
-          { "field"       : "code_access",
+          { "field"       : "code_typo",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
             "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
+            "text_color" : "white",
+            "background_color" : "primary",
+            # "custom_title" : "Typologie(s) :",
+            "custom_title" : [ { "locale" : "fr", "text" : "Typologie(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
             "locale" : "fr"
           },
-
+          { "field"       : "code_label",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb2_tags",
+            "filter_correspondance" : False,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "light",
+            # "custom_title" : "Labellisation(s) :",
+            "custom_title" : [ { "locale" : "fr", "text" : "Labellisation(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+            "locale" : "fr"
+          },
         ],
 
         "images_fields"     : {

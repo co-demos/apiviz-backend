@@ -233,12 +233,12 @@ default_routes_config = [
               "is_clickable"        : True,
 
               "radius_min"          : 1,
-              "radius_max"          : 10,
+              "radius_max"          : 20,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
               "circle_color"        : "#004494",
               "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.8,
+              "circle_opacity"      : 0.7,
             },
 
             ### clusters source and layer
