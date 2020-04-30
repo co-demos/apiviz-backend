@@ -199,12 +199,19 @@ default_routes_config = [
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
-          "center"           : [47.1155478, 5.0558742],
+          "center"           : [47.1155478, 5.0558742], #
           "currentCenter"    : [47.1155478, 5.0558742],
           "zoom"             : 7,
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
+
+          "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
+          "item_marker"       : "fas fa-map-marker-alt",
+          "item_marker_color" : "primary",
+          "item_marker_offset" : [ 0, 8 ],
+          "item_marker_anchor" : "bottom",
+
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
           "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
 
@@ -444,7 +451,6 @@ default_routes_config = [
               # "fill_color"          : "#888888",
               # "fill_opacity"        : 0.5,
               # "fill_outline_color"  : "rgb(256,256,256)",
-
             },
 
             ### heatmap source and layer
@@ -459,7 +465,6 @@ default_routes_config = [
               "radius_min"          : 6,
               "radius_max"          : 25,
             },
-
           },
         
           "layers_visibility" :{
@@ -864,69 +869,28 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "url_illustration",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_image",
-            # "trim" : 20,
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          { "field" : "adresse",
+          { "field" : "adresse_full",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "code_postal",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          # { "field" : "DESCRIPTION",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
-            
-          #   "custom_title" : "Description",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "SOURCE",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_src",
-            
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
           { "field" : "url_lieu",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          { "field"       : "code_typo",
+          { "field" : "code_typo",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
@@ -938,9 +902,8 @@ default_routes_config = [
             # "custom_title" : "Typologie(s) :",
             "custom_title" : [ { "locale" : "fr", "text" : "Typologie(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
-            "locale" : "fr"
           },
-          { "field"       : "code_label",
+          { "field" : "code_label",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb2_tags",
@@ -952,10 +915,28 @@ default_routes_config = [
             # "custom_title" : "Labellisation(s) :",
             "custom_title" : [ { "locale" : "fr", "text" : "Labellisation(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
-            "locale" : "fr"
           },
-        ],
 
+          # test map
+          { "field" : None,
+            "is_visible" : True,
+            "map_height" : 250,
+            "item_title_field" : "nom_structure",
+            "position" : "block_map_bottom_left",
+            "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
+            "item_marker" : "fas fa-map-marker-alt",
+            "item_marker_color" : "danger",
+            "item_marker_offset" : [ 0, 8 ],
+            "item_marker_anchor" : "bottom",
+            "zoom" : 8,
+            "max_zoom" : 13,
+            "min_zoom" : 4,
+            "interactive" : False,
+            "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
+          },
+
+        ],
+        
         "images_fields"     : {
           "card_img_main"  : { "field" : "", "default" : "img_card",  "is_visible" : True,  "position" : "block_right_top_1" },
           "card_img_top"   : { "field" : "", "default" : None,        "is_visible" : False, "position" : "block_right_middle" },

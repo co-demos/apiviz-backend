@@ -214,6 +214,13 @@ default_routes_config = [
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
+
+          "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
+          "item_marker"       : "fas fa-map-marker-alt",
+          "item_marker_color" : "primary",
+          "item_marker_offset" : [ 0, 8 ],
+          "item_marker_anchor" : "bottom",
+
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
           "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
 
@@ -860,6 +867,24 @@ default_routes_config = [
             "custom_title" : None,
             "locale" : "fr"
           },
+          { "field" : None,
+            "is_visible" : True,
+            "map_height" : 200,
+            "item_title_field" : "NOM DU LIEU",
+            "position" : "block_map_bottom_right",
+            "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
+            "item_marker" : "fas fa-map-marker-alt",
+            "item_marker_color" : "danger",
+            "item_marker_offset" : [ 0, 8 ],
+            "item_marker_anchor" : "bottom",
+            "zoom" : 8,
+            "max_zoom" : 13,
+            "min_zoom" : 4,
+            "interactive" : False,
+            "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
+          },
+
+
           { "field" : "IMAGE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
