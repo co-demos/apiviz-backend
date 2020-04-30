@@ -917,7 +917,7 @@ default_routes_config = [
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
 
-          # test map
+          ### minimap
           { "field" : None,
             "is_visible" : True,
             "map_height" : 250,

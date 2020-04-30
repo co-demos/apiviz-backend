@@ -206,6 +206,13 @@ default_routes_config = [
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
+
+          "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
+          "item_marker"       : "fas fa-map-marker-alt",
+          "item_marker_color" : "primary",
+          "item_marker_offset" : [ 0, 8 ],
+          "item_marker_anchor" : "bottom",
+
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
           "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
 
@@ -223,14 +230,15 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
 
               "radius_min"          : 1,
-              "radius_max"          : 10,
+              "radius_max"          : 22,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
-              "circle_color"        : "#004494",
+              "circle_color"        : "#37afc8",
               "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.8,
+              "circle_opacity"      : 0.6,
             },
 
             ### clusters source and layer
@@ -845,67 +853,21 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
           { "field" : "result_label",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "result_postcode",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
-            
-          #   "custom_title" : "Résumé du projet",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "SOURCE",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_src",
-            
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
           { "field" : "Site web",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_wesite",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field"       : "services_tags",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
@@ -916,6 +878,23 @@ default_routes_config = [
             "tags_separator" : "-",
             "custom_title" : "Thématiques",
             "locale" : "fr"
+          },
+          ### minimap
+          { "field" : None,
+            "is_visible" : True,
+            "map_height" : 200,
+            "item_title_field" : "Nom de la structure",
+            "position" : "block_map_bottom_left",
+            "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
+            "item_marker" : "fas fa-map-marker-alt",
+            "item_marker_color" : "primary",
+            "item_marker_offset" : [ 0, 8 ],
+            "item_marker_anchor" : "bottom",
+            "zoom" : 13,
+            "max_zoom" : 14,
+            "min_zoom" : 4,
+            "interactive" : False,
+            "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
           },
 
         ],

@@ -238,6 +238,7 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
 
               "radius_min"          : 1,
               "radius_max"          : 20,
@@ -867,17 +868,19 @@ default_routes_config = [
             "custom_title" : None,
             "locale" : "fr"
           },
+
+          ### minimap
           { "field" : None,
             "is_visible" : True,
             "map_height" : 200,
             "item_title_field" : "NOM DU LIEU",
-            "position" : "block_map_bottom_right",
+            "position" : "block_map_bottom_left",
             "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
             "item_marker" : "fas fa-map-marker-alt",
             "item_marker_color" : "danger",
             "item_marker_offset" : [ 0, 8 ],
             "item_marker_anchor" : "bottom",
-            "zoom" : 8,
+            "zoom" : 10,
             "max_zoom" : 13,
             "min_zoom" : 4,
             "interactive" : False,
