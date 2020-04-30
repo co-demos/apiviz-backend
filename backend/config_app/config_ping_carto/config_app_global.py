@@ -177,6 +177,7 @@ default_global_config = [
 
         "content"      : u"Carto PiNG",
         "content_text" : [{"locale" : "en", "text" : "A lookout at third places in Loire region"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Regards sur les tiers-lieux en Pays de la Loire"}],
+        "content_size" : 7,
         "is_in_navbar" : True,
         # "title_color" : "primary",
 

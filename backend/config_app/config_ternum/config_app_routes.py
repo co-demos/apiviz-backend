@@ -222,14 +222,16 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
               "is_hoverable"        : True,
+              "hover_infos"         : {},
 
               "radius_min"          : 1,
               "radius_max"          : 25,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
               "circle_color"        : "#004494",
-              "circle_color_activated": "#e75b0e",
+              "circle_color_activated": "#e8385b",
               "circle_stroke_color" : "#fff",
               "circle_opacity"      : 0.6,
             },

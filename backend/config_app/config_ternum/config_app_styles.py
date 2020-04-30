@@ -4,7 +4,7 @@ from . import version, uuid_models
 
 default_app_styles_config = [
 
-  ### CONFIG PING CARTO STYLES
+  ### CONFIG BFC STYLES
 
     ### GLOBAL STYLES
       { "field"       : "app_colors",
@@ -22,11 +22,11 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#293e86',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
-          'info'       : '#37bec1',
+          'primary'    : '#28357f',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
+          'info'       : '#4abcc1',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
-          'danger'     : '#f24c61',
+          'danger'     : '#e8385b',
           'text-color' : '#3D3A39',
 
           # ### EXTRA COLORS
