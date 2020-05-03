@@ -935,7 +935,7 @@ default_routes_config = [
             ### minimap
             { "field" : None,
               "is_visible" : True,
-              "map_height" : 250,
+              "map_height" : 200,
               "item_title_field" : "porteur_projet",
               "position" : "block_map_top_right_bis",
               "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
