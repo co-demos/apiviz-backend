@@ -121,58 +121,37 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              
-              "locale" : "fr"
             },
             { "field" : "adresse structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "ville structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "intitulé structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "description structure",
               "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              
-              "locale" : "fr"
             },
             { "field" : "source",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_src",
-              
-              "locale" : "fr"
             },
-            # { "field" : "",
-            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_tags",
-              
-            #   "locale" : "fr"
-            # },
             { "field" : "services",
               "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
@@ -411,59 +390,44 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              
-              "locale" : "fr"
             },
             { "field" : "adresse structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "ville structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "intitulé structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "description structure",
               "field_format" : { "trim" : 150, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
-              
-              "locale" : "fr"
             },
             { "field" : "source",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_src",
-              
-              "locale" : "fr"
             },
-            { "field" : "",
+            { "field" : "coding services",
               "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
               "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "\r\n",
-              "locale" : "fr"
             },
 
           ],

@@ -38,6 +38,7 @@ default_app_navbar = [
               "has_dropdown" : True,
               "dropdowns"  : [
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/map-ext", "link_text" : [{"locale" : "en", "text" : "Makers' map"},{"locale" : "es", "text" : "Mapa de los makers"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des makers"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/kifekoi/liste", "link_text" : [{"locale" : "en", "text" : "Who makes what ?"},{"locale" : "es", "text" : "Quien produce que ?"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui produit quoi ?"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/printers", "link_text" : [{"locale" : "en", "text" : "3D printers map"},{"locale" : "es", "text" : "Mapa de impresores 3D"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte des imprimeurs 3D - démo apiviz"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
                 # { "is_divider" : False, "is_external_link" : True, "link_to" : "https://www.makery.info/labs-map/", "link_text" : [{"locale" : "en", "text" : "-->   Map Makery"},{"locale" : "es", "text" : "--> Mapa Makery"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "-->   Carte Makery"}] },
@@ -79,20 +80,20 @@ default_app_navbar = [
               ]
             },
 
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "/kifekoi/liste",
-              "help"       : u"Other menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Productions"},{"locale" : "es", "text" : "Producciones"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Productions" }],
-              "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
+            # { "is_visible" : True,
+            #   "position"   : "exterior_right",
+            #   "link_to"    : "/kifekoi/liste",
+            #   "help"       : u"Other menu in navbar",
+            #   "is_external_link" : False,
+            #   "link_type"  : "link", ### show btn border
+            #   "icon_class" : "",
+            #   "link_text"  : [{"locale" : "en", "text" : "Productions"},{"locale" : "es", "text" : "Producciones"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Productions" }],
+            #   "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
+            #   "has_dropdown" : False,
+            #   "dropdowns"  : [
 
-              ]
-            },
+            #   ]
+            # },
 
             { "is_visible" : True,
               "position"   : "exterior_right",
