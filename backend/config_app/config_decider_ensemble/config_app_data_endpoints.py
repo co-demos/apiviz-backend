@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_data_endpoints_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING CARTO 
+  ### CONFIG DECIDER ENSEMBLE
 
     ### - - - - - - - - - - - - - - - ###
     ### USER MANAGEMENT
@@ -290,13 +290,13 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Structures"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Structures" }],
             "choices"	: [
+              {'name' : u'AE', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Administration d'Etat" }]},
+              {'name' : u'RG', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Région' }]},
               {'name' : u'DEP', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Département' }]},
+              {'name' : u'GV', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Grande ville' }]},
               {'name' : u'VM', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Ville moyenne' }]},
               {'name' : u'AC', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Association ou collectif' }]},
               {'name' : u'EP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Entreprise privée' }]},
-              {'name' : u'GV', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Grande ville' }]},
-              {'name' : u'AE', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Administration d'Etat" }]},
-              {'name' : u'RG', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Région' }]},
             ],
           },
           {	"name"		: u"code_dispositif__",
@@ -305,13 +305,13 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Dispositifs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Dispositifs" }],
             "choices"	: [
-              {'name' : u'AU', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Autre' }]},
               {'name' : u'BP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Budget participatif' }]},
               {'name' : u'DPP', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Dialogue parties prenantes' }]},
               {'name' : u'EP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Exercice de prospective' }]},
               {'name' : u'DC', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Dispositif de concertation' }]},
               {'name' : u'IP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Instance de participation' }]},
               {'name' : u'PN', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Plateforme numérique' }]},
+              {'name' : u'AU', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Autre' }]},
             ],
           },
           {	"name"		: u"code_thematique__",  
@@ -508,28 +508,11 @@ default_data_endpoints_config = [
 
       ### DATA MAP
       { "field"         : "tl_data_API_map",
-        "is_visible"    : False,
+        "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "map",
         "dataset_uri"   : "fiches",
-
-        # "map_options"   : {
-          
-        #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-        #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-        #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        #   "subdomains"       : 'abcd',
-        #   "center"           : [46.2276, 2.2137],
-        #   "currentCenter"    : [46.2276, 2.2137],
-        #   "zoom"             : 5,
-        #   "maxZoom"          : 18,
-        #   "minZoom"          : 2,
-        #   "useMarkerCluster" : True,
-        #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-        #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
-        
-        # },
 
         "content"       : u"apiviz default API endpoint for map results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6", ## V2

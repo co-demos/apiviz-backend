@@ -233,7 +233,7 @@ default_routes_config = [
               "is_hoverable"        : True,
               "hover_infos"         : {},
 
-              "radius_min"          : 1,
+              "radius_min"          : 2,
               "radius_max"          : 25,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -888,7 +888,7 @@ default_routes_config = [
           { "field" : "url_lieu",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
           },
           { "field" : "code_typo",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },

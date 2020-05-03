@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG DECIDER ENSEMBLE
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -120,70 +120,38 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "ADRESSE", 
+            { "field" : "adresse_rue", 
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "result_city",
+            { "field" : "adresse_commune",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "NOM DU LIEU", 
+            { "field" : "porteur_projet",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_actor_top_b",
+            },
+            { "field" : "titre_projet", 
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-
-            # { "field" : "résumé du projet",
-            #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_abstract",
-              
-            #   "custom_title" : None,
-            #   "locale" : "fr"
-            # },
-            { "field" : "SOURCE",
-              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-              "is_visible" : True,
-              "position" : "block_src",
-              
-              "custom_title" : None,
-              "locale" : "fr"
-            },
-            { "field" : "IMAGE",
+            { "field" : "url_logo",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            # { "field"       : "coding APCIS N1",
-            #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_tags",
-            #   "filter_correspondance" : True,
-            #   "is_tag_like" : True,
-            #   "tags_separator" : "-",
-            #   "custom_title" : None,
-            #   "locale" : "fr"
-            # },
-
+            { "field" : "presentation_projet",
+              "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_abstract",
+              # "custom_title" : [ { "locale" : "fr", "text" : "Description du projet :" } ],
+            },
           ],
 
           "lat_long_fields" : {
@@ -210,12 +178,19 @@ default_routes_config = [
             "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
             "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
             "subdomains"       : 'abcd',
-            "center"           : [47.469994, -0.5600023],
-            "currentCenter"    : [47.469994, -0.5600023],
-            "zoom"             : 7,
+            "center"           : [46.2276, 2.2137],
+            "currentCenter"    : [46.2276, 2.2137],
+            "zoom"             : 5,
             "maxZoom"          : 18,
             "minZoom"          : 2,
             "useMarkerCluster" : True,
+
+            "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
+            "item_marker"       : "fas fa-map-marker-alt",
+            "item_marker_color" : "primary",
+            "item_marker_offset" : [ 0, 8 ],
+            "item_marker_anchor" : "bottom",
+
             "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
             "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
 
@@ -234,8 +209,8 @@ default_routes_config = [
 
                 "is_clickable"        : True,
 
-                "radius_min"          : 1,
-                "radius_max"          : 10,
+                "radius_min"          : 4,
+                "radius_max"          : 45,
                 "max_zoom"            : 14,
                 "min_zoom"            : 4,
                 "circle_color"        : "#004494",
@@ -245,7 +220,7 @@ default_routes_config = [
 
               ### clusters source and layer
               "cluster_circles_layer" : {
-                "is_activated"     : True,
+                "is_activated"        : True,
                 "source_id"           : "clusterSource",
                 "layer_id"            : "cluster-circles",
                 "is_default_visible"  : False,
@@ -297,7 +272,7 @@ default_routes_config = [
 
               ### choropleth source and layer
               "choropleth_layer" : {
-                "is_activated"        : True,
+                "is_activated"        : False,
                 # "source_id"           : "choroSource",
                 # "layer_id"            : "choropleth",
                 "is_live_data"        : False,
@@ -460,7 +435,7 @@ default_routes_config = [
 
               ### heatmap source and layer
               "heatmap_layer" : {
-                "is_activated"        : True,
+                "is_activated"        : False,
                 "is_default_visible"  : False,
                 "source_id"           : "allPointsSource",
                 "layer_id"            : "heatmap-layer",
@@ -474,7 +449,7 @@ default_routes_config = [
             },
           
             "layers_visibility" :{
-              "is_activated" : True,
+              "is_activated" : False,
               "is_drawer_open" : False,
               "layers_switches" : [ 
                 { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
@@ -722,51 +697,48 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_id",
-              
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "adresse",
+            { "field" : "adresse_commune",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
             { "field" : "titre_projet",
-              "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "source",
-              "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-              "is_visible" : False,
-              "position" : "block_src",
-              
-              "custom_title" : None,
-              "locale" : "fr"
+            { "field" : "porteur_projet",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_actor_top_b",
             },
             { "field" : "url_logo",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field"       : "tag_thematique",
-              "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            { "field"       : "code_thematique",
+              "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
               "is_visible"  : True,
               "position"    : "block_tags",
-              "filter_correspondance" : False,
               "is_tag_like" : True,
               "tags_separator" : "-",
+              "text_color" : "white",
+              "background_color" : "primary",
               "custom_title" : "Thématiques",
-              "locale" : "fr"
+              "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+            },
+            { "field"       : "code_dispositif",
+              "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "block_tags_bis",
+              "is_tag_like" : True,
+              "tags_separator" : "-",
+              "text_color" : "white",
+              "background_color" : "light",
+              "custom_title" : "Dispositifs",
+              "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
             },
 
           ],
@@ -861,77 +833,121 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              
-              "custom_title" : None,
-              "locale" : "fr"
+            },
+            { "field" : "porteur_projet",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_actor_left_top_b",
             },
             { "field" : "url_logo",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_image",
-              # "trim" : 20,
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            { "field" : "adresse",
+            { "field" : "adresse_postale",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_address",
-              
-              "custom_title" : None,
-              "locale" : "fr"
             },
-            # { "field" : "result_postcode",
-            #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_cp",
-              
-            #   "custom_title" : None,
-            #   "locale" : "fr"
-            # },
+
+            { "field" : "a_retenir",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_pre_abstract",
+              "custom_title" : [ { "locale" : "fr", "text" : "A retenir :" } ],
+            },
             { "field" : "presentation_projet",
-              "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
               "is_visible" : True,
               "position" : "block_abstract",
-              
-              "custom_title" : "Description",
-              "locale" : "fr"
+              "custom_title" : [ { "locale" : "fr", "text" : "Description du projet :" } ],
             },
+            { "field" : "acteurs",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_post_abstract",
+              "custom_title" : [ { "locale" : "fr", "text" : "Autres acteurs :" } ],
+            },
+            { "field" : "porteur_projet_full",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
+              "is_visible" : True,
+              "position" : "block_partners",
+              "custom_title" : [ { "locale" : "fr", "text" : "Présentation du porteur de projet :" } ],
+            },
+
             { "field" : "source",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_src",
-              
-              "custom_title" : None,
-              "locale" : "fr"
+              "custom_title" : [ { "locale" : "fr", "text" : "Thématiques(s) :" } ],
             },
-            # { "field" : "services",
-            #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-            #   "is_visible" : True,
-            #   "position" : "block_tags",
-              
-            #   "is_tag_like" : True,
-            #   "tags_separator" : "-",
-            #   "custom_title" : None,
-            #   "locale" : "fr"
-            # },
             { "field" : "url_site",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
-              "position" : "block_wesite",
-              
-              "custom_title" : None,
-              "locale" : "fr"
+              "position" : "block_website",
             },
-            { "field"       : "tag_thematique",
+            { "field" : "url_pdf",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_file_1",
+            },
+            { "field"       : "code_thematique",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible"  : True,
               "position"    : "block_rb1_tags",
               "filter_correspondance" : False,
               "is_tag_like" : True,
               "tags_separator" : "-",
-              "custom_title" : "Thématiques",
-              "locale" : "fr"
+              "text_color" : "white",
+              "background_color" : "primary",
+              # "custom_title" : "Thématiques(s) :",
+              "custom_title" : [ { "locale" : "fr", "text" : "Thématiques(s) :" } ],
+              "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+            },
+            { "field" : "code_dispositif",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible"  : True,
+              "position"    : "block_rb2_tags",
+              "filter_correspondance" : False,
+              "is_tag_like" : True,
+              "tags_separator" : "-",
+              "text_color" : "white",
+              "background_color" : "light",
+              # "custom_title" : "Labellisation(s) :",
+              "custom_title" : [ { "locale" : "fr", "text" : "Dispositifs(s) :" } ],
+              "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+            },
+
+            ### timeline
+            { "field" : "titre_etapes",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_timeline_title",
+            },
+            { "field" : "etapes",
+              "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+              "is_visible" : True,
+              "position" : "block_timeline",
+              "steps_separator" : "//",
+              "title_separator" : "::",
+            },
+
+            ### minimap
+            { "field" : None,
+              "is_visible" : True,
+              "map_height" : 250,
+              "item_title_field" : "porteur_projet",
+              "position" : "block_map_top_right_bis",
+              "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
+              "item_marker" : "fas fa-map-marker-alt",
+              "item_marker_color" : "danger",
+              "item_marker_offset" : [ 0, 8 ],
+              "item_marker_anchor" : "bottom",
+              "zoom" : 8,
+              "max_zoom" : 13,
+              "min_zoom" : 4,
+              "interactive" : False,
+              "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
             },
 
           ],

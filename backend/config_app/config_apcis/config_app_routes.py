@@ -233,7 +233,7 @@ default_routes_config = [
 
               "is_clickable"        : True,
 
-              "radius_min"          : 1,
+              "radius_min"          : 2,
               "radius_max"          : 10,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -610,7 +610,7 @@ default_routes_config = [
           { "field" : "link_data",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
             
             "custom_title" : None,
             "locale" : "fr"

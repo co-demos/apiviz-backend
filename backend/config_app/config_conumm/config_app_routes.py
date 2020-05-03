@@ -232,7 +232,7 @@ default_routes_config = [
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
 
-              "radius_min"          : 1,
+              "radius_min"          : 2,
               "radius_max"          : 22,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -867,7 +867,7 @@ default_routes_config = [
           { "field" : "Site web",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
           },
           { "field"       : "services_tags",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },

@@ -518,7 +518,7 @@ default_routes_config = [
           { "field" : "repertoire_url",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
             
             "custom_title" : None,
             "locale" : "fr"
@@ -1422,7 +1422,7 @@ default_routes_config = [
           { "field" : "organisation_url",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
             
             "custom_title" : None,
             "locale" : "fr"

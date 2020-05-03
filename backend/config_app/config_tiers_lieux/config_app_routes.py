@@ -118,61 +118,27 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "GEOCOD", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            # "trim" : 20,
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "NOMREG",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : None,
-            "locale" : "fr"
           },
           { "field" : "NOM_TL", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : None,
-            "locale" : "fr"
           },
-
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
-            
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
           { "field" : "SOURCE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : None,
-            "locale" : "fr"
           },
-          # { "field"       : "coding APCIS N1",
-          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-          #   "filter_correspondance" : True,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : None,
-          #   "locale" : "fr"
-          # },
 
         ],
 
@@ -232,7 +198,7 @@ default_routes_config = [
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
 
-              "radius_min"          : 1,
+              "radius_min"          : 2,
               "radius_max"          : 30,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -870,7 +836,7 @@ default_routes_config = [
           { "field" : "WEB",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
+            "position" : "block_website",
           },
           { "field"       : "TYPO",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },

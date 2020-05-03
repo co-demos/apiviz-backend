@@ -237,7 +237,7 @@ default_routes_config = [
 
                 "is_clickable"        : True,
 
-                "radius_min"          : 1,
+                "radius_min"          : 2,
                 "radius_max"          : 10,
                 "max_zoom"            : 14,
                 "min_zoom"            : 4,
@@ -921,7 +921,7 @@ default_routes_config = [
             { "field" : "url_initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
-              "position" : "block_wesite",
+              "position" : "block_website",
               
               "custom_title" : None,
               "locale" : "fr"
@@ -1768,7 +1768,7 @@ default_routes_config = [
             { "field" : "url_initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
-              "position" : "block_wesite",
+              "position" : "block_website",
               
               "custom_title" : None,
               "locale" : "fr"
@@ -2318,7 +2318,7 @@ default_routes_config = [
             { "field" : "url_structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
-              "position" : "block_wesite",
+              "position" : "block_website",
               
               "custom_title" : None,
               "locale" : "fr"
@@ -2537,13 +2537,13 @@ default_routes_config = [
                 "is_clickable"        : True,
                 "add_zoom_on_click"   : 3.5,
 
-                "radius_min"          : 1,
+                "radius_min"          : 2,
                 "radius_max"          : 25,
                 "max_zoom"            : 14,
                 "min_zoom"            : 4,
                 "circle_color"        : "#004494",
                 "circle_stroke_color" : "#fff",
-                "circle_opacity"      : 0.8,
+                "circle_opacity"      : 0.65,
               },
 
               ### clusters source and layer
@@ -3194,7 +3194,7 @@ default_routes_config = [
             { "field" : "url_initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
-              "position" : "block_wesite",
+              "position" : "block_website",
             },
             { "field"       : "tag_besoin_niv1_code",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
