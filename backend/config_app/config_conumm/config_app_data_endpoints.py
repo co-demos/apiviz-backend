@@ -364,7 +364,7 @@ default_data_endpoints_config = [
             "id"      : "filter_4",
             "col_name" : "access-codes",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Access conditions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Conditions d'accès" }],
+            "filter_title" : [{"locale" : "en", "text" : "Access conditions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accès" }],
             "choices"	: [
               {'name' : u'G', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Gratuit' }]},
               {'name' : u'P', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Payant' }]},
