@@ -1310,7 +1310,7 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/le-projet"],
-        "dataset_uri"       : "project-cis",
+        "dataset_uri"       : "project",
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/le-projet.html" }, 
@@ -1367,7 +1367,7 @@ default_routes_config = [
         "in_footer"         : False,
         "link_in_logo"      : True,
         "urls"              : ["/qui-sommes-nous"],
-        "dataset_uri"       : "project-cis",
+        "dataset_uri"       : "who",
         
         "template_urls"     : [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/pages-html/site_CONUMM/qui-sommes-nous.html" }, 
