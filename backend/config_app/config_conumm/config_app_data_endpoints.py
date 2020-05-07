@@ -297,8 +297,7 @@ default_data_endpoints_config = [
               {'name' : u'Mayenne', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : 'Mayenne'},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
               {'name' : u'Sarthe', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : 'Sarthe'},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
               {'name' : u'Vendée', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : 'Vendée'},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
-  
-              {'name' : u'-', 'choice_title' : [{'locale' : 'en', 'text' : 'NA'},{'locale' : 'es', 'text' : 'NA'},{'locale' : 'tr', 'text' : 'NA'},{'locale' : 'de', 'text' : 'NA'}, {'locale' : 'fr', 'text' : 'NA' }]},
+              # {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : 'NR'},{'locale' : 'de', 'text' : 'NNR'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -319,7 +318,7 @@ default_data_endpoints_config = [
               {'name' : u'CuFa', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Culture FabLab' }]},
               {'name' : u'Co', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Conseils' }]},
               {'name' : u'LeAc', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Lecture & activités' }]},
-              # {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Value' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : 'NR'},{'locale' : 'de', 'text' : 'NNR'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -337,7 +336,7 @@ default_data_endpoints_config = [
               {'name' : u'AcIn', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Accompagnements individuels' }]},
               {'name' : u'Au', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Autonomie' }]},
               {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Autre' }]},
-              # {'name' : u'COWORKING', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Value' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : 'NR'},{'locale' : 'de', 'text' : 'NNR'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -355,6 +354,7 @@ default_data_endpoints_config = [
               {'name' : u'S', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Seniors' }]},
               {'name' : u'De', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Demandeurs Emploi' }]},
               {'name' : u'J', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Jeunes' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : 'NR'},{'locale' : 'de', 'text' : 'NNR'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -370,6 +370,7 @@ default_data_endpoints_config = [
               {'name' : u'P', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Payant' }]},
               {'name' : u'A', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Aptic' }]},
               {'name' : u'Condp', 'choice_title' : [{'locale' : 'en', 'text' : 'Todo'},{'locale' : 'es', 'text' : 'Pendiente'},{'locale' : 'tr', 'text' : 'yapılmamış'},{'locale' : 'de', 'text' : 'ungemacht'}, {'locale' : 'fr', 'text' : 'Conditions particulières' }]},
+              {'name' : u'NR', 'choice_title' : [{'locale' : 'en', 'text' : 'NR'},{'locale' : 'es', 'text' : 'NR'},{'locale' : 'tr', 'text' : 'NR'},{'locale' : 'de', 'text' : 'NNR'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -398,7 +399,7 @@ default_data_endpoints_config = [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
           {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
-          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "NOM_TL", "type": "str" },
+          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "Nom de la structure", "type": "str" },
           {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",            "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",          "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },

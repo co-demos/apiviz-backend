@@ -434,7 +434,7 @@ default_routes_config = [
         
           "layers_visibility" :{
             "is_activated" : True,
-            "is_drawer_open" : True,
+            "is_drawer_open" : False,
             "layers_switches" : [ 
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
@@ -568,6 +568,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : False,
+            "is_external_link" : True,
           },
 
         ],
