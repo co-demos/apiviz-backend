@@ -320,7 +320,7 @@ default_data_endpoints_config = [
               {'name' : u'Citoyens', 'choice_title' : [{'locale' : 'en', 'text' : 'Citizens'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyens' }]},
             ],
           },
-          {	"name"		: u"SOURCE__",
+          {	"name"		: u"SOURCE_codes__",
             "id"      : "filter_3",
             "col_name" : "SOURCE_codes",
             "dataType" : "text",
