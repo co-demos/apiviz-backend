@@ -284,12 +284,6 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          # 44, Loire-Atlantique, Pays de la Loire
-          # 49, Maine-et-Loire, Pays de la Loire
-          # 53, Mayenne, Pays de la Loire
-          # 72, Sarthe, Pays de la Loire
-          # 85, Vendée, Pays de la Loire
-
           {	"name"		: u"result_context__",
             "id"      : "filter_1",
             "col_name" : "result_context",
@@ -304,19 +298,6 @@ default_data_endpoints_config = [
 
             ],
           },
-          # {	"name"		: u"COMCLASS_CODE__",
-          #   "id"      : "filter_0",
-          #   "col_name" : "COMCLASS_CODE",
-          #   "dataType" : "text",
-          #   "filter_title" : [{"locale" : "en", "text" : "Population"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Population" }],
-          #   "choices"	: [
-          #     {'name' : u'pop_0', 'choice_title' : [{'locale' : 'en', 'text' : '0-5000'},{'locale' : 'es', 'text' : '0-5000'},{'locale' : 'tr', 'text' : '0-5000'},{'locale' : 'de', 'text' : '0-5000'}, {'locale' : 'fr', 'text' : '0-5000' }]},
-          #     {'name' : u'pop_1', 'choice_title' : [{'locale' : 'en', 'text' : '5000-20000'},{'locale' : 'es', 'text' : '5000-20000'},{'locale' : 'tr', 'text' : '5000-20000'},{'locale' : 'de', 'text' : '5000-20000'}, {'locale' : 'fr', 'text' : '5000-20000' }]},
-          #     {'name' : u'pop_2', 'choice_title' : [{'locale' : 'en', 'text' : '20000-50000'},{'locale' : 'es', 'text' : '20000-50000'},{'locale' : 'tr', 'text' : '20000-50000'},{'locale' : 'de', 'text' : '20000-50000'}, {'locale' : 'fr', 'text' : '20000-50000' }]},
-          #     {'name' : u'pop_3', 'choice_title' : [{'locale' : 'en', 'text' : '50000-100000'},{'locale' : 'es', 'text' : '50000-100000'},{'locale' : 'tr', 'text' : '50000-100000'},{'locale' : 'de', 'text' : '50000-100000'}, {'locale' : 'fr', 'text' : '50000-100000' }]},
-          #     {'name' : u'pop_4', 'choice_title' : [{'locale' : 'en', 'text' : '100000 et plus'},{'locale' : 'es', 'text' : '100000 et plus'},{'locale' : 'tr', 'text' : '100000 et plus'},{'locale' : 'de', 'text' : '100000 et plus'}, {'locale' : 'fr', 'text' : '100000 et plus' }]},
-          #   ],
-          # },
           {	"name"		: u"TYPOLOGIE__",  
             "id"      : "filter_2",
             "col_name" : "TYPOLOGIE",
@@ -341,13 +322,13 @@ default_data_endpoints_config = [
           },
           {	"name"		: u"SOURCE__",
             "id"      : "filter_3",
-            "col_name" : "SOURCE",
+            "col_name" : "SOURCE_codes",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
             "choices"	: [
               {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "CGET"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
               {"name" : u"PiNG", "choice_title" : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "PiNG" }]},
-              {"name" : u"CRESS", "choice_title" : [{"locale" : "en", "text" : "CRESS"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CRESS" }]},
+              {"name" : u"CAPTL", "choice_title" : [{"locale" : "en", "text" : "CAP Tiers-lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CAP Tiers-lieux" }]},
             ],
           },
         ],
