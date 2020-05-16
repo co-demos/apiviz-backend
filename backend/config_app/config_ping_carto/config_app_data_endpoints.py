@@ -407,8 +407,9 @@ default_data_endpoints_config = [
         "content"       : u"apiviz default API endpoint for detailled results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
-          {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
-          {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "dataToken", "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
+          # {  "app_arg" : "itemId",    "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "INDEX", "sep" : "__" }},
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -499,23 +500,6 @@ default_data_endpoints_config = [
         "endpoint_type" : "map",
         "dataset_uri"   : "recherche",
 
-        # "map_options"   : {
-          
-        #   ### TO ADAPT TO MAPBOX-GL-JS OPTIONS
-        #   "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
-        #   "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-        #   "subdomains"       : 'abcd',
-        #   "center"           : [46.2276, 2.2137],
-        #   "currentCenter"    : [46.2276, 2.2137],
-        #   "zoom"             : 5,
-        #   "maxZoom"          : 18,
-        #   "minZoom"          : 2,
-        #   "useMarkerCluster" : True,
-        #   "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-        #   "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]}
-        
-        # },
-
         "content"       : u"apiviz default API endpoint for map results",
         "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
         "args_options"  : [
@@ -523,7 +507,7 @@ default_data_endpoints_config = [
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT,INDEX",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 

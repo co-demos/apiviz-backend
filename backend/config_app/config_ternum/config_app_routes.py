@@ -114,7 +114,12 @@ default_routes_config = [
 
         "contents_fields" : [
 
-          { "field" : "sd_id",
+          # { "field" : "sd_id",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_id",
+          # },
+          { "field" : "bfc_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
@@ -567,7 +572,15 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "sd_id",
+          # { "field" : "sd_id",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : False,
+          #   "is_id_field" : True,
+          #   "position" : "col_id",
+          #   "custom_title" : None,
+          #   "locale" : "fr"
+          # },
+          { "field" : "bfc_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "is_id_field" : True,
@@ -707,7 +720,12 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "sd_id",
+          # { "field" : "sd_id",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_id",
+          # },
+          { "field" : "bfc_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
