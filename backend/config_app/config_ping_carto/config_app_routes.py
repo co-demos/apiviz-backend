@@ -749,7 +749,16 @@ default_routes_config = [
             "background_color" : "primary",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-
+          # { "field"       : "PUBLICS",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "block_tags_bis",
+          #   "is_tag_like" : True,
+          #   "tags_separator" : " - ",
+          #   "text_color" : "white",
+          #   "background_color" : "primary",
+          #   "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          # },
         ],
 
         "images_fields"        : {
@@ -847,7 +856,7 @@ default_routes_config = [
           ### minimap
           { "field" : None,
             "is_visible" : True,
-            "map_height" : 200,
+            "map_height" : 250,
             "item_title_field" : "NOM DU LIEU",
             "position" : "block_map_bottom_left",
             "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
@@ -903,6 +912,17 @@ default_routes_config = [
             "background_color" : "primary",
             "custom_title" : [ { "locale" : "fr", "text" : "Thématique(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "PUBLICS",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb2_tags",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Publics(s) :" } ],
+            "convert_from_filters" : True, 
           },
 
         ],

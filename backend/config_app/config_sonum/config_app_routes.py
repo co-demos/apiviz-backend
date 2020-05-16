@@ -207,7 +207,6 @@ default_routes_config = [
               "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "\r\n",
               "locale" : "fr"
@@ -482,7 +481,6 @@ default_routes_config = [
               "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "\r\n",
               "locale" : "fr"
@@ -615,7 +613,6 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "\r\n",
               "locale" : "fr"
@@ -1088,7 +1085,6 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "\r\n",
               "locale" : "fr"
@@ -1342,7 +1338,6 @@ default_routes_config = [
               "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "-",
               "locale" : "fr"
@@ -1438,8 +1433,6 @@ default_routes_config = [
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_title",
-              
-              "locale" : "fr"
             },
             { "field" : "public visé",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
@@ -1448,8 +1441,6 @@ default_routes_config = [
               "custom_title" : "Publics visés :",
               "is_tag_like" : True,
               "tags_separator" : "-",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "échelle action initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
@@ -1458,143 +1449,105 @@ default_routes_config = [
               "custom_title" : "Echelle :",
               "is_tag_like" : True,
               "tags_separator" : "-",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "nom structure porteuse",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_scale_2",
               "custom_title" : "Structure :",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "adresse structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_scale_address",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "city",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_city",
-              # "trim" : 20,
-              "locale" : "fr"
             },
             { "field" : "présentation structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_pre_abstract",
               "custom_title" : "Présentation de la structure",
-              
-              "locale" : "fr"
             },
             { "field" : "présentation initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_abstract",
               "custom_title" : "Présentation de l'initiative",
-              
-              "locale" : "fr"
             },
             { "field" : "type structure",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_tags",
-              "filter_correspondance" : True,
               "is_tag_like" : True,
               "tags_separator" : "-",
-              "locale" : "fr"
             },
             { "field" : "date action initiative - début",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_period",
-              
-              "locale" : "fr"
             },
             { "field" : "contact - nom",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_surname",
-              
-              "locale" : "fr"
             },
             { "field" : "contact - prénom",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_name",
-              
-              "locale" : "fr"
             },
             { "field" : "contact - titre",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_title",
-              
-              "locale" : "fr"
             },
             { "field" : "contact - email",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_email",
-              
-              "locale" : "fr"
             },
             { "field" : "contact - téléphone",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_contact_tel",
-              
-              "locale" : "fr"
             },
             { "field" : "lien document présentation",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_file_1",
-              
-              "locale" : "fr"
             },
             { "field" : "website - initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_website",
-              
-              "locale" : "fr"
             },
             { "field" : "retour d'expérience",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_right_bottom_1",
-              
               "custom_title" : "Retour d'expérience",
-              "locale" : "fr"
             },
             { "field" : "partenaires initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_post_abstract_1",
-              
               "custom_title" : "Partenaires de l'initiative",
-              "locale" : "fr"
             },
             { "field" : "moyens humains initiative",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_post_abstract_2",
-              
               "custom_title" : "Moyens",
-              "locale" : "fr"
             },
             { "field" : "mesure d'impact",
               "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
               "is_visible" : True,
               "position" : "block_right_bottom_2",
-              
               "custom_title" : "Mesure d'impact",
-              "locale" : "fr"
             },
           ],
 
