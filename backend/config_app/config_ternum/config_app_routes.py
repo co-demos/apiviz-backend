@@ -238,6 +238,7 @@ default_routes_config = [
 
               "is_hoverable"        : True,
               "hover_infos"         : {},
+              "direct_to_detail"        : True,
 
               "has_popup"           : True, 
               "popup_config"        : {
