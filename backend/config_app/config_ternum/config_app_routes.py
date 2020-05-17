@@ -235,8 +235,18 @@ default_routes_config = [
 
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
+
               "is_hoverable"        : True,
               "hover_infos"         : {},
+
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'nom_structure', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
 
               "radius_min"          : 2,
               "radius_max"          : 25,
@@ -353,7 +363,7 @@ default_routes_config = [
                   "fill_opacity"        : 0.4,
                   "fill_outline_color"  : "#28357f",
 
-                  "has_popup" : True, 
+                  "has_popup" : False, 
                   "popup_config" : {
                     "action" : 'mousemove',
                     "fields" : [
@@ -362,6 +372,7 @@ default_routes_config = [
                       { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
                     ],
                   },
+
                   "legend" : {
                     "position" : "bottom-right", 
                     "legend_color" : "primary",
