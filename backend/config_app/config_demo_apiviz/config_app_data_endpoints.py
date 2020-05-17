@@ -341,7 +341,7 @@ default_data_endpoints_config = [
         ### cf : https://gitlab.com/latitudes-exploring-tech-for-good/hackathon-a-lasso-des-donnees/sujet-3-transiscope
         ### cf : https://grappe.io/data/api/5c961ef44a490f002e4598f6-agenda-comme-un-nantes-events-all
         { "field"         : "sonum_carto_data_API_calendar",
-          "is_visible"    : True,
+          "is_visible"    : False,
           "is_disabled"   : False,
           "data_type"     : "data",
           "endpoint_type" : "calendar",

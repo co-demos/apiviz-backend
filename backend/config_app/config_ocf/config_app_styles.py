@@ -22,7 +22,7 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
+          'primary'    : '#400' , # '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#40529d',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
@@ -138,7 +138,7 @@ default_app_styles_config = [
           "dataset_uri" : "recherche",
           "images_set"  : [
             { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_1.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
-            { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?r:aw=true", "credits" : "Élise Lalique", "licence" : "" },
+            { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_3.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_4.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             { "dft_text" : "img_5", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_5.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },

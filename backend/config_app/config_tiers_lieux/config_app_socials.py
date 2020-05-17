@@ -11,7 +11,7 @@ default_socials_config = [
     { "field"       : "app_twitter",
       "content"     : u"twitter",
       "icon_class"  : "fab fa-twitter",
-      "url"         : "https://twitter.com/cget_gouv",
+      "url"         : "https://twitter.com/frtierslieux",
       "app_version" : version,
       "help"        : u"Choose the twitter account for your ApiViz instance",
       "in_footer"   : True,

@@ -42,6 +42,8 @@ def app_runner(mode, docker, mongodb, auth, host, port, https) :
   
   try :
     env_path_superAdmins = Path('.') / '.env.superadmins'
+    if env_path_superAdmins.is_file() == False :
+      raise FileNotFoundError 
     load_dotenv(env_path_superAdmins, verbose=True)
   except : 
     env_path_superAdmins = Path('.') / 'example.env.superadmins'

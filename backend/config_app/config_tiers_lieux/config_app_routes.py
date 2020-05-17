@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG TIERS LIEUX 
+  ### CONFIG FRANCE TIERS LIEUX 
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche/carte"],
+        "urls"              : ["/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -118,61 +118,37 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "GEOCOD", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "NOMREG",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "NOM_TL", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
+          { "field"       : "TYPO",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_tags",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "convert_from_filters" : True,
+          },
           { "field" : "SOURCE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field"       : "coding APCIS N1",
-          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-          #   "filter_correspondance" : True,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
 
         ],
 
@@ -206,6 +182,13 @@ default_routes_config = [
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
+
+          "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
+          "item_marker"       : "fas fa-map-marker-alt",
+          "item_marker_color" : "primary",
+          "item_marker_offset" : [ 0, 8 ],
+          "item_marker_anchor" : "bottom",
+
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
           "pinIconSize"      : { "highlighted" : [46, 46], "normal" : [29, 29]},
 
@@ -223,14 +206,15 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
 
-              "radius_min"          : 1,
-              "radius_max"          : 10,
+              "radius_min"          : 2,
+              "radius_max"          : 30,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
               "circle_color"        : "#004494",
               "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.8,
+              "circle_opacity"      : 0.6,
             },
 
             ### clusters source and layer
@@ -570,7 +554,7 @@ default_routes_config = [
             "is_id_field" : True,
             "position" : "col_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "NOM_TL",
@@ -580,36 +564,31 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "NOMCOM",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field"       : "TYPO",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
-            "is_sortable" : True,
-            "filter_correspondance" : False,
+            "is_sortable" : False,
+            "custom_title" : [ { "locale" : "fr", "text" : "TYPOLOGIES" }],
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
+            "text_color" : "white",
+            "background_color" : "primary",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
           { "field" : "SOURCE",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : False,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -687,7 +666,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/recherche", "/recherche/liste"],
+        "urls"              : ["/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -712,43 +691,32 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "NOMCOM",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "NOM_TL",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "SOURCE",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field"       : "TYPO_CODE",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
-            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Thématique(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
 
         ],
@@ -843,77 +811,55 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "GEOCOD",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "code postal structure",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "résumé du projet",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_abstract",
-            
-          #   "custom_title" : "Résumé du projet",
-          #   "locale" : "fr"
-          # },
           { "field" : "SOURCE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "WEB",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
+            "position" : "block_website",
           },
           { "field"       : "TYPO",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
-            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "Thématiques",
-            "locale" : "fr"
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Typologie(s) :" } ],
+            "convert_from_filters" : True, 
+          },
+
+          ### minimap
+          { "field" : None,
+            "is_visible" : True,
+            "map_height" : 200,
+            "item_title_field" : "NOM_TL",
+            "position" : "block_map_bottom_left",
+            "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
+            "item_marker" : "fas fa-map-marker-alt",
+            "item_marker_color" : "danger",
+            "item_marker_offset" : [ 0, 8 ],
+            "item_marker_anchor" : "bottom",
+            "zoom" : 12,
+            "max_zoom" : 14,
+            "min_zoom" : 4,
+            "interactive" : False,
+            "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
           },
 
         ],

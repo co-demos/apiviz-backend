@@ -133,7 +133,7 @@ default_routes_config = [
             "is_id_field" : True,
             "position" : "col_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "nom",
@@ -144,7 +144,7 @@ default_routes_config = [
             "position" : "col_1",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "organisation_nom",
@@ -153,7 +153,7 @@ default_routes_config = [
             "position" : "col_2",
             "is_sortable" : True,
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field"       : "description",
@@ -161,7 +161,6 @@ default_routes_config = [
             "is_visible"  : True,
             "position"    : "col_3",
             "is_sortable" : False,
-            "filter_correspondance" : False,
             "is_tag_like" : False,
             "tags_separator" : "-",
             "custom_title" : "description",
@@ -172,7 +171,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "licence",
@@ -180,7 +179,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_5",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "langage",
@@ -188,7 +187,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "col_§",
             "is_sortable" : True,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
         ],
@@ -290,52 +289,23 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "nom",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "NOMCOM",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_city",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "organisation_nom",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "description",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field"       : "TYPO_CODE",
-          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "block_tags",
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
+
 
         ],
 
@@ -429,110 +399,42 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "GEOCOD",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_address",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "code postal structure",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_cp",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "description",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
-            
-            "custom_title" : "Description",
-            "locale" : "fr"
           },
           { "field" : "langage",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_post_abstract_1",
-            
-            "custom_title" : "Langage",
-            "locale" : "fr"
           },
           { "field" : "licence",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_post_abstract_2",
-            
-            "custom_title" : "Licence",
-            "locale" : "fr"
           },
           { "field" : "plateforme",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_post_abstract_3",
-            
-            "custom_title" : "Plateforme",
-            "locale" : "fr"
           },
           { "field" : "date_creation",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_right_bottom_1",
-            
-            "custom_title" : "Date de création",
-            "locale" : "fr"
           },
           { "field" : "organisation_nom",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "repertoire_url",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
+            "position" : "block_website",
           },
-          # { "field"       : "TYPO",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "block_rb1_tags",
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
 
         ],
 
@@ -1028,9 +930,6 @@ default_routes_config = [
             "is_visible" : False,
             "is_id_field" : True,
             "position" : "col_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "nom",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
@@ -1039,53 +938,39 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "organisation_nom",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field"       : "description",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "col_3",
             "is_sortable" : True,
-            "filter_correspondance" : False,
             "is_tag_like" : False,
             "tags_separator" : "-",
             "custom_title" : "description",
-            "locale" : "fr"
           },
           { "field" : "plateforme",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_4",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "licence",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_5",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "langage",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_§",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
         ],
 
@@ -1186,52 +1071,22 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "nom",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field" : "NOMCOM",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_city",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "organisation_nom",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "description",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_abstract",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field"       : "TYPO_CODE",
-          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "block_tags",
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
 
         ],
 
@@ -1325,126 +1180,48 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
+            "custom_title" : None,
           },
-          # { "field" : "image(s) du projet",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          #   # "trim" : 20,
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "adresse",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
+            "custom_title" : None,
           },
-          # { "field" : "code postal structure",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_cp",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "description",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
-            
             "custom_title" : "Description",
-            "locale" : "fr"
           },
-          # { "field" : "langage",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_post_abstract_1",
-            
-          #   "custom_title" : "Langage",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "licence",
-          #   "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
-          #   "is_visible" : True,
-          #   "position" : "block_post_abstract_2",
-            
-          #   "custom_title" : "Licence",
-          #   "locale" : "fr"
-          # },
           { "field" : "plateforme",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_post_abstract_3",
-            
             "custom_title" : "Plateforme",
-            "locale" : "fr"
           },
           { "field" : "date_creation",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_right_bottom_1",
-            
             "custom_title" : "Date de création",
-            "locale" : "fr"
           },
           { "field" : "nombre_repertoires",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_right_bottom_2",
-            
             "custom_title" : "Nombre de répertoires",
-            "locale" : "fr"
           },
-          # { "field" : "organisation_nom",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_src",
-            
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
-          # { "field" : "services",
-          #   "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_tags",
-            
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "to do",
-          #   "locale" : "fr"
-          # },
           { "field" : "organisation_url",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
+            "position" : "block_website",
           },
           { "field" : "email",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_contact_email",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field"       : "TYPO",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "block_rb1_tags",
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : True,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
 
         ],
 

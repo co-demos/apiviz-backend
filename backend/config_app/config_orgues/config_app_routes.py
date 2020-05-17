@@ -119,7 +119,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_id",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Commune_insee", 
@@ -127,7 +127,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_address",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           # { "field" : "NOMREG",
@@ -135,7 +135,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_city",
           #   # "trim" : 20,
-          #   "custom_title" : "to do",
+          #   "custom_title" : None,
           #   "locale" : "fr"
           # },
           { "field" : "Edifice", 
@@ -143,7 +143,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
             # "trim" : 20,
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -152,7 +152,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_abstract",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
           { "field" : "Codification_instrument",
@@ -160,7 +160,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_src",
             
-            "custom_title" : "to do",
+            "custom_title" : None,
             "locale" : "fr"
           },
 
@@ -215,7 +215,7 @@ default_routes_config = [
 
               "is_clickable"        : True,
 
-              "radius_min"          : 1,
+              "radius_min"          : 2,
               "radius_max"          : 10,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -560,9 +560,6 @@ default_routes_config = [
             "is_visible" : False,
             "is_id_field" : True,
             "position" : "col_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Edifice",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
@@ -570,16 +567,12 @@ default_routes_config = [
             "has_link_to_detail" : True,
             "position" : "col_1",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Commune_insee",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Nom_departement",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
@@ -588,20 +581,7 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_3",
             "is_sortable" : True,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
-          # { "field"       : "Edifice",
-          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-          #   "is_visible"  : True,
-          #   "position"    : "col_3",
-          #   "is_sortable" : True,
-          #   "filter_correspondance" : False,
-          #   "is_tag_like" : False,
-          #   "tags_separator" : "-",
-          #   "custom_title" : "Thématiques",
-          #   "locale" : "fr"
-          # },
           { "field" : "Info_edifice",
             "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
@@ -609,8 +589,6 @@ default_routes_config = [
             "is_sortable" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
 
         ],
@@ -712,35 +690,24 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Commune_insee",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Edifice",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            # "trim" : 20,
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field"       : "Info_edifice",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
-            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "custom_title" : "Thématiques",
-            "locale" : "fr"
           },
 
         ],
@@ -835,60 +802,41 @@ default_routes_config = [
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Commune_insee",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Nom_departement",
             "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_cp",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
           { "field" : "Info_edifice",
             "field_format" : { "trim" : 500, "type" : "object", "retrieve" : [-1] },
             "is_visible" : True,
             "position" : "block_abstract",
-            
-            "custom_title" : "Edifice",
-            "locale" : "fr"
           },
           { "field" : "Codification_instrument",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_src",
-            
-            "custom_title" : "to do",
-            "locale" : "fr"
           },
 
           { "field" : "Livre",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_wesite",
-            
+            "position" : "block_website",
             "custom_title" : "Livre",
-            "locale" : "fr"
           },
           { "field"       : "Info_edifice",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb1_tags",
-            "filter_correspondance" : False,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "custom_title" : "Info édifice",
-            "locale" : "fr"
           },
 
         ],

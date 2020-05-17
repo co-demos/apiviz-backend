@@ -35,7 +35,7 @@ default_socials_config = [
     { "field"       : "app_github",
       "content"     : u"github",
       "icon_class"  : "fab fa-github",
-      "url"         : "https://www.github.com/co-demos",
+      "url"         : "https://github.com/co-demos/PING-carto",
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,

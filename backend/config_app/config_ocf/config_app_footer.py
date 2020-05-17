@@ -6,7 +6,7 @@ default_app_footer = [
 
   ### FOOTER
 
-    ### CONFIG PING CARTO 
+    ### CONFIG 
       { "field"       : "app_footer",
         "app_version" : version,
         "help"        : u"The default footer for your ApiViz instance",
@@ -19,8 +19,14 @@ default_app_footer = [
 
         "ui_options" : {
 
-            "card_color" : { "value" : None, "default" : "grey", },
-            "text_color" : { "value" : None, "default" : "white", },
+            "card_color" : { "value" : "default_background_app", "default" : "light", },
+            "card_class"  : { "value" : "", "default" : "" },
+
+            "title_color" : { "value" : 'primary',   "default" : "white",   "custom_color" : None},
+            "text_color" : { "value" : "grey-dark", "default" : "black", },
+
+            "socials_color" : { "value" : "primary", "default" : "primary" } ,
+            "socials_class" : { "value" : "", "default" : "" } ,
 
             "footer_logos" : [
               { "src_image" : "https://github.com/co-demos/carto-sonum/blob/master/logos/bloc-web-le-maire-darmanin.png?raw=true",
@@ -38,6 +44,9 @@ default_app_footer = [
             # "block_left" : {
             "is_visible"  : False,
             "has_socials" : False,
+            "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_left",
             "title_block" : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : ""}],
             "title_visible" : True,
@@ -48,51 +57,41 @@ default_app_footer = [
             # "block_center_left" : {
             "is_visible"  : True,
             "has_socials" : False,
+            "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_center_left",
-            "title_block" : [{"locale" : "en", "text" : "Mission co-working"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mission co-working"}],
+            "title_block" : [{"locale" : "en", "text" : "Open corporate facts"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Open corporate facts"}],
             "title_visible" : True,
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "/le-projet",
-                "is_external_link" : False,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La mission co-working du CGET" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "/le-projet/outils",
-                "is_external_link" : False,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "The tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils de valorisation des données" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "https://www.fondation-travailler-autrement.org/",
+                "link_to"    : "http://opencorporatefacts.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Travailler Autrement Foundation"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La Fondation Travailler Autrement" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+                "link_text"  : [{"locale" : "en", "text" : "OCF official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le site officiel d'OCF" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://www.cget.gouv.fr/actualites/l-etat-s-engage-pour-soutenir-et-accelerer-la-dynamique-des-tiers-lieux-dans-les-territoires",
+                "link_to"    : "http://opencorporatefacts.fr/api?ui=docs",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "To know more"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "En savoir plus sur la mission co-working" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+                "link_text"  : [{"locale" : "en", "text" : "OCF's API platform"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "API platform d'OCF" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
+
+
               { "is_visible" : True,
-                "link_to"    : "/login",
-                "is_external_link" : False,
+                "link_to"    : "http://api.cquest.org/company/433842044",
+                "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Login back-office"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login back-office" }],
+                "link_text"  : [{"locale" : "en", "text" : "CQuest's API for companies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "API de CQuest pour les compagnies" }],
                 "tooltip"    : [{"locale" : "en", "text" : "Login"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Login" }]
               },
+
             ]
           },
 
@@ -113,25 +112,35 @@ default_app_footer = [
             # "block_right" : {
             "is_visible"  : True,
             "has_socials" : True,
-            
+            "block_class" : "is-3",
+            # "link_class"  : { "value" : 'has-text-centered', "default" : "" },
+
             "position"    : "block_top_right",
             "title_block" : [{"locale" : "en", "text" : "Participate"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Participer"}],
             "title_visible" : True,
             "links"       : [
               { "is_visible" : True,
-                "link_to"    : "https://github.com/cget-carto/mission_coworking",
+                "link_to"    : "https://github.com/leonarf/OpenCorporateFacts",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Improve the data"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Améliorer les données sur les tiers-lieux" }],
+                "link_text"  : [{"locale" : "en", "text" : "OCF on Github"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "OCF sur Github" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,
-                "link_to"    : "https://github.com/co-demos/apiviz-frontend",
+                "link_to"    : "https://codefor.fr/processes/opencorporatefacts",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Apps' source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Code source des applications" }],
+                "link_text"  : [{"locale" : "en", "text" : "OCF on Code for France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "OCF sur Code for France" }],
+                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              },
+              { "is_visible" : True,
+                "link_to"    : "https://parlement-ouvert.fr/fr/",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "Open Parliement"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Parlement Ouvert" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               # { "is_visible" : True,
