@@ -15,7 +15,7 @@ default_socials_config = [
     #   "app_version" : version,
     #   "help"        : u"Choose the twitter account for your ApiViz instance",
     #   "in_footer"   : True,
-    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
+    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "it", "text" : "vuoto"}, {"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page Twitter" }],
     #   "apiviz_front_uuid" : uuid_models["uuid_covid"],
     #   "is_default"  : True
     # },
@@ -27,7 +27,7 @@ default_socials_config = [
     #   "app_version" : version,
     #   "help"        : u"Choose the facebook account for your ApiViz instance",
     #   "in_footer"   : True,
-    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
+    #   "tooltip"     : [{"locale" : "en", "text" : "todo"},{"locale" : "es", "text" : "pendiente"},{"locale" : "it", "text" : "vuoto"}, {"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page sur Facebook" }],
     #   "apiviz_front_uuid" : uuid_models["uuid_covid"],
     #   "is_default"  : True
     # },
@@ -39,7 +39,7 @@ default_socials_config = [
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
+      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "it", "text" : "vuoto"}, {"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
       "apiviz_front_uuid" : uuid_models["uuid_covid"],
       "is_default"  : True
     },
@@ -51,7 +51,7 @@ default_socials_config = [
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
+      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "it", "text" : "vuoto"}, {"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "codes sources" }],
       "apiviz_front_uuid" : uuid_models["uuid_covid"],
       "is_default"  : True
     },
@@ -63,7 +63,7 @@ default_socials_config = [
       "app_version" : version,
       "help"        : u"Choose the github account for your ApiViz instance",
       "in_footer"   : True,
-      "tooltip"     : [{"locale" : "en", "text" : "open data"},{"locale" : "es", "text" : "open data"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "openn data" }],
+      "tooltip"     : [{"locale" : "en", "text" : "open data"},{"locale" : "es", "text" : "open data"},{"locale" : "it", "text" : "open data"}, {"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "openn data" }],
       "apiviz_front_uuid" : uuid_models["uuid_covid"],
       "is_default"  : True
     },
