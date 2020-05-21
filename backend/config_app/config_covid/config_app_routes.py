@@ -3100,11 +3100,11 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-en.html" },
           { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-es.html" },
-          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-es.html" },
+          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/la-demarche-it.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche-en.html" }
           # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/la-demarche-es.html" }
-          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/la-demarche-es.html" }
+          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/la-demarche-it.html" }
         ],
         
 
@@ -3161,11 +3161,11 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/revue-de-presse-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/revue-de-presse-fr.html" },
           { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/revue-de-presse-fr.html" },
-          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/revue-de-presse-fr.html" },
+          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/revue-de-presse-it.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/revue-de-presse-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/revue-de-presse-fr.html" },
           # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/revue-de-presse-fr.html" },
-          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/revue-de-presse-fr.html" },
+          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/revue-de-presse-it.html" },
         ],
         
 
@@ -3221,11 +3221,11 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
           { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
-          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-fr.html" },
+          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/who-are-we-it.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
           # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
-          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/who-are-we-fr.html" },
+          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/who-are-we-it.html" },
         ],
         
         "has_ext_script"    : False,
@@ -3400,11 +3400,11 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-fr.html" },
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-en.html" },
           { "locale" : "es", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-es.html" },
-          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-es.html" },
+          { "locale" : "it", "url" : "https://raw.githubusercontent.com/co-demos/covid-viz/master/pages-html/contact-it.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contact-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contact-en.html" }
           # { "locale" : "es", "url" : "http://localhost:8800/html/pages-html/contact-es.html" }
-          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/contact-es.html" }
+          # { "locale" : "it", "url" : "http://localhost:8800/html/pages-html/contact-it.html" }
         ],
         
 
