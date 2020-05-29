@@ -832,7 +832,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_cp",
           },
-          { "field" : "Site web",
+          { "field" : "Site Web",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_website",
