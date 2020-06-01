@@ -847,7 +847,7 @@ default_routes_config = [
             "tags_separator" : "/",
             "text_color" : "white",
             "background_color" : "primary",
-              "custom_title" : [ { "locale" : "fr", "text" : "Département :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Département :" } ],
           },
           # { "field"       : "Activites-codes",
           #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
