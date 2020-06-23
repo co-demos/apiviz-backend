@@ -19,8 +19,8 @@ default_app_navbar = [
           "background_color" : { 
             "bulma_color" : "primary"
           },
-
         },
+
         "links_options" : {
           "extra_buttons" : [ ### for buttons not declared in routes/pages
 
