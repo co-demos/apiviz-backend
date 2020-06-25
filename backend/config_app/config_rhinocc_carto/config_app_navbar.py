@@ -9,7 +9,7 @@ default_app_navbar = [
     ### - - - - - - - - - - - - - - - ###
     ### CONFIG RHINOCC CARTO
       { "field"       : "app_navbar",
-        "content"     : u"TL navbar",
+        "content"     : u"RH navbar",
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",

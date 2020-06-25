@@ -66,28 +66,12 @@ default_app_footer = [
             "links"       : [
 
               { "is_visible" : True,
-                "link_to"    : "http://www.agence-paysdelaloire.fr/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Région Pays de la Loire"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Région Pays de la Loire" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
                 "link_to"    : "https://www.cget.gouv.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
                 "link_text"  : [{"locale" : "en", "text" : "CGET / ANCT"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET / ANCT" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
-              { "is_visible" : True,
-                "link_to"    : "http://www.cress-pdl.org/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "CAP Tiers-Lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CAP Tiers-Lieux" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
             ]
           },
@@ -104,14 +88,6 @@ default_app_footer = [
             "title_visible" : True,
             "links"       : [
 
-              { "is_visible" : True,
-                "link_to"    : "https://movilab.org/index.php?title=Accueil",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Movilab"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Movilab" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
               { "is_visible" : True,
                 "link_to"    : "https://francetierslieux.fr/",
                 "is_external_link" : True,
@@ -145,11 +121,11 @@ default_app_footer = [
             "links"       : [
               
               { "is_visible" : True,
-                "link_to"    : "https://www.pingbase.net/",
+                "link_to"    : "https://rhinocc.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text",
                 "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Discover PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Découvrir PiNG" }],
+                "link_text"  : [{"locale" : "en", "text" : "Discover RhinOcc"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Découvrir RhinOcc" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
               { "is_visible" : True,

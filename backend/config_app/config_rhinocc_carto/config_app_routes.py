@@ -42,10 +42,10 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/home.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/home.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
         
 
@@ -76,7 +76,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - map
-      { "field"             : "tl_carte",
+      { "field"             : "rh_carte",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche d'Apiviz",
@@ -506,7 +506,7 @@ default_routes_config = [
       },
 
       ### PAGE - table
-      { "field"             : "tl_table",
+      { "field"             : "rh_table",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -664,7 +664,7 @@ default_routes_config = [
       },
 
       ### PAGE - list
-      { "field"             : "tl_liste",
+      { "field"             : "rh_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -809,7 +809,7 @@ default_routes_config = [
       },
 
       ### PAGE - detail
-      { "field"             : "tl_detail",
+      { "field"             : "rh_detail",
         "is_global_app_homepage" : False,
         "route_title"        : u"Rechercher",
         "route_description"  : u"Page de recherche d'Apiviz",
@@ -1006,7 +1006,7 @@ default_routes_config = [
       },
 
       ## PAGE - stats
-      { "field"             : "tl_stats",
+      { "field"             : "rh_stats",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",
@@ -1365,7 +1365,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "tl_demarche",
+      { "field"             : "rh_demarche",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1389,10 +1389,10 @@ default_routes_config = [
         "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/la-demarche.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/la-demarche.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/la-demarche.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/la-demarche.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/la-demarche.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/la-demarche.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
         ],
         
 
@@ -1422,7 +1422,7 @@ default_routes_config = [
       },
 
       ### PAGE - CONTRIBUER
-      { "field"             : "tl_contribuer",
+      { "field"             : "rh_contribuer",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1446,10 +1446,10 @@ default_routes_config = [
         "dataset_uri"       : None,
 
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/contribuer.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/contribuer.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/contribuer.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/contribuer.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/contribuer.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/contribuer.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contribuer.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contribuer.html" }
         ],
         
 
@@ -1479,7 +1479,7 @@ default_routes_config = [
       },
 
       ### PAGE : PROJECT/TOOLS
-      { "field"             : "tl_tools",
+      { "field"             : "rh_tools",
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
         "route_description" : u"apiviz default tools page",
@@ -1526,7 +1526,7 @@ default_routes_config = [
       },
 
       ### PAGE : LEGAL 
-      { "field"             : "tl_legal",
+      { "field"             : "rh_legal",
         "is_global_app_homepage" : True,
         "route_title"       : u"Mentions légales",
         "route_description" : u"apiviz default legal page",
@@ -1549,10 +1549,10 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/site_ping_carto/mentions-legales-fr.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/mentions-legales-fr.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/site_ping_carto/mentions-legales-fr.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
         
         "has_ext_script"    : False,
