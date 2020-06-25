@@ -6,7 +6,7 @@ default_app_footer = [
 
   ### FOOTER
 
-    ### CONFIG PING CARTO 
+    ### CONFIG RHINOCC CARTO 
       { "field"       : "app_footer",
         "app_version" : version,
         "help"        : u"The default footer for your ApiViz instance",

@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_global_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING CARTO
+  ### CONFIG RHINOCC CARTO
 
     ### LANGUAGES
       { "field"       : "app_languages",
@@ -66,7 +66,7 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_TLF_carré_04.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
@@ -76,7 +76,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/PING-carto/master/logos/logo_ping.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/logos/logo_ping.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
@@ -90,7 +90,7 @@ default_global_config = [
 
         "can_be_used_as_model" : True,
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
-        "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
+        "image_preview" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Carto PiNG",
         "content_text" : [{"locale" : "en", "text" : "A lookout at third places in Loire region"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Regards sur les tiers-lieux en Pays de la Loire"}],
