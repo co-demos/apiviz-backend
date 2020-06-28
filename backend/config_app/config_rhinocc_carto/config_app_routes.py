@@ -191,10 +191,10 @@ default_routes_config = [
           # "center"           : [43.5563826, 2.560496],
           # "currentCenter"    : [43.5563826, 2.560496],
           ### center departements w/ data
-          "center"           : [43.110288, 1.607835],
-          "currentCenter"    : [43.110288, 1.607835],
+          "center"           : [43.487427, 2.383375],
+          "currentCenter"    : [43.487427, 2.383375],
           
-          "zoom"             : 7,
+          "zoom"             : 6.5,
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
@@ -215,7 +215,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "allPointsSource",
               "layer_id"            : "all-points",
-              "is_default_visible"  : True,
+              "is_default_visible"  : False,
               "is_source_distant"   : False,
 
               "is_live_data"        : False,
@@ -272,17 +272,28 @@ default_routes_config = [
             },
 
             "cluster_unclustered_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "unclustered-point",
               "is_default_visible"  : True,
               "is_source_distant"   : False,
               "is_clickable"        : True,
-
+              "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : False,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'nom', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
               "circle_color"        : "#fff", 
-              "circle_stroke_color" : "#53e0cb",
-              "circle_radius"       : 5, 
-              "circle_stroke_width" : 5, 
+              "circle_stroke_color" : "#e08453",
+              "circle_radius"       : 7, 
+              "circle_stroke_width" : 3, 
             },
 
             ### choropleth source and layer
@@ -624,8 +635,8 @@ default_routes_config = [
             "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
-              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : True }, 
+              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : False }, 
+              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ], "default_visible" : True }, 
               { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
@@ -747,17 +758,29 @@ default_routes_config = [
             "position" : "col_2",
             "is_sortable" : True,
           },
+          { "field" : "code_postal",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_3",
+            "is_sortable" : True,
+          },
+          { "field" : "adresse",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_4",
+            "is_sortable" : False,
+          },
 
-          # { "field"       : "TYPOLOGIE",
+          # { "field"       : "code_mediations",
           #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
           #   "is_visible"  : True,
           #   "position"    : "col_3",
           #   "is_sortable" : False,
-          #   "custom_title" : [ { "locale" : "fr", "text" : "TYPOLOGIES" }],
+          #   "custom_title" : [ { "locale" : "fr", "text" : "activités" }],
           #   "is_tag_like" : True,
           #   "tags_separator" : "-",
           #   "text_color" : "white",
-          #   "background_color" : "primary",s
+          #   "background_color" : "primary",
           #   "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           # },
 
