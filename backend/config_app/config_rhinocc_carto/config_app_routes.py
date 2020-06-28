@@ -1561,15 +1561,13 @@ default_routes_config = [
         ],
         
 
-        "has_ext_script"    : True,
+        "has_ext_script"    : False,
         "ext_script_urls"   : [
-          {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},
-
+          # {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},s
           # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
-          {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
         ],
 
-        # "has_carousel"      : True,
         "help"              : u"you can specify a remote template (f.e. a github url)",
         "languages"         : ["fr"],
         "app_version"       : version,
@@ -1579,7 +1577,7 @@ default_routes_config = [
         "has_navbar"        : True,
 
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
+        "tabs_uri"          : "tabs-rh-test",
 
         "has_footer"        : True,
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
@@ -1635,7 +1633,7 @@ default_routes_config = [
         "has_navbar"        : True,
 
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
+        "tabs_uri"          : "tabs-rh-test",
 
         "has_footer"        : True,
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
@@ -1684,7 +1682,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
+        "tabs_uri"          : "tabs-rh-test",
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
@@ -1731,7 +1729,7 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
+        "tabs_uri"          : "tabs-rh-test",
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },

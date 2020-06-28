@@ -10,7 +10,7 @@ default_app_tabs = [
     ### CONFIG RHINOCC CARTO
 
       { "field"       : "app_tabs_test",
-        "tabs_uri"     : "tabs-tl-test",
+        "tabs_uri"     : "tabs-rh-test",
         "content"     : u"apiviz tabs test",
         "app_version" : version,
         "help"        : u"The tabs of your ApiViz instance",
