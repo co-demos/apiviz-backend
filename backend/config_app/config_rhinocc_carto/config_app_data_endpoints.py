@@ -262,7 +262,7 @@ default_data_endpoints_config = [
         },
 
         "placeholder"   : [
-          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
+          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }
         ],
         "items_found"   : [
           {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" }
@@ -284,51 +284,109 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"result_context__",
+          {	"name"		: u"activite_code__",
             "id"      : "filter_1",
-            "col_name" : "result_context",
+            "col_name" : "activite_code",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Areas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
-            "choices"	: [
-              {'name' : u'44  Loire-Atlantique  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
-              {'name' : u'49  Maine-et-Loire  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
-              {'name' : u'53  Mayenne  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
-              {'name' : u'72  Sarthe  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
-              {'name' : u'85  Vendée  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
-
+            "filter_title" : [
+              {"locale" : "en", "text" : "Activities"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Activités" }
             ],
+            "choices"	: [
+              {"name" : u"ORD", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ordinateur en libre service" }]},
+              {"name" : u"ORDM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ordinateur avec médiateur.rice" }]},
+              {"name" : u"REP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers de réparation de matériel informatique" }]},
+              {"name" : u"TL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tiers lieux" }]},
+              {"name" : u"FL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "FabLab" }]},
+              {"name" : u"W", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Espace de co-working" }]},
+              {"name" : u"ACCDS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel accès aux droits simple" }]},
+              {"name" : u"ACCDA", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel approfondi accès aux droits" }]},
+              {"name" : u"SENS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sensibilisation autour du numérique" }]},
+              {"name" : u"ACCN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel des actions uniquement numériques" }]},
+              {"name" : u"COMP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers informatiques de montée en compétences" }]},
+              {"name" : u"PRO", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formation numérique professionnalisante" }]},
+              {"name" : u"ENT", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers collectifs d’entraide autour du numérique" }]},
+           ],
           },
-          {	"name"		: u"TYPOLOGIE__",  
+          {	"name"		: u"public_code__",  
             "id"      : "filter_2",
-            "col_name" : "TYPOLOGIE",
+            "col_name" : "public_code",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
+            "filter_title" : [
+              {"locale" : "en", "text" : "Publics"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Publics" }
+            ],
             "choices"	: [
-              {'name' : u'T', 'choice_title' : [{'locale' : 'en', 'text' : 'Renew work'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Renouveler le travail' }]},
-              {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Work together'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Œuvrer ensemble' }]},
-              {'name' : u'D', 'choice_title' : [{'locale' : 'en', 'text' : 'Collectively discover'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Découvrir collectivement' }]},
-              {'name' : u'C', 'choice_title' : [{'locale' : 'en', 'text' : 'Rethink our consumption'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Repenser sa consommation' }]},
+              {"name" : u"SEN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Seniors" }]},
+              {"name" : u"J", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jeunes" }]},
+              {"name" : u"DE", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Demandeur.se d’emploi" }]},
+              {"name" : u"AD", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Adultes" }]},
+              {"name" : u"TP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tout public" }]},
+              {"name" : u"ALL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Allocataire CAF" }]},
+              {"name" : u"ETR", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etranger" }]},
             ],
           },
-          {	"name"		: u"PUBLICS__",  
-            "id"      : "filter_2",
-            "col_name" : "PUBLICS",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
-            "choices"	: [
-              {'name' : u'Professionnels', 'choice_title' : [{'locale' : 'en', 'text' : 'Professionals'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Professionnels' }]},
-              {'name' : u'Citoyens', 'choice_title' : [{'locale' : 'en', 'text' : 'Citizens'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyens' }]},
-            ],
-          },
-          {	"name"		: u"SOURCE_codes__",
+          {	"name"		: u"thematique_code__",  
             "id"      : "filter_3",
-            "col_name" : "SOURCE_codes",
+            "col_name" : "thematique_code",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
+            "filter_title" : [
+              {"locale" : "en", "text" : "Themas"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Thématiques" }
+            ],
             "choices"	: [
-              {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "CGET"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
-              {"name" : u"PiNG", "choice_title" : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "PiNG" }]},
-              {"name" : u"CAPTL", "choice_title" : [{"locale" : "en", "text" : "CAP Tiers-lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CAP Tiers-lieux" }]},
+              {"name" : u"MOB", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mobilité" }]},
+              {"name" : u"SAN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Santé" }]},
+              {"name" : u"EM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Emploi" }]},
+              {"name" : u"FAM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Famille/parentalité" }]},
+              {"name" : u"FI", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Finances" }]},
+              {"name" : u"LOG", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Logement" }]},
+            ],
+          },
+          {	"name"		: u"label_code__",
+            "id"      : "filter_4",
+            "col_name" : "label_code",
+            "dataType" : "text",
+            "filter_title" : [
+              {"locale" : "en", "text" : "Labels"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Labels" }
+            ],
+            "choices"	: [
+              {"name" : u"APTIC", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APTIC" }]},
+              {"name" : u"MFS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Maison France Services" }]},
+              {"name" : u"EPN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Espace Public Numérique" }]},
+              {"name" : u"TL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tiers lieux" }]},
+              {"name" : u"REL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Structures relais Coll.in/RhinOcc" }]},
+            ],
+          },
+          {	"name"		: u"departement_code__",
+            "id"      : "filter_5",
+            "col_name" : "departement_code",
+            "dataType" : "text",
+            "filter_title" : [
+              {"locale" : "en", "text" : "Areas"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Départements" }
+            ],
+            "choices"	: [
+              {"name" : u"65", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hautes Pyrénées" }]},
+              {"name" : u"31", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Haute Garonne" }]},
+              {"name" : u"11", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aude" }]},
+              {"name" : u"32", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gers" }]},
             ],
           },
         ],
@@ -409,7 +467,7 @@ default_data_endpoints_config = [
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           # {  "app_arg" : "itemId",    "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
-          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "INDEX", "sep" : "__" }},
+          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "rh_id", "sep" : "__" }},
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -507,7 +565,7 @@ default_data_endpoints_config = [
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT,INDEX",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "rh_id,departement",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 

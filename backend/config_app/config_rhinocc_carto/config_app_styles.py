@@ -13,63 +13,29 @@ default_app_styles_config = [
         "content"     : {
 
           ### DEFAULTS
-          "navbar-border-color"       : '#3D3A39' , #'#004494', # '#592d7b',
+          "navbar-border-color"       : '#e08453' , #'#004494', # '#592d7b',
           "default_background_app"    : "#fafafa",
           "default_background_navbar" : "#ffffff",
 
+          ## cf : https://htmlcolorcodes.com/color-picker/
           ### SIMILI - BULMA
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
-          'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
-          'info'       : '#40529d',
-          'success'    : '#80C2BD',
+          'link-hover' : '#e08453' ,
+          'primary'    : '#e08453', 
+          'info'       : '#53e0cb',
+          'success'    : '#afe053',
           'warning'    : '#f3bd80',
-          'danger'     : '#d24745',
-          'text-color' : '#3D3A39',
+          'danger'     : '#e05369',
+          'text-color' : '#68e053',
 
-          # ### EXTRA COLORS
-          # "dark_blue"   : "#40529d",
-          # "light_pink"  : "#e89db1",
-          # "light_blue"  : "#a3b1d7",
-          # "deep_blue"   : "#21295e",
         },
         "app_version" : version,
         "help"        : u"Choose a set of colors (an hexa for example) for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"  : True
       },
-
-      # { "field"       : "app_typo_colors",
-      #   "content"     : {
-
-      #     "default_dark"       : "#000000",
-      #     "default_light_dark" : "#3D3A39",
-      #     "default_invert"     : "#ffffff",
-
-      #     ### SIMILI - BULMA
-      #     'light'      : '#40529d',
-      #     'dark'       : '#1b1b1b',
-      #     'link'       : '#21295e',
-      #     'link-hover' : '#592d7b',
-      #     'primary'    : '#592d7b',
-      #     'info'       : '#40529d',
-      #     'success'    : '#80C2BD',
-      #     'warning'    : '#f3bd80',
-      #     'danger'     : '#d24745',
-      #     'text-color' : '#3D3A39',
-      #     ### EXTRA COLORS
-      #     "dark_blue"   : "#40529d",
-      #     "light_pink"  : "#e89db1",
-      #     "light_blue"  : "#a3b1d7",
-      #     "deep_blue"   : "#21295e",
-      #   },
-      #   "app_version" : version,
-      #   "help"        : u"Choose a set of colors for your typo for your ApiViz instance",
-      #   "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
-      #   "is_default"  : True
-      # },
 
       { "field"       : "app_typo",
         "content"     : {
