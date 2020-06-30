@@ -288,7 +288,7 @@ default_data_endpoints_config = [
             "id"      : "filter_1",
             "col_name" : "code_thematique",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Themas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématiques principales" }],
+            "filter_title" : [{"locale" : "en", "text" : "Themas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématique principale" }],
             "choices"	: [
               {'name' : u'ACT', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Action et inclusion sociale' }]},
               {'name' : u'BUD', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Budget' }]},
