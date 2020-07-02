@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG CONUMM CARTO 
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -837,7 +837,18 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_website",
           },
-
+          { "field" : "Mail contact",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_email",
+            "text_color" : "white",
+            "background_color" : "primary",
+          },
+          { "field" : "Numero de téléphone",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_tel",
+          },
           ### tags
           { "field"       : "dep_nom",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },

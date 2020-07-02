@@ -13,6 +13,7 @@ default_app_navbar = [
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
+        "title_to"    : "/",
         "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : True,
@@ -65,7 +66,7 @@ default_app_navbar = [
               "is_external_link" : True,
               "link_type"  : "button", ### link | button / show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
+              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site de Décider Ensemble" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : False,
               "dropdowns"  : [

@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_socials_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING
+  ### CONFIG CONUMM
   
     ### SOCIAL NETWORKS
     { "field"       : "app_twitter",
