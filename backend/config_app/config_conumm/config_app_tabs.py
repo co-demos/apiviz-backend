@@ -7,7 +7,7 @@ default_app_tabs = [
   ### MAIN TABS
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG CONUMM CARTO
 
       { "field"       : "app_tabs_test",
         "tabs_uri"     : "tabs-tl-test",
