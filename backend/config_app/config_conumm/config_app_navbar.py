@@ -13,6 +13,7 @@ default_app_navbar = [
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
+        "title_to"    : "/",
         "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,

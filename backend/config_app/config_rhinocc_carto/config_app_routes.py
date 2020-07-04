@@ -214,14 +214,19 @@ default_routes_config = [
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
 
-          ### center Occitanie
+          ### center departements w/ 4 deps 
+          "center"           : [43.281245, 1.625257],
+          "currentCenter"    : [43.281245, 1.625257],
+          "zoom"             : 7.3,
+          ### center Occitanie 
           # "center"           : [43.5563826, 2.560496],
           # "currentCenter"    : [43.5563826, 2.560496],
+          # "zoom"             : 6.5,
           ### center departements w/ data
-          "center"           : [43.487427, 2.383375],
-          "currentCenter"    : [43.487427, 2.383375],
+          # "center"           : [43.487427, 2.383375],
+          # "currentCenter"    : [43.487427, 2.383375],
+          # "zoom"             : 6.5,
           
-          "zoom"             : 6.5,
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
@@ -250,6 +255,17 @@ default_routes_config = [
 
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : False,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'nom', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
 
               "radius_min"          : 2,
               "radius_max"          : 15,

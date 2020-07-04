@@ -15,6 +15,7 @@ default_app_navbar = [
         # "logo_to"     : "/",
         "logo_to"     : "https://www.mednum-bfc.fr/",
         "logo_to_external" : True,
+        "title_to"    : "/",
         "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,
