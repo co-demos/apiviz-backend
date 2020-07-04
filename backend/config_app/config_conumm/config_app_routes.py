@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG PING CARTO 
+  ### CONFIG CONUMM CARTO 
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -141,6 +141,7 @@ default_routes_config = [
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
+            "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",
@@ -206,6 +207,17 @@ default_routes_config = [
 
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : False,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'Nom de la structure', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
 
               "radius_min"          : 2,
               "radius_max"          : 22,
@@ -722,6 +734,7 @@ default_routes_config = [
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
+            "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",
@@ -837,7 +850,18 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_website",
           },
-
+          { "field" : "Mail contact",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_email",
+            "text_color" : "white",
+            "background_color" : "primary",
+          },
+          { "field" : "Numero de téléphone",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_tel",
+          },
           ### tags
           { "field"       : "dep_nom",
             "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },

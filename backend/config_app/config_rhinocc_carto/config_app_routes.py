@@ -7,7 +7,7 @@ from . import version, uuid_models
 default_routes_config = [
 
   ### - - - - - - - - - - - - - - - - - - -  ### 
-  ### CONFIG DECIDER ENSEMBLE
+  ### CONFIG RHINOCC CARTO 
   ### - - - - - - - - - - - - - - - - - - -  ###
 
     ### - - - - - - - - - - - - - - - - - ###
@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/home.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
@@ -67,7 +67,7 @@ default_routes_config = [
         "has_tabs"          : False,
         "tabs_uri"          : "",
         "dataset_uri"       : "recherche",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -76,7 +76,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - map
-      { "field"             : "de_carte",
+      { "field"             : "rh_carte",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche d'Apiviz",
@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/fiches/carte"],
+        "urls"              : [ "/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
@@ -108,7 +108,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "fiches",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicMap',
         "endpoint_type"     : "map",
 
@@ -119,42 +119,74 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_id",
           # },
-          { "field" : "slug",
+          { "field" : "rh_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
           },
-          { "field" : "adresse_rue", 
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_address",
-          },
-          { "field" : "adresse_commune",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_city",
-          },
-          { "field" : "porteur_projet",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_actor_top_b",
-          },
-          { "field" : "titre_projet", 
+
+          { "field" : "nom", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
           },
-          { "field" : "url_logo",
+
+          # location
+          { "field" : "adresse_full",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_image",
+            "position" : "block_city",
           },
-          { "field" : "presentation_projet",
-            "field_format" : { "trim" : 75, "type" : "object", "retrieve" : [-1] },
+
+          # contact
+          { "field" : "tel_structure",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_abstract",
-            # "custom_title" : [ { "locale" : "fr", "text" : "Description du projet :" } ],
+            "position" : "block_phone",
           },
+          { "field" : "email_structure",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_email",
+          },
+          { "field" : "site_internet",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_url",
+          },
+
+          # tags
+          { "field" : "code_label",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_tags",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            # "text_color" : "white",
+            "background_color" : "warning",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "codes_types_mediations",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_tags_bis",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+
+          # technical
+          { "field" : "date_maj",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_tech",
+            "custom_title" : [ { "locale" : "fr", "text" : "mise à jour :" } ],
+          },
+
         ],
 
         "lat_long_fields" : {
@@ -181,16 +213,27 @@ default_routes_config = [
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
-          "center"           : [46.2276, 2.2137],
-          "currentCenter"    : [46.2276, 2.2137],
-          "zoom"             : 5,
+
+          ### center departements w/ 4 deps 
+          "center"           : [43.281245, 1.625257],
+          "currentCenter"    : [43.281245, 1.625257],
+          "zoom"             : 7.3,
+          ### center Occitanie 
+          # "center"           : [43.5563826, 2.560496],
+          # "currentCenter"    : [43.5563826, 2.560496],
+          # "zoom"             : 6.5,
+          ### center departements w/ data
+          # "center"           : [43.487427, 2.383375],
+          # "currentCenter"    : [43.487427, 2.383375],
+          # "zoom"             : 6.5,
+          
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
 
           "item_geo_fields"   : { "latitude" : "lat", "longitude": "lon"},
           "item_marker"       : "fas fa-map-marker-alt",
-          "item_marker_color" : "primary",
+          "item_marker_color" : "info",
           "item_marker_offset" : [ 0, 8 ],
           "item_marker_anchor" : "bottom",
 
@@ -204,7 +247,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "allPointsSource",
               "layer_id"            : "all-points",
-              "is_default_visible"  : True,
+              "is_default_visible"  : False,
               "is_source_distant"   : False,
 
               "is_live_data"        : False,
@@ -219,41 +262,41 @@ default_routes_config = [
               "popup_config"        : {
                 "action" : 'mousemove',
                 "fields" : [
-                  { 'position' : 'field_main_title', 'field' : 'titre_projet', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_main_title', 'field' : 'nom', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
                   { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
                 ],
               },
 
-              "radius_min"          : 4,
-              "radius_max"          : 45,
+              "radius_min"          : 2,
+              "radius_max"          : 15,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
-              "circle_color"        : "#004494",
+              "circle_color"        : "#e69c75",
               "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.8,
+              "circle_opacity"      : 0.7,
             },
 
             ### clusters source and layer
             "cluster_circles_layer" : {
-              "is_activated"        : True,
+              "is_activated"     : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-circles",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
 
               "is_source_distant"   : False, ### clusters all points sources by default
               "is_clickable"        : True,
 
-              "circle_color"     : "#e5ecf4", 
-              "circle_color_100" : "#b2c6de", 
-              "circle_color_250" : "#668ebe", 
-              "circle_color_500" : "#3269a9", 
-              "circle_color_750" : "#004494", 
+              "circle_color"     : "#e69c75", 
+              "circle_color_100" : "#e39064", 
+              "circle_color_250" : "#e08453", 
+              "circle_color_500" : "#c9764a", 
+              "circle_color_750" : "#b36942", 
 
               "circle_radius"     : 15, 
               "circle_radius_100" : 20, 
-              "circle_radius_250" : 25, 
-              "circle_radius_500" : 30, 
-              "circle_radius_750" : 35, 
+              "circle_radius_250" : 30, 
+              "circle_radius_500" : 40, 
+              "circle_radius_750" : 50, 
 
               "circle_stroke_color" : "#fff",
               "circle_stroke_width" : 1,
@@ -263,7 +306,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-counts",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
               "is_source_distant"   : False,
               "is_clickable"        : True,
 
@@ -272,22 +315,33 @@ default_routes_config = [
             },
 
             "cluster_unclustered_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "unclustered-point",
               "is_default_visible"  : True,
               "is_source_distant"   : False,
               "is_clickable"        : True,
-
+              "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : False,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'nom', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
               "circle_color"        : "#fff", 
-              "circle_stroke_color" : "#004494",
-              "circle_radius"       : 5, 
-              "circle_stroke_width" : 5, 
+              "circle_stroke_color" : "#e08453",
+              "circle_radius"       : 7, 
+              "circle_stroke_width" : 3, 
             },
 
             ### choropleth source and layer
             "choropleth_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               # "source_id"           : "choroSource",
               # "layer_id"            : "choropleth",
               "is_live_data"        : False,
@@ -296,7 +350,7 @@ default_routes_config = [
               "is_drawer_open"      : True,
 
               "is_source_distant"   : True,
-              "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+              # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
               # "distant_source_url"  : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/communes-avec-outre-mer.geojson", 
               
               "change_source_by_zoom" : True,
@@ -314,33 +368,32 @@ default_routes_config = [
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  # "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/occitanie/departements-occitanie.geojson", 
                   "update_src_from_previous_layer" : False,
 
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
                   # "agregate_data_from_source" : "allPointsSource",
-                  "join_polygon_id_to_field"  : "DEPARTEMENT",
+                  "join_polygon_id_to_field"  : "departement",
                   "agregated_data_field"      : "count_dep",
                   # "fill_color"          : "#888888",
                   'fill_color': [
                     'interpolate',
                     ['linear'],
                     ['get', 'count_dep' ],
-                    0,  "#888888",
-                    1,  '#EED322',
-                    3,  '#E6B71E',
-                    5,  '#DA9C20',
-                    10, '#CA8323',
-                    20, '#B86B25',
-                    35, '#A25626',
-                    50, '#8B4225',
-                    100, '#723122'
+                    0,  "#fbf2ed",
+                    1,  '#6cc3b7',
+                    10, '#42b2a3',
+                    25, '#18a28f',
+                    50, '#158b7b',
+                    100, '#10685c',
+                    150, '#106268'
                   ],
-                  "fill_opacity"        : 0.4,
-                  "fill_outline_color"  : "#004494",
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "#f2f3f3",
 
-                  "has_popup" : True, 
+                  "has_popup" : False, 
                   "popup_config" : {
                     "action" : 'mousemove',
                     "fields" : [
@@ -353,19 +406,178 @@ default_routes_config = [
                     "position" : "bottom-right", 
                     "title" : "Tiers-lieux / département",
                     "scales" : [
-                      { 'value' : '>100 lieux', 'color' : '#723122'},
-                      { 'value' : '50 lieux',   'color' : '#8B4225'},
-                      { 'value' : '35 lieux',   'color' : '#A25626'},
-                      { 'value' : '20 lieux',   'color' : '#B86B25'},
-                      { 'value' : '10 lieux',   'color' : '#CA8323'},
-                      { 'value' : '5 lieux',    'color' : '#DA9C20'},
-                      { 'value' : '3 lieux',    'color' : '#E6B71E'},
-                      { 'value' : '1 lieu',    'color' : '#EED322'},
-                      { 'value' : '0 lieu',    'color' : "#888888"},
+                      { 'value' : '>150 lieux', 'color' : '#106268'},
+                      { 'value' : '100 lieux',  'color' : '#10685c'},
+                      { 'value' : '50 lieux',  'color' : '#158b7b'},
+                      { 'value' : '25 lieux',  'color' : '#18a28f'},
+                      { 'value' : '10 lieux',   'color' : '#42b2a3'},
+                      { 'value' : '1 lieu',   'color' : '#6cc3b7'},
+                      { 'value' : '0 lieu',    'color' : "#fbf2ed"},
                     ]
                   }
 
                 },
+
+                { ### OCCITANIE - EPCI
+                  "is_activated" : False,
+                  "source_id" : "chorosource-EPCI",
+                  "layer_id"  : "chorolayer-EPCI",
+                  "is_default_visible" : False,
+                  "max_zoom" : 9,
+                  "min_zoom" : 0,
+                  # "next_layer_id"  : "chorolayer-communes",
+                  "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/EPCI_4DPT.geojson", 
+                  "update_src_from_previous_layer" : False,
+                  "need_aggregation" : False,
+                  "polygon_prop_id" : "code",
+                  # "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "departement",
+                  "agregated_data_field"      : "count_dep",
+                  # "fill_color"          : "#888888",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_dep' ],
+                    0,  "#fbf2ed",
+                    1,  '#6cc3b7',
+                    10, '#42b2a3',
+                    25, '#18a28f',
+                    50, '#158b7b',
+                    100, '#10685c',
+                    150, '#106268'
+                  ],
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "#f2f3f3",
+                  "has_popup" : False, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Tiers-lieux / EPCI",
+                    "scales" : [
+                      { 'value' : '>150 lieux', 'color' : '#106268'},
+                      { 'value' : '100 lieux',  'color' : '#10685c'},
+                      { 'value' : '50 lieux',  'color' : '#158b7b'},
+                      { 'value' : '25 lieux',  'color' : '#18a28f'},
+                      { 'value' : '10 lieux',   'color' : '#42b2a3'},
+                      { 'value' : '1 lieu',   'color' : '#6cc3b7'},
+                      { 'value' : '0 lieu',    'color' : "#fbf2ed"},
+                    ]
+                  }
+                },
+                { ### OCCITANIE - QPV
+                  "is_activated" : False,
+                  "source_id" : "chorosource-QPV",
+                  "layer_id"  : "chorolayer-QPV",
+                  "is_default_visible" : False,
+                  "max_zoom" : 9,
+                  "min_zoom" : 0,
+                  # "next_layer_id"  : "chorolayer-communes",
+                  "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/QPV_4DPT.geojson", 
+                  "update_src_from_previous_layer" : False,
+                  "need_aggregation" : False,
+                  "polygon_prop_id" : "code",
+                  # "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "departement",
+                  "agregated_data_field"      : "count_dep",
+                  # "fill_color"          : "#888888",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_dep' ],
+                    0,  "#fbf2ed",
+                    1,  '#6cc3b7',
+                    10, '#42b2a3',
+                    25, '#18a28f',
+                    50, '#158b7b',
+                    100, '#10685c',
+                    150, '#106268'
+                  ],
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "#f2f3f3",
+                  "has_popup" : False, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Tiers-lieux / EPCI",
+                    "scales" : [
+                      { 'value' : '>150 lieux', 'color' : '#106268'},
+                      { 'value' : '100 lieux',  'color' : '#10685c'},
+                      { 'value' : '50 lieux',  'color' : '#158b7b'},
+                      { 'value' : '25 lieux',  'color' : '#18a28f'},
+                      { 'value' : '10 lieux',   'color' : '#42b2a3'},
+                      { 'value' : '1 lieu',   'color' : '#6cc3b7'},
+                      { 'value' : '0 lieu',    'color' : "#fbf2ed"},
+                    ]
+                  }
+                },
+                { ### OCCITANIE - 4DPT
+                  "is_activated" : False,
+                  "source_id" : "chorosource-4DPT",
+                  "layer_id"  : "chorolayer-4DPT",
+                  "is_default_visible" : False,
+                  "max_zoom" : 9,
+                  "min_zoom" : 0,
+                  # "next_layer_id"  : "chorolayer-communes",
+                  "source_url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/data/datasets_src/4DPT_RhinOcc.geojson", 
+                  "update_src_from_previous_layer" : False,
+                  "need_aggregation" : False,
+                  "polygon_prop_id" : "code",
+                  # "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "departement",
+                  "agregated_data_field"      : "count_dep",
+                  # "fill_color"          : "#888888",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_dep' ],
+                    0,  "#fbf2ed",
+                    1,  '#6cc3b7',
+                    10, '#42b2a3',
+                    25, '#18a28f',
+                    50, '#158b7b',
+                    100, '#10685c',
+                    150, '#106268'
+                  ],
+                  "fill_opacity"        : 0.5,
+                  "fill_outline_color"  : "#f2f3f3",
+                  "has_popup" : False, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Tiers-lieux / 4DPT",
+                    "scales" : [
+                      { 'value' : '>150 lieux', 'color' : '#106268'},
+                      { 'value' : '100 lieux',  'color' : '#10685c'},
+                      { 'value' : '50 lieux',  'color' : '#158b7b'},
+                      { 'value' : '25 lieux',  'color' : '#18a28f'},
+                      { 'value' : '10 lieux',   'color' : '#42b2a3'},
+                      { 'value' : '1 lieu',   'color' : '#6cc3b7'},
+                      { 'value' : '0 lieu',    'color' : "#fbf2ed"},
+                    ]
+                  }
+                },
+
 
                 { ### FR - communes
                   "is_activated" : False,
@@ -438,7 +650,6 @@ default_routes_config = [
                   }
                 },
 
-
               ],
               
 
@@ -450,7 +661,7 @@ default_routes_config = [
 
             ### heatmap source and layer
             "heatmap_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               "is_default_visible"  : False,
               "source_id"           : "allPointsSource",
               "layer_id"            : "heatmap-layer",
@@ -464,15 +675,15 @@ default_routes_config = [
           },
         
           "layers_visibility" :{
-            "is_activated" : False,
+            "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
-              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
-              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : False }, 
+              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ], "default_visible" : True }, 
+              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
-              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              { "label" : "heatmap" ,       "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
 
@@ -510,12 +721,12 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"      : True
       },
 
       ### PAGE - table
-      { "field"             : "de_table",
+      { "field"             : "rh_table",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -539,7 +750,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/fiches/table"],
+        "urls"              : ["/recherche/table"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -549,7 +760,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Table search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "fiches",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicTable',
         "endpoint_type"     : "table",
         "pagination"        : {
@@ -564,19 +775,19 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "slug",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : False,
-            "is_id_field" : True,
-            "position" : "col_id",
-          },
           # { "field" : "sd_id",
           #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : False,
           #   "is_id_field" : True,
           #   "position" : "col_id",
           # },
-          { "field" : "titre_projet",
+          { "field" : "rh_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : False,
+            "is_id_field" : True,
+            "position" : "col_id",
+          },
+          { "field" : "nom",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "has_link_to_detail" : True,
@@ -584,37 +795,49 @@ default_routes_config = [
             "position" : "col_1",
             "is_sortable" : True,
           },
-          { "field" : "adresse_commune",
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
           },
-          { "field" : "porteur_projet",
+          { "field" : "code_postal",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_3",
             "is_sortable" : True,
           },
-          { "field"       : "code_thematique",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "col_4",
+          { "field" : "adresse",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "col_4",
             "is_sortable" : False,
-            "custom_title" : [ { "locale" : "fr", "text" : "TYPOLOGIES" }],
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "text_color" : "white",
-            "background_color" : "primary",
-            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          # { "field" : "source",
-          #   "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "col_5",
+
+          # { "field"       : "code_mediations",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_3",
           #   "is_sortable" : False,
-          #   "custom_title" : None,
-          #   "locale" : "fr"
+          #   "custom_title" : [ { "locale" : "fr", "text" : "activités" }],
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "text_color" : "white",
+          #   "background_color" : "primary",
+          #   "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          # },
+
+          # { "field"       : "SOURCE_codes",
+          #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "col_4",
+          #   "is_sortable" : False,
+          #   "custom_title" : [ { "locale" : "fr", "text" : "SOURCE" }],
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "text_color" : "white",
+          #   "background_color" : "primary",
+          #   "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           # },
 
         ],
@@ -662,12 +885,12 @@ default_routes_config = [
         "tabs_uri"          : "TL-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
       ### PAGE - list
-      { "field"             : "de_liste",
+      { "field"             : "rh_liste",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher",
         "route_description" : u"Page de recherche du CIS",
@@ -691,7 +914,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/fiches", "/fiches/liste"],
+        "urls"              : ["/recherche/liste"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -701,7 +924,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "fiches",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicList',
         "endpoint_type"     : "list",
         "pagination"        : {
@@ -712,60 +935,82 @@ default_routes_config = [
 
         "contents_fields"  : [
 
-          { "field" : "slug",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_id",
-          },
           # { "field" : "sd_id",
           #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
           #   "is_visible" : True,
           #   "position" : "block_id",
           # },
-          { "field" : "adresse_commune",
+          { "field" : "rh_id",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_id",
+          },
+          # { "field" : "url_illustration",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          # },
+          { "field" : "nom",
+            "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_title",
+          },
+
+          # location
+          { "field" : "ville",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
           },
-          { "field" : "titre_projet",
+
+          # contact
+          { "field" : "tel_structure",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_title",
+            "position" : "block_phone",
           },
-          { "field" : "porteur_projet",
+          { "field" : "email_structure",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_actor_top_b",
+            "position" : "block_email",
           },
-          { "field" : "url_logo",
+          { "field" : "site_internet",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "position" : "block_image",
+            "position" : "block_url",
           },
-          { "field"       : "code_thematique",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_tags",
+
+          # tags
+          { "field" : "code_label",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_tags",
             "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
-            "text_color" : "white",
-            "background_color" : "primary",
-            "custom_title" : [ { "locale" : "fr", "text" : "Thématique(s) :" } ],
+            # "text_color" : "white",
+            "background_color" : "warning",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field"       : "code_dispositif",
-            "field_format" : { "trim" : 15, "type" : "object", "retrieve" : [0] },
+          { "field"       : "codes_types_mediations",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
             "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",
-            "background_color" : "light",
+            "background_color" : "primary",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
 
+          # technical
+          { "field" : "date_maj",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_tech",
+            "custom_title" : [ { "locale" : "fr", "text" : "mise à jour :" } ],
+          },
         ],
 
         "images_fields"        : {
@@ -811,12 +1056,12 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
       ### PAGE - detail
-      { "field"             : "de_detail",
+      { "field"             : "rh_detail",
         "is_global_app_homepage" : False,
         "route_title"        : u"Rechercher",
         "route_description"  : u"Page de recherche d'Apiviz",
@@ -838,7 +1083,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/fiches/detail" ],
+        "urls"              : ["/project", "/cis/detail", "/recherche/detail"],
         # "template_url"      : "/static/spa.html",
         "template_urls"     : [
         ],
@@ -848,137 +1093,179 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "fiches",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicDetail',
         "endpoint_type"     : "detail",
 
         "contents_fields"  : [
 
-          { "field" : "titre_projet", 
+          { "field" : "nom", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
-          },
-          { "field" : "porteur_projet",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_actor_left_top_b",
-          },
-          { "field" : "url_logo",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_image",
-          },
-          { "field" : "adresse_postale",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_address",
-          },
-          { "field" : "source",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_src_left",
-            "custom_title" : [ { "locale" : "fr", "text" : "Source :" } ],
-          },
-          { "field" : "a_retenir",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
-            "is_visible" : True,
-            "position" : "block_pre_abstract",
-            "custom_title" : [ { "locale" : "fr", "text" : "A retenir :" } ],
-            "paragraph_format" : { "breakline": None, "list_type": "ul", "list_separator": "- " },
-          },
-          { "field" : "presentation_projet",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
-            "is_visible" : True,
-            "position" : "block_abstract",
-            "custom_title" : [ { "locale" : "fr", "text" : "Description du projet :" } ],
-            "paragraph_format" : { "breakline": '//' },
-          },
-          { "field" : "acteurs",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1], "false_if_nodata": True },
-            "is_visible" : True,
-            "position" : "block_post_abstract",
-            "custom_title" : [ { "locale" : "fr", "text" : "Autres acteurs :" } ],
-          },
-          { "field" : "porteur_projet_full",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [-1] },
-            "is_visible" : True,
-            "position" : "block_partners",
-            "custom_title" : [ { "locale" : "fr", "text" : "Présentation du porteur de projet :" } ],
-          },
-          # { "field" : "source",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_src",
-          #   "custom_title" : [ { "locale" : "fr", "text" : "Source(s) :" } ],
-          # },
-          { "field" : "url_site",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_website",
-          },
-          { "field" : "url_pdf",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_file_1",
-          },
-
-          ### tags
-          { "field"       : "code_thematique",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_rb1_tags",
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "text_color" : "white",
-            "background_color" : "primary",
-            "custom_title" : [ { "locale" : "fr", "text" : "Thématiques(s) :" } ],
-            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
-          },
-          { "field" : "code_dispositif",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_rb2_tags",
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "text_color" : "white",
-            "background_color" : "light",
-            "custom_title" : [ { "locale" : "fr", "text" : "Dispositif(s) :" } ],
-            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
-          },
-
-          ### timeline
-          { "field" : "titre_etapes",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_timeline_title",
-          },
-          { "field" : "etapes",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_timeline",
-            "steps_separator" : "//",
-            "title_separator" : "::",
           },
 
           ### minimap
           { "field" : None,
             "is_visible" : True,
-            "map_height" : 200,
-            "item_title_field" : "porteur_projet",
-            "position" : "block_map_top_right_bis",
+            "map_height" : 250,
+            "item_title_field" : "nom",
+            "position" : "block_map_bottom_left",
             "item_geo_fields" : { "latitude" : "lat", "longitude": "lon"},
             "item_marker" : "fas fa-map-marker-alt",
             "item_marker_color" : "danger",
             "item_marker_offset" : [ 0, 8 ],
             "item_marker_anchor" : "bottom",
-            "zoom" : 8,
+            "zoom" : 10,
             "max_zoom" : 13,
             "min_zoom" : 4,
             "interactive" : False,
             "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
           },
 
+
+          # { "field" : "url_illustration",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          # },
+          { "field" : "adresse_full",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_address",
+          },
+          { "field" : "ville",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_city",
+          },
+          { "field" : "code_postal",
+            "field_format" : { "trim" : None, "type" : "list", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_cp",
+          },
+
+          ### mediation
+          { "field" : "bloc_mediation_1",
+            "custom_title" : [ { "locale" : "fr", "text" : "Médiation 1 :" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_left_open_infos",
+          },
+          { "field" : "bloc_mediation_2",
+            "custom_title" : [ { "locale" : "fr", "text" : "Médiation 2 :" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_left_open_infos_2",
+          },
+          { "field" : "bloc_mediation_3",
+            "custom_title" : [ { "locale" : "fr", "text" : "Médiation 3 :" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_left_open_infos_3",
+          },
+          { "field" : "bloc_mediation_4",
+            "custom_title" : [ { "locale" : "fr", "text" : "Médiation 4 :" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_left_open_infos_4",
+          },
+          { "field" : "bloc_mediation_5",
+            "custom_title" : [ { "locale" : "fr", "text" : "Médiation 5 :" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_left_open_infos_5",
+          },
+
+          ### block contact
+          { "field" : "tel_structure",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_tel",
+          },
+          { "field" : "email_structure",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_email",
+            "text_color" : "white",
+            "background_color" : "primary",
+          },
+          { "field" : "site_internet",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_contact_website",
+          },
+
+          { "field" : "horaires_semaine",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_open_infos",
+          },
+
+          # technical
+          { "field" : "n_ref",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_right_bottom_tech",
+            "background_color" : "link",
+            "custom_title" : [ { "locale" : "fr", "text" : "numéro de référence :" } ],
+          },
+          { "field" : "date_maj",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_right_bottom_tech_2",
+            "custom_title" : [ { "locale" : "fr", "text" : "mise à jour :" } ],
+          },
+
+          ### block tags
+          { "field" : "code_label",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "position" : "block_rb1_tags",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            # "text_color" : "white",
+            "background_color" : "warning",
+            "custom_title" : [ { "locale" : "fr", "text" : "Label :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "codes_types_mediations",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb2_tags",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Activité(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "codes_publics",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb3_tags",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "danger",
+            "custom_title" : [ { "locale" : "fr", "text" : "Public(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "codes_thematiques",
+            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb4_tags",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "link-hover",
+            "custom_title" : [ { "locale" : "fr", "text" : "Thématique(s) :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
         ],
 
         "images_fields"     : {
@@ -1055,12 +1342,12 @@ default_routes_config = [
         "tabs_uri"          : "cis-tabs",
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
       ## PAGE - stats
-      { "field"             : "de_stats",
+      { "field"             : "rh_stats",
         "is_global_app_homepage" : False,
         "route_title"       : u"Rechercher stats",
         "route_description" : u"Page de recherche stats LM d'Apiviz",
@@ -1082,7 +1369,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : ["/fiches/stats"],
+        "urls"              : ["/recherche/stats"],
         "template_urls"     : [
         ],
         
@@ -1091,7 +1378,7 @@ default_routes_config = [
         "app_version"       : version,
         "comment"           : u"Main search route in french",
         "is_dynamic"        : True,
-        "dataset_uri"       : "fiches",
+        "dataset_uri"       : "recherche",
         "dynamic_template"  : 'DynamicStats',
         "endpoint_type"     : "stat",
 
@@ -1410,7 +1697,7 @@ default_routes_config = [
         "tabs_uri"          : None,
         "deactivate_btn"    : False,
         "is_visible"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1419,7 +1706,7 @@ default_routes_config = [
     ### - - - - - - - - - - - - - - - - - ###
 
       ### PAGE - PROJECT
-      { "field"             : "de_a_propos",
+      { "field"             : "rh_demarche",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
         "route_description" : u"apiviz default home page",
@@ -1439,16 +1726,70 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/a-propos"],
-        "dataset_uri"       : "",
+        "urls"              : ["/la-demarche"],
+        "dataset_uri"       : "project-cis",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/a-propos.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/a-propos.html" },
-          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/a-propos.html" },
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/la-demarche.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/la-demarche.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/la-demarche.html" }
         ],
         
+
+        "has_ext_script"    : False,
+        "ext_script_urls"   : [
+          # {"script_id" : "js-car"    , "at_mount" : True,  "type" : None, "url" : "https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.4/dist/js/bulma-carousel.min.js"},s
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "http://localhost:8800/statics/scripts/le-projet.js?v4"},
+          # {"script_id" : "js-project", "at_mount" : False, "type" : None, "url" : "https://cdn.jsdelivr.net/gh/co-demos/cget-tiers-lieux/scripts/le-projet.js"},
+        ],
+
+        "help"              : u"you can specify a remote template (f.e. a github url)",
+        "languages"         : ["fr"],
+        "app_version"       : version,
+        "comment"           : u"Main demarche route",
+        "is_dynamic"        : True,
+        "dynamic_template"  : "DynamicStatic",
+        "has_navbar"        : True,
+
+        "has_tabs"          : True,
+        "tabs_uri"          : "tabs-rh-test",
+
+        "has_footer"        : True,
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
+        "is_default"        : True
+      },
+
+      ### PAGE - CONTRIBUER
+      { "field"             : "rh_contribuer",
+        "is_global_app_homepage" : True,
+        "route_title"       : u"Home",
+        "route_description" : u"apiviz default home page",
+        "route_activated"   : False,
+        "banner" : {
+          "activated"  : False,
+          "banner_uri" : "banner-sonum-carto"
+        },
+        "in_main_navbar"    : False,
+        "navbar_btn_options" : {
+          "position"   : "middle_right",
+          "link_type"  : "link",
+          "icon_class" : "",
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un lieu" }],
+          "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
+        },
+
+        "in_footer"         : False,
+        "link_in_logo"      : True,
+        "urls"              : ["/contribuer"],
+        "dataset_uri"       : None,
+
+        "template_urls"     : [
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/contribuer.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/contribuer.html" },
+          # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/contribuer.html" },
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/contribuer.html" }
+        ],
 
         "has_ext_script"    : True,
         "ext_script_urls"   : [
@@ -1468,15 +1809,15 @@ default_routes_config = [
         "has_navbar"        : True,
 
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
+        "tabs_uri"          : "tabs-rh-test",
 
         "has_footer"        : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
       ### PAGE : PROJECT/TOOLS
-      { "field"             : "tl_tools",
+      { "field"             : "rh_tools",
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
         "route_description" : u"apiviz default tools page",
@@ -1517,13 +1858,13 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "tabs_uri"          : "tabs-rh-test",
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
       ### PAGE : LEGAL 
-      { "field"             : "tl_legal",
+      { "field"             : "rh_legal",
         "is_global_app_homepage" : True,
         "route_title"       : u"Mentions légales",
         "route_description" : u"apiviz default legal page",
@@ -1546,8 +1887,8 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
@@ -1564,8 +1905,8 @@ default_routes_config = [
         "has_navbar"        : True,
         "has_footer"        : True,
         "has_tabs"          : True,
-        "tabs_uri"          : "tabs-tl-test",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "tabs_uri"          : "tabs-rh-test",
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1605,7 +1946,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1640,7 +1981,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1675,7 +2016,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1710,7 +2051,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 
@@ -1745,7 +2086,7 @@ default_routes_config = [
         "has_footer"        : True,
         "has_tabs"          : False,
         "tabs_uri"          : "tabs-cis-default",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"        : True
       },
 

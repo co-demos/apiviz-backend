@@ -7,20 +7,21 @@ default_app_navbar = [
   ### MAIN NAVBAR
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG PING CARTO
+    ### CONFIG DECIDER ENSEMBLE CARTO
       { "field"       : "app_navbar",
         "content"     : u"TL navbar",
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
+        "title_to"    : "/",
         "has_login"   : False,
         "ui_options"  : {
-          "background_isdark" : False,
+          "background_isdark" : True,
           "background_color" : { 
-            "bulma_color" : "white"
+            "bulma_color" : "primary"
           },
-
         },
+
         "links_options" : {
           "extra_buttons" : [ ### for buttons not declared in routes/pages
 
@@ -35,9 +36,9 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/liste",        "link_text" : [{"locale" : "en", "text" : "Cards (liste)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (liste)"}] },
-                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/table",        "link_text" : [{"locale" : "en", "text" : "Cards (tableur)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (tableur)"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/carte",       "link_text" : [{"locale" : "en", "text" : "Cards (map)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fiches (carte)"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/carte",       "link_text" : [{"locale" : "en", "text" : "Cards (map)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/liste",        "link_text" : [{"locale" : "en", "text" : "Cards (liste)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Liste"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/fiches/table",        "link_text" : [{"locale" : "en", "text" : "Cards (tableur)"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tableur"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
               ]
             },
@@ -65,7 +66,7 @@ default_app_navbar = [
               "is_external_link" : True,
               "link_type"  : "button", ### link | button / show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site officiel" }],
+              "link_text"  : [{"locale" : "en", "text" : "Official website"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Site de Décider Ensemble" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : False,
               "dropdowns"  : [

@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_data_endpoints_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG DECIDER ENSEMBLE
+  ### CONFIG RHINOCC CARTO 
 
     ### - - - - - - - - - - - - - - - ###
     ### USER MANAGEMENT
@@ -37,7 +37,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"         : "GET",
         "help"           : u"define the endpoints for authentication",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"     : True
       },
 
@@ -72,7 +72,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint for a JWT check",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -90,7 +90,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint for a new access JWT ",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -114,7 +114,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for registering a new user",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "needs_form"    : True,
         "is_default"    : True
       },
@@ -134,7 +134,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for login an user",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "needs_form"    : True,
         "is_default"    : True
       },
@@ -155,7 +155,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -174,7 +174,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -194,7 +194,7 @@ default_data_endpoints_config = [
         "method"        : "PUT",
         "help"          : u"define the endpoint to get data for : an user ",
         "needs_form"    : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -213,7 +213,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "DELETE",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -232,7 +232,7 @@ default_data_endpoints_config = [
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
         "needs_form"    : True,
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
@@ -242,12 +242,12 @@ default_data_endpoints_config = [
     ### - - - - - - - - - - - - - - - ###
 
       ### DATA FILTERS
-      { "field"         : "tl_data_API_filters",
+      { "field"         : "rh_data_API_filters",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "filters",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
         "has_shuffle"  : False,
         "has_pagination" : False,
@@ -262,10 +262,10 @@ default_data_endpoints_config = [
         },
 
         "placeholder"   : [
-          {"locale" : "en", "text" : "Enter the name of a project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un projet" }
+          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "" }
         ],
         "items_found"   : [
-          {"locale" : "en", "text" : "files found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "fiches trouvées" }
+          {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" }
         ],
         "stats_text"   : [
           {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
@@ -275,7 +275,7 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6",  
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5ef524fc328ed703e789aab8",  
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -284,97 +284,142 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"code_thematique__",  
+          {	"name"		: u"codes_types_mediations__",
             "id"      : "filter_1",
-            "col_name" : "code_thematique",
+            "col_name" : "codes_types_mediations",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Themas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Thématique principale" }],
-            "choices"	: [
-              {'name' : u'ACT', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Action et inclusion sociale' }]},
-              # {'name' : u'BUD', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Budget' }]},
-              # {'name' : u'VIE', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cadre de vie' }]},
-              # {'name' : u'CUL', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Culture' }]},
-              # {'name' : u'DEM', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Démocratie et citoyenneté' }]},
-              {'name' : u'JEU', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Jeunesse, Education et Culture' }]},
-              {'name' : u'ENV', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Environnement' }]},
-              # {'name' : u'LOG', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Logement' }]},
-              # {'name' : u'SER', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Organisation des services publics' }]},
-              {'name' : u'SAN', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Santé' }]},
-              # {'name' : u'MOB', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Transports & mobilité' }]},
-              {'name' : u'URB', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Urbanisme et Aménagement' }]},
-              {'name' : u'MTH', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Multithématique' }]},
+            "filter_title" : [
+              {"locale" : "en", "text" : "Activities"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Activités" }
             ],
-          },
-
-
-          {	"name"		: u"code_dispositif__",
-            "id"      : "filter_3",
-            "col_name" : "code_dispositif",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Dispositifs"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type de démarche" }],
             "choices"	: [
-              {'name' : u'BP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Budget et financement participatif' }]},
-              {'name' : u'DPP', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Dialogue parties prenantes' }]},
-              # {'name' : u'EP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Exercice de prospective' }]},
-              {'name' : u'DC', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Dispositif de consultation' }]},
-              {'name' : u'IP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Instance de participation' }]},
-              {'name' : u'IC', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Interpellation et initiatives citoyennes' }]},
-              {'name' : u'PN', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Participation en ligne' }]},
-              {'name' : u'AU', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Autre' }]},
-            ],
+              {"name" : u"ORD", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ordinateur en libre service" }]},
+              {"name" : u"ORDM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ordinateur avec médiateur.rice" }]},
+              {"name" : u"REP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers de réparation de matériel informatique" }]},
+              {"name" : u"TL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tiers lieux" }]},
+              {"name" : u"FL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "FabLab" }]},
+              {"name" : u"W", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Espace de co-working" }]},
+              {"name" : u"ACCDS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel accès aux droits simple" }]},
+              {"name" : u"ACCDA", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel approfondi accès aux droits" }]},
+              {"name" : u"SENS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sensibilisation autour du numérique" }]},
+              {"name" : u"ACCN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accompagnement individuel des actions uniquement numériques" }]},
+              {"name" : u"COMP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers informatiques de montée en compétences" }]},
+              {"name" : u"PRO", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Formation numérique professionnalisante" }]},
+              {"name" : u"ENT", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers collectifs d’entraide autour du numérique" }]},
+           ],
           },
-
-          {	"name"		: u"code_structure__",
+          {	"name"		: u"codes_publics__",  
             "id"      : "filter_2",
-            "col_name" : "code_structure",
+            "col_name" : "codes_publics",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Structures"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Porteur de projet" }],
+            "filter_title" : [
+              {"locale" : "en", "text" : "Publics"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Publics" }
+            ],
             "choices"	: [
-              {'name' : u'AE', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Administration d'Etat" }]},
-              {'name' : u'RG', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Région' }]},
-              {'name' : u'DEP', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Département' }]},
-              {'name' : u'GV', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Grande ville, communauté urbaine, métropole' }]},
-              {'name' : u'VM', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Ville moyenne' }]},
-              {'name' : u'PV', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Petite ville ou EPCI' }]},
-              {'name' : u'AC', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Association ou collectif citoyen' }]},
-              {'name' : u'EP', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Entreprise' }]},
+              {"name" : u"SEN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Seniors" }]},
+              {"name" : u"J", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Jeunes" }]},
+              {"name" : u"DE", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Demandeur.se d’emploi" }]},
+              {"name" : u"AD", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Adultes" }]},
+              {"name" : u"TP", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tout public" }]},
+              {"name" : u"ALL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Allocataire CAF" }]},
+              {"name" : u"ETR", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etranger" }]},
             ],
           },
-
-          # {	"name"		: u"code_etape__",  
-          #   "id"      : "filter_4",
-          #   "col_name" : "code_etape",
+          # {	"name"		: u"code_thematique__",  
+          #   "id"      : "filter_3",
+          #   "col_name" : "code_thematique",
           #   "dataType" : "text",
-          #   "filter_title" : [{"locale" : "en", "text" : "Etapes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etapes" }],
+          #   "filter_title" : [
+          #     {"locale" : "en", "text" : "Themas"},
+          #     {"locale" : "es", "text" : "pendiente"},
+          #     {"locale" : "tr", "text" : "yapılmamış"},
+          #     {"locale" : "de", "text" : "ungemacht"},
+          #     {"locale" : "fr", "text" : "Thématiques" }
+          #   ],
           #   "choices"	: [
-          #     {'name' : u'DER_BUD', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Déroulé du budget participatif' }]},
-          #     {'name' : u'DER_PRO', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Déroulé du projet' }]},
-          #     {'name' : u'DER_SEQ', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Déroulé de la séquence démocratique' }]},
+          #     {"name" : u"MOB", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mobilité" }]},
+          #     {"name" : u"SAN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Santé" }]},
+          #     {"name" : u"EM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Emploi" }]},
+          #     {"name" : u"FAM", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Famille/parentalité" }]},
+          #     {"name" : u"FI", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Finances" }]},
+          #     {"name" : u"LOG", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Logement" }]},
           #   ],
           # },
-
+          {	"name"		: u"code_label__",
+            "id"      : "filter_4",
+            "col_name" : "code_label",
+            "dataType" : "text",
+            "filter_title" : [
+              {"locale" : "en", "text" : "Labels"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Labels" }
+            ],
+            "choices"	: [
+              {"name" : u"APTIC", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APTIC" }]},
+              {"name" : u"MFS", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Maison France Services" }]},
+              {"name" : u"EPN", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Espace Public Numérique" }]},
+              {"name" : u"TL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tiers lieux" }]},
+              {"name" : u"REL", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Structures relais Coll.in/RhinOcc" }]},
+            ],
+          },
+          {	"name"		: u"code_departement__",
+            "id"      : "filter_5",
+            "col_name" : "code_departement",
+            "dataType" : "text",
+            "filter_title" : [
+              {"locale" : "en", "text" : "Areas"},
+              {"locale" : "es", "text" : "pendiente"},
+              {"locale" : "tr", "text" : "yapılmamış"},
+              {"locale" : "de", "text" : "ungemacht"},
+              {"locale" : "fr", "text" : "Départements" }
+            ],
+            "choices"	: [
+              # {"name" : u"=9=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ariège" }]},
+              {"name" : u"=11=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aude" }]},
+              # {"name" : u"=12=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aveyron" }]},
+              # {"name" : u"=30=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gard" }]},
+              {"name" : u"=31=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Haute-Garonne" }]},
+              {"name" : u"=32=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gers" }]},
+              # {"name" : u"=34=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hérault" }]},
+              # {"name" : u"=46=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lot" }]},
+              # {"name" : u"=48=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lozère" }]},
+              {"name" : u"=65=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hautes-Pyrénées" }]},
+              # {"name" : u"=66=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pyrénées-orientales" }]},
+              # {"name" : u"=81=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn" }]},
+              # {"name" : u"=82=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn-et-Garonne" }]},
+            ],
+          },
         ],
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : filters in search navbar",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA TABLE
-      { "field"         : "tl_data_API_table",
+      { "field"         : "rh_data_API_table",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "table",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5ef524fc328ed703e789aab8", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
-          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "titre_projet", "type": "str" },
+          {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 50, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
+          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "nom", "type": "str" },
           {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",            "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",          "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
@@ -387,19 +432,19 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a view list",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA LIST
-      { "field"         : "tl_data_API_list",
+      { "field"         : "rh_data_API_list",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "list",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5ef524fc328ed703e789aab8", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -415,23 +460,23 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a view list",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA DETAIL
-      { "field"         : "tl_data_API_detail",
+      { "field"         : "rh_data_API_detail",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "detail",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5ef524fc328ed703e789aab8", ## V2
         "args_options"  : [
-          {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
-          # {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
-          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "slug", "sep" : "__" }},
+          {  "app_arg" : "dataToken", "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
+          # {  "app_arg" : "itemId",    "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "rh_id", "sep" : "__" }},
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -440,20 +485,20 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a detailled data",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA STATS
-      { "field"         : "tl_data_API_stats",
+      { "field"         : "rh_data_API_stats",
         "is_visible"    : False,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "stat",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5ef524fc328ed703e789aab8", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -510,26 +555,26 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "POST",
         "help"          : u"define the endpoint to get data for : a stat about the dataset",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA MAP
-      { "field"         : "tl_data_API_map",
+      { "field"         : "rh_data_API_map",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "map",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5ef524fc328ed703e789aab8", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT,slug,titre_projet",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "rh_id,departement,nom",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 
@@ -545,19 +590,19 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : map results",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 
       ### DATA EXPORT
-      { "field"         : "tl_data_API_export",
+      { "field"         : "rh_data_API_export",
         "is_visible"    : True,
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "export",
-        "dataset_uri"   : "fiches",
+        "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e8f4f59328ed74e1eea3ca6", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5ef524fc328ed703e789aab8", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -573,7 +618,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : export dataset as csv",
-        "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"    : True
       },
 

@@ -227,7 +227,7 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "allPointsSource",
               "layer_id"            : "all-points",
-              "is_default_visible"  : True,
+              "is_default_visible"  : False,
               "is_source_distant"   : False,
 
               "is_live_data"        : False,
@@ -235,11 +235,9 @@ default_routes_config = [
 
               "is_clickable"        : True,
               "add_zoom_on_click"   : 3.5,
-
               "is_hoverable"        : True,
               "hover_infos"         : {},
-              "direct_to_detail"        : True,
-
+              "direct_to_detail"    : True,
               "has_popup"           : True, 
               "popup_config"        : {
                 "action" : 'mousemove',
@@ -250,7 +248,7 @@ default_routes_config = [
               },
 
               "radius_min"          : 2,
-              "radius_max"          : 25,
+              "radius_max"          : 18,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
               "circle_color"        : "#004494",
@@ -261,25 +259,25 @@ default_routes_config = [
 
             ### clusters source and layer
             "cluster_circles_layer" : {
-              "is_activated"     : True,
+              "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-circles",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
 
               "is_source_distant"   : False, ### clusters all points sources by default
               "is_clickable"        : True,
 
-              "circle_color"     : "#E8385B", 
-              "circle_color_100" : "#E8385B", 
-              "circle_color_250" : "#E8385B", 
-              "circle_color_500" : "#E8385B", 
-              "circle_color_750" : "#E8385B", 
+              "circle_color"     : "#004494", 
+              "circle_color_100" : "#004494", 
+              "circle_color_250" : "#004494", 
+              "circle_color_500" : "#004494", 
+              "circle_color_750" : "#004494", 
 
-              "circle_radius"     : 15, 
-              "circle_radius_100" : 20, 
-              "circle_radius_250" : 25, 
-              "circle_radius_500" : 30, 
-              "circle_radius_750" : 35, 
+              "circle_radius"     : 20, 
+              "circle_radius_100" : 30, 
+              "circle_radius_250" : 35, 
+              "circle_radius_500" : 40, 
+              "circle_radius_750" : 45, 
 
               "circle_stroke_color" : "#fff",
               "circle_stroke_width" : 1,
@@ -289,8 +287,9 @@ default_routes_config = [
               "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "cluster-counts",
-              "is_default_visible"  : False,
+              "is_default_visible"  : True,
               "is_source_distant"   : False,
+
               "is_clickable"        : True,
 
               "text_size"    : 11,
@@ -298,17 +297,30 @@ default_routes_config = [
             },
 
             "cluster_unclustered_layer" : {
-              "is_activated"        : False,
+              "is_activated"        : True,
               "source_id"           : "clusterSource",
               "layer_id"            : "unclustered-point",
               "is_default_visible"  : True,
               "is_source_distant"   : False,
-              "is_clickable"        : True,
 
-              "circle_color"        : "#fff", 
-              "circle_stroke_color" : "#004494",
-              "circle_radius"       : 5, 
-              "circle_stroke_width" : 5, 
+              "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : True,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'nom_structure', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
+
+              "circle_stroke_color" : "#fff", 
+              "circle_color" : "#004494",
+              "circle_radius"       : 9, 
+              "circle_stroke_width" : 3, 
             },
 
             ### choropleth source and layer
@@ -485,15 +497,15 @@ default_routes_config = [
           },
         
           "layers_visibility" :{
-            "is_activated" : False,
+            "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
-              # { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
-              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
+              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : False }, 
+              { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ], "default_visible" : True }, 
+              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
-              # { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
+              { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
 
@@ -761,6 +773,7 @@ default_routes_config = [
             "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
+            "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",
@@ -771,6 +784,7 @@ default_routes_config = [
             "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
+            "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",

@@ -4,7 +4,7 @@ from . import version, uuid_models
 
 default_app_styles_config = [
 
-  ### CONFIG PING CARTO STYLES
+  ### CONFIG COVID INIT CARTO STYLES
 
     ### GLOBAL STYLES
       { "field"       : "app_colors",

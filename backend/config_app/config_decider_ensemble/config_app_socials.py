@@ -32,6 +32,18 @@ default_socials_config = [
       "is_default"  : True
     },
 
+    { "field"       : "app_linkedin",
+      "content"     : u"linkedin",
+      "icon_class"  : "fab fa-linkedin",
+      "url"         : "https://www.linkedin.com/company/d%C3%A9cider-ensemble/",
+      "app_version" : version,
+      "help"        : u"Choose the linkedin account for your ApiViz instance",
+      "in_footer"   : True,
+      "tooltip"     : [{"locale" : "en", "text" : "source codes"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "notre page LinkedIn" }],
+      "apiviz_front_uuid" : uuid_models["uuid_decider_ensemble"],
+      "is_default"  : True
+    },
+
     { "field"       : "app_github",
       "content"     : u"github",
       "icon_class"  : "fab fa-github",

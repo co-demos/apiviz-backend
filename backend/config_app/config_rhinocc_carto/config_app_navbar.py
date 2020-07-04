@@ -7,9 +7,9 @@ default_app_navbar = [
   ### MAIN NAVBAR
 
     ### - - - - - - - - - - - - - - - ###
-    ### CONFIG CONUMM
+    ### CONFIG RHINOCC CARTO
       { "field"       : "app_navbar",
-        "content"     : u"TL navbar",
+        "content"     : u"RH navbar",
         "app_version" : version,
         "help"        : u"The navbar of your ApiViz instance",
         "logo_to"     : "/",
@@ -27,26 +27,12 @@ default_app_navbar = [
 
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/le-projet",
-              "help"       : u"First menu in navbar",
-              "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet de cartographie" }],
-              "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                # { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
               "link_to"    : "/recherche",
               "help"       : u"First menu in navbar",
               "is_external_link" : False,
-              "link_type"  : "link", ### show btn border
+              "link_type"  : "link",
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "The map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La carte" }],
+              "link_text"  : [{"locale" : "en", "text" : "Map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cartographie" }],
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : False,
               "dropdowns"  : [
@@ -55,44 +41,29 @@ default_app_navbar = [
             },
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "/qui-sommes-nous",
+              "link_to"    : "/la-demarche",
               "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link",
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Who are we ?"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Qui sommes-nous ?" }],
+              "link_text"  : [{"locale" : "en", "text" : "Approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Démarche" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : False,
+              "has_dropdown" : True,
               "dropdowns"  : [
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche",        "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La démarche"}] },
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales",   "link_text" : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
                 # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
               ]
             },
             { "is_visible" : False,
               "position"   : "exterior_right",
-              "link_to"    : "/partenaires",
-              "help"       : u"Third menu in navbar",
+              "link_to"    : "/contribuer",
+              "help"       : u"Second menu in navbar",
               "is_external_link" : False,
               "link_type"  : "link",
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "Project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Partenaires" }],
-              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
-              "has_dropdown" : False,
-              "dropdowns"  : [
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet",                 "link_text" : [{"locale" : "en", "text" : "The project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le projet"}] },
-                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/le-projet/outils",          "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
-                # { "is_divider" : True,  "is_external_link" : False },
-              ]
-            },
-            { "is_visible" : True,
-              "position"   : "exterior_right",
-              "link_to"    : "https://conumm.fr/",
-              "help"       : u"Fourth menu in navbar",
-              "is_external_link" : True,
-              "link_type"  : "button", ### link | text | button --- show btn border
-              "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "CONUMM"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "retour vers CONNUMM" }],
+              "link_text"  : [{"locale" : "en", "text" : "Contribuer"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Contribuer" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : False,
               "dropdowns"  : [
@@ -102,9 +73,27 @@ default_app_navbar = [
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
               ]
             },
+            { "is_visible" : True,
+              "position"   : "exterior_right",
+              "link_to"    : "https://rhinocc.fr/",
+              "help"       : u"Second menu in navbar",
+              "is_external_link" : True,
+              "link_type"  : "button", ### link | text | button --- show btn border
+              "icon_class" : "",
+              "link_text"  : [{"locale" : "en", "text" : "RhinOcc"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "retour vers RhinOcc" }],
+              "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
+              "has_dropdown" : False,
+              "dropdowns"  : [
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/la-demarche",        "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La démarche"}] },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/mentions-legales",   "link_text" : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales"}] },
+                # { "is_divider" : True,  "is_external_link" : False },
+                # { "is_divider" : False, "is_external_link" : False, "link_to" : "/outils",   "link_text" : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils"}] },
+              ]
+            },
+
           ]
         },
-        "apiviz_front_uuid" : uuid_models["uuid_conumm"],
+        "apiviz_front_uuid" : uuid_models["uuid_rhinocc_carto"],
         "is_default"  : True
       },
 
