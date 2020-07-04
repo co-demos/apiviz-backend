@@ -377,7 +377,7 @@ default_routes_config = [
                   "fill_opacity"        : 0.5,
                   "fill_outline_color"  : "#f2f3f3",
 
-                  "has_popup" : True, 
+                  "has_popup" : False, 
                   "popup_config" : {
                     "action" : 'mousemove',
                     "fields" : [
