@@ -211,6 +211,18 @@ default_routes_config = [
               "refresh_delay"       : 3000,
 
               "is_clickable"        : True,
+              "add_zoom_on_click"   : 3.5,
+              "is_hoverable"        : True,
+              "hover_infos"         : {},
+              "direct_to_detail"    : False,
+              "has_popup"           : True, 
+              "popup_config"        : {
+                "action" : 'mousemove',
+                "fields" : [
+                  { 'position' : 'field_main_title', 'field' : 'titre_projet', 'prefix' : None, 'suffix' : None, 'class': 'is-size-6 has-text-weight-semibold' },
+                  { 'position' : 'field_info', 'field' : None, 'prefix' : "(cliquez pour + d'infos)", 'suffix' : None, 'class': 'has-text-centered has-text-weight-light' },
+                ],
+              },
 
               "radius_min"          : 4,
               "radius_max"          : 45,

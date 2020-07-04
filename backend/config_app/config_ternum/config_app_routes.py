@@ -237,7 +237,7 @@ default_routes_config = [
               "add_zoom_on_click"   : 3.5,
               "is_hoverable"        : True,
               "hover_infos"         : {},
-              "direct_to_detail"        : True,
+              "direct_to_detail"    : True,
               "has_popup"           : True, 
               "popup_config"        : {
                 "action" : 'mousemove',
