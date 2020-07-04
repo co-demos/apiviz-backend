@@ -6,6 +6,9 @@
 
 
 -------
+
+[![GitHub license](https://img.shields.io/github/license/co-demos/apiviz-backend)](https://github.com/co-demos/apiviz-backend/blob/master/LICENSE) 
+
 ## PRESENTATION
 
 Visualize data coming from an API in a CMS-like app. 
