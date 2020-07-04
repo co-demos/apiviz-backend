@@ -22,7 +22,7 @@ default_app_styles_config = [
           'light'      : '#40529d',
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
-          'link-hover' : '#e08453' ,
+          'link-hover' : '#b76d46' ,
           'primary'    : '#e08453', 
           'info'       : '#53e0cb',
           'success'    : '#afe053',
@@ -103,7 +103,8 @@ default_app_styles_config = [
         {
           "dataset_uri" : "recherche",
           "images_set"  : [
-            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/graphisme/texture_TL/texturePiNG_650-430.png?raw=true", "credits" : "Ping", "licence" : "" },
+            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/graphisme/texture_RH_default.png?raw=true", "credits" : "None", "licence" : "" },
+            # { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/rhinocc-carto/master/graphisme/texture_TL/texturePiNG_650-430.png?raw=true", "credits" : "Ping", "licence" : "" },
             # { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_1.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             # { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_2.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
             # { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/cis-data/master/illustrations/textures/medium_fiche_3.png?raw=true", "credits" : "Élise Lalique", "licence" : "" },
