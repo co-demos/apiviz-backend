@@ -116,7 +116,7 @@ default_app_footer = [
             "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : "PiNG association"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Association PiNG"}],
+            "title_block" : [{"locale" : "en", "text" : "PiNG association"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Le réseau"}],
             "title_visible" : True,
             "links"       : [
               

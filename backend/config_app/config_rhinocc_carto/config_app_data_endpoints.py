@@ -284,9 +284,9 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"code_mediations__",
+          {	"name"		: u"codes_types_mediations__",
             "id"      : "filter_1",
-            "col_name" : "code_mediations",
+            "col_name" : "codes_types_mediations",
             "dataType" : "text",
             "filter_title" : [
               {"locale" : "en", "text" : "Activities"},
@@ -311,9 +311,9 @@ default_data_endpoints_config = [
               {"name" : u"ENT", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ateliers collectifs d’entraide autour du numérique" }]},
            ],
           },
-          {	"name"		: u"code_public__",  
+          {	"name"		: u"codes_publics__",  
             "id"      : "filter_2",
-            "col_name" : "code_public",
+            "col_name" : "codes_publics",
             "dataType" : "text",
             "filter_title" : [
               {"locale" : "en", "text" : "Publics"},
@@ -383,19 +383,19 @@ default_data_endpoints_config = [
               {"locale" : "fr", "text" : "Départements" }
             ],
             "choices"	: [
-              {"name" : u"=9=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ariège" }]},
+              # {"name" : u"=9=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Ariège" }]},
               {"name" : u"=11=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aude" }]},
-              {"name" : u"=12=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aveyron" }]},
-              {"name" : u"=30=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gard" }]},
+              # {"name" : u"=12=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Aveyron" }]},
+              # {"name" : u"=30=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gard" }]},
               {"name" : u"=31=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Haute-Garonne" }]},
               {"name" : u"=32=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Gers" }]},
-              {"name" : u"=34=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hérault" }]},
-              {"name" : u"=46=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lot" }]},
-              {"name" : u"=48=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lozère" }]},
+              # {"name" : u"=34=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hérault" }]},
+              # {"name" : u"=46=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lot" }]},
+              # {"name" : u"=48=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lozère" }]},
               {"name" : u"=65=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Hautes-Pyrénées" }]},
-              {"name" : u"=66=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pyrénées-orientales" }]},
-              {"name" : u"=81=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn" }]},
-              {"name" : u"=82=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn-et-Garonne" }]},
+              # {"name" : u"=66=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Pyrénées-orientales" }]},
+              # {"name" : u"=81=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn" }]},
+              # {"name" : u"=82=", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tarn-et-Garonne" }]},
             ],
           },
         ],
@@ -448,7 +448,7 @@ default_data_endpoints_config = [
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
+          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 50, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
