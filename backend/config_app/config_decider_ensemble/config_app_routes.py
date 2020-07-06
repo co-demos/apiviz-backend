@@ -232,7 +232,7 @@ default_routes_config = [
                 ],
               },
 
-              "radius_min"          : 4,
+              "radius_min"          : 5,
               "radius_max"          : 45,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
