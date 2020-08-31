@@ -357,11 +357,11 @@ default_data_endpoints_config = [
             "col_name" : "code_label",
             "dataType" : "text",
             "filter_title" : [
-              {"locale" : "en", "text" : "Labels"},
+              {"locale" : "en", "text" : "Typologies"},
               {"locale" : "es", "text" : "pendiente"},
               {"locale" : "tr", "text" : "yapılmamış"},
               {"locale" : "de", "text" : "ungemacht"},
-              {"locale" : "fr", "text" : "Labels" }
+              {"locale" : "fr", "text" : "Typologies" }
             ],
             "choices"	: [
               {"name" : u"APTIC", "choice_title" : [{"locale" : "en", "text" : "undefined"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "APTIC" }]},
