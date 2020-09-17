@@ -181,9 +181,17 @@ default_routes_config = [
           "url"              : "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
-          "center"           : [46.2276, 2.2137],
-          "currentCenter"    : [46.2276, 2.2137],
-          "zoom"             : 5,
+
+          ### France center
+          # "center"           : [46.2276, 2.2137],
+          # "currentCenter"    : [46.2276, 2.2137],
+          # "zoom"             : 5,
+
+          ### World center
+          "center"           : [20.24, 2.79],
+          "currentCenter"    : [20.24, 2.79],
+          "zoom"             : 2.7,
+
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
@@ -224,7 +232,7 @@ default_routes_config = [
                 ],
               },
 
-              "radius_min"          : 4,
+              "radius_min"          : 5,
               "radius_max"          : 45,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
