@@ -1180,7 +1180,7 @@ default_routes_config = [
 
           ### mediation
           { "field" : "bloc_mediations",
-            "custom_title" : [ { "locale" : "fr", "text" : "Activités :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Activités d'inclusion numérique" } ],
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_left_open_infos",
