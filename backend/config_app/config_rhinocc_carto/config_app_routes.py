@@ -1020,7 +1020,7 @@ default_routes_config = [
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
           { "field"       : "codes_types_mediations",
-            "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
+            "field_format" : { "trim" : 45, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
             "has_tooltip" : True,
