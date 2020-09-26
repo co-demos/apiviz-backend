@@ -457,9 +457,9 @@ default_routes_config = [
                   # "agregate_data_from_source" : "allPointsSource",
                   "join_polygon_id_to_field"  : "departement",
                   "agregated_data_field"      : "count_dep",
-                  'fill_color': '#158b7b',
-                  "fill_opacity"        : 0.4,
-                  "fill_outline_color"  : "#f2f3f3",
+                  'fill_color': 'transparent',
+                  "fill_opacity"        : 0.9,
+                  "fill_outline_color"  : "#e69c75",
                   "has_popup" : False, 
                   "popup_config" : {
                     "action" : 'mousemove',
