@@ -1185,6 +1185,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_left_open_infos",
           },
+
           # { "field" : "bloc_mediation_2",
           #   # "custom_title" : [ { "locale" : "fr", "text" : "Activité 2 :" } ],
           #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
