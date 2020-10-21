@@ -1210,6 +1210,15 @@ default_routes_config = [
           #   "position" : "block_left_open_infos_5",
           # },
 
+          ### block external link for updates
+          { "field" : "rhinocc_update_btn",
+            "custom_title" : [ { "locale" : "fr", "text" : "Mettre à jour vos données" } ],
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "btn_link" : "https://rhinocc.fr/recensement/",
+            "position" : "block_btn_ext_link",
+          },
+
           ### block contact
           { "field" : "tel_structure",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
