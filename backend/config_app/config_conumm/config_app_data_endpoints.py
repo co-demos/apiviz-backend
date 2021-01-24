@@ -342,9 +342,9 @@ default_data_endpoints_config = [
 
 
           ### Publics
-          {	"name"		: u"Publics-codes__",
+          {	"name"		: u"publics-codes__",
             "id"      : "filter_3",
-            "col_name" : "Publics-codes",
+            "col_name" : "publics-codes",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Training"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
             "choices"	: [
@@ -360,9 +360,9 @@ default_data_endpoints_config = [
 
 
           ### Conditions d'accès
-          {	"name"		: u"access-codes__",
+          {	"name"		: u"acces-codes__",
             "id"      : "filter_4",
-            "col_name" : "access-codes",
+            "col_name" : "acces-codes",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Access conditions"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accès" }],
             "choices"	: [
