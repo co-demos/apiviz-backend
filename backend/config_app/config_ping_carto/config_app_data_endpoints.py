@@ -249,7 +249,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "filters",
         "dataset_uri"   : "recherche",
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
-        "has_shuffle"  : False,
+        "has_shuffle"  : True,
         "has_pagination" : False,
         "has_export" : True,
         "pagination_options" : {
@@ -356,7 +356,7 @@ default_data_endpoints_config = [
           {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",            "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",          "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
-          {  "app_arg" : "shuffleSeed",      "arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
+          {  "app_arg" : "shuffleSeed",      "arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int", "init": True },
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -384,7 +384,7 @@ default_data_endpoints_config = [
           {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
-          {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
+          {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int", "init": True },
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
