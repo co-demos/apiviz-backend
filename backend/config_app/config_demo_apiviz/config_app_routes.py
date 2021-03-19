@@ -2339,7 +2339,7 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet.html" }, 
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/le-projet-en.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/le-projet-en.html" }, 
         ],
         
 
@@ -2396,7 +2396,7 @@ default_routes_config = [
           { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/apiviz-tutorial.html" }, 
           { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/apiviz-website-demo/master/pages-html/apiviz-tutorial-en.html" }, 
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/apiviz-tutorial.html" }, 
-          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/apiviz-tutorial.html" }, 
+          # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/apiviz-tutorial-en.html" }, 
         ],
         
 
