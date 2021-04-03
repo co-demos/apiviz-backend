@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/home.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
@@ -1458,8 +1458,8 @@ default_routes_config = [
         "dataset_uri"       : "",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/a-propos.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/a-propos.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/a-propos.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/a-propos.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/a-propos.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/a-propos.html" }
         ],
@@ -1561,8 +1561,8 @@ default_routes_config = [
         "urls"              : ["/mentions-legales"],
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/arbories-carto/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
