@@ -161,7 +161,7 @@ default_global_config = [
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
         # "url"           : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/logos/LOGO-decider-ensemble-01.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/decider-ensemble/master/logos/Logo-parenthese-DE.png",
+        "url"           : "https://raw.githubusercontent.com/co-demos/arbories/master/logos/favicon-feuille-screenshot-01.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_arbories"],
