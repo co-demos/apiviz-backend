@@ -350,7 +350,7 @@ default_data_endpoints_config = [
             "id"      : "filter_3",
             "col_name" : "ANNEE_STR",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Year"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Année" }],
+            "filter_title" : [{"locale" : "en", "text" : "Years"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Années" }],
             "choices"	: [
               {'name' : u'2020', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "2020" }]},
               {'name' : u'2019', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2019' }]},
