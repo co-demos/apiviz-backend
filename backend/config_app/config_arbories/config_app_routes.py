@@ -187,7 +187,7 @@ default_routes_config = [
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
 
-          "mapStyle"         : "testGeoportail", # testRasterPositron | testRasterVoyager | testGeoportail | testRasterOSM_topo | testRasterVoyager | testGeo
+          "mapStyle"         : "arcGis", # testRasterPositron | testRasterVoyager | testGeoportail | testRasterOSM_topo | testRasterVoyager | testGeo
   
           ### France center
           # "center"           : [46.2276, 2.2137],
@@ -210,7 +210,7 @@ default_routes_config = [
           "item_marker_anchor" : "bottom",
 
           "pinIconUrl"       : "/static/icons/icon_pin_plein_violet.svg",
-          "pinIconSize"      : { "highlighted" : [20, 20], "normal" : [10, 10]},
+          "pinIconSize"      : { "highlighted" : [15, 15], "normal" : [7, 7]},
 
           "mapbox_layers" : {
 
@@ -240,10 +240,10 @@ default_routes_config = [
               },
 
               "radius_min"          : 5,
-              "radius_max"          : 20,
+              "radius_max"          : 15,
               "max_zoom"            : 18,
               "min_zoom"            : 4,
-              "circle_color"        : "#004494",
+              "circle_color"        : "#fff",
               "circle_stroke_color" : "#fff",
               "circle_opacity"      : 0.8,
             },
@@ -988,8 +988,8 @@ default_routes_config = [
           #   "item_marker_offset" : [ 0, 8 ],
           #   "item_marker_anchor" : "bottom",
           #   "zoom" : 8,
-          #   "max_zoom" : 13,
-          #   "min_zoom" : 4,
+          #   "max_zoom" : 19,
+          #   "min_zoom" : 15,
           #   "interactive" : False,
           #   "max_bounds" : { "latitude" : "lat", "longitude": "lon"},
           # },
