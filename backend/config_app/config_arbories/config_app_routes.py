@@ -187,7 +187,7 @@ default_routes_config = [
           "attribution"      : '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
           "subdomains"       : 'abcd',
 
-          "mapStyle"         : "arcGis", # testRasterPositron | testRasterVoyager | testGeoportail | testRasterOSM_topo | testRasterVoyager | testGeo
+          "mapStyle"         : "testGeo" ,#  "arcGis", # testRasterPositron | testRasterVoyager | testGeoportail | testRasterOSM_topo | testRasterVoyager | testGeo
   
           ### France center
           # "center"           : [46.2276, 2.2137],
