@@ -178,7 +178,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"Cartographie des arbories",
-        "content_text" : [{"locale" : "en", "text" : "Arbories"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Arbories"}],
+        "content_text" : [{"locale" : "en", "text" : "Arbories"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Cartographie des Arbories"}],
         "is_in_navbar" : True,
         # "title_color" : "primary",
 
