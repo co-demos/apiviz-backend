@@ -884,7 +884,7 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_actor_left_top_b",
           },
-          { "field" : "LIEUX_DIT",
+          { "field" : "LIEUX_DITS", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
