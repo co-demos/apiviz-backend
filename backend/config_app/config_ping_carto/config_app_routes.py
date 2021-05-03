@@ -778,6 +778,7 @@ default_routes_config = [
             "background_color" : "primary",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
+
           # { "field"       : "PUBLICS",
           #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
           #   "is_visible"  : True,
@@ -953,7 +954,28 @@ default_routes_config = [
             "custom_title" : [ { "locale" : "fr", "text" : "Publics(s) :" } ],
             "convert_from_filters" : True, 
           },
-
+          { "field"       : "MODELE_JURIDIQUE",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb3_tags",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Modèle juridique :" } ],
+            "convert_from_filters" : True, 
+          },
+          { "field"       : "FABRIQUE_DE_TERRITOIRE",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb4_tags",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "custom_title" : [ { "locale" : "fr", "text" : "Fabbrique de territoire :" } ],
+            "convert_from_filters" : True, 
+          },
         ],
 
         "images_fields"     : {
