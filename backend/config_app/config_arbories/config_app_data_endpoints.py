@@ -5,7 +5,7 @@ from . import version, uuid_models
 default_data_endpoints_config = [
 
   ### - - - - - - - - - - - - - - - ###
-  ### CONFIG PING CARTO 
+  ### CONFIG DECIDER ENSEMBLE
 
     ### - - - - - - - - - - - - - - - ###
     ### USER MANAGEMENT
@@ -37,7 +37,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"         : "GET",
         "help"           : u"define the endpoints for authentication",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"     : True
       },
 
@@ -72,7 +72,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint for a JWT check",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -90,7 +90,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint for a new access JWT ",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -114,7 +114,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for registering a new user",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "needs_form"    : True,
         "is_default"    : True
       },
@@ -134,7 +134,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "POST",
         "help"          : u"define the endpoint for login an user",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "needs_form"    : True,
         "is_default"    : True
       },
@@ -155,7 +155,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -174,7 +174,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -194,7 +194,7 @@ default_data_endpoints_config = [
         "method"        : "PUT",
         "help"          : u"define the endpoint to get data for : an user ",
         "needs_form"    : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -213,7 +213,7 @@ default_data_endpoints_config = [
         "app_version"   : version,
         "method"        : "DELETE",
         "help"          : u"define the endpoint to get data for : an user ",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -232,7 +232,7 @@ default_data_endpoints_config = [
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : an user ",
         "needs_form"    : True,
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -247,9 +247,9 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "filters",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "available_views" : ['VIEW_LIST', 'VIEW_MAP'],
-        "has_shuffle"  : True,
+        "has_shuffle"  : False,
         "has_pagination" : False,
         "has_export" : True,
         "pagination_options" : {
@@ -262,10 +262,10 @@ default_data_endpoints_config = [
         },
 
         "placeholder"   : [
-          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un lieu" }
+          {"locale" : "en", "text" : "Enter the name of a project"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un projet" }
         ],
         "items_found"   : [
-          {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "lieux trouvés" }
+          {"locale" : "en", "text" : "files found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "fiches trouvées" }
         ],
         "stats_text"   : [
           {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
@@ -275,7 +275,7 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1",  
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/606248c7328ed71f6f4513a9",  
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -284,85 +284,97 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          {	"name"		: u"result_context__",
+          {	"name"		: u"CATEG_CODE__",  
             "id"      : "filter_1",
-            "col_name" : "result_context",
+            "col_name" : "CATEG_CODE",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Areas"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Départements" }],
+            "filter_title" : [{"locale" : "en", "text" : "Categories"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Catégories" }],
             "choices"	: [
-              {'name' : u'44  Loire-Atlantique  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
-              {'name' : u'49  Maine-et-Loire  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
-              {'name' : u'53  Mayenne  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
-              {'name' : u'72  Sarthe  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
-              {'name' : u'85  Vendée  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
-
-            ],
-          },
-          {	"name"		: u"TYPOLOGIE__",  
-            "id"      : "filter_2",
-            "col_name" : "TYPOLOGIE",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
-            "choices"	: [
-              {'name' : u'T', 'choice_title' : [{'locale' : 'en', 'text' : 'Renew work'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Renouveler le travail' }]},
-              {'name' : u'O', 'choice_title' : [{'locale' : 'en', 'text' : 'Work together'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Œuvrer ensemble' }]},
-              {'name' : u'D', 'choice_title' : [{'locale' : 'en', 'text' : 'Collectively discover'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Découvrir collectivement' }]},
-              {'name' : u'C', 'choice_title' : [{'locale' : 'en', 'text' : 'Rethink our consumption'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Repenser sa consommation' }]},
-            ],
-          },
-          {	"name"		: u"PUBLICS__",  
-            "id"      : "filter_2",
-            "col_name" : "PUBLICS",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Publics" }],
-            "choices"	: [
-              {'name' : u'Professionnels', 'choice_title' : [{'locale' : 'en', 'text' : 'Professionals'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Professionnels' }]},
-              {'name' : u'Citoyens', 'choice_title' : [{'locale' : 'en', 'text' : 'Citizens'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyens' }]},
+              {'name' : u'PE', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Performances et spectacles' }]},
+              {'name' : u'EX', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Expo photos et projections' }]},
+              {'name' : u'TH', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Théâtre et Lectures' }]},
+              {'name' : u'CO', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Concerts' }]},
+              {'name' : u'IN', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Installations' }]},
+              {'name' : u'PA', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Parcours' }]},
+              {'name' : u'AT', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Ateliers et stages' }]},
+              {'name' : u'EC', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Ecologie et paysage' }]},
+              {'name' : u'PA', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Histoire et patrimoine' }]},
             ],
           },
 
-          {	"name"		: u"MODELE_JURIDIQUE__",  
+          {	"name"		: u"LIEU_DIT_CODE__",
+            "id"      : "filter_2",
+            "col_name" : "LIEU_DIT_CODE",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Lieux dits"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lieux dits" }],
+            "choices"	: [
+              {'name' : u'100_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'La maison' }]},
+              {'name' : u'101_', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'La deuxième cours' }]},
+              {'name' : u'102_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Le dojo' }]},
+              {'name' : u'103_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'La yourte' }]},
+              {'name' : u'104_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'La caravane du boulodrome' }]},
+              {'name' : u'201_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Barque échouée' }]},
+              {'name' : u'202_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cabane perchée' }]},
+
+              {'name' : u'203_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cube' }]},
+              {'name' : u'204_', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Rideau de buis' }]},
+              {'name' : u'205_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Twin Towers' }]},
+              {'name' : u'206_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Mont Parrine' }]},
+              {'name' : u'207_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Banc en pierres' }]},
+              {'name' : u'208_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie de chasse' }]},
+              {'name' : u'209_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "L'arche en pierre" }]},
+              {'name' : u'210_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Escalier des cerisiers' }]},
+              {'name' : u'211_', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Château d’eau de la charbonnière' }]},
+              
+              {'name' : u'212_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Plateforme du bouddha' }]},
+              {'name' : u'213_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Lit en mousse' }]},
+              {'name' : u'214_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Nid géant' }]},
+              {'name' : u'215_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cabane du Mont Rinardas' }]},
+              {'name' : u'216_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cité radieuse' }]},
+              {'name' : u'217_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Le gisant' }]},
+              {'name' : u'301_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Cabanon jardinier' }]},
+              {'name' : u'302_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Fermette' }]},
+              {'name' : u'303_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Voilier' }]},
+              {'name' : u'304_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie du berger' }]},
+              
+              {'name' : u'305_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Bories gauloise' }]},
+              {'name' : u'306_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie du lierre' }]},
+              {'name' : u'307_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie du clapier' }]},
+              {'name' : u'308_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie carrée' }]},
+              {'name' : u'309_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Borie de l’arc' }]},
+              {'name' : u'310_', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Bories de l’aire' }]},
+            ],
+          },
+
+          {	"name"		: u"ANNEE_STR__",
             "id"      : "filter_3",
-            "col_name" : "MODELE_JURIDIQUE",
+            "col_name" : "ANNEE_STR",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Publics"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Modèle juridique" }],
+            "filter_title" : [{"locale" : "en", "text" : "Years"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Années" }],
             "choices"	: [
-              {'name' : u'Association', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Association' }]},
-              {'name' : u'SCIC ou SCOP', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'SCIC ou SCOP' }]},
-              {'name' : u'Collectivité', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Collectivité' }]},
-              {'name' : u'SARL/SAS/SA', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'SARL/SAS/SA' }]},
-              {'name' : u'Autre', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Autre' }]},
-            ],
-          },
-          {	"name"		: u"FABRIQUE_DE_TERRITOIRE__",  
-            "id"      : "filter_4",
-            "col_name" : "FABRIQUE_DE_TERRITOIRE",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "to do"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Fabrique de territoire" }],
-            "choices"	: [
-              {'name' : u'OUI', 'choice_title' : [{'locale' : 'en', 'text' : 'TO DO'},{'locale' : 'es', 'text' : 'TO DO'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Oui' }]},
-              {'name' : u'NON', 'choice_title' : [{'locale' : 'en', 'text' : 'TO DO'},{'locale' : 'es', 'text' : 'TO DO'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Non' }]},
+              {'name' : u'2020', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "2020" }]},
+              {'name' : u'2019', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2019' }]},
+              {'name' : u'2018', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2018' }]},
+              {'name' : u'2017', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2017' }]},
+              {'name' : u'2016', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2016' }]},
+              {'name' : u'2015', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2015' }]},
+              {'name' : u'2014', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2014' }]},
+              {'name' : u'2013', 'choice_title'  : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2013' }]},
+              {'name' : u'2012', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2012' }]},
+              {'name' : u'2011', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2011' }]},
+              {'name' : u'2010', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2010' }]},
+              {'name' : u'2009', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2009' }]},
+              {'name' : u'2008', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2008' }]},
+              {'name' : u'2007', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2007' }]},
+              {'name' : u'2006', 'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'pendiente'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : '2006' }]},
             ],
           },
 
-          {	"name"		: u"SOURCE_codes_temp__",
-            "id"      : "filter_5",
-            "col_name" : "SOURCE_codes",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Sources"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Sources" }],
-            "choices"	: [
-              # {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "CGET"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CGET" }]},
-              # {"name" : u"CGET", "choice_title" : [{"locale" : "en", "text" : "France Tiers-Lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "France Tiers-Lieux" }]},
-              {"name" : u"FTL", "choice_title" : [{"locale" : "en", "text" : "France Tiers-Lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "France Tiers-Lieux" }]},
-              {"name" : u"PiNG", "choice_title" : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "PiNG" }]},
-              {"name" : u"CAPTL", "choice_title" : [{"locale" : "en", "text" : "CAP Tiers-lieux"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "CAP Tiers-lieux" }]},
-            ],
-          },
         ],
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : filters in search navbar",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -372,18 +384,18 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "table",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/606248c7328ed71f6f4513a9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
           {  "app_arg" : "perPage",          "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
-          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "NOM DU LIEU", "type": "str" },
+          {  "app_arg" : "sortBy",           "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "titre_projet", "type": "str" },
           {  "app_arg" : "sortIsDescending", "arg" : "descending",       "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",            "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",          "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
-          {  "app_arg" : "shuffleSeed",      "arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int", "init": True },
+          {  "app_arg" : "shuffleSeed",      "arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int" },
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -392,7 +404,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a view list",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -402,13 +414,13 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "list",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/606248c7328ed71f6f4513a9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 25, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
+          {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 50, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : None , "type": "int", "init": True },
@@ -420,7 +432,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a view list",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -430,14 +442,13 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "detail",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/606248c7328ed71f6f4513a9", ## V2
         "args_options"  : [
-          {  "app_arg" : "dataToken", "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
-          # {  "app_arg" : "itemId",    "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
-          # {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "INDEX", "sep" : "__" }},
-          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "INDEX_SLUG_CLEAN", "sep" : "__" }},
+          {  "app_arg" : "dataToken",  "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
+          # {  "app_arg" : "itemId",     "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
+          {  "app_arg" : "itemId",     "arg" : "item_id", "optional" : False, "in" : ["url"],          "default" : "", "type": "str", "replace_arg": { "arg" : "search_filters", "sub_arg" : "FICHE_ID_SLUG", "sep" : "__" }},
         ],
         "resp_fields" : {
           "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
@@ -446,7 +457,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : a detailled data",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -456,10 +467,10 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "stat",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/606248c7328ed71f6f4513a9", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -516,7 +527,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "POST",
         "help"          : u"define the endpoint to get data for : a stat about the dataset",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -526,17 +537,16 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "map",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/606248c7328ed71f6f4513a9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT,INDEX,NOM DU LIEU",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "result_context,DEPARTEMENT,INDEX_SLUG_CLEAN,NOM DU LIEU",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "FICHE_ID_SLUG,NOM_PROJET",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 
@@ -552,7 +562,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : map results",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 
@@ -562,9 +572,9 @@ default_data_endpoints_config = [
         "is_disabled"   : False,
         "data_type"     : "data",
         "endpoint_type" : "export",
-        "dataset_uri"   : "recherche",
+        "dataset_uri"   : "fiches",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/5e4bac5d328ed74937e075b1", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/606248c7328ed71f6f4513a9", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -580,7 +590,7 @@ default_data_endpoints_config = [
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : export dataset as csv",
-        "apiviz_front_uuid" : uuid_models["uuid_ping_carto"],
+        "apiviz_front_uuid" : uuid_models["uuid_arbories"],
         "is_default"    : True
       },
 

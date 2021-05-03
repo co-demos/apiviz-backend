@@ -25,6 +25,7 @@ uuid_models = {
   "uuid_rhinocc_carto" : "894f8dbe-e073-448b-9c0d-3813d244b57d",
 
   "uuid_covid" : "ebd7910d-5c98-4701-883a-6003a288b37d",
+  "uuid_arbories" : "8a310cce-48bb-4bf9-9797-491b3f87128f",
 
   "uuid_orgues" : "3f3fd562-5202-427f-8ba3-f58d5660aabf",
 
@@ -47,8 +48,9 @@ config_folders = [
 
   "config_decider_ensemble",
   "config_ternum",
-  "config_covid",
   "config_rhinocc_carto",
+  "config_covid",
+  "config_arbories",
 
   "config_etalab_codes",
   "config_orgues",
