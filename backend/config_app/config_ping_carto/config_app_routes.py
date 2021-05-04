@@ -973,7 +973,7 @@ default_routes_config = [
             "tags_separator" : "-",
             "text_color" : "white",
             "background_color" : "primary",
-            "custom_title" : [ { "locale" : "fr", "text" : "Fabbrique de territoire :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Fabrique de territoire :" } ],
             "convert_from_filters" : True, 
           },
         ],
