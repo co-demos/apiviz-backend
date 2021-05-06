@@ -3,7 +3,7 @@ chardet==3.0.4
 Click==7.0
 colorlog==4.0.2
 Flask==1.0.3
-Flask-Cors==3.0.7
+Flask-Cors==3.0.9
 Flask-PyMongo==2.3.0
 gunicorn==19.9.0
 idna==2.8
