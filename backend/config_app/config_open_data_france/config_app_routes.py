@@ -356,7 +356,7 @@ default_routes_config = [
                     "fields" : [
                       { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
                       { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
-                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' portails' }
                     ],
                   },
                   "legend" : {
@@ -429,19 +429,19 @@ default_routes_config = [
                     "fields" : [
                       { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
                       { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
-                      { 'position' : 'field_value' ,      'field' : 'count_com', 'prefix' : 'total : ', 'suffix' : ' lieux' }
+                      { 'position' : 'field_value' ,      'field' : 'count_com', 'prefix' : 'total : ', 'suffix' : ' portails' }
                     ],
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Tiers-lieux / communes",
+                    "title" : "Portails / communes",
                     "scales" : [
-                      { 'value' : '>10 lieux', 'color' : '#723122'},
-                      { 'value' : '7 lieux',   'color' : '#8B4225'},
-                      { 'value' : '5 lieux',   'color' : '#B86B25'},
-                      { 'value' : '2 lieux',   'color' : '#DA9C20'},
-                      { 'value' : '1 lieu',    'color' : '#EED322'},
-                      { 'value' : '0 lieu',    'color' : "#888888"},
+                      { 'value' : '>10 portails', 'color' : '#723122'},
+                      { 'value' : '7 portails',   'color' : '#8B4225'},
+                      { 'value' : '5 portails',   'color' : '#B86B25'},
+                      { 'value' : '2 portails',   'color' : '#DA9C20'},
+                      { 'value' : '1 portail',    'color' : '#EED322'},
+                      { 'value' : '0 portail',    'color' : "#888888"},
                     ]
                   }
                 },
@@ -475,7 +475,7 @@ default_routes_config = [
             "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
+              { "label" : "portails",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
               # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
