@@ -12,6 +12,8 @@ uuid_models = {
 
   "uuid_demo_apiviz" : "89edbf7d-8b63-4088-ad14-ae6779d7698f",
 
+  "uuid_open_data_france" : "94887dab-01cc-4ffa-8181-360471ba2254",
+
   "uuid_apcis" : "f0a482da-28be-4929-a443-f22ecb03ee68",
   "uuid_sonum" : "c5efafab-1733-4ad1-9eb8-d529bc87c481",
   "uuid_tiers_lieux" : "fd9d4302-bddb-4fb1-8f13-d64dfdb66b91",
@@ -39,6 +41,8 @@ uuid_models = {
 config_folders = [
   
   "config_demo_apiviz",
+
+  "config_open_data_france",
 
   "config_apcis",
   "config_sonum",
