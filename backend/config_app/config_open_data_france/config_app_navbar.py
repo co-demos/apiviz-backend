@@ -75,12 +75,12 @@ default_app_navbar = [
             },
             { "is_visible" : True,
               "position"   : "exterior_right",
-              "link_to"    : "https://www.pingbase.net/",
+              "link_to"    : "https://www.opendatafrance.net/",
               "help"       : u"Second menu in navbar",
               "is_external_link" : True,
               "link_type"  : "button", ### link | text | button --- show btn border
               "icon_class" : "",
-              "link_text"  : [{"locale" : "en", "text" : "PiNG"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "retour vers PING" }],
+              "link_text"  : [{"locale" : "en", "text" : "Open data France"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "retour vers Open data France" }],
               "tooltip"    : [{"locale" : "en", "text" : "More infos on the topic"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations sur ce site" }],
               "has_dropdown" : False,
               "dropdowns"  : [

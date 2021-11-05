@@ -140,7 +140,7 @@ default_app_footer = [
             "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_right",
-            "title_block" : [{"locale" : "en", "text" : " "},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : " "}],
+            "title_block" : [{"locale" : "en", "text" : "..."},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "..."}],
             "title_visible" : True,
             "links"       : [
               
