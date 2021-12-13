@@ -262,10 +262,10 @@ default_data_endpoints_config = [
         },
 
         "placeholder"   : [
-          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'un portail" }
+          {"locale" : "en", "text" : "Enter the name of a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tapez le nom d'une organisation" }
         ],
         "items_found"   : [
-          {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "portails trouvés" }
+          {"locale" : "en", "text" : "places found"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "organisations trouvées" }
         ],
         "stats_text"   : [
           {"locale" : "en", "text" : "experimental"},{"locale" : "es", "text" : "experimental"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "expérimental" }
@@ -284,22 +284,48 @@ default_data_endpoints_config = [
 
         "filter_options" : [
 
-          # {	"name"		: u"orgas__",
-          #   "id"      : "filter_1",
-          #   "col_name" : "orgas",
-          #   "dataType" : "text",
-          #   "filter_title" : [{"locale" : "en", "text" : "Orga"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Organisation" }],
-          #   "choices"	: [
-          #     # {'name' : u'44  Loire-Atlantique  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Loire-Atlantique'},{'locale' : 'es', 'text' : 'Loire-Atlantique'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Loire-Atlantique'}, {'locale' : 'fr', 'text' : 'Loire-Atlantique' }]},
-          #     # {'name' : u'49  Maine-et-Loire  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Maine-et-Loire'},{'locale' : 'es', 'text' : 'Maine-et-Loire'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Maine-et-Loire'}, {'locale' : 'fr', 'text' : 'Maine-et-Loire' }]},
-          #     # {'name' : u'53  Mayenne  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Mayenne'},{'locale' : 'es', 'text' : 'Mayenne'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Mayenne'}, {'locale' : 'fr', 'text' : 'Mayenne' }]},
-          #     # {'name' : u'72  Sarthe  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Sarthe'},{'locale' : 'es', 'text' : 'Sarthe'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Sarthe'}, {'locale' : 'fr', 'text' : 'Sarthe' }]},
-          #     # {'name' : u'85  Vendée  Pays de la Loire', 'choice_title' : [{'locale' : 'en', 'text' : 'Vendée'},{'locale' : 'es', 'text' : 'Vendée'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : 'Vendée'}, {'locale' : 'fr', 'text' : 'Vendée' }]},
-          #   ],
-          # },
+          {	"name"		: u"tranche_pop__",
+            "id"      : "filter_1",
+            "col_name" : "tranche_pop",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Orga"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tranche de population" }],
+            "choices"	: [
+              {'name' : u'0_1', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'moins de 1000 habitants' }]},
+              {'name' : u'1_5', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1001 et 5000 habitants' }]},
+              {'name' : u'5_10', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 5001 et 10000 habitants' }]},
+              {'name' : u'10_25', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 10001 et 25000 habitants' }]},
+              {'name' : u'25_50', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 25001 et 50000 habitants' }]},
+              {'name' : u'50_100', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 50001 et 100000 habitants' }]},
+              {'name' : u'100_250', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 100001 et 250000 habitants' }]},
+              {'name' : u'250_500', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 250001 et 500000 habitants' }]},
+              {'name' : u'500_1000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 500001 et 1000000 habitants' }]},
+              {'name' : u'1000_5000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'plus de 1000000 habitants' }]},
+              {'name' : u'na', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
+            ],
+          },
+
+          {	"name"		: u"type__",  
+            "id"      : "filter_2",
+            "col_name" : "type",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Type"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type d'organisation" }],
+            "choices"	: [
+              {'name' : u'COM', 'choice_title' : [{'locale' : 'en', 'text' : 'COM'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Commune" }]},
+              {'name' : u'CC', 'choice_title' : [{'locale' : 'en', 'text' : 'CC'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Communauté de Communes" }]},
+              {'name' : u'CA', 'choice_title' : [{'locale' : 'en', 'text' : 'CA'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Communauté d'Agglomération" }]},
+              {'name' : u'CU', 'choice_title' : [{'locale' : 'en', 'text' : 'CU'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Communauté Urbaine" }]},
+              {'name' : u'EPT', 'choice_title' : [{'locale' : 'en', 'text' : 'CEPT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Etab. Public Territorial, rattaché à la Métropole du Grand Paris" }]},
+              {'name' : u'MET', 'choice_title' : [{'locale' : 'en', 'text' : 'CMET'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Métropole" }]},
+              {'name' : u'DEP', 'choice_title' : [{'locale' : 'en', 'text' : 'DEP'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Département" }]},
+              {'name' : u'REG', 'choice_title' : [{'locale' : 'en', 'text' : 'REG'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Région" }]},
+              {'name' : u'AGCT', 'choice_title' : [{'locale' : 'en', 'text' : 'AGCT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Autre Groupement de Coll. Terr : SMI, GIP, ..." }]},
+              {'name' : u'OACT', 'choice_title' : [{'locale' : 'en', 'text' : 'OACT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Organisme Associé de Coll. Terr. : Office de Tourisme, Régie de transport, ..." }]},
+              {'name' : u'DSPT', 'choice_title' : [{'locale' : 'en', 'text' : 'CDSPT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : "Délégataire de Serivce Public Territoriaux : opérateurs privés, Soc. d'Economie Mixte,..." }]},
+            ],
+          },
 
           {	"name"		: u"platform__",  
-            "id"      : "filter_2",
+            "id"      : "filter_3",
             "col_name" : "platform",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Platform"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plateforme" }],
@@ -321,31 +347,11 @@ default_data_endpoints_config = [
             ],
           },
 
-          {	"name"		: u"type__",  
-            "id"      : "filter_3",
-            "col_name" : "type",
-            "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Type"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Type" }],
-            "choices"	: [
-              {'name' : u'AGCT', 'choice_title' : [{'locale' : 'en', 'text' : 'AGCT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'AGCT' }]},
-              {'name' : u'CA', 'choice_title' : [{'locale' : 'en', 'text' : 'CA'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'CA' }]},
-              {'name' : u'CC', 'choice_title' : [{'locale' : 'en', 'text' : 'CC'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'CC' }]},
-              {'name' : u'COM', 'choice_title' : [{'locale' : 'en', 'text' : 'COM'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'COM' }]},
-              {'name' : u'CU', 'choice_title' : [{'locale' : 'en', 'text' : 'CU'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'CU' }]},
-              {'name' : u'DEP', 'choice_title' : [{'locale' : 'en', 'text' : 'DEP'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'DEP' }]},
-              {'name' : u'CODSPT', 'choice_title' : [{'locale' : 'en', 'text' : 'CDSPT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'DSPT' }]},
-              {'name' : u'COEPT', 'choice_title' : [{'locale' : 'en', 'text' : 'CEPT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'EPT' }]},
-              {'name' : u'COMET', 'choice_title' : [{'locale' : 'en', 'text' : 'CMET'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'MET' }]},
-              {'name' : u'OACT', 'choice_title' : [{'locale' : 'en', 'text' : 'OACT'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'OACT' }]},
-              {'name' : u'REG', 'choice_title' : [{'locale' : 'en', 'text' : 'REG'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'REG' }]},
-            ],
-          },
-
           {	"name"		: u"tags__",  
             "id"      : "filter_4",
             "col_name" : "tags",
             "dataType" : "text",
-            "filter_title" : [{"locale" : "en", "text" : "Tags"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tags" }],
+            "filter_title" : [{"locale" : "en", "text" : "Tags"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etiquettes" }],
             "choices"	: [
               {'name' : u'Administratif', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Administratif' }]},
               {'name' : u'Citoyenneté', 'choice_title' : [{'locale' : 'en', 'text' : 'to do'},{'locale' : 'es', 'text' : 'to do'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Citoyenneté' }]},

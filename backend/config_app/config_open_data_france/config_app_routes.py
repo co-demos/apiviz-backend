@@ -93,7 +93,7 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un portail" }],
+          "link_text"  : [{"locale" : "en", "text" : "Search for a place"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher une organisation" }],
           "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
@@ -356,20 +356,20 @@ default_routes_config = [
                     "fields" : [
                       { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
                       { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
-                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' portails' }
+                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' organisations' }
                     ],
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Portails / département",
+                    "title" : "Organisations / département",
                     "scales" : [
-                      { 'value' : '>30 Portails', 'color' : '#106268'},
-                      { 'value' : '20 Portails',  'color' : '#10685c'},
-                      { 'value' : '15 Portails',  'color' : '#158b7b'},
-                      { 'value' : '10 Portails',  'color' : '#18a28f'},
-                      { 'value' : '5 Portails',   'color' : '#42b2a3'},
-                      { 'value' : '1 Portail',   'color' : '#6cc3b7'},
-                      { 'value' : '0 Portail',    'color' : "#f2f3f3"},
+                      { 'value' : '>30 organisations', 'color' : '#106268'},
+                      { 'value' : '20 organisations',  'color' : '#10685c'},
+                      { 'value' : '15 organisations',  'color' : '#158b7b'},
+                      { 'value' : '10 organisations',  'color' : '#18a28f'},
+                      { 'value' : '5 organisations',   'color' : '#42b2a3'},
+                      { 'value' : '1 organisation',   'color' : '#6cc3b7'},
+                      { 'value' : '0 organisation',    'color' : "#f2f3f3"},
                     ]
                   }
 
@@ -429,19 +429,19 @@ default_routes_config = [
                     "fields" : [
                       { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
                       { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
-                      { 'position' : 'field_value' ,      'field' : 'count_com', 'prefix' : 'total : ', 'suffix' : ' portails' }
+                      { 'position' : 'field_value' ,      'field' : 'count_com', 'prefix' : 'total : ', 'suffix' : ' organisations' }
                     ],
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Portails / communes",
+                    "title" : "Organisations / communes",
                     "scales" : [
-                      { 'value' : '>10 portails', 'color' : '#723122'},
-                      { 'value' : '7 portails',   'color' : '#8B4225'},
-                      { 'value' : '5 portails',   'color' : '#B86B25'},
-                      { 'value' : '2 portails',   'color' : '#DA9C20'},
-                      { 'value' : '1 portail',    'color' : '#EED322'},
-                      { 'value' : '0 portail',    'color' : "#888888"},
+                      { 'value' : '>10 organisations', 'color' : '#723122'},
+                      { 'value' : '7 organisations',   'color' : '#8B4225'},
+                      { 'value' : '5 organisations',   'color' : '#B86B25'},
+                      { 'value' : '2 organisations',   'color' : '#DA9C20'},
+                      { 'value' : '1 organisation',    'color' : '#EED322'},
+                      { 'value' : '0 organisation',    'color' : "#888888"},
                     ]
                   }
                 },
@@ -475,7 +475,7 @@ default_routes_config = [
             "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
-              { "label" : "portails",         "layers" : [ "all-points" ], "default_visible" : True }, 
+              { "label" : "organisations",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
               # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
@@ -542,7 +542,7 @@ default_routes_config = [
           "position"   : "middle_right",
           "link_type"  : "link",
           "icon_class" : "",
-          "link_text"  : [{"locale" : "en", "text" : "Search for a portal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher un portail" }],
+          "link_text"  : [{"locale" : "en", "text" : "Search for a portal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Recherher une organisation" }],
           "tooltip"    : [{"locale" : "en", "text" : "Search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Rechercher" }],
         },
 
@@ -597,28 +597,42 @@ default_routes_config = [
             "is_table_head" : True,
             "position" : "col_1",
             "is_sortable" : True,
+            "custom_title" : [ { "locale" : "fr", "text" : "nom de l'organisation" }],
           },
           { "field" : "depcode",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "col_2",
             "is_sortable" : True,
+            "custom_title" : [ { "locale" : "fr", "text" : "département" }],
           },
           { "field" : "platform",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "has_link_to_detail" : True,
-            "is_table_head" : True,
+            # "has_link_to_detail" : True,
+            # "is_table_head" : True,
             "position" : "col_3",
             "is_sortable" : False,
+            "custom_title" : [ { "locale" : "fr", "text" : "Plateforme" }],
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field" : "orgas",
+          { "field" : "type",
             "field_format" : { "trim" : 50, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
-            "has_link_to_detail" : True,
-            "is_table_head" : True,
+            # "has_link_to_detail" : False,
+            # "is_table_head" : True,
             "position" : "col_4",
             "is_sortable" : False,
+            "custom_title" : [ { "locale" : "fr", "text" : "Type d'organisation" }],
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "primary",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
           # { "field"       : "tags",
           #   "field_format" : { "trim" : 20, "type" : "object", "retrieve" : [0] },
