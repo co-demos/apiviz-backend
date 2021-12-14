@@ -275,7 +275,7 @@ default_data_endpoints_config = [
         ],
 
         "content"       : u"apiviz default API endpoint for navbar filters",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61851058328ed7248be623f7",  
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61b8eedc328ed773d00efa16",  
         "args_options"  : [
           {  "app_arg" : "dataToken",      "arg" : "token",             "optional" : True, "in" : ["url","header"],   "default" : "",   "type": "str" },
           {  "app_arg" : "filtersList",    "arg" : "get_filters",       "optional" : False, "in" : ["url"],           "default" : True, "type": "bool" }, # also working with dsi?
@@ -290,17 +290,17 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Orga"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Tranche de population" }],
             "choices"	: [
-              {'name' : u'0_1', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'moins de 1 000 habitants' }]},
-              {'name' : u'1_5', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 000 et 5 000 habitants' }]},
-              {'name' : u'5_10', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 5 000 et 10 000 habitants' }]},
-              {'name' : u'10_25', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 000 et 25 000 habitants' }]},
-              {'name' : u'25_50', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 25 000 et 50 000 habitants' }]},
-              {'name' : u'50_100', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 50 000 et 100 000 habitants' }]},
-              {'name' : u'100_250', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 100 000 et 250 000 habitants' }]},
-              {'name' : u'250_500', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 250 000 et 500 000 habitants' }]},
-              {'name' : u'500_1000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 500 000 et 1 000 000 habitants' }]},
-              {'name' : u'1000_5000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'plus de 1 000 000 habitants' }]},
-              {'name' : u'na', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
+              {'name' : u'p_0_1', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'moins de 1 000 habitants' }]},
+              {'name' : u'p_1_5', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 000 et 5 000 habitants' }]},
+              {'name' : u'p_5_10', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 5 000 et 10 000 habitants' }]},
+              {'name' : u'p_10_25', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 000 et 25 000 habitants' }]},
+              {'name' : u'p_25_50', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 25 000 et 50 000 habitants' }]},
+              {'name' : u'p_50_100', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 50 000 et 100 000 habitants' }]},
+              {'name' : u'p_100_250', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 100 000 et 250 000 habitants' }]},
+              {'name' : u'p_250_500', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 250 000 et 500 000 habitants' }]},
+              {'name' : u'p_500_1000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 500 000 et 1 000 000 habitants' }]},
+              {'name' : u'p_1000_5000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'plus de 1 000 000 habitants' }]},
+              {'name' : u'p_na', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -310,15 +310,15 @@ default_data_endpoints_config = [
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Orga"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Nombre de jeux de données publiés" }],
             "choices"	: [
-              {'name' : u'1_5', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 et 5 jeux de données' }]},
-              {'name' : u'6_10', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 6 et 10 jeux de données' }]},
-              {'name' : u'11_25', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 11 et 25 jeux de données' }]},
-              {'name' : u'26_50', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 26 et 50 jeux de données' }]},
-              {'name' : u'51_100', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 51 et 100 jeux de données' }]},
-              {'name' : u'101_250', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 101 et 250 jeux de données' }]},
-              {'name' : u'251_500', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 251 et 500 jeux de données' }]},
-              {'name' : u'501_5000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'plus de 500 jeux de données' }]},
-              {'name' : u'na', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
+              {'name' : u'd_1_5', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 1 et 5 jeux de données' }]},
+              {'name' : u'd_6_10', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 6 et 10 jeux de données' }]},
+              {'name' : u'd_11_25', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 11 et 25 jeux de données' }]},
+              {'name' : u'd_26_50', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 26 et 50 jeux de données' }]},
+              {'name' : u'd_51_100', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 51 et 100 jeux de données' }]},
+              {'name' : u'd_101_250', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 101 et 250 jeux de données' }]},
+              {'name' : u'd_251_500', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'entre 251 et 500 jeux de données' }]},
+              {'name' : u'd_501_5000', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'plus de 500 jeux de données' }]},
+              {'name' : u'd_na', 'choice_title' : [{'locale' : 'en', 'text' : '_'},{'locale' : 'es', 'text' : '_'},{'locale' : 'tr', 'text' : ''},{'locale' : 'de', 'text' : '_'}, {'locale' : 'fr', 'text' : 'Non renseigné' }]},
             ],
           },
 
@@ -446,7 +446,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "table",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61b8eedc328ed773d00efa16", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",        "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",             "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -476,7 +476,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "list",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for list results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61b8eedc328ed773d00efa16", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
@@ -504,7 +504,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "detail",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for detailled results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61b8eedc328ed773d00efa16", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",     "optional" : True,  "in" : ["url","header"],   "default" : "", "type": "str" },
           # {  "app_arg" : "itemId",    "arg" : "item_id",   "optional" : False, "in" : ["url"],           "default" : "", "type": "str" },
@@ -533,7 +533,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for stats results",
 
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one_stats/61b8eedc328ed773d00efa16", ## V2
 
         "args_options"  : [
           {  "app_arg" : "dataToken", "arg" : "token",          "optional" : True, "in" : ["url","header"], "default" : "", "type": "str" },
@@ -603,7 +603,7 @@ default_data_endpoints_config = [
         "dataset_uri"   : "recherche",
 
         "content"       : u"apiviz default API endpoint for map results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/infos/get_one/61b8eedc328ed773d00efa16", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"], "default" : "",   "type": "str" },
 
@@ -638,7 +638,7 @@ default_data_endpoints_config = [
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/61851058328ed7248be623f7", ## V2
+        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/61b8eedc328ed773d00efa16", ## V2
         "args_options"  : [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
