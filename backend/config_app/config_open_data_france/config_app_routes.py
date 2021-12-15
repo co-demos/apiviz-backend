@@ -331,7 +331,7 @@ default_routes_config = [
               "is_live_data"        : False,
               "refresh_delay"       : 3000,
 
-              "is_drawer_open"      : True,
+              "is_drawer_open"      : False,
 
               "is_source_distant"   : True,
               # "distant_source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements-version-simplifiee.geojson", 
@@ -393,7 +393,7 @@ default_routes_config = [
                   },
                   "legend" : {
                     "position" : "bottom-right", 
-                    "title" : "Organisations / département",
+                    "title" : "Légende",
                     "scales" : [
                       # { 'value' : '>30 organisations', 'color' : '#106268'},
                       # { 'value' : '20 organisations',  'color' : '#10685c'},
@@ -402,11 +402,11 @@ default_routes_config = [
                       # { 'value' : '5 organisations',   'color' : '#42b2a3'},
                       # { 'value' : '1 organisation',   'color' : '#6cc3b7'},
                       # { 'value' : '0 organisation',    'color' : "#f2f3f3"},
-                      { 'value' : '> 30 organisations', 'color' : '#106268'},
-                      { 'value' : '10 à 30 organisations',  'color' : '#158b7b'},
-                      { 'value' : '5 à 9 organisations',   'color' : '#67c1b5'},
-                      { 'value' : '1 à 4 organisations',   'color' : '#d2ede9'},
-                      { 'value' : '0 organisation',    'color' : "#f2f3f3"},
+                      { 'value' : '> 30 organisations par département', 'color' : '#106268'},
+                      { 'value' : '10 à 30 organisations par département',  'color' : '#158b7b'},
+                      { 'value' : '5 à 9 organisations par département',   'color' : '#67c1b5'},
+                      { 'value' : '1 à 4 organisations par département',   'color' : '#d2ede9'},
+                      { 'value' : '0 organisation par département',    'color' : "#f2f3f3"},
                     ]
                   }
 

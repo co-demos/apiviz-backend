@@ -65,14 +65,14 @@ default_app_footer = [
             "title_visible" : True,
             "links"       : [
 
-              { "is_visible" : True,
-                "link_to"    : "https://www.etalab.gouv.fr/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Etalab"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etalab" }],
-                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
-              },
+              # { "is_visible" : True,
+              #   "link_to"    : "https://www.etalab.gouv.fr/",
+              #   "is_external_link" : True,
+              #   "link_type"  : "text",
+              #   "icon_class" : "",
+              #   "link_text"  : [{"locale" : "en", "text" : "Etalab"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Etalab" }],
+              #   "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              # },
               { "is_visible" : True,
                 "link_to"    : "https://www.numerique.gouv.fr/dinum/",
                 "is_external_link" : True,
@@ -97,14 +97,14 @@ default_app_footer = [
                 "link_text"  : [{"locale" : "en", "text" : "Banque des territoires"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Banque des territoires" }],
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
-              { "is_visible" : True,
-                "link_to"    : "https://www.caissedesdepots.fr/",
-                "is_external_link" : True,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Caisse des dépôts et consignations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Caisse des dépôts et consignations" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-              },
+              # { "is_visible" : True,
+              #   "link_to"    : "https://www.caissedesdepots.fr/",
+              #   "is_external_link" : True,
+              #   "link_type"  : "text",
+              #   "icon_class" : "",
+              #   "link_text"  : [{"locale" : "en", "text" : "Caisse des dépôts et consignations"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Caisse des dépôts et consignations" }],
+              #   "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              # },
             ]
           },
 
