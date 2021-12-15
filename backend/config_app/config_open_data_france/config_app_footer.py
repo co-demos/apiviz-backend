@@ -82,6 +82,14 @@ default_app_footer = [
                 "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
               },
               { "is_visible" : True,
+                "link_to"    : "https://agence-cohesion-territoires.gouv.fr/",
+                "is_external_link" : True,
+                "link_type"  : "text",
+                "icon_class" : "",
+                "link_text"  : [{"locale" : "en", "text" : "ANCT"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "ANCT" }],
+                "tooltip"    : [{"locale" : "en", "text" : "More infos"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Plus d’informations" }]
+              },
+              { "is_visible" : True,
                 "link_to"    : "https://www.banquedesterritoires.fr/",
                 "is_external_link" : True,
                 "link_type"  : "text",
@@ -152,14 +160,14 @@ default_app_footer = [
                 "link_text"  : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Mentions légales" }],
                 "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
               },
-              { "is_visible" : True,
-                "link_to"    : "/outils",
-                "is_external_link" : False,
-                "link_type"  : "text",
-                "icon_class" : "",
-                "link_text"  : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils" }],
-                "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
-              },
+              # { "is_visible" : True,
+              #   "link_to"    : "/outils",
+              #   "is_external_link" : False,
+              #   "link_type"  : "text",
+              #   "icon_class" : "",
+              #   "link_text"  : [{"locale" : "en", "text" : "Our tools"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les outils" }],
+              #   "tooltip"    : [{"locale" : "en", "text" : "See the source code"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Voir le code" }]
+              # },
             ]
           },
 
