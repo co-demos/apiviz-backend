@@ -1684,7 +1684,7 @@ default_routes_config = [
         "is_global_app_homepage" : True,
         "route_title"       : u"Outils",
         "route_description" : u"apiviz default tools page",
-        "route_activated"   : True,
+        "route_activated"   : False,
         "banner" : {
           "activated"  : False,
           "banner_uri" : ""
