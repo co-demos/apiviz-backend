@@ -92,8 +92,8 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/co-demos/ODF-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"Carto Open data France",
-        "content_text" : [{"locale" : "en", "text" : "A lookout at third places in Loire region"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "carte de l'observatoire open data"}],
+        "content"      : u"OpenDataFrance - Carte de l'observatoire open data",
+        "content_text" : [{"locale" : "en", "text" : "A lookout at third places in Loire region"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Carte de l'observatoire open data"}],
         "content_size" : 7,
         "is_in_navbar" : True,
         # "title_color" : "primary",
