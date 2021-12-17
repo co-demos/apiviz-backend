@@ -116,7 +116,7 @@ default_app_footer = [
             "link_class"  : { "value" : 'has-text-centered', "default" : "" },
 
             "position"    : "block_top_center_right",
-            "title_block" : [{"locale" : "en", "text" : "OpenDataFrance"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Open data France"}],
+            "title_block" : [{"locale" : "en", "text" : "OpenDataFrance"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "OpenDataFrance"}],
             "title_visible" : True,
             "links"       : [
 
