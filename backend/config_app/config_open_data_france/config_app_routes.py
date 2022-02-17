@@ -343,12 +343,79 @@ default_routes_config = [
               ### list of choropleth sources
               "sources" : [
 
+                { ### FR - régions
+                  "is_activated" : True,
+                  "source_id" : "chorosource-regions",
+                  "layer_id"  : "chorolayer-regions",
+                  "is_default_visible" : True,
+                  "max_zoom" : 10,
+                  "min_zoom" : 0,
+
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions-version-simplifiee.geojson", 
+                  "update_src_from_previous_layer" : False,
+
+                  "need_aggregation" : True,
+                  "polygon_prop_id" : "code",
+                  # "agregate_data_from_source" : "allPointsSource",
+                  "join_polygon_id_to_field"  : "reg_code_geo",
+                  "agregated_data_field"      : "count_reg",
+                  'fill_color': [
+                    'interpolate',
+                    ['linear'],
+                    ['get', 'count_reg' ],
+                    # 0,  "#f2f3f3",
+                    # 1,  '#6cc3b7',
+                    # 5,  '#42b2a3',
+                    # 10, '#18a28f',
+                    # 15, '#158b7b',
+                    # 20, '#10685c',
+                    # 30, '#106268'
+                    0,  '#f2f3f3',
+                    1,  '#d2ede9',
+                    25,  '#67c1b5',
+                    75,  '#18a28f',
+                    100, '#158b7b',
+                    150, '#106268'
+                  ],
+                  "fill_opacity"        : 0.3,
+                  "fill_outline_color"  : "#004494",
+
+                  "has_popup" : True, 
+                  "popup_config" : {
+                    "action" : 'mousemove',
+                    "fields" : [
+                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                      { 'position' : 'field_value' ,      'field' : 'count_reg', 'prefix' : 'total : ', 'suffix' : ' organisations' }
+                    ],
+                  },
+                  "legend" : {
+                    "position" : "bottom-right", 
+                    "title" : "Légende",
+                    "scales" : [
+                      # { 'value' : '>30 organisations', 'color' : '#106268'},
+                      # { 'value' : '20 organisations',  'color' : '#10685c'},
+                      # { 'value' : '15 organisations',  'color' : '#158b7b'},
+                      # { 'value' : '10 organisations',  'color' : '#18a28f'},
+                      # { 'value' : '5 organisations',   'color' : '#42b2a3'},
+                      # { 'value' : '1 organisation',   'color' : '#6cc3b7'},
+                      # { 'value' : '0 organisation',    'color' : "#f2f3f3"},
+                      { 'value' : '> 30 organisations par région', 'color' : '#106268'},
+                      { 'value' : '10 à 30 organisations par région',  'color' : '#158b7b'},
+                      { 'value' : '5 à 9 organisations par région',   'color' : '#67c1b5'},
+                      { 'value' : '1 à 4 organisations par région',   'color' : '#d2ede9'},
+                      { 'value' : '0 organisation par région',    'color' : "#f2f3f3"},
+                    ]
+                  }
+
+                },
+                
                 { ### FR - departements
                   "is_activated" : True,
                   "source_id" : "chorosource-departements",
                   "layer_id"  : "chorolayer-departements",
-                  "is_default_visible" : True,
-                  "max_zoom" : 9,
+                  "is_default_visible" : False,
+                  "max_zoom" : 10,
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
@@ -382,15 +449,15 @@ default_routes_config = [
                   "fill_opacity"        : 0.5,
                   "fill_outline_color"  : "#004494",
 
-                  "has_popup" : True, 
-                  "popup_config" : {
-                    "action" : 'mousemove',
-                    "fields" : [
-                      { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
-                      { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
-                      { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' organisations' }
-                    ],
-                  },
+                  "has_popup" : False, 
+                  # "popup_config" : {
+                  #   "action" : 'mousemove',
+                  #   "fields" : [
+                  #     { 'position' : 'field_title' ,      'field' : 'nom',       'prefix' : None,       'suffix' : None },
+                  #     { 'position' : 'field_title_post' , 'field' : 'code',      'prefix' : ' (',       'suffix' : ')' },
+                  #     { 'position' : 'field_value' ,      'field' : 'count_dep', 'prefix' : 'total : ', 'suffix' : ' organisations' }
+                  #   ],
+                  # },
                   "legend" : {
                     "position" : "bottom-right", 
                     "title" : "Légende",
@@ -512,9 +579,10 @@ default_routes_config = [
             "is_activated" : True,
             "is_drawer_open" : False,
             "layers_switches" : [ 
+              { "label" : "régions" , "layers" : [ "chorolayer-regions" ], "default_visible" : True }, 
+              { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : False }, 
               { "label" : "organisations", "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts" ], "default_visible" : False }, 
-              # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
               # { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : False }, 
               # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
