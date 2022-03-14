@@ -153,8 +153,8 @@ default_global_config = [
       { "field"       : "app_logo",
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_terrnum_mini_fb_white.png",
-        # "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1.png",
-        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/logo_terrnum_mini_fb_white.png",
+        # "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/mednumbfc-logo-1.png",
+        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/logo_terrnum_mini_fb_white.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_doubs_inclusion"],
@@ -164,7 +164,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/logos/mednumbfc-logo-1-mini.png",
+        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/mednumbfc-logo-1-mini.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_doubs_inclusion"],
@@ -178,7 +178,7 @@ default_global_config = [
 
         "can_be_used_as_model" : True,
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
-        "image_preview" : "https://raw.githubusercontent.com/co-demos/PING-carto/master/documentation/screenshots/map-view-tiers-lieux-01.png",
+        "image_preview" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"cartographie MedNum BFC",
         "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie des lieux de médiation numérique en BFC"}],

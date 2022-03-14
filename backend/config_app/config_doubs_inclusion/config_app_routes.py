@@ -42,8 +42,8 @@ default_routes_config = [
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/home.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/home.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/home.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/home.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/home.html" }
         ],
@@ -119,32 +119,32 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_id",
           # },
-          { "field" : "bfc_id",
+          { "field" : "carto_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
           },
-          { "field" : "adresse", 
+          { "field" : "ADRESSE", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_address",
           },
-          { "field" : "ville",
+          { "field" : "VILLE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_city",
           },
-          { "field" : "nom_structure", 
+          { "field" : "NOM_DISPOSITIF", 
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_title",
           },
-          { "field" : "url_illustration",
-            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-            "is_visible" : True,
-            "position" : "block_image",
-          },
-          { "field"       : "code_typo",
+          # { "field" : "url_illustration",
+          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+          #   "is_visible" : True,
+          #   "position" : "block_image",
+          # },
+          { "field"       : "TYPE_STRUCTURE",
             "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags",
@@ -155,24 +155,24 @@ default_routes_config = [
             "custom_title" : "Typologies",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field"       : "code_label",
-            "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
-            "is_visible"  : True,
-            "position"    : "block_tags_bis",
-            "is_tag_like" : True,
-            "tags_separator" : "-",
-            "text_color" : "white",
-            "background_color" : "light",
-            "custom_title" : "Labellisation",
-            "locale" : "fr",
-            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
-          },
-          { "field"       : "url_lieu",
+          # { "field"       : "code_label",
+          #   "field_format" : { "trim" : 30, "type" : "object", "retrieve" : [0] },
+          #   "is_visible"  : True,
+          #   "position"    : "block_tags_bis",
+          #   "is_tag_like" : True,
+          #   "tags_separator" : "-",
+          #   "text_color" : "white",
+          #   "background_color" : "light",
+          #   "custom_title" : "Labellisation",
+          #   "locale" : "fr",
+          #   "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          # },
+          { "field"       : "WEBSITE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_url",
           },
-          { "field"       : "contact_tel",
+          { "field"       : "N_TEL",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_phone",
@@ -353,13 +353,14 @@ default_routes_config = [
                   "min_zoom" : 0,
 
                   # "next_layer_id"  : "chorolayer-communes",
-                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/bourgogne-franche-comte/departements-bourgogne-franche-comte.geojson", 
+                  # "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/regions/bourgogne-franche-comte/departements-bourgogne-franche-comte.geojson", 
+                  "source_url" : "https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements/25-doubs/communes-25-doubs.geojson", 
                   "update_src_from_previous_layer" : False,
 
                   "need_aggregation" : True,
                   "polygon_prop_id" : "code",
                   # "agregate_data_from_source" : "allPointsSource",
-                  "join_polygon_id_to_field"  : "departement",
+                  "join_polygon_id_to_field"  : "COM_CODE",
                   "agregated_data_field"      : "count_dep",
                   # "fill_color"          : "#888888",
                   'fill_color': [
@@ -604,7 +605,7 @@ default_routes_config = [
           #   "custom_title" : None,
           #   "locale" : "fr"
           # },
-          { "field" : "bfc_id",
+          { "field" : "carto_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : False,
             "is_id_field" : True,
@@ -749,7 +750,7 @@ default_routes_config = [
           #   "is_visible" : True,
           #   "position" : "block_id",
           # },
-          { "field" : "bfc_id",
+          { "field" : "carto_id",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
             "position" : "block_id",
@@ -1420,7 +1421,7 @@ default_routes_config = [
     ### CUSTOM ROUTES-PAGES --> TO BE ADDED VIA BACK OFFICE BY ADMIN USER
     ### - - - - - - - - - - - - - - - - - ###
 
-      ### PAGE - TERNUM
+      ### PAGE - DOUBS
       { "field"             : "tl_mednum_bfc",
         "is_global_app_homepage" : True,
         "route_title"       : u"Home",
@@ -1445,8 +1446,8 @@ default_routes_config = [
         "dataset_uri"       : "recherche",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mednum-bfc.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/mednum-bfc.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/mednum-bfc.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mednum-bfc.html" }
         ],
@@ -1502,8 +1503,8 @@ default_routes_config = [
         "dataset_uri"       : "recherche",
         
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/les-données.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/les-données.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/les-données.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/les-données.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/les-données.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/les-données.html" }
         ],
@@ -1559,8 +1560,8 @@ default_routes_config = [
       #   "dataset_uri"       : "recherche",
         
       #   "template_urls"     : [
-      #     # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/export-data.html" },
-      #     # { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/export-data.html" },
+      #     # { "locale" : "fr", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/export-data.html" },
+      #     # { "locale" : "en", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/export-data.html" },
       #     { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/export-data.html" },
       #     { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/export-data.html" }
       #   ],
@@ -1663,8 +1664,8 @@ default_routes_config = [
         "dataset_uri"       : "recherche",
 
         "template_urls"     : [
-          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
-          { "locale" : "en", "url" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "fr", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/mentions-legales-fr.html" },
+          { "locale" : "en", "url" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/pages-html/mentions-legales-fr.html" },
           # { "locale" : "fr", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" },
           # { "locale" : "en", "url" : "http://localhost:8800/html/pages-html/mentions-legales-fr.html" }
         ],
