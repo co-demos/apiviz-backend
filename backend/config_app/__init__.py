@@ -26,6 +26,7 @@ uuid_models = {
   "uuid_decider_ensemble" : "b8b52f0c-e66f-4018-bc0b-9ec7d17f8ccc",
   "uuid_ternum" : "e8aff5a7-64b1-46b0-942a-8b16ac53aa3b",
   "uuid_rhinocc_carto" : "894f8dbe-e073-448b-9c0d-3813d244b57d",
+  "uuid_doubs_inclusion" : "f5dd24f4-4bd6-41cb-9d47-fee426fdf78d",
 
   "uuid_covid" : "ebd7910d-5c98-4701-883a-6003a288b37d",
   "uuid_arbories" : "8a310cce-48bb-4bf9-9797-491b3f87128f",
@@ -54,6 +55,7 @@ config_folders = [
 
   "config_decider_ensemble",
   "config_ternum",
+  "config_doubs_inclusion",
   "config_rhinocc_carto",
   "config_covid",
   "config_arbories",
