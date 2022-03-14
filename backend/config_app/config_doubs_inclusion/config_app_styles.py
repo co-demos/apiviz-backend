@@ -22,7 +22,7 @@ default_app_styles_config = [
           'dark'       : '#1b1b1b',
           'link'       : '#4b4d58',
           'link-hover' : '#FF9300' , #'#004494', # '#592d7b',
-          'primary'    : '#28357f',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
+          'primary'    : '#0080c8', #'#428bca', # '#28357f',# '#00c0aa', #'#FF9300' , #'#004494', # '#592d7b',
           'info'       : '#4abcc1',
           'success'    : '#80C2BD',
           'warning'    : '#f3bd80',
@@ -137,10 +137,10 @@ default_app_styles_config = [
         {
           "dataset_uri" : "recherche",
           "images_set"  : [
-            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-3-rect-b.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-4-rect-b.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-5-rect-b.png?raw=true", "credits" : "", "licence" : "" },
-            { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-6-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/LOGO_CD25_colors.jpeg?raw=true", "credits" : "", "licence" : "" },
+          #   { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-4-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+          #   { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-5-rect-b.png?raw=true", "credits" : "", "licence" : "" },
+          #   { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-6-rect-b.png?raw=true", "credits" : "", "licence" : "" },
           ]
         }
       ],

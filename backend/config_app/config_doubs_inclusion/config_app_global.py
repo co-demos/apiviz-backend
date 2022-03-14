@@ -154,7 +154,7 @@ default_global_config = [
         "content"     : u"apiviz default logo in navbar",
         # "url"         : "http://localhost:8800/statics/logos/logo_terrnum_mini_fb_white.png",
         # "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/mednumbfc-logo-1.png",
-        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/logo_terrnum_mini_fb_white.png",
+        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/LOGO_CD25.png",
         "app_version" : version,
         "help"        : u"The official default logo for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_doubs_inclusion"],
@@ -164,7 +164,7 @@ default_global_config = [
     ### FAVICON
       { "field"       : "app_favicon",
         "content"     : u"apiviz default favicon in browser",
-        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/mednumbfc-logo-1-mini.png",
+        "url"           : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/LOGO_CD25.png",
         "app_version" : version,
         "help"        : u"The default favicon for your ApiViz instance",
         "apiviz_front_uuid" : uuid_models["uuid_doubs_inclusion"],
@@ -180,8 +180,8 @@ default_global_config = [
         # "image_preview" : "https://raw.githubusercontent.com/co-demos/apiviz-frontend/master/documentation/screenshots/list-view-apcis-01.png",
         "image_preview" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
-        "content"      : u"cartographie MedNum BFC",
-        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "cartographie des lieux de médiation numérique en BFC"}],
+        "content"      : u"cartographie inclusion numérique Doubs",
+        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "les lieux d'inclusion numérique dans le Doubs"}],
         "content_size" : 7,
         "is_in_navbar" : True,
         # "title_color" : "primary",
@@ -201,7 +201,7 @@ default_global_config = [
       { "field"       : "app_keywords",
         "app_version" : version,
         "help"        : u"Choose a set of keywords for your ApiViz instance",
-        "content"     : u"""dataviz,data visualisation,data visualization,SIG,commons,digital commons,API,opensource,open source,open data,opendata,MIT licence,github,sJS,javascript,python,flask,HTML,CSS,JSON,bulma,Vue.js,sEtalab,co-demos, codemos""",
+        "content"     : u"""dataviz,data visualisation,data visualization,SIG,commons,digital commons,API,opensource,open source,open data,opendata,MIT licence,github,sJS,javascript,python,flask,HTML,CSS,JSON,bulma,Vue.js,sEtalab,co-demos,codemos,multi""",
         "apiviz_front_uuid" : uuid_models["uuid_doubs_inclusion"],
         "is_default"  : True
       },
