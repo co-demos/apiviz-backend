@@ -393,7 +393,7 @@ default_data_endpoints_config = [
           {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
           {  "app_arg" : "page",       "arg" : "page",             "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
           {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 50, "type": "int", "authorized" : [10, 25, 50, 100, 200, 300] },
-          {  "app_arg" : "sortBy",     "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "nom_structure", "type": "str" },
+          {  "app_arg" : "sortBy",     "arg" : "sort_by",          "optional" : True, "in" : ["url"],           "default" : "NOM_DISPOSITIF", "type": "str" },
           {  "app_arg" : "sortIsDescending", "arg" : "descending", "optional" : False, "in" : ["url"],          "default" : False, "type": "bool" },
           {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
           {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
