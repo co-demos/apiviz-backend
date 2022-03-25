@@ -895,7 +895,7 @@ default_routes_config = [
             "tags_separator" : "-",
             "text_color" : "white",
             "background_color" : "light",
-            "custom_title" : [ { "locale" : "fr", "text" : "Etiquette(s) :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Accessibilité :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
           { "field" : "SERVICES",
@@ -906,7 +906,7 @@ default_routes_config = [
             "tags_separator" : "-",
             "text_color" : "white",
             "background_color" : "light",
-            "custom_title" : [ { "locale" : "fr", "text" : "Etiquette(s) :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Service(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
 
