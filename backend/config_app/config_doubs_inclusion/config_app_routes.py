@@ -439,8 +439,8 @@ default_routes_config = [
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ], "default_visible" : False }, 
               # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
-              { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : True }, 
-              # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
+              { "label" : "communes" ,     "layers" : [ "chorolayer-communes" ], "default_visible" : True }, 
+              # { "label" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
