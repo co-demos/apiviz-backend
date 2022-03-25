@@ -327,18 +327,26 @@ default_data_endpoints_config = [
             ],
           },
 
-          {	"name"		: u"TAGS__",  
+          {	"name"		: u"ACCES__",  
             "id"      : "filter_2",
-            "col_name" : "TAGS",
+            "col_name" : "ACCES",
             "dataType" : "text",
             "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
             "choices"	: [
               {'name' : u'acces_libre',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès libre' }]},
               {'name' : u'acces_payant',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès payant' }]},
               {'name' : u'adapt_handicap',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Adapté aux personnes handicapées' }]},
+              {'name' : u'itinerance',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Itinérance' }]},
+            ],
+          },
+          {	"name"		: u"SERVICES__",  
+            "id"      : "filter_3",
+            "col_name" : "SERVICES",
+            "dataType" : "text",
+            "filter_title" : [{"locale" : "en", "text" : "Typologies"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Typologies" }],
+            "choices"	: [
               {'name' : u'accomp_demarches',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accompagnement de démarches' }]},
               {'name' : u'ateliers_formations',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Ateliers et formations' }]},
-              {'name' : u'itinerance',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Itinérance' }]},
               {'name' : u'tierslieux_cowork',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Tiers-lieux et coworking' }]},
             ],
           },
@@ -519,7 +527,7 @@ default_data_endpoints_config = [
 
           {  "app_arg" : "forMap",       "arg" : "map_list",          "optional" : False, "in" : ["url"], "default" : True,        "type": "bool" },
           # {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "INSEEDEP",  "type": "str" },
-          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "COM_CODE,carto_id,NOM_DISPOSITIF,TAGS,TYPE_STRUCTURE,ADRESSE_COMPLETE",  "type": "str" },
+          {  "app_arg" : "defaultValue", "arg" : "fields_to_return",  "optional" : False, "in" : ["url"], "default" : "COM_CODE,carto_id,NOM_DISPOSITIF,ACCES,SERVICES,TYPE_STRUCTURE,ADRESSE_COMPLETE",  "type": "str" },
           # {  "app_arg" : "asLatLng", "arg" : "as_latlng",         "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
           # {  "app_arg" : "onlyGeocoded", "arg" : "only_geocoded", "optional" : False, "in" : ["url"], "default" : True, "type": "bool" },
 
