@@ -211,7 +211,7 @@ default_routes_config = [
           "subdomains"       : 'abcd',
           "center"           : [47.1381272, 6.3691419], #
           "currentCenter"    : [47.1381272, 6.3691419],
-          "zoom"             : 8.5,
+          "zoom"             : 8,
           "maxZoom"          : 18,
           "minZoom"          : 2,
           "useMarkerCluster" : True,
