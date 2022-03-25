@@ -439,8 +439,8 @@ default_routes_config = [
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 
               { "label" : "clusters" ,     "layers" : [ "cluster-circles", "cluster-counts", "unclustered-point" ], "default_visible" : False }, 
               # { "label" : "départements" , "layers" : [ "chorolayer-departements" ], "default_visible" : True }, 
-              { "title" : "communes" ,   "layers" : [ "chorolayer-communes" ], "default_visible" : True }, 
-              # { "title" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
+              { "label" : "communes" ,     "layers" : [ "chorolayer-communes" ], "default_visible" : True }, 
+              # { "label" : "cadastre" ,   "layers" : [ "chorolayer-cadastre" ], "default_visible" : False }, 
               { "label" : "radar" ,        "layers" : [ "heatmap-layer" ], "default_visible" : False }
             ],
           },
@@ -716,7 +716,7 @@ default_routes_config = [
             "background_color" : "primary",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field"       : "TAGS",
+          { "field"       : "SERVICES",
             "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
@@ -887,7 +887,7 @@ default_routes_config = [
             "custom_title" : [ { "locale" : "fr", "text" : "Typologie(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field" : "TAGS",
+          { "field" : "ACCES",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_rb2_tags",
@@ -895,7 +895,18 @@ default_routes_config = [
             "tags_separator" : "-",
             "text_color" : "white",
             "background_color" : "light",
-            "custom_title" : [ { "locale" : "fr", "text" : "Etiquette(s) :" } ],
+            "custom_title" : [ { "locale" : "fr", "text" : "Accessibilité :" } ],
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field" : "SERVICES",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_rb3_tags",
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "light",
+            "custom_title" : [ { "locale" : "fr", "text" : "Service(s) :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
 

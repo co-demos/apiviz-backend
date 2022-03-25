@@ -181,7 +181,7 @@ default_global_config = [
         "image_preview" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/documentation/screenshots/map-view-tiers-lieux-01.png",
 
         "content"      : u"cartographie inclusion numérique Doubs",
-        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "les lieux d'inclusion numérique dans le Doubs"}],
+        "content_text" : [{"locale" : "en", "text" : "cartographie"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Où se faire accompagner dans le numérique ?"}],
         "content_size" : 7,
         "is_in_navbar" : True,
         # "title_color" : "primary",
