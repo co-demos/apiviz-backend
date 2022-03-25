@@ -716,10 +716,22 @@ default_routes_config = [
             "background_color" : "primary",
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
-          { "field"       : "SERVICES",
+          { "field"       : "ACCES",
             "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
             "is_visible"  : True,
             "position"    : "block_tags_bis",
+            "has_tooltip" : True,
+            "is_tag_like" : True,
+            "tags_separator" : "-",
+            "text_color" : "white",
+            "background_color" : "info",
+            "locale" : "fr",
+            "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
+          },
+          { "field"       : "SERVICES",
+            "field_format" : { "trim" : 25, "type" : "object", "retrieve" : [0] },
+            "is_visible"  : True,
+            "position"    : "block_tags_ter",
             "has_tooltip" : True,
             "is_tag_like" : True,
             "tags_separator" : "-",
@@ -741,7 +753,7 @@ default_routes_config = [
         ],
 
         "images_fields"        : {
-          "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : True  },
+          "card_img_main" : { "field" : "", "default" : "img_card",  "is_visible" : False  },
           "card_img_top"  : { "field" : "", "default" : None,        "is_visible" : False },
         },
         "ui_options" : {
@@ -830,11 +842,12 @@ default_routes_config = [
             "is_visible" : True,
             "position" : "block_title",
           },
-          # { "field" : "url_illustration",
-          #   "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
-          #   "is_visible" : True,
-          #   "position" : "block_image",
-          # },
+          { "field" : "ILLUSTRATION",
+            "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
+            "is_visible" : True,
+            "activated": False,
+            "position" : "block_image",
+          },
           { "field" : "ADRESSE_COMPLETE",
             "field_format" : { "trim" : None, "type" : "object", "retrieve" : [0] },
             "is_visible" : True,
@@ -894,7 +907,7 @@ default_routes_config = [
             "is_tag_like" : True,
             "tags_separator" : "-",
             "text_color" : "white",
-            "background_color" : "light",
+            "background_color" : "info",
             "custom_title" : [ { "locale" : "fr", "text" : "Accessibilité :" } ],
             "convert_from_filters" : True, # uses "field" to match with "filter_options.col_name"
           },
@@ -931,7 +944,7 @@ default_routes_config = [
         ],
         
         "images_fields"     : {
-          "card_img_main"  : { "field" : "", "default" : "img_card",  "is_visible" : True,  "position" : "block_right_top_1" },
+          "card_img_main"  : { "field" : "", "default" : None,  "is_visible" : False,  "position" : "block_right_top_1" },
           "card_img_top"   : { "field" : "", "default" : None,        "is_visible" : False, "position" : "block_right_middle" },
         },
 

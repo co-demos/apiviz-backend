@@ -549,27 +549,27 @@ default_data_endpoints_config = [
 
       ### DATA EXPORT
       { "field"         : "tl_data_API_export",
-        "is_visible"    : True,
+        "is_visible"    : False,
         "is_disabled"   : False,
-        # "redirect_to"   : "/recherche/export-data",
-        "redirect_to"   : "/les-données",
+        "redirect_to"   : "https://opendata.doubs.fr/pages/accueil/",
+        # "redirect_to"   : "/les-données",
         "data_type"     : "data",
         "endpoint_type" : "export",
         "dataset_uri"   : "recherche",
         "content"       : u"apiviz default API endpoint for export results",
-        "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/622f18c0328ed713994a00af", ## V2
-        "args_options"  : [
-          {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
-          # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
-          # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
-          # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
-          # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
-          # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
-        ],
-        "resp_fields" : {
-          # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
-          # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
-        },
+        # "root_url"      : "https://solidata-api.co-demos.com/api/dsi/exports/as_csv/622f18c0328ed713994a00af", ## V2
+        # "args_options"  : [
+        #   {  "app_arg" : "dataToken",  "arg" : "token",            "optional" : True, "in" : ["url","header"],  "default" : "", "type": "str" },
+        #   # {  "app_arg" : "page",       "arg" : "page_n",           "optional" : True, "in" : ["url"],           "default" : 1,  "type": "int" },
+        #   # {  "app_arg" : "perPage",    "arg" : "per_page",         "optional" : True, "in" : ["url"],           "default" : 300, "type": "int" },
+        #   # {  "app_arg" : "query",      "arg" : "search_for",       "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+        #   # {  "app_arg" : "filters",    "arg" : "search_filters",   "optional" : True, "in" : ["url"],           "default" : "", "type": "str" },
+        #   # {  "app_arg" : "shuffleSeed","arg" : "shuffle_seed",     "optional" : True, "in" : ["url"],           "default" : 205 , "type": "int" },
+        # ],
+        # "resp_fields" : {
+        #   # "projects" : { "resp_format" : "list", "path" : "data/data_raw/f_data" },
+        #   # "total" :    { "resp_format" : "int",  "path" : "data/data_raw/f_data_count" },
+        # },
         "app_version"    : version,
         "method"        : "GET",
         "help"          : u"define the endpoint to get data for : export dataset as csv",

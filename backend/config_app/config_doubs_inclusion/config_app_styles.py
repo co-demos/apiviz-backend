@@ -137,7 +137,8 @@ default_app_styles_config = [
         {
           "dataset_uri" : "recherche",
           "images_set"  : [
-            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/LOGO_CD25_colors_rect.jpeg?raw=true", "credits" : "", "licence" : "" },
+            { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/illustrations/white_rect.png?raw=true", "credits" : "", "licence" : "" },
+            # { "dft_text" : "img_1", "src_image" : "https://raw.githubusercontent.com/multi-coop/apiviz-config-doubs-inclusion/master/logos/LOGO_CD25_colors_rect.jpeg?raw=true", "credits" : "", "licence" : "" },
           #   { "dft_text" : "img_2", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-4-rect-b.png?raw=true", "credits" : "", "licence" : "" },
           #   { "dft_text" : "img_3", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-5-rect-b.png?raw=true", "credits" : "", "licence" : "" },
           #   { "dft_text" : "img_4", "src_image" : "https://raw.githubusercontent.com/co-demos/BFC-ternum/master/illustrations/Formes_logo-6-rect-b.png?raw=true", "credits" : "", "licence" : "" },
