@@ -254,13 +254,35 @@ default_routes_config = [
               },
 
               "radius_min"          : 2,
-              "radius_max"          : 18,
+              "radius_max"          : 12,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
-              "circle_color"        : "#004494",
+              # "circle_color"        : "#004494",
+              "circle_color": [
+                "match",
+                ["get", "TYPE_STRUCTURE"],
+                "association",
+                "#e41a1c",
+                "biblioth_que",
+                "#377eb8",
+                "ccas",
+                "#4daf4a",
+                "cms",
+                "#984ea3",
+                "collectivite",
+                "#ff7f00",
+                "entreprise",
+                "#ffff33",
+                "espnum",
+                "#a65628",
+                "msap_mfs",
+                "#f781bf",
+                # Other
+                "#000000"
+              ],
               "circle_color_activated": "#e8385b",
-              "circle_stroke_color" : "#fff",
-              "circle_opacity"      : 0.6,
+              "circle_stroke_color" : "#808080",
+              "circle_opacity"      : 0.9,
             },
 
             ### clusters source and layer
@@ -398,12 +420,43 @@ default_routes_config = [
                     "legend_color" : "primary",
                     "title" : "Légende",
                     "scales" : [
-                      { 'value' : '>20 lieux',  'color' : '#00a78e'},
-                      { 'value' : '15 lieux',   'color' : '#00d1b2'},
-                      { 'value' : '10 lieux',    'color' : '#4cdec9'},
-                      { 'value' : '5 lieux',    'color' : '#7fe8d8'},
-                      { 'value' : '1 lieu',    'color' : '#b2f1e7'},
-                      { 'value' : '0 lieu',      'color' : "#fff"},
+                      # { 'value' : '>20 lieux',  'color' : '#00a78e'},
+                      # { 'value' : '15 lieux',   'color' : '#00d1b2'},
+                      # { 'value' : '10 lieux',    'color' : '#4cdec9'},
+                      # { 'value' : '5 lieux',    'color' : '#7fe8d8'},
+                      # { 'value' : '1 lieu',    'color' : '#b2f1e7'},
+                      # { 'value' : '0 lieu',      'color' : "#fff"},
+
+                      { 'color' : '#e41a1c', 'value' : 'Association'},
+                      { 'color' : '#377eb8', 'value' : 'Bibliothèque'},
+                      { 'color' : '#4daf4a', 'value' : "Centre Communal d'Action Sociale"},
+                      { 'color' : '#984ea3', 'value' : 'Centre Médico-Social'},
+                      { 'color' : '#ff7f00', 'value' : 'Collectivité'},
+                      { 'color' : '#ffff33', 'value' : 'Entreprise'},
+                      { 'color' : '#a65628', 'value' : 'Espace numérique'},
+                      { 'color' : "#f781bf", 'value' : 'MSAP / MFS'},
+                      { 'color' : "#000000", 'value' : 'Autre'},
+                      # [#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0"]
+                      '''
+                        cf : https://colorbrewer2.org/#type=qualitative&scheme=Accent&n=8
+                        #8dd3c7
+                        #ffffb3
+                        #bebada
+                        #fb8072
+                        #80b1d3
+                        #fdb462
+                        #b3de69
+                        #fccde5
+                        
+                        #e41a1c
+                        #377eb8
+                        #4daf4a
+                        #984ea3
+                        #ff7f00
+                        #ffff33
+                        #a65628
+                        #f781bf
+                      '''
                     ]
                   }
 
@@ -433,7 +486,7 @@ default_routes_config = [
           },
         
           "layers_visibility" :{
-            "is_activated" : True,
+            "is_activated" : False,
             "is_drawer_open" : False,
             "layers_switches" : [ 
               { "label" : "lieux",         "layers" : [ "all-points" ], "default_visible" : True }, 

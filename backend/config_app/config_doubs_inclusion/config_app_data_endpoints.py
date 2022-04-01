@@ -336,7 +336,7 @@ default_data_endpoints_config = [
               {'name' : u'acces_libre',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès libre' }]},
               {'name' : u'acces_payant',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès payant' }]},
               {'name' : u'adapt_handicap',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Adapté aux personnes handicapées' }]},
-              {'name' : u'itinerance',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Lieu mobile (bus)' }]},
+              {'name' : u'itinerance',  'choice_title' : [{'locale' : 'en', 'text' : 'todo'},{'locale' : 'es', 'text' : 'Renovar el trabajo'},{'locale' : 'tr', 'text' : 'to do'},{'locale' : 'de', 'text' : 'to do'}, {'locale' : 'fr', 'text' : 'Accès en itinérance (bus)' }]},
             ],
           },
           {	"name"		: u"SERVICES__",  
