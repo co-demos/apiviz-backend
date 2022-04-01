@@ -253,7 +253,7 @@ default_routes_config = [
                 ],
               },
 
-              "radius_min"          : 2,
+              "radius_min"          : 4,
               "radius_max"          : 12,
               "max_zoom"            : 14,
               "min_zoom"            : 4,
@@ -262,26 +262,48 @@ default_routes_config = [
                 "match",
                 ["get", "TYPE_STRUCTURE"],
                 "association",
-                "#e41a1c",
+                "#a6cee3",
                 "biblioth_que",
-                "#377eb8",
+                "#1f78b4",
                 "ccas",
-                "#4daf4a",
+                "#b2df8a",
                 "cms",
-                "#984ea3",
+                "#33a02c",
                 "collectivite",
-                "#ff7f00",
+                "#fb9a99",
                 "entreprise",
-                "#ffff33",
+                "#e31a1c",
                 "espnum",
-                "#a65628",
+                "#fdbf6f",
                 "msap_mfs",
-                "#f781bf",
+                "#ff7f00",
                 # Other
                 "#000000"
               ],
-              "circle_color_activated": "#e8385b",
-              "circle_stroke_color" : "#808080",
+              # "circle_color_activated": "#e8385b",
+              "circle_color_activated": [
+                "match",
+                ["get", "TYPE_STRUCTURE"],
+                "association",
+                "#a6cee3",
+                "biblioth_que",
+                "#1f78b4",
+                "ccas",
+                "#b2df8a",
+                "cms",
+                "#33a02c",
+                "collectivite",
+                "#fb9a99",
+                "entreprise",
+                "#e31a1c",
+                "espnum",
+                "#fdbf6f",
+                "msap_mfs",
+                "#ff7f00",
+                # Other
+                "#000000"
+              ],
+              "circle_stroke_color" : "#FFFFFF",
               "circle_opacity"      : 0.9,
             },
 
@@ -397,12 +419,12 @@ default_routes_config = [
                     ['get', 'count_com' ],
                     0,   '#fff',
                     1,  '#b2f1e7',
-                    5,  '#7fe8d8',
+                    # 5,  '#7fe8d8',
                     10,  '#4cdec9',
-                    15, '#00d1b2',
+                    # 15, '#00d1b2',
                     20, '#00a78e',
                   ],
-                  "fill_opacity"        : 0.4,
+                  "fill_opacity"        : 0.25,
                   "fill_outline_color"  : "#28357f",
 
                   "has_popup" : False, 
@@ -427,15 +449,16 @@ default_routes_config = [
                       # { 'value' : '1 lieu',    'color' : '#b2f1e7'},
                       # { 'value' : '0 lieu',      'color' : "#fff"},
 
-                      { 'color' : '#e41a1c', 'value' : 'Association'},
-                      { 'color' : '#377eb8', 'value' : 'Bibliothèque'},
-                      { 'color' : '#4daf4a', 'value' : "Centre Communal d'Action Sociale"},
-                      { 'color' : '#984ea3', 'value' : 'Centre Médico-Social'},
-                      { 'color' : '#ff7f00', 'value' : 'Collectivité'},
-                      { 'color' : '#ffff33', 'value' : 'Entreprise'},
-                      { 'color' : '#a65628', 'value' : 'Espace numérique'},
-                      { 'color' : "#f781bf", 'value' : 'MSAP / MFS'},
+                      { 'color' : '#a6cee3', 'value' : 'Association'},
+                      { 'color' : '#1f78b4', 'value' : 'Bibliothèque'},
+                      { 'color' : '#b2df8a', 'value' : "Centre Communal d'Action Sociale"},
+                      { 'color' : '#33a02c', 'value' : 'Centre Médico-Social'},
+                      { 'color' : '#fb9a99', 'value' : 'Collectivité'},
+                      { 'color' : '#e31a1c', 'value' : 'Entreprise'},
+                      { 'color' : '#fdbf6f', 'value' : 'Espace numérique'},
+                      { 'color' : "#ff7f00", 'value' : 'MSAP / MFS'},
                       { 'color' : "#000000", 'value' : 'Autre'},
+
                       # [#e60049", "#0bb4ff", "#50e991", "#e6d800", "#9b19f5", "#ffa300", "#dc0ab4", "#b3d4ff", "#00bfa0"]
                       '''
                         cf : https://colorbrewer2.org/#type=qualitative&scheme=Accent&n=8
@@ -456,6 +479,15 @@ default_routes_config = [
                         #ffff33
                         #a65628
                         #f781bf
+                        
+                        #a6cee3
+                        #1f78b4
+                        #b2df8a
+                        #33a02c
+                        #fb9a99
+                        #e31a1c
+                        #fdbf6f
+                        #ff7f00
                       '''
                     ]
                   }
