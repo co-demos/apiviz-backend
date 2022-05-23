@@ -15,7 +15,7 @@ default_app_navbar = [
         # "logo_to"     : "/",
         "logo_to"     : "/", #"https://apiviz-carto-doubs-staging.netlify.app",
         "logo_to_external" : True,
-        "title_to"    : "/",
+        "title_to"    : "/accueil",
         "has_login"   : False,
         "ui_options"  : {
           "background_isdark" : False,
@@ -38,6 +38,7 @@ default_app_navbar = [
               "tooltip"    : [{"locale" : "en", "text" : "Begin a search"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Lancer une recherche" }],
               "has_dropdown" : True,
               "dropdowns"  : [
+                { "is_divider" : False, "is_external_link" : False, "link_to" : "/accueil",          "link_text" : [{"locale" : "en", "text" : "The map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Accueil"}] },
                 { "is_divider" : False, "is_external_link" : False, "link_to" : "/recherche",        "link_text" : [{"locale" : "en", "text" : "The map"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La carte"}] },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/mednum-bfc",       "link_text" : [{"locale" : "en", "text" : "The approach"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "La MedNum BFC"}] },
                 # { "is_divider" : False, "is_external_link" : False, "link_to" : "/les-données",      "link_text" : [{"locale" : "en", "text" : "Legal"},{"locale" : "es", "text" : "pendiente"},{"locale" : "tr", "text" : "yapılmamış"},{"locale" : "de", "text" : "ungemacht"}, {"locale" : "fr", "text" : "Les données"}] },

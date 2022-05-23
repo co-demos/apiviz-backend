@@ -37,7 +37,7 @@ default_routes_config = [
 
         "in_footer"         : False,
         "link_in_logo"      : True,
-        "urls"              : ["/"],
+        "urls"              : ["/accueil"],
 
         # "template_url"      : "https://raw.githubusercontent.com/co-demos/cis-data/master/pages-html/home.html",
         # "template_url"      : "http://localhost:8800/html/pages-html/home.html",
@@ -98,7 +98,7 @@ default_routes_config = [
         },
 
         "in_footer"         : False,
-        "urls"              : [ "/recherche", "/recherche/carte"],
+        "urls"              : [ "/", "/recherche", "/recherche/carte"],
         
         "template_urls"     : [
         ],
